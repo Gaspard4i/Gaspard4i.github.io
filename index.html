@@ -22,7 +22,7 @@
 
 <!-- Accueil -->
 <section id="accueil" class="section">
-    <div class="accueil-container" style="background-color: #F5F5DC; padding: 20px;">
+    <div class="accueil-container">
         <h1>Gaspard Catry</h1>
         <p>Étudiant en BUT Informatique, passionné par le développement et l'apprentissage de nouvelles technologies. Toujours curieux d'explorer des projets innovants et collaborer sur des idées créatives.</p>
         <button class="btn" onclick="downloadCV()">Télécharger mon CV</button>
@@ -30,68 +30,87 @@
     </div>
 </section>
 
-<!-- Formations -->
-<section id="formations" class="section">
-    <h2>Formations</h2>
-    <div class="card-container">
-        <div class="card">
-            <div class="front">
-                <img src="formation1.jpg" alt="Formation Image 1">
-            </div>
-            <div class="back">
-                <p>BUT Informatique 2e année, IUT de Lille</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <img src="formation2.jpg" alt="Formation Image 2">
-            </div>
-            <div class="back">
-                <p>Bac Général (Mention Bien), 2023</p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Compétences -->
 <section id="competences" class="section">
     <h2>Compétences</h2>
+
     <div class="skills-container">
-        <div class="skill-chart">
+        <!-- Catégorie Développement Backend -->
+        <div class="skill-category">
             <h3>Développement Backend</h3>
-            <div class="chart" data-percent="80">80%</div>
+            <ul>
+                <li>Java, Python, SQL</li>
+                <li>Frameworks: Spring, Django</li>
+                <li>Base de données: PostgreSQL, MySQL</li>
+            </ul>
         </div>
-        <div class="skill-chart">
+
+        <!-- Catégorie Développement Frontend -->
+        <div class="skill-category">
             <h3>Développement Frontend</h3>
-            <div class="chart" data-percent="70">70%</div>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <!-- <li>Frameworks: React, Angular</li> -->
+                <li>UI/UX Design</li>
+            </ul>
         </div>
-        <div class="skill-chart">
+
+        <!-- Compétences Ergonomie et Design -->
+        <div class="skill-category">
+            <h3>Ergonomie et Design</h3>
+            <ul>
+                <li>Conception ergonomique et UI/UX</li>
+                <li>Outils de design: Figma</li>
+                <li>Dessins et illustrations</li>
+            </ul>
+        </div>
+
+        <!-- Compétences Communication et Langues -->
+        <div class="skill-category">
             <h3>Communication & Langues</h3>
-            <div class="chart" data-percent="85">85%</div>
+            <ul>
+                <li>Anglais (courant), Espagnol (débuttant), Russe (En début d'apprentissage)</li>
+                <li>Communication écrite et orale, sociable et curieux</li>
+            </ul>
         </div>
-    </div>
+    </div>  
 </section>
 
-<!-- Expériences -->
-<section id="experiences" class="section">
-    <h2>Expériences</h2>
+
+<!-- Frise chronologique (Formations et Expériences) -->
+<section id="timeline" class="section">
+    <h2>Parcours</h2>
     <div class="timeline">
-        <div class="experience-item">
+        <div class="timeline-item">
             <div class="date">2024</div>
             <div class="details">
                 <h3>Stage Développeur</h3>
                 <p>Stage de 2 mois en tant que développeur chez XYZ, participation à divers projets d'applications web.</p>
             </div>
         </div>
-        <div class="experience-item">
+        <div class="timeline-item">
             <div class="date">2023</div>
             <div class="details">
                 <h3>Animateur en centre aéré</h3>
                 <p>Encadrement d'enfants durant les vacances, organisation d'activités éducatives et ludiques.</p>
             </div>
         </div>
+        <div class="timeline-item">
+            <div class="date">2023</div>
+            <div class="details">
+                <h3>Bac Général (Mention Bien)</h3>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="date">2022</div>
+            <div class="details">
+                <h3>BUT Informatique 1ère année</h3>
+                <p>IUT de Lille</p>
+            </div>
+        </div>
     </div>
 </section>
+
 
 <!-- Réalisations -->
 <section id="realisations" class="section">

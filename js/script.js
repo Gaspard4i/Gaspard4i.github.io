@@ -3,12 +3,12 @@ const header = document.getElementById('main-header');
 
 // Fonction pour télécharger le CV
 function downloadCV() {
-    window.open('./cv/Gaspard_Catry_CV.pdf', '_blank');
+    window.open('./res/cv.pdf', '_blank');
 }
 
 // Fonction pour télécharger le Portfolio
 function downloadPortfolio() {
-    window.open('./portfolio/Gaspard_Catry_Portfolio.pdf', '_blank');
+    window.open('./res/portfolio.pdf', '_blank');
 }
 
 // Fonction pour afficher le header lors du scroll vers le haut
@@ -36,3 +36,20 @@ document.addEventListener('DOMContentLoaded', function() {
         chart.textContent = percent + '%';
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const points = document.querySelectorAll('.timeline-point');
+
+    points.forEach(point => {
+        const year = point.getAttribute('data-year');
+        const position = calculatePositionByYear(year);
+        point.style.left = `${position}%`;
+    });
+
+    function calculatePositionByYear(year) {
+        const startYear = 2020;
+        const endYear = 2023;
+        return ((year - startYear) / (endYear - startYear)) * 100;
+    }
+});
+
