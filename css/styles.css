@@ -1,0 +1,265 @@
+/* Reset et règles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header avec les onglets */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    z-index: 100;
+}
+
+header.hidden {
+    transform: translateY(-100%);
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Conteneur global du CV */
+.cv-container {
+    display: flex;
+    max-width: 1100px;
+    margin: 100px auto; /* Marges ajustées pour inclure le header */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+    background-color: #e0e8ff;
+    padding: 30px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.right-section {
+    padding: 30px;
+    width: 70%;
+    background-color: #fefefe;
+}
+
+/* Style des boutons */
+.btn-download {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #002244;
+}
+
+.btn-download:active {
+    background-color: #fff;
+    color: #003366;
+    border: 1px solid #003366;
+}
+
+/* Accueil - Description */
+#accueil {
+    background-color: #e6e6ff; /* Couleur sobre */
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* Formations */
+#formations {
+    margin: 30px 0;
+}
+
+.formation-card {
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 20px;
+}
+
+.formation-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.formation-card:hover .formation-inner {
+    transform: rotateY(180deg);
+}
+
+.formation-front, .formation-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.formation-front {
+    background-color: #e0c18b;
+    color: #fff;
+}
+
+.formation-back {
+    background-color: #003366;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+/* Compétences - Camemberts */
+#competences {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0;
+}
+
+.skill-chart {
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(
+        #003366 0% 70%, 
+        #e0c18b 70% 100%
+    );
+    border-radius: 50%;
+    position: relative;
+}
+
+.skill-chart::before {
+    content: attr(data-skill);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+    color: #003366;
+    font-weight: bold;
+}
+
+/* Expériences sous forme de frise */
+#experiences {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.timeline {
+    position: relative;
+    width: 2px;
+    background-color: #003366;
+    height: auto;
+}
+
+.timeline-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #e0c18b;
+    border-radius: 50%;
+    left: -6.5px;
+    top: -5px;
+}
+
+/* Réalisations */
+#realisations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.realisation-card {
+    width: 30%;
+    margin-bottom: 30px;
+    background-color: #e0e8ff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+    }
+
+    #competences {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-chart {
+        margin-bottom: 20px;
+    }
+
+    #realisations {
+        flex-direction: column;
+    }
+
+    .realisation-card {
+        width: 100%;
+    }
+}

@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Gaspard Catry</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>CV - Gaspard Catry</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>CV de Gaspard Catry</h1>
-        <p>Développeur Informatique Junior</p>
-    </header>
-
+<!-- Header qui suit l'utilisateur -->
+<header id="main-header">
     <nav>
         <a href="#accueil">Accueil</a>
         <a href="#formations">Formations</a>
@@ -21,74 +18,106 @@
         <a href="#realisations">Réalisations</a>
         <a href="#contact">Contact</a>
     </nav>
+</header>
 
-    <section id="accueil">
-        <h2>Accueil</h2>
-        <p>Bonjour, je suis Gaspard Catry, étudiant en BUT Informatique à l'IUT de Villeneuve d'Ascq.
-            Passionné par le développement informatique, je me spécialise dans la création d'applications web et l'optimisation d'algorithmes.
-            Ce portfolio présente mon parcours, mes compétences et mes réalisations professionnelles et académiques.</p>
-    </section>
+<!-- Accueil -->
+<section id="accueil" class="section">
+    <div class="accueil-container" style="background-color: #F5F5DC; padding: 20px;">
+        <h1>Gaspard Catry</h1>
+        <p>Étudiant en BUT Informatique, passionné par le développement et l'apprentissage de nouvelles technologies. Toujours curieux d'explorer des projets innovants et collaborer sur des idées créatives.</p>
+        <button class="btn" onclick="downloadCV()">Télécharger mon CV</button>
+        <button class="btn" onclick="downloadPortfolio()">Télécharger mon Portfolio</button>
+    </div>
+</section>
 
-    <section id="formations">
-        <h2>Formations</h2>
-        <ul>
-            <li>
-                <strong>BUT Informatique</strong>, IUT de Villeneuve d'Ascq <br>
-                2023 - 2025 <br>
-                <img src="logo-iut.png" alt="Logo IUT Villeneuve d'Ascq">
-            </li>
-            <!-- autres formations -->
-        </ul>
-    </section>
+<!-- Formations -->
+<section id="formations" class="section">
+    <h2>Formations</h2>
+    <div class="card-container">
+        <div class="card">
+            <div class="front">
+                <img src="formation1.jpg" alt="Formation Image 1">
+            </div>
+            <div class="back">
+                <p>BUT Informatique 2e année, IUT de Lille</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <img src="formation2.jpg" alt="Formation Image 2">
+            </div>
+            <div class="back">
+                <p>Bac Général (Mention Bien), 2023</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section id="competences">
-        <h2>Compétences</h2>
-        <ul>
-            <li>Développement Java, HTML, CSS, Python, SQL</li>
-            <li>Gestion de version avec Git</li>
-            <li>Utilisation de frameworks comme JavaFX</li>
-            <li>Travail en équipe, gestion de projet</li>
-            <!-- ajouter une mindmap ici -->
-        </ul>
-    </section>
+<!-- Compétences -->
+<section id="competences" class="section">
+    <h2>Compétences</h2>
+    <div class="skills-container">
+        <div class="skill-chart">
+            <h3>Développement Backend</h3>
+            <div class="chart" data-percent="80">80%</div>
+        </div>
+        <div class="skill-chart">
+            <h3>Développement Frontend</h3>
+            <div class="chart" data-percent="70">70%</div>
+        </div>
+        <div class="skill-chart">
+            <h3>Communication & Langues</h3>
+            <div class="chart" data-percent="85">85%</div>
+        </div>
+    </div>
+</section>
 
-    <section id="experiences">
-        <h2>Expériences</h2>
-        <ul>
-            <li>
-                <strong>Stage Développeur Web</strong> - Entreprise XYZ <br>
-                Juin 2023 - Août 2023 <br>
-                Développement d'un site e-commerce avec JavaScript et PHP.
-            </li>
-            <!-- Autres expériences pro ou bénévoles -->
-        </ul>
-    </section>
+<!-- Expériences -->
+<section id="experiences" class="section">
+    <h2>Expériences</h2>
+    <div class="timeline">
+        <div class="experience-item">
+            <div class="date">2024</div>
+            <div class="details">
+                <h3>Stage Développeur</h3>
+                <p>Stage de 2 mois en tant que développeur chez XYZ, participation à divers projets d'applications web.</p>
+            </div>
+        </div>
+        <div class="experience-item">
+            <div class="date">2023</div>
+            <div class="details">
+                <h3>Animateur en centre aéré</h3>
+                <p>Encadrement d'enfants durant les vacances, organisation d'activités éducatives et ludiques.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section id="realisations">
-        <h2>Réalisations</h2>
-        <ul>
-            <li>
-                <strong>Projet SAE 1.01 - Générateur de site web statique</strong> <br>
-                <a href="https://gitlab.univ-lille.fr/gaspard.catry.etu/sae1.01" target="_blank">Voir sur GitLab</a>
-            </li>
-            <li>
-                <strong>Projet SAE 1.02 - Comparaison d'algorithmes</strong> <br>
-                <a href="https://gitlab.univ-lille.fr/louis.bedu.etu/S1.02" target="_blank">Voir sur GitLab</a>
-            </li>
-            <!--autres réalisations -->
-        </ul>
-    </section>
+<!-- Réalisations -->
+<section id="realisations" class="section">
+    <h2>Réalisations</h2>
+    <div class="project">
+        <h3>Finn Find Da Sword</h3>
+        <p>Un jeu de speedrun développé en Java EE. Projet en cours de développement avec des mécaniques de plateforme.</p>
+    </div>
+    <div class="project">
+        <h3>Logiciel de modélisation/analyse de données</h3>
+        <p>Analyse des données basées sur l'algorithme KNN, projet réalisé dans le cadre d'une étude universitaire.</p>
+    </div>
+</section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p><a href="mailto:gaspard.catry.etu@univ-lille.fr">gaspard.catry.etu@univ-lille.fr</a></p>
-        <p><a href="https://linkedin.com/in/gaspard-catry" target="_blank">LinkedIn</a></p>
-        <p><a href="https://gitlab.univ-lille.fr/gaspard.catry.etu" target="_blank">GitLab</a></p>
-    </section>
+<!-- Footer -->
+<footer id="contact">
+    <div class="contact">
+        <p><strong>Téléphone:</strong> 0768370776</p>
+        <p><strong>Email:</strong> catry.gaspard@gmail.com</p>
+        <p><strong>Adresse:</strong> 34 Avenue Léon-Blum Billy-Montigny 62420</p>
+        <p><strong>Âge:</strong> 19 ans</p>
+    </div>
+</footer>
 
-    <footer>
-        <p>&copy; 2024 Gaspard Catry</p>
-    </footer>
+<!-- Lien vers le script externe -->
+<script src="./js/script.js"></script>
 
 </body>
 </html>
