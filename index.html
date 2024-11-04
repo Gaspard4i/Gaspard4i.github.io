@@ -14,8 +14,7 @@
         <a href="#accueil">Accueil</a>
         <a href="#formations">Formations</a>
         <a href="#competences">Compétences</a>
-        <a href="#experiences">Expériences</a>
-        <a href="#realisations">Réalisations</a>
+        <a href="#projets">Projets</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -28,75 +27,80 @@
         </a>
         <div class="accueil-container">
             <h1>Gaspard Catry</h1>
-            <p>Étudiant en BUT Informatique, passionné par le développement et l'apprentissage de nouvelles technologies. Toujours curieux d'explorer des projets innovants et collaborer sur des idées créatives.</p>
+            <p>Étudiant en BUT Informatique, passionné par le développement et l'apprentissage de nouvelles technologies.</p>
+            <p>Toujours curieux d'explorer des projets innovants et collaborer sur des idées créatives.</p>
             <button class="btn" onclick="downloadCV()">Télécharger mon CV</button>
             <button class="btn" onclick="downloadPortfolio()">Télécharger mon Portfolio</button>
         </div>
     </div>
 </section>
 
-
 <!-- Compétences -->
 <section id="competences" class="section">
     <h2>Compétences</h2>
+    
+    <div class="slider">
+        <div class="skills-container">
+            <!-- Catégorie Développement Backend -->
+            <div class="skill-category active">
+                <h3>Développement Backend</h3>
+                <ul>
+                    <li>Java, Python, SQL</li>
+                    <li>Base de données: PostgreSQL, MySQL</li>
+                </ul>
+                <div class="logo-banner">
+                    <img src="./resources/java_logo.png" alt="Logo Java">
+                    <img src="./resources/postgresql_logo.png" alt="Logo PostgreSQL">
+                </div>
+            </div>
 
-    <div class="skills-container">
-        <!-- Catégorie Développement Backend -->
-        <div class="skill-category">
-            <h3>Développement Backend</h3>
-            <ul>
-                <li>Java, Python, SQL</li>
-                <li>Base de données: PostgreSQL, MySQL</li>
-            </ul>
-            <div class="logo-banner">
-                <img src="./resources/java_logo.png" alt="Logo Java">
-                <img src="./resources/postgresql_logo.png" alt="Logo PostgreSQL">
+            <!-- Catégorie Développement Frontend -->
+            <div class="skill-category">
+                <h3>Développement Frontend</h3>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>UI/UX Design</li>
+                </ul>
+                <div class="logo-banner">
+                    <img src="./resources/html_logo.png" alt="Logo HTML">
+                    <img src="./resources/css_logo.png" alt="Logo CSS">
+                    <img src="./resources/java_script.png" alt="Logo JavaScript">
+                </div>
+            </div>
+
+            <!-- Catégorie Ergonomie et Design -->
+            <div class="skill-category">
+                <h3>Ergonomie et Design</h3>
+                <ul>
+                    <li>Outils de design: Figma</li>
+                    <li>Prototypage ergonomique et UI/UX</li>
+                    <li>Dessins et illustrations</li>
+                </ul>
+                <div class="logo-banner">
+                    <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png" alt="Logo Figma">
+                    <img src="./resources/piskel_logo.png" alt="Logo Piskel">
+                </div>
+            </div>
+
+            <!-- Catégorie Communication & Langues -->
+            <div class="skill-category">
+                <h3>Communication & Langues</h3>
+                <ul>
+                    <li>Anglais (courant), Espagnol (débutant), Russe (En début d'apprentissage)</li>
+                    <li>Communication écrite et orale, sociable et curieux</li>
+                </ul>
+                <div class="logo-banner">
+                    <img src="./resources/anglais.png" alt="Logo Anglais">
+                    <img src="./resources/espagnol.png" alt="Logo Espagnol">
+                    <img src="./resources/russe.png" alt="Logo Russe">
+                </div>
             </div>
         </div>
 
-        <!-- Catégorie Développement Frontend -->
-        <div class="skill-category">
-            <h3>Développement Frontend</h3>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>UI/UX Design</li>
-            </ul>
-            <div class="logo-banner">
-                <img src="./resources/html_logo.png" alt="Logo HTML">
-                <img src="./resources/css_logo.png" alt="Logo CSS">
-                <img src="./resources/java_script.png" alt="Logo JavaScript">
-            </div>
-        </div>
-
-        <!-- Catégorie Ergonomie et Design -->
-        <div class="skill-category">
-            <h3>Ergonomie et Design</h3>
-            <ul>
-                <li>Outils de design: Figma</li>
-                <li>Conception ergonomique et UI/UX</li>
-                <li>Dessins et illustrations</li>
-            </ul>
-            <div class="logo-banner">
-                <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png" alt="Logo Figma">
-            </div>
-        </div>
-
-        <!-- Catégorie Communication & Langues -->
-        <div class="skill-category">
-            <h3>Communication & Langues</h3>
-            <ul>
-                <li>Anglais (courant), Espagnol (débuttant), Russe (En début d'apprentissage)</li>
-                <li>Communication écrite et orale, sociable et curieux</li>
-            </ul>
-            <div class="logo-banner">
-                <img src="./resources/anglais.webp" alt="Logo Anglais">
-                <img src="./resources/espagnol.png" alt="Logo Espagnol">
-            </div>
-        </div>
-    </div>  
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
 </section>
-
-
 
 
 <!-- Frise chronologique (Formations et Expériences) -->
@@ -106,37 +110,39 @@
         <div class="timeline-item">
             <div class="date">2024</div>
             <div class="details">
-                <h3>Stage Développeur</h3>
-                <p>Stage de 2 mois en tant que développeur chez XYZ, participation à divers projets d'applications web.</p>
+                <h3>2ème année de BUT Informatique</h3>
+                <p>Poursuite de mes études en 2ème année de BUT Informatique.</p>
             </div>
         </div>
         <div class="timeline-item">
-            <div class="date">2023</div>
+            <div class="date">2024</div>
             <div class="details">
                 <h3>Animateur en centre aéré</h3>
-                <p>Encadrement d'enfants durant les vacances, organisation d'activités éducatives et ludiques.</p>
+                <p>Stage de 2 mois à Billy-Montigny et Dourges.</p>
             </div>
         </div>
         <div class="timeline-item">
             <div class="date">2023</div>
             <div class="details">
-                <h3>Bac Général (Mention Bien)</h3>
+                <h3>Bac Spécialité, Maths et NSI</h3>
+                <p>Physique-chimie délaissé en 1ère, option mathématiques expertes, et option First (sans passer le test Cambridge).</p>
             </div>
         </div>
         <div class="timeline-item">
-            <div class="date">2022</div>
+            <div class="date">2023</div>
             <div class="details">
-                <h3>BUT Informatique 1ère année</h3>
-                <p>IUT de Lille</p>
+                <h3>Animateur en séjour pour les 1000 et 1 loisirs</h3>
+                <p>Encadrement d'enfants durant les vacances, organisation d'activités éducatives et ludiques.</p>
             </div>
         </div>
     </div>
 </section>
 
 
-<!-- Réalisations -->
-<section id="realisations" class="section">
-    <h2>Réalisations</h2>
+
+<!-- Projets -->
+<section id="projets" class="section">
+    <h2>Projets</h2>
     <div class="project">
         <h3>Finn Find Da Sword</h3>
         <p>Un jeu de speedrun développé en Java EE. Projet en cours de développement avec des mécaniques de plateforme.</p>
