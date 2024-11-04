@@ -106,31 +106,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Désactiver la sélection de texte dans le slider
     slider.addEventListener('mousedown', (event) => event.preventDefault());
-
-    // Gérer l'envoi du formulaire de contact
-    const contactForm = document.getElementById('contactForm');
-    const envelopeAnimation = document.getElementById('envelope-animation');
-    const toggleFormButton = document.getElementById('toggleForm');
-
-    toggleFormButton.addEventListener('click', () => {
-        contactForm.classList.toggle('hidden');
-        toggleFormButton.textContent = contactForm.classList.contains('hidden') ? 'Afficher le formulaire' : 'Cacher le formulaire';
-    });
-
-    contactForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        envelopeAnimation.classList.remove('hidden');
-        grecaptcha.enterprise.ready(async () => {
-            const token = await grecaptcha.enterprise.execute('6LecR3UqAAAAAFx7ikHM3CgVg_O7YBQXxLgMmOtz', {action: 'submit'});
-            // Ajoutez le token au formulaire avant de le soumettre
-            const tokenInput = document.createElement('input');
-            tokenInput.setAttribute('type', 'hidden');
-            tokenInput.setAttribute('name', 'g-recaptcha-response');
-            tokenInput.setAttribute('value', token);
-            contactForm.appendChild(tokenInput);
-            setTimeout(() => {
-                contactForm.submit();
-            }, 2000); // Attendre 2 secondes avant de soumettre le formulaire
-        });
-    });
 });

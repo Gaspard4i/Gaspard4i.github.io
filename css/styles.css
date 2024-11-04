@@ -570,7 +570,7 @@ button.prev, button.next {
     transform: scale(1.05);
 }
 
-#contact-form {
+#contact {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -579,28 +579,28 @@ button.prev, button.next {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#contact-form .form-row {
+#contact .form-row {
     display: flex;
     justify-content: space-between;
 }
 
-#contact-form .form-group {
+#contact .form-group {
     margin-bottom: 15px;
     flex: 1;
 }
 
-#contact-form .form-group:not(:last-child) {
+#contact .form-group:not(:last-child) {
     margin-right: 10px;
 }
 
-#contact-form label {
+#contact label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-#contact-form input,
-#contact-form textarea {
+#contact input,
+#contact textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -608,11 +608,11 @@ button.prev, button.next {
     box-sizing: border-box;
 }
 
-#contact-form textarea {
+#contact textarea {
     resize: vertical; /* Permettre le redimensionnement uniquement en hauteur */
 }
 
-#contact-form button {
+#contact button {
     background-color: #003366;
     color: #fff;
     padding: 10px 20px;
@@ -625,12 +625,12 @@ button.prev, button.next {
     margin: 0 auto; /* Centrer le bouton */
 }
 
-#contact-form button:hover {
+#contact button:hover {
     background-color: #9BD47D; /* Vert clair */
     transform: translateY(-2px);
 }
 
-#contact-form button:active {
+#contact button:active {
     background-color: #4B9720; /* Vert foncé */
     transform: translateY(1px);
 }
