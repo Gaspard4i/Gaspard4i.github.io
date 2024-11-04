@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Gaspard Catry</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LecR3UqAAAAAFx7ikHM3CgVg_O7YBQXxLgMmOtz"></script>
 </head>
 <body>
 
@@ -23,14 +24,14 @@
 <section id="accueil" class="section">
     <div class="accueil-content">
         <a href="https://www.linkedin.com/in/gaspard-catry-070b70289/" target="_blank" class="profile-link">
-            <img src="./resources/linkedin.jpg" alt="Photo de Gaspard Catry" class="profile-photo">
+            <img src="./resources/images/linkedin.jpg" alt="Photo de Gaspard Catry" class="profile-photo">
         </a>
         <div class="accueil-container">
             <h1>Gaspard Catry</h1>
             <p>Étudiant en BUT Informatique, passionné par le développement et l'apprentissage de nouvelles technologies.</p>
             <p>Toujours curieux d'explorer des projets innovants et collaborer sur des idées créatives.</p>
-            <button class="btn" onclick="downloadCV()">Télécharger mon CV</button>
-            <button class="btn" onclick="downloadPortfolio()">Télécharger mon Portfolio</button>
+            <a href="./resources/pdf/cv.pdf" target="_blank" class="btn">Télécharger mon CV</a>
+            <a href="./resources/pdf/portfolio.pdf" target="_blank" class="btn">Télécharger mon Portfolio</a>
         </div>
     </div>
 </section>
@@ -46,11 +47,11 @@
                 <h3>Développement Backend</h3>
                 <ul>
                     <li>Java, Python, SQL</li>
-                    <li>Base de données: PostgreSQL, MySQL</li>
+                    <li>Base de données: PostgreSQL</li>
                 </ul>
                 <div class="logo-banner">
-                    <img src="./resources/java_logo.png" alt="Logo Java">
-                    <img src="./resources/postgresql_logo.png" alt="Logo PostgreSQL">
+                    <img src="./resources/images/java_logo.png" alt="Logo Java">
+                    <img src="./resources/images/postgresql_logo.png" alt="Logo PostgreSQL">
                 </div>
             </div>
 
@@ -62,9 +63,9 @@
                     <li>UI/UX Design</li>
                 </ul>
                 <div class="logo-banner">
-                    <img src="./resources/html_logo.png" alt="Logo HTML">
-                    <img src="./resources/css_logo.png" alt="Logo CSS">
-                    <img src="./resources/java_script.png" alt="Logo JavaScript">
+                    <img src="./resources/images/html_logo.png" alt="Logo HTML">
+                    <img src="./resources/images/css_logo.png" alt="Logo CSS">
+                    <img src="./resources/images/java_script.png" alt="Logo JavaScript">
                 </div>
             </div>
 
@@ -78,7 +79,7 @@
                 </ul>
                 <div class="logo-banner">
                     <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png" alt="Logo Figma">
-                    <img src="./resources/piskel_logo.png" alt="Logo Piskel">
+                    <img src="./resources/images/piskel_logo.png" alt="Logo Piskel">
                 </div>
             </div>
 
@@ -90,54 +91,46 @@
                     <li>Communication écrite et orale, sociable et curieux</li>
                 </ul>
                 <div class="logo-banner">
-                    <img src="./resources/anglais.png" alt="Logo Anglais">
-                    <img src="./resources/espagnol.png" alt="Logo Espagnol">
-                    <img src="./resources/russe.png" alt="Logo Russe">
+                    <img src="./resources/images/anglais.png" alt="Logo Anglais">
+                    <img src="./resources/images/espagnol.png" alt="Logo Espagnol">
+                    <img src="./resources/images/russe.png" alt="Logo Russe">
                 </div>
             </div>
         </div>
-
-        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
 </section>
-
 
 <!-- Frise chronologique (Formations et Expériences) -->
 <section id="timeline" class="section">
     <h2>Parcours</h2>
     <div class="timeline">
-        <div class="timeline-item">
-            <div class="date">2024</div>
-            <div class="details">
-                <h3>2ème année de BUT Informatique</h3>
-                <p>Poursuite de mes études en 2ème année de BUT Informatique.</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="date">2024</div>
-            <div class="details">
-                <h3>Animateur en centre aéré</h3>
-                <p>Stage de 2 mois à Billy-Montigny et Dourges.</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="date">2023</div>
-            <div class="details">
-                <h3>Bac Spécialité, Maths et NSI</h3>
-                <p>Physique-chimie délaissé en 1ère, option mathématiques expertes, et option First (sans passer le test Cambridge).</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="date">2023</div>
-            <div class="details">
-                <h3>Animateur en séjour pour les 1000 et 1 loisirs</h3>
-                <p>Encadrement d'enfants durant les vacances, organisation d'activités éducatives et ludiques.</p>
-            </div>
-        </div>
+        <!-- Groupe 2024 -->
+        <article>
+            <h4>2ème année de BUT Informatique</h4>
+            <p>Poursuite de mes études en 2ème année de BUT Informatique.</p>
+        </article>
+        <article>
+            <h4>Animateur en centre aéré</h4>
+            <p>2 mois à Billy-Montigny et Dourges.</p>
+        </article>
+
+        <!-- Groupe 2023 -->
+        <article>
+            <h4>1ère année de BUT Informatique</h4>
+            <p>Début de mon parcours en informatique à l'IUT, avec des bases en programmation, algorithmes et structures de données.</p>
+        </article>
+        <article>
+            <h4>Animateur en séjour pour les 1000 et 1 loisirs</h4>
+            <p>Encadrement d'enfants durant les vacances, organisation d'activités éducatives et ludiques.</p>
+        </article>
+        <article>
+            <h4>Bac Spécialité, Maths et NSI</h4>
+            <p>Physique-chimie délaissé en 1ère, option mathématiques expertes, et option First (sans passer le test Cambridge).</p>
+        </article>
+
+
     </div>
 </section>
-
 
 
 <!-- Projets -->
@@ -153,12 +146,50 @@
     </div>
 </section>
 
+<!-- Formulaire de contact -->
+<section id="contact-form" class="section">
+    <h2>Contactez-moi</h2>
+    <button id="toggleForm" class="btn">Afficher le formulaire</button>
+    <form id="contactForm" action="https://formspree.io/f/{your_form_id}" method="POST" class="hidden">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="first-name">Prénom</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="company">Entreprise (facultatif)</label>
+            <input type="text" id="company" name="company">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div class="g-recaptcha" data-sitekey="6LecR3UqAAAAAFx7ikHM3CgVg_O7YBQXxLgMmOtz"></div>
+        <button type="submit" class="btn" onclick="onClick(event)">Envoyer</button>
+    </form>
+    <div id="envelope-animation" class="hidden">
+        <img src="./resources/images/envelope.gif" alt="Envoi en cours...">
+    </div>
+</section>
+
 <!-- Footer -->
-<footer id="contact">
-    <div class="contact">
-        <p><strong>Téléphone:</strong> 0768370776</p>
-        <p><strong>Email:</strong> catry.gaspard@gmail.com</p>
-        <p><strong>Adresse:</strong> 34 Avenue Léon-Blum Billy-Montigny 62420</p>
+<footer id="lien">
+    <div class="lien">
+        <p><strong>GitHub:</strong> <a href="https://github.com/Gaspard4i" target="_blank">Gaspard4i</a></p>
+        <p><strong>GitLab:</strong> <a href="https://gitlab.univ-lille.fr/gaspard.catry.etu" target="_blank">gaspard.catry.etu</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/gaspard-catry-070b70289/" target="_blank">Gaspard Catry</a></p>
+    </div>
+    <div class="license">
+        <p>Ce site est sous licence <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>.</p>
     </div>
 </footer>
 
