@@ -9,7 +9,7 @@
 <body>
 
 <!-- Header qui suit l'utilisateur -->
-<header id="main-header">
+<header id="main-header" >
     <nav>
         <a href="#accueil">Accueil</a>
         <a href="#formations">Formations</a>
@@ -22,13 +22,19 @@
 
 <!-- Accueil -->
 <section id="accueil" class="section">
-    <div class="accueil-container">
-        <h1>Gaspard Catry</h1>
-        <p>Étudiant en BUT Informatique, passionné par le développement et l'apprentissage de nouvelles technologies. Toujours curieux d'explorer des projets innovants et collaborer sur des idées créatives.</p>
-        <button class="btn" onclick="downloadCV()">Télécharger mon CV</button>
-        <button class="btn" onclick="downloadPortfolio()">Télécharger mon Portfolio</button>
+    <div class="accueil-content">
+        <a href="https://www.linkedin.com/in/gaspard-catry-070b70289/" target="_blank" class="profile-link">
+            <img src="./resources/linkedin.jpg" alt="Photo de Gaspard Catry" class="profile-photo">
+        </a>
+        <div class="accueil-container">
+            <h1>Gaspard Catry</h1>
+            <p>Étudiant en BUT Informatique, passionné par le développement et l'apprentissage de nouvelles technologies. Toujours curieux d'explorer des projets innovants et collaborer sur des idées créatives.</p>
+            <button class="btn" onclick="downloadCV()">Télécharger mon CV</button>
+            <button class="btn" onclick="downloadPortfolio()">Télécharger mon Portfolio</button>
+        </div>
     </div>
 </section>
+
 
 <!-- Compétences -->
 <section id="competences" class="section">
@@ -40,9 +46,12 @@
             <h3>Développement Backend</h3>
             <ul>
                 <li>Java, Python, SQL</li>
-                <li>Frameworks: Spring, Django</li>
                 <li>Base de données: PostgreSQL, MySQL</li>
             </ul>
+            <div class="logo-banner">
+                <img src="./resources/java_logo.png" alt="Logo Java">
+                <img src="./resources/postgresql_logo.png" alt="Logo PostgreSQL">
+            </div>
         </div>
 
         <!-- Catégorie Développement Frontend -->
@@ -50,31 +59,44 @@
             <h3>Développement Frontend</h3>
             <ul>
                 <li>HTML, CSS, JavaScript</li>
-                <!-- <li>Frameworks: React, Angular</li> -->
                 <li>UI/UX Design</li>
             </ul>
+            <div class="logo-banner">
+                <img src="./resources/html_logo.png" alt="Logo HTML">
+                <img src="./resources/css_logo.png" alt="Logo CSS">
+                <img src="./resources/java_script.png" alt="Logo JavaScript">
+            </div>
         </div>
 
-        <!-- Compétences Ergonomie et Design -->
+        <!-- Catégorie Ergonomie et Design -->
         <div class="skill-category">
             <h3>Ergonomie et Design</h3>
             <ul>
-                <li>Conception ergonomique et UI/UX</li>
                 <li>Outils de design: Figma</li>
+                <li>Conception ergonomique et UI/UX</li>
                 <li>Dessins et illustrations</li>
             </ul>
+            <div class="logo-banner">
+                <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png" alt="Logo Figma">
+            </div>
         </div>
 
-        <!-- Compétences Communication et Langues -->
+        <!-- Catégorie Communication & Langues -->
         <div class="skill-category">
             <h3>Communication & Langues</h3>
             <ul>
                 <li>Anglais (courant), Espagnol (débuttant), Russe (En début d'apprentissage)</li>
                 <li>Communication écrite et orale, sociable et curieux</li>
             </ul>
+            <div class="logo-banner">
+                <img src="./resources/anglais.webp" alt="Logo Anglais">
+                <img src="./resources/espagnol.png" alt="Logo Espagnol">
+            </div>
         </div>
     </div>  
 </section>
+
+
 
 
 <!-- Frise chronologique (Formations et Expériences) -->
@@ -131,7 +153,6 @@
         <p><strong>Téléphone:</strong> 0768370776</p>
         <p><strong>Email:</strong> catry.gaspard@gmail.com</p>
         <p><strong>Adresse:</strong> 34 Avenue Léon-Blum Billy-Montigny 62420</p>
-        <p><strong>Âge:</strong> 19 ans</p>
     </div>
 </footer>
 

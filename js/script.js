@@ -3,12 +3,12 @@ const header = document.getElementById('main-header');
 
 // Fonction pour télécharger le CV
 function downloadCV() {
-    window.open('./res/cv.pdf', '_blank');
+    window.open('res/cv.pdf', '_blank');
 }
 
 // Fonction pour télécharger le Portfolio
 function downloadPortfolio() {
-    window.open('./res/portfolio.pdf', '_blank');
+    window.open('res/portfolio.pdf', '_blank');
 }
 
 // Fonction pour afficher le header lors du scroll vers le haut
@@ -17,10 +17,10 @@ window.onscroll = function () {
 
     if (currentScrollPosition < lastScrollPosition || currentScrollPosition < 50) {
         // Si on scrolle vers le haut ou est proche du haut de la page, afficher le header
-        header.classList.remove('hidden');
+        header.classList.remove('visible');
     } else {
         // Si on scrolle vers le bas, cacher le header
-        header.classList.add('hidden');
+        header.classList.add('visible');
     }
 
     // Mettre à jour la dernière position de scroll

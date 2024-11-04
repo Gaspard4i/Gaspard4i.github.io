@@ -389,5 +389,130 @@ footer {
 }
 
 .accueil-container {
-    
+    margin: 20px auto;
+    max-width: 1200px; 
+}
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-category {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #e0e8ff;
+}
+
+.logo-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 150px; /* Limite la hauteur visible de la bannière */
+    overflow-y: scroll; /* Ajoute un défilement vertical */
+    margin-left: 20px;
+    padding-right: 10px; /* Espace pour éviter que l'image soit coupée par le défilement */
+}
+
+.logo-banner img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-category {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.logo-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 150px; /* Limite la hauteur visible de la bannière */
+    overflow: hidden; /* Cache tout ce qui dépasse la zone visible */
+    margin-left: 20px;
+    position: relative;
+}
+
+.logo-banner img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+    object-fit: contain;
+}   
+
+
+.acceuil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil-content {
+    display: flex;
+    align-items: center;
+}
+
+.profile-link {
+    display: inline-block;
+    margin-right: 20px; /* Ajuste l'espacement entre la photo et le texte */
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff; /* Optionnel : contour blanc autour de la photo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optionnel : ombre autour de la photo */
+}
+
+
+.btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #003366; /* Couleur de fond principale */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    margin-right: 10px; /* Espace entre les boutons */
+}
+
+.btn:hover {
+    background-color: #003366ce; /* Couleur au survol */
+    transform: translateY(-2px); /* Légère élévation au survol */
+}
+
+.btn:active {
+    background-color: #00336685; /* Couleur lors du clic */
+    transform: translateY(1px); /* Effet de clic */
 }
