@@ -104,10 +104,11 @@ nav a:hover {
 
 .accueil-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Aligner le contenu à gauche */
     align-items: center;
-    gap: 20px;
+    gap: 20px; /* Espace entre l'image et le texte */
     flex-direction: row;
+    padding: 0 20px; /* Ajouter un padding pour ne pas coller trop près des bords */
 }
 
 .accueil-container {
@@ -374,22 +375,16 @@ nav a:hover {
 
     #projets {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .realisation-card {
         flex-direction: column;
-    }
-
-    .left-section, .right-section {
-        width: 100%;
-    }
-
-    #projets {
-        flex-direction: column;
-    }
-
-    .realisation-card {
-        width: 100%;
     }
 
     .timeline-item {
@@ -429,6 +424,29 @@ nav a:hover {
     .timeline article:nth-child(even):after {
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .skill-category {
+        min-width: 100%;
+        margin: 10px 0;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-photo {
+        margin-bottom: 20px;
+    }
+
+    footer .lien {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .lien p {
+        text-align: center;
     }
 }
 
@@ -649,6 +667,33 @@ button.prev, button.next {
     display: none;
 }
 
-.hidden {
-    display: none;
+.spotify-player {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 51, 102, 0.7); /* Couleur semi-transparente */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: rgba(0, 51, 102, 0.9); /* Couleur légèrement plus opaque au survol */
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* Inverser les couleurs pour que l'icône soit blanche */
 }

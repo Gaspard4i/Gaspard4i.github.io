@@ -33,6 +33,7 @@ window.onscroll = function () {
 // Gérer le clic sur les bulles
 document.addEventListener('DOMContentLoaded', () => {
     const timelineArticles = document.querySelectorAll('.timeline article');
+    const spotifyPlayer = document.getElementById('spotify-player');
 
     timelineArticles.forEach(article => {
         article.addEventListener('click', () => {
@@ -44,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkAllActive() {
         const allActive = Array.from(timelineArticles).every(article => article.classList.contains('active'));
         if (allActive) {
-            // Action à effectuer lorsque tous les ronds sont verts foncés
-            console.log("Tous les ronds sont verts foncés.");
+            // Afficher ou masquer l'intégration Spotify
+            spotifyPlayer.classList.toggle('hidden');
             timelineArticles.forEach(article => {
                 article.classList.remove('active');
             });
