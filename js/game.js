@@ -23,6 +23,29 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerInterval;
     let record = localStorage.getItem('record') || 0;
     let mousePosition = { x: 0, y: 0 };
+    let informations = {};
+
+    fetch('./data/informations.json')
+        .then(response => response.json())
+        .then(data => {
+            informations = data.reduce((acc, info) => {
+                if (!acc[info.type]) acc[info.type] = [];
+                acc[info.type].push(info);
+                return acc;
+            }, {});
+        })
+        .catch(error => {
+            console.error('Erreur lors du chargement des informations:', error);
+            informations = null; // Indiquer qu'il y a eu une erreur
+        });
+
+    function getRandomInfo(type) {
+        if (!informations || !informations[type] || informations[type].length === 0) {
+            return { nom_info: "", info: "Information" }; // Retourner "Information" en cas d'erreur
+        }
+        const infoList = informations[type];
+        return infoList[Math.floor(Math.random() * infoList.length)];
+    }
 
     recordElement.textContent = `Record: ${record}`;
 
@@ -220,7 +243,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const obstaclesContainer = document.getElementById('obstacles-container');
         const obstacle = document.createElement('div');
         obstacle.classList.add('obstacle');
-        obstacle.textContent = 'Information'; // Ajouter le texte "Information"
+        const info = getRandomInfo('basique');
+        obstacle.textContent = `${info.nom_info} ${info.info}`;
 
         // Générer une position aléatoire en évitant le header
         const obstacleWidth = 100; // Largeur des rectangles
@@ -240,7 +264,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const obstaclesContainer = document.getElementById('obstacles-container');
         const yellowObstacle = document.createElement('div');
         yellowObstacle.classList.add('yellow-obstacle');
-        yellowObstacle.textContent = 'Information'; // Ajouter le texte "Information"
+        const info = getRandomInfo('cool');
+        yellowObstacle.textContent = `${info.nom_info} ${info.info}`;
         const side = Math.random() < 0.5 ? 'left' : 'right';
         yellowObstacle.style[side] = '0px';
         yellowObstacle.style.top = `${Math.random() * (window.innerHeight - 75)}px`; // Ajuster pour la nouvelle hauteur
@@ -251,7 +276,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const obstaclesContainer = document.getElementById('obstacles-container');
         const redObstacle = document.createElement('div');
         redObstacle.classList.add('red-obstacle');
-        redObstacle.textContent = 'Information'; // Ajouter le texte "Information"
+        const info = getRandomInfo('importante');
+        redObstacle.textContent = `${info.nom_info} ${info.info}`;
         redObstacle.style.left = `${Math.random() * (window.innerWidth - 200)}px`; // Ajuster pour la nouvelle largeur
         redObstacle.style.top = `0px`; // Commencer en haut
         obstaclesContainer.appendChild(redObstacle);

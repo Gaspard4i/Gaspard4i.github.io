@@ -185,6 +185,10 @@ a {
     overflow: hidden;
 }
 
+.red-obstacle, .yellow-obstacle {
+    color: #000000; /* Couleur du texte en noir */
+}
+
 .info-table {
     width: 100%;
     border-collapse: collapse;

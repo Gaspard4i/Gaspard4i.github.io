@@ -1,0 +1,102 @@
+[
+    {
+        "nom_info": "Nom:",
+        "info": "Gaspard Catry",
+        "type": "importante"
+    },
+    {
+        "nom_info": "Prénom:",
+        "info": "Gaspard",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Pseudo:",
+        "info": "Gaspard4i",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Âge:",
+        "info": "20 ans",
+        "type": "importante"
+    },
+    {
+        "nom_info": "Années d'étude:",
+        "info": "2ème année de BUT Informatique",
+        "type": "importante"
+    },
+    {
+        "nom_info": "École:",
+        "info": "IUT de Lille",
+        "type": "importante"
+    },
+    {
+        "nom_info": "École primaire:",
+        "info": "École Primaire de Lille",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Lycée:",
+        "info": "Lycée de Lille",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Collège:",
+        "info": "Collège de Lille",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Nom de mon chat:",
+        "info": "Minou",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Dessin animé préféré:",
+        "info": "Adventure Time",
+        "type": "cool"
+    },
+    {
+        "nom_info": "Film préféré:",
+        "info": "Inception",
+        "type": "cool"
+    },
+    {
+        "nom_info": "Série préférée:",
+        "info": "Breaking Bad",
+        "type": "cool"
+    },
+    {
+        "nom_info": "Manga préféré:",
+        "info": "One Piece",
+        "type": "cool"
+    },
+    {
+        "nom_info": "Langage préféré:",
+        "info": "JavaScript",
+        "type": "importante"
+    },
+    {
+        "nom_info": "Plat préféré:",
+        "info": "Pizza",
+        "type": "cool"
+    },
+    {
+        "nom_info": "Hobby:",
+        "info": "Lecture",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Sport préféré:",
+        "info": "Football",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Couleur préférée:",
+        "info": "Bleu",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Musique préférée:",
+        "info": "Rock",
+        "type": "basique"
+    }
+]
