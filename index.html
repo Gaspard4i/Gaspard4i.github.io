@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Gaspard Catry</title>
+    <title>Portfolio - Gaspard Catry</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/projects.css">
     <link rel="icon" href="./resources/images/finnstay.gif" type="image/gif">
 </head>
 <body>
@@ -26,6 +27,8 @@
     <div class="accueil-content">
         <a href="https://www.linkedin.com/in/gaspard-catry-070b70289/" target="_blank" class="profile-link">
             <img src="./resources/images/linkedin.jpg" alt="Photo de Gaspard Catry" class="profile-photo">
+            <a href="test.html" class="btn">Voir les Informations JSON</a>
+
         </a>
         <div class="accueil-container">
             <h1>Gaspard Catry</h1>
@@ -33,6 +36,8 @@
             <p>Toujours curieux d'explorer des projets innovants et collaborer sur des idées créatives.</p>
             <a href="./resources/pdf/cv.pdf" target="_blank" class="btn">Télécharger mon CV</a>
             <a href="./resources/pdf/portfolio.pdf" target="_blank" class="btn">Télécharger mon Portfolio</a>
+            <button id="open-game-btn" class="btn" onclick="window.open('game.html', '_blank')">Jouer au jeu des informations</button>
+
         </div>
     </div>
     <!-- Intégration Spotify -->
@@ -40,7 +45,6 @@
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3uCWMWlPNxJsfLKWh6gXwY?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
 </section>
-
 
 <!-- Frise chronologique (Formations et Expériences) -->
 <section id="timeline" class="section">
@@ -67,13 +71,10 @@
         </article>
         <article>
             <h4>Bac Spécialité, Maths et NSI</h4>
-            <p>Physique-chimie délaissé en 1ère, option mathématiques expertes, et option First (sans passer le test Cambridge).</p>
+            <p>Bac Spécialité, Maths et NSI<p style="color: white;">(sans passer le test Cambridge)</p></p>
         </article>
-
-
     </div>
 </section>
-
 
 <!-- Compétences -->
 <section id="competences" class="section">
@@ -109,7 +110,7 @@
             </div>
 
             <!-- Catégorie Ergonomie et Design -->
-            <div class="skill-category">
+            <div class=" skill-category">
                 <h3>Ergonomie et Design</h3>
                 <ul>
                     <li>Outils de design: Figma</li>
@@ -152,14 +153,7 @@
 <!-- Projets -->
 <section id="projets" class="section">
     <h2>Projets</h2>
-    <div class="project">
-        <h3>Finn Find Da Sword</h3>
-        <p>Un jeu de speedrun développé en Java EE. Projet en cours de développement avec des mécaniques de plateforme.</p>
-    </div>
-    <div class="project">
-        <h3>Logiciel de modélisation/analyse de données</h3>
-        <p>Analyse des données basées sur l'algorithme KNN, projet réalisé dans le cadre d'une étude universitaire.</p>
-    </div>
+    <div id="project-container" class="project-list"></div>
 </section>
 
 <!-- Footer -->
@@ -176,6 +170,7 @@
 
 <!-- Lien vers le script externe -->
 <script src="./js/script.js"></script>
+<script src="./js/projects.js"></script>
 
 </body>
 </html>

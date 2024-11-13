@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informations CSV</title>
+</head>
+<body>
+    <header>
+        <h1>Informations CSV</h1>
+    </header>
+    <main>
+        <div id="csv-content"></div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM fully loaded and parsed');
+            fetch('./data/informations.csv')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erreur lors du chargement du fichier CSV');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    console.log('CSV data loaded');
+                    const contentDiv = document.getElementById('csv-content');
+                    const rows = data.split('\n').map(row => row.split(','));
+
+                    let html = '<table class="info-table">';
+                    html += '<tr>';
+                    rows[0].forEach(header => {
+                        html += `<th>${header}</th>`;
+                    });
+                    html += '</tr>';
+                    rows.slice(1).forEach(row => {
+                        html += '<tr>';
+                        row.forEach(cell => {
+                            html += `<td>${cell}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+
+                    contentDiv.innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Erreur lors du chargement du fichier CSV:', error);
+                    const contentDiv = document.getElementById('csv-content');
+                    contentDiv.innerHTML = `<p style="color: red;">${error.message}</p>`;
+                });
+        });
+    </script>
+</body>
+</html>

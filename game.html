@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu des Informations</title>
+    <link rel="stylesheet" href="./css/game.css">
+</head>
+<body>
+    <div id="game-modal" class="modal"> 
+        <div class="modal-content">
+            <h2>Bienvenue dans le Jeu des Informations</h2>
+            <p>Dans ce jeu, les éléments de vos informations vont descendre et tomber sur le joueur (la boule). Chaque 10 éléments tombés, la vitesse augmente. Le but est de rester en vie le plus longtemps possible et de collecter le plus d'éléments.</p>
+            <button id="start-game-btn" class="btn">Commencer</button>
+        </div>
+    </div>
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+            <h2>Game Over</h2>
+            <p id="final-score"></p>
+            <p id="final-time"></p>
+            <p id="final-record"></p>
+            <button id="restart-game-btn" class="btn">Recommencer</button>
+            <button id="close-game-over-btn" class="btn">Fermer</button>
+        </div>
+    </div>
+    <div id="pause-modal" class="modal">
+        <div class="modal-content">
+            <h2>Pause</h2>
+            <p id="pause-score"></p>
+            <button id="continue-game-btn" class="btn">Continuer</button>
+            <button id="quit-game-btn" class="btn">Quitter</button>
+        </div>
+    </div>
+    <div id="error-modal" class="modal">
+        <div class="modal-content">
+            <h2>Erreur</h2>
+            <p id="error-message"></p>
+            <button id="close-error-btn" class="btn">Fermer</button>
+        </div>
+    </div>
+    <header id="game-header" class="game-header">
+        <div class="score-container">
+            <div id="score" class="score">Score: 0</div>
+            <div id="timer" class="timer">Temps: 0s</div>
+            <div id="record" class="record">Record: 0</div>
+        </div>
+    </header>
+    <div class="platform-game">
+        <div class="player" id="player"></div> <!-- Renommer l'élément en `player` -->
+         <div id="obstacles-container"></div> <!--Ajouter ce conteneur pour les obstacles -->
+    </div>
+    <div class="pause-hint">Échap pour faire pause</div>
+    <script>
+        try {
+            document.addEventListener('DOMContentLoaded', () => {
+                // ...existing code...
+            });
+        } catch (error) {
+            const errorModal = document.getElementById('error-modal');
+            const errorMessage = document.getElementById('error-message');
+            const closeErrorBtn = document.getElementById('close-error-btn');
+
+            errorMessage.textContent = `Une erreur est survenue : ${error.message}`;
+            errorModal.style.display = 'flex';
+
+            closeErrorBtn.addEventListener('click', () => {
+                errorModal.style.display = 'none';
+            });
+        }
+    </script>
+    <script src="./js/game.js"></script>
+</body>
+</html>

@@ -108,3 +108,147 @@ document.addEventListener('DOMContentLoaded', () => {
     // Désactiver la sélection de texte dans le slider
     slider.addEventListener('mousedown', (event) => event.preventDefault());
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const player = document.getElementById('player');
+    const platforms = document.querySelectorAll('.project-platform');
+    const platformGame = document.querySelector('.platform-game');
+    const openGameBtn = document.getElementById('open-game-btn');
+    const gameModal = document.getElementById('game-modal');
+    const closeBtn = document.querySelector('.close-btn');
+    const pauseGameBtn = document.getElementById('pause-game-btn');
+    const quitGameBtn = document.getElementById('quit-game-btn');
+    const projectList = document.querySelector('.project-list');
+    let playerPosition = { x: 50, y: 0 };
+    let isJumping = false;
+    let velocity = { x: 0, y: 0 };
+    const gravity = 0.5;
+    const jumpStrength = 10;
+    let isPaused = false;
+    let gameOver = false;
+
+    function movePlayer(event) {
+        const key = event.key.toLowerCase();
+        if (key === 'd') {
+            velocity.x = 5;
+        } else if (key === 'q') {
+            velocity.x = -5;
+        }
+    }
+
+    function stopPlayer(event) {
+        const key = event.key.toLowerCase();
+        if (key === 'd' || key === 'q') {
+            velocity.x = 0;
+        }
+    }
+
+    function updatePlayer() {
+        if (!isPaused && !gameOver) {
+            playerPosition.x += velocity.x;
+            playerPosition.y += velocity.y;
+            velocity.y += gravity;
+
+            if (playerPosition.y > 0) {
+                playerPosition.y = 0;
+                isJumping = false;
+                velocity.y = 0;
+            }
+
+            player.style.left = `${playerPosition.x}px`;
+            player.style.bottom = `${playerPosition.y}px`;
+
+            checkPlatformCollision();
+            requestAnimationFrame(updatePlayer);
+        }
+    }
+
+    function checkPlatformCollision() {
+        platforms.forEach(platform => {
+            const platformRect = platform.getBoundingClientRect();
+            const playerRect = player.getBoundingClientRect();
+            if (
+                playerRect.right > platformRect.left &&
+                playerRect.left < platformRect.right &&
+                playerRect.bottom > platformRect.top &&
+                playerRect.top < platformRect.bottom
+            ) {
+                gameOver = true;
+                alert('Game Over!');
+                gameModal.style.display = 'none';
+                projectList.style.display = 'flex';
+            }
+        });
+    }
+
+    function movePlatforms() {
+        if (!isPaused && !gameOver) {
+            platforms.forEach(platform => {
+                let top = parseFloat(platform.style.top) || 0;
+                top += 2; // Vitesse de défilement
+                if (top > platformGame.offsetHeight) {
+                    top = -100; // Réinitialiser la position en haut
+                    platform.style.left = `${Math.random() * (platformGame.offsetWidth - platform.offsetWidth)}px`;
+                }
+                platform.style.top = `${top}px`;
+            });
+            requestAnimationFrame(movePlatforms);
+        }
+    }
+
+    platforms.forEach(platform => {
+        platform.addEventListener('dragstart', (event) => {
+            event.dataTransfer.setData('text/plain', null);
+            platform.classList.add('dragging');
+        });
+
+        platform.addEventListener('dragend', (event) => {
+            platform.classList.remove('dragging');
+            const rect = platformGame.getBoundingClientRect();
+            const x = event.clientX - rect.left - platform.offsetWidth / 2;
+            const y = event.clientY - rect.top - platform.offsetHeight / 2;
+            platform.style.position = 'absolute';
+            platform.style.left = `${x}px`;
+            platform.style.top = `${y}px`;
+            platformGame.appendChild(platform);
+        });
+    });
+
+    openGameBtn.addEventListener('click', () => {
+        projectList.style.display = 'none';
+        gameModal.style.display = 'block';
+        gameOver = false;
+        isPaused = false;
+        requestAnimationFrame(updatePlayer);
+        requestAnimationFrame(movePlatforms);
+    });
+
+    closeBtn.addEventListener('click', () => {
+        gameModal.style.display = 'none';
+        projectList.style.display = 'flex';
+    });
+
+    pauseGameBtn.addEventListener('click', () => {
+        isPaused = !isPaused;
+        if (!isPaused) {
+            requestAnimationFrame(updatePlayer);
+            requestAnimationFrame(movePlatforms);
+        }
+    });
+
+    quitGameBtn.addEventListener('click', () => {
+        gameModal.style.display = 'none';
+        projectList.style.display = 'flex';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === gameModal) {
+            gameModal.style.display = 'none';
+            projectList.style.display = 'flex';
+        }
+    });
+
+    document.addEventListener('keydown', movePlayer);
+    document.addEventListener('keyup', stopPlayer);
+    requestAnimationFrame(updatePlayer);
+});
