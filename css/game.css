@@ -218,6 +218,14 @@ a {
     color: #000000; /* Couleur du texte en noir */
 }
 
+.obstacle, .red-obstacle, .yellow-obstacle {
+    font-size: calc(1vw + 1vh + 0.5vmin); /* Adapter la taille du texte à la taille de l'écran */
+    width: auto; /* Adapter la largeur au texte */
+    height: auto; /* Adapter la hauteur au texte */
+    padding: 1vw; /* Adapter le padding à la taille de l'écran */
+    box-sizing: border-box; /* Inclure le padding dans la taille totale */
+}
+
 .obstacle span, .red-obstacle span, .yellow-obstacle span {
     display: block;
     width: 100%;
@@ -273,12 +281,12 @@ a {
     }
 
     .obstacle, .red-obstacle, .yellow-obstacle {
-        font-size: calc(3px + 0.4vw); /* Réduire encore plus la taille du texte pour les téléphones */
+        font-size: calc(0.8vw + 0.8vh + 0.4vmin); /* Adapter la taille du texte à la taille de l'écran pour les téléphones */
         white-space: normal; /* Permettre le retour à la ligne */
         word-wrap: break-word; /* Casser les mots longs */
         width: auto; /* Adapter la largeur au texte pour les téléphones */
         height: auto; /* Adapter la hauteur au texte pour les téléphones */
-        padding: 5px; /* Ajouter du padding pour le texte */
+        padding: 0.8vw; /* Adapter le padding à la taille de l'écran pour les téléphones */
         box-sizing: border-box; /* Inclure le padding dans la taille totale */
     }
 
