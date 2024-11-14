@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let record = localStorage.getItem('record') || 0;
     let mousePosition = { x: 0, y: 0 };
     let informations = {};
+    let blueSpeed = 2;
+    let redSpeed = 0.5;
+    let yellowSpeed = 1;
+    let yellowObstacleThreshold = 20;
 
     fetch('./data/informations.json')
         .then(response => response.json())
@@ -49,16 +53,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     recordElement.textContent = `Record: ${record}`;
 
+    function resetGameVariables() {
+        blueSpeed = 2;
+        redSpeed = 0.5;
+        yellowSpeed = 1;
+        yellowObstacleThreshold = 20;
+        score = 0;
+        speed = 2;
+        isPaused = false;
+        gameOver = false;
+    }
+
     function startGame() {
         gameModal.style.display = 'none';
         gameOverModal.style.display = 'none';
         pauseModal.style.display = 'none';
         emptyModal.style.display = 'none';
-        score = 0;
+        resetGameVariables(); // Réinitialiser les variables de jeu
         scoreElement.textContent = `Score: ${score}`; // Réinitialiser le score affiché
-        speed = 2;
-        isPaused = false;
-        gameOver = false;
         playerPosition = { x: platformGame.offsetWidth / 2 - player.offsetWidth / 2, y: platformGame.offsetHeight / 2 - player.offsetHeight / 2 };
         player.style.left = `${playerPosition.x}px`;
         player.style.top = `${playerPosition.y}px`;
@@ -77,8 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function movePlayer(event) {
-        mousePosition.x = event.clientX;
-        mousePosition.y = event.clientY;
+        if (event.touches) {
+            mousePosition.x = event.touches[0].clientX;
+            mousePosition.y = event.touches[0].clientY;
+        } else {
+            mousePosition.x = event.clientX;
+            mousePosition.y = event.clientY;
+        }
     }
 
     function checkCollisions() {
@@ -185,13 +202,11 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(timerInterval); // Arrêter le timer
         const obstaclesContainer = document.getElementById('obstacles-container');
         obstaclesContainer.innerHTML = ''; // Vider les obstacles
-        location.reload(); // Recharger la page lorsque le jeu est quitté
+        window.close(); // Fermer la page
     });
 
     startGameBtn.addEventListener('click', startGame);
     restartGameBtn.addEventListener('click', () => {
-        score = 0;
-        scoreElement.textContent = `Score: ${score}`; // Réinitialiser le score affiché
         gameOverModal.style.display = 'none';
         startGame();
     });
@@ -201,6 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     platformGame.addEventListener('mousemove', movePlayer);
+    platformGame.addEventListener('touchmove', movePlayer);
 
     // Désactiver les fonctionnalités de copier-coller et de sélection de texte
     document.addEventListener('copy', (event) => event.preventDefault());
@@ -227,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ajouter un écouteur pour le mouvement de la souris
     document.addEventListener('mousemove', movePlayer);
 
-    // Ajouter un écouteur pour détecter lorsque l'utilisateur quitte la page
+    // Ajouter un écouteur pour d��tecter lorsque l'utilisateur quitte la page
     window.addEventListener('blur', () => {
         if (!isPaused && !gameOver) {
             togglePause();
@@ -247,8 +263,8 @@ document.addEventListener('DOMContentLoaded', () => {
         obstacle.textContent = `${info.nom_info} ${info.info}`;
 
         // Générer une position aléatoire en évitant le header
-        const obstacleWidth = 100; // Largeur des rectangles
-        const obstacleHeight = 50; // Hauteur des rectangles
+        const obstacleWidth = window.innerWidth < 768 ? 50 : 100; // Largeur des rectangles
+        const obstacleHeight = window.innerWidth < 768 ? 25 : 50; // Hauteur des rectangles
         const leftPosition = Math.random() * (window.innerWidth - obstacleWidth);
         const topPosition = Math.random() * (gameHeader.offsetHeight - obstacleHeight);
 
@@ -268,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
         yellowObstacle.textContent = `${info.nom_info} ${info.info}`;
         const side = Math.random() < 0.5 ? 'left' : 'right';
         yellowObstacle.style[side] = '0px';
-        yellowObstacle.style.top = `${Math.random() * (window.innerHeight - 75)}px`; // Ajuster pour la nouvelle hauteur
+        yellowObstacle.style.top = `${Math.random() * (window.innerHeight - (window.innerWidth < 768 ? 37.5 : 75))}px`; // Ajuster pour la nouvelle hauteur
         obstaclesContainer.appendChild(yellowObstacle);
     }
 
@@ -278,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
         redObstacle.classList.add('red-obstacle');
         const info = getRandomInfo('importante');
         redObstacle.textContent = `${info.nom_info} ${info.info}`;
-        redObstacle.style.left = `${Math.random() * (window.innerWidth - 200)}px`; // Ajuster pour la nouvelle largeur
+        redObstacle.style.left = `${Math.random() * (window.innerWidth - (window.innerWidth < 768 ? 100 : 200))}px`; // Ajuster pour la nouvelle largeur
         redObstacle.style.top = `0px`; // Commencer en haut
         obstaclesContainer.appendChild(redObstacle);
     }
@@ -291,21 +307,41 @@ document.addEventListener('DOMContentLoaded', () => {
         createObstacle();
     }
 
+    function accelerateBlueObstacles() {
+        blueSpeed += 0.5;
+    }
+
+    function accelerateRedObstacles() {
+        redSpeed += 0.2;
+    }
+
+    function accelerateYellowObstacles() {
+        yellowSpeed += 0.3;
+    }
+
     function moveYellowObstacles() {
         const yellowObstacles = document.querySelectorAll('.yellow-obstacle');
         yellowObstacles.forEach(obstacle => {
             let left = parseFloat(obstacle.style.left) || 0;
             let right = parseFloat(obstacle.style.right) || 0;
             if (obstacle.style.left !== '') {
-                left += 1; // Déplacer vers la droite
+                left += yellowSpeed; // Utiliser la vitesse des obstacles jaunes
                 if (left > window.innerWidth) {
                     left = -100; // Réinitialiser à gauche
+                    accelerateYellowObstacles(); // Augmenter la vitesse des obstacles jaunes
+                    if (yellowObstacleThreshold > 3) {
+                        yellowObstacleThreshold--; // Réduire le seuil jusqu'à 3
+                    }
                 }
                 obstacle.style.left = `${left}px`;
             } else {
-                right += 1; // Déplacer vers la gauche
+                right += yellowSpeed; // Utiliser la vitesse des obstacles jaunes
                 if (right > window.innerWidth) {
                     right = -100; // Réinitialiser à droite
+                    accelerateYellowObstacles(); // Augmenter la vitesse des obstacles jaunes
+                    if (yellowObstacleThreshold > 3) {
+                        yellowObstacleThreshold--; // Réduire le seuil jusqu'à 3
+                    }
                 }
                 obstacle.style.right = `${right}px`;
             }
@@ -316,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const redObstacles = document.querySelectorAll('.red-obstacle');
         redObstacles.forEach(obstacle => {
             let top = parseFloat(obstacle.style.top);
-            top += 0.5; // Déplacer doucement vers le bas
+            top += redSpeed; // Utiliser la vitesse des obstacles rouges
             if (top > window.innerHeight) {
                 obstacle.remove(); // Supprimer l'obstacle lorsqu'il sort de l'écran
             } else {
@@ -329,25 +365,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const obstacles = document.querySelectorAll('.obstacle');
         obstacles.forEach(obstacle => {
             let top = parseFloat(obstacle.style.top);
-            top += speed;
+            top += blueSpeed; // Utiliser la vitesse des obstacles bleus
             if (top > window.innerHeight) {
                 top = -50; // Régénérer en haut
                 obstacle.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
                 score++;
                 scoreElement.textContent = `Score: ${score}`;
-                if (score % 10 === 0 && speed < 10 && score <= 300) {
-                    speed += 0.5; // Augmenter la vitesse tous les 10 points, jusqu'à un maximum de 10
+                if (score % 10 === 0 && blueSpeed < 10 && score <= 1000) {
+                    blueSpeed += 0.5; // Augmenter la vitesse tous les 10 points, jusqu'à un maximum de 10
                 }
                 // Générer un nouvel obstacle bleu si moins de 7 sur l'écran
                 if (document.querySelectorAll('.obstacle').length < 7) {
                     createObstacle();
                 }
                 // Générer un nouvel obstacle jaune si moins de 2 sur l'écran et tous les 20 points
-                if (score % 20 === 0 && document.querySelectorAll('.yellow-obstacle').length < 2) {
+                if (score % yellowObstacleThreshold === 0 && document.querySelectorAll('.yellow-obstacle').length < 3) {
                     createYellowObstacle();
                 }
                 // Générer un nouvel obstacle rouge si tous les 30 points et moins de 1 sur l'écran
-                if (score >= 30 && score % 30 === 0 && document.querySelectorAll('.red-obstacle').length < 1) {
+                if (score >= 30 && score % 30 === 0 && document.querySelectorAll('.red-obstacle').length < 2) {
                     createRedObstacle();
                 }
             }

@@ -1,13 +1,18 @@
 [
     {
         "nom_info": "Nom:",
-        "info": "Gaspard Catry",
-        "type": "importante"
+        "info": "Catry",
+        "type": "Basique"
     },
     {
         "nom_info": "Prénom:",
         "info": "Gaspard",
         "type": "basique"
+    },
+    {
+        "nom_info": "Mes 3 Prénoms:",
+        "info": "Gaspard,Bernard,Omer",
+        "type": "cool"
     },
     {
         "nom_info": "Pseudo:",
@@ -16,78 +21,118 @@
     },
     {
         "nom_info": "Âge:",
-        "info": "20 ans",
-        "type": "importante"
+        "info": "19 ans",
+        "type": "basique"
     },
     {
         "nom_info": "Années d'étude:",
         "info": "2ème année de BUT Informatique",
-        "type": "importante"
+        "type": "basique"
     },
     {
         "nom_info": "École:",
         "info": "IUT de Lille",
-        "type": "importante"
+        "type": "basique"
     },
     {
         "nom_info": "École primaire:",
-        "info": "École Primaire de Lille",
+        "info": "Saint Roch à Rouvroy",
         "type": "basique"
     },
     {
         "nom_info": "Lycée:",
-        "info": "Lycée de Lille",
+        "info": "Lycée Saint Paul à Lens", 
         "type": "basique"
     },
     {
         "nom_info": "Collège:",
-        "info": "Collège de Lille",
+        "info": "Collège Sainte ide à Lens",
         "type": "basique"
     },
     {
         "nom_info": "Nom de mon chat:",
-        "info": "Minou",
+        "info": "Vanille",
         "type": "basique"
     },
     {
-        "nom_info": "Dessin animé préféré:",
+        "nom_info": "Série animé préférée:",
         "info": "Adventure Time",
         "type": "cool"
     },
     {
         "nom_info": "Film préféré:",
-        "info": "Inception",
+        "info": "The Trueman Show",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Série sf préférée:",
+        "info": "Rick et Morty",
         "type": "cool"
     },
     {
-        "nom_info": "Série préférée:",
-        "info": "Breaking Bad",
-        "type": "cool"
-    },
-    {
-        "nom_info": "Manga préféré:",
-        "info": "One Piece",
+        "nom_info": "Animé préféré:",
+        "info": "Sword Art Online",
         "type": "cool"
     },
     {
         "nom_info": "Langage préféré:",
-        "info": "JavaScript",
+        "info": "Java",
+        "type": "importante"
+    },
+    {
+        "nom_info": "Base de données connue:",
+        "info": "PostgreSQL",
+        "type": "importante"
+    },
+    {
+        "nom_info": "Système d'exploitation habituel:",
+        "info": "Windows 10,11",
+        "type": "cool"
+    },
+    {
+        "nom_info": "IDE préféré:",
+        "info": "VS Code",
+        "type": "importante"
+    },
+    {
+        "nom_info": "Outil de versioning préféré:",
+        "info": "Git",
         "type": "importante"
     },
     {
         "nom_info": "Plat préféré:",
-        "info": "Pizza",
+        "info": "Tacos",
         "type": "cool"
     },
     {
-        "nom_info": "Hobby:",
-        "info": "Lecture",
+        "nom_info": "Hobby 1:",
+        "info": "jeux vidéos",
+        "type": "basique"
+    },    
+    {
+        "nom_info": "Hobby 2:",
+        "info": "coder",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Hobby 3:",
+        "info": "dessiner",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Hobby 4:",
+        "info": "débattre",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Hobby 5:",
+        "info": "socialiser",
         "type": "basique"
     },
     {
         "nom_info": "Sport préféré:",
-        "info": "Football",
-        "type": "basique"
+        "info": "Badminton",
+        "type": "cool"
     },
     {
         "nom_info": "Couleur préférée:",
@@ -96,7 +141,7 @@
     },
     {
         "nom_info": "Musique préférée:",
-        "info": "Rock",
+        "info": "Indie",
         "type": "basique"
     }
 ]

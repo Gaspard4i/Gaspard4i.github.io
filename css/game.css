@@ -217,3 +217,20 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1001; /* Mettre le tableau au-dessus de tout */
 }
+
+@media (max-width: 768px) {
+    .obstacle {
+        width: 50px; /* Réduire la largeur pour les téléphones */
+        height: 25px; /* Réduire la hauteur pour les téléphones */
+    }
+
+    .red-obstacle {
+        width: 100px; /* Réduire la largeur pour les téléphones */
+        height: 50px; /* Réduire la hauteur pour les téléphones */
+    }
+
+    .yellow-obstacle {
+        width: 75px; /* Réduire la largeur pour les téléphones */
+        height: 37.5px; /* Réduire la hauteur pour les téléphones */
+    }
+}
