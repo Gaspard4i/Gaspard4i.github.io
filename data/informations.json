@@ -25,18 +25,13 @@
         "type": "basique"
     },
     {
-        "nom_info": "Années d'étude:",
+        "nom_info": "Années d'études:",
         "info": "2ème année de BUT Informatique",
-        "type": "basique"
+        "type": "cool"
     },
     {
         "nom_info": "École:",
         "info": "IUT de Lille",
-        "type": "basique"
-    },
-    {
-        "nom_info": "École primaire:",
-        "info": "Saint Roch à Rouvroy",
         "type": "basique"
     },
     {
@@ -45,12 +40,7 @@
         "type": "basique"
     },
     {
-        "nom_info": "Collège:",
-        "info": "Collège Sainte ide à Lens",
-        "type": "basique"
-    },
-    {
-        "nom_info": "Nom de mon chat:",
+        "nom_info": "Mon chat:",
         "info": "Vanille",
         "type": "basique"
     },
@@ -61,7 +51,7 @@
     },
     {
         "nom_info": "Film préféré:",
-        "info": "The Trueman Show",
+        "info": "The Truman Show",
         "type": "basique"
     },
     {
@@ -80,7 +70,7 @@
         "type": "importante"
     },
     {
-        "nom_info": "Base de données connue:",
+        "nom_info": "Base de données habituel:",
         "info": "PostgreSQL",
         "type": "importante"
     },

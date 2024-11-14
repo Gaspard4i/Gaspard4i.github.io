@@ -338,6 +338,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 left += yellowSpeed; // Utiliser la vitesse des obstacles jaunes
                 if (left > window.innerWidth) {
                     left = -100; // Réinitialiser à gauche
+                    const info = getRandomInfo('cool'); // Prendre un autre élément aléatoire
+                    obstacle.textContent = `${info.nom_info} ${info.info}`;
                     accelerateYellowObstacles(); // Augmenter la vitesse des obstacles jaunes
                     if (yellowObstacleThreshold > 3) {
                         yellowObstacleThreshold--; // Réduire le seuil jusqu'à 3
@@ -348,6 +350,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 right += yellowSpeed; // Utiliser la vitesse des obstacles jaunes
                 if (right > window.innerWidth) {
                     right = -100; // Réinitialiser à droite
+                    const info = getRandomInfo('cool'); // Prendre un autre élément aléatoire
+                    obstacle.textContent = `${info.nom_info} ${info.info}`;
                     accelerateYellowObstacles(); // Augmenter la vitesse des obstacles jaunes
                     if (yellowObstacleThreshold > 3) {
                         yellowObstacleThreshold--; // Réduire le seuil jusqu'à 3
@@ -365,6 +369,8 @@ document.addEventListener('DOMContentLoaded', () => {
             top += redSpeed; // Utiliser la vitesse des obstacles rouges
             if (top > window.innerHeight) {
                 obstacle.remove(); // Supprimer l'obstacle lorsqu'il sort de l'écran
+                const info = getRandomInfo('importante'); // Prendre un autre élément aléatoire
+                obstacle.textContent = `${info.nom_info} ${info.info}`;
             } else {
                 obstacle.style.top = `${top}px`;
             }
