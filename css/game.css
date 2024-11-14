@@ -48,7 +48,6 @@ a {
 
 .block {
     position: absolute;
-    background-color: #0000FF; /* Couleur bleue */
     top: -50px; /* Commencer au-dessus de l'écran */
     left: 50%; /* Positionner au centre */
     transform: translateX(-50%);
@@ -169,26 +168,50 @@ a {
     position: absolute;
     width: 200px; /* Augmenter la largeur pour le texte */
     height: 100px; /* Taille des rectangles */
-    background-color: #FF0000; /* Couleur rouge */
+    background-color: #E8871E; /* Couleur E8871E */
 }
 
 .yellow-obstacle {
     position: absolute;
     width: 150px; /* Augmenter la largeur pour le texte */
     height: 75px; /* Taille des rectangles */
-    background-color: #FFFF00; /* Couleur jaune */
+    background-color: #4B9720; /* Couleur 4B9720 */
 }
 
-.obstacle, .red-obstacle, .yellow-obstacle {
+.obstacle{
     color: #FFFFFF; /* Couleur du texte en blanc */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: calc(8px + 0.8vw); /* Taille du texte adaptée à la taille de l'écran */
+    font-size: calc(5px + 0.4vw); /* Réduire encore la taille du texte */
     text-align: center;
     overflow: hidden;
     border-radius: 10px; /* Arrondir les bords des blocs */
     clip-path: inset(0 round 10px); /* Arrondir la hitbox des blocs */
+    white-space: normal; /* Permettre le retour à la ligne */
+    word-wrap: break-word; /* Casser les mots longs */
+    width: auto; /* Adapter la largeur au texte */
+    height: auto; /* Adapter la hauteur au texte */
+    padding: 10px; /* Ajouter du padding pour le texte */
+    box-sizing: border-box; /* Inclure le padding dans la taille totale */
+}
+
+.red-obstacle, .yellow-obstacle {
+    color: #FFFFFF; /* Couleur du texte en blanc */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 0.4vw); /* Réduire encore la taille du texte */
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px; /* Arrondir les bords des blocs */
+    clip-path: inset(0 round 10px); /* Arrondir la hitbox des blocs */
+    white-space: normal; /* Permettre le retour à la ligne */
+    word-wrap: break-word; /* Casser les mots longs */
+    width: auto; /* Adapter la largeur au texte */
+    height: auto; /* Adapter la hauteur au texte */
+    padding: 10px; /* Ajouter du padding pour le texte */
+    box-sizing: border-box; /* Inclure le padding dans la taille totale */
 }
 
 .red-obstacle, .yellow-obstacle {
@@ -250,7 +273,13 @@ a {
     }
 
     .obstacle, .red-obstacle, .yellow-obstacle {
-        font-size: calc(6px + 0.8vw); /* Taille du texte adaptée à la taille de l'écran pour les téléphones */
+        font-size: calc(3px + 0.4vw); /* Réduire encore plus la taille du texte pour les téléphones */
+        white-space: normal; /* Permettre le retour à la ligne */
+        word-wrap: break-word; /* Casser les mots longs */
+        width: auto; /* Adapter la largeur au texte pour les téléphones */
+        height: auto; /* Adapter la hauteur au texte pour les téléphones */
+        padding: 5px; /* Ajouter du padding pour le texte */
+        box-sizing: border-box; /* Inclure le padding dans la taille totale */
     }
 
     .obstacle span, .red-obstacle span, .yellow-obstacle span {
