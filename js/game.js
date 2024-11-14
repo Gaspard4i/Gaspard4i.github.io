@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let redSpeed = 0.5;
     let yellowSpeed = 1;
     let yellowObstacleThreshold = 20;
+    let isAdminMode = false;
+    let isPasswordEntered = false;
+    const yellowSpeedLimit = 5; // Limite de vitesse pour les blocs jaunes
 
     fetch('./data/informations.json')
         .then(response => response.json())
@@ -99,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function checkCollisions() {
+        if (isAdminMode) return; // Désactiver les collisions en mode admin
         const playerRect = player.getBoundingClientRect();
         const obstacles = document.querySelectorAll('.obstacle, .red-obstacle, .yellow-obstacle');
 
@@ -167,27 +171,13 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(timerInterval);
             pauseScoreElement.textContent = `Score: ${score}`;
             pauseModal.style.display = 'flex';
+            closePauseBtn.style.display = 'block'; // Afficher le bouton en pause
         } else {
             startTime = Date.now() - (parseInt(timerElement.textContent.split(' ')[1]) * 1000);
             timerInterval = setInterval(updateTimer, 1000);
             pauseModal.style.display = 'none';
-            requestAnimationFrame(updatePlayer);
-            requestAnimationFrame(updateObstacles); // Ajouter cette ligne pour reprendre le mouvement des obstacles
-        }
-    }
-
-    function toggleEmptyPause() {
-        if (gameModal.style.display === 'flex' || gameOverModal.style.display === 'flex') {
-            return; // Ne pas permettre la pause si le jeu est dans le menu de présentation ou de Game Over
-        }
-        isPaused = !isPaused;
-        if (isPaused) {
-            clearInterval(timerInterval);
-            emptyModal.style.display = 'flex';
-        } else {
-            startTime = Date.now() - (parseInt(timerElement.textContent.split(' ')[1]) * 1000);
-            timerInterval = setInterval(updateTimer, 1000);
-            emptyModal.style.display = 'none';
+            closePauseBtn.style.display = 'none'; // Masquer le bouton en reprenant le jeu
+            passwordModal.style.display = 'none'; // Masquer la fenêtre de mot de passe en reprenant le jeu
             requestAnimationFrame(updatePlayer);
             requestAnimationFrame(updateObstacles); // Ajouter cette ligne pour reprendre le mouvement des obstacles
         }
@@ -235,15 +225,33 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (event) => {
         if (event.code === 'Space' || event.key === 'Escape') {
             togglePause();
-        } else if (event.ctrlKey) {
-            toggleEmptyPause();
+        } else if (event.key === '²' && isAdminMode) {
+            gameOver = true;
+            gameOverModal.style.display = 'flex';
+            clearInterval(timerInterval);
+        } else if (event.key === '*') {
+            if (isAdminMode) {
+                isAdminMode = false;
+                player.classList.remove('admin'); // Retirer la classe admin pour désactiver le mode admin
+            } else if (isPasswordEntered) {
+                isAdminMode = true;
+                player.classList.add('admin'); // Activer le mode admin sans redemander le mot de passe
+            } else {
+                togglePause();
+                passwordModal.style.display = 'flex'; // Afficher la fenêtre de mot de passe
+                const passwordInput = document.getElementById('password-input');
+                passwordInput.focus(); // Sélectionner automatiquement la zone de texte
+
+            }
+        } else if (event.key === 'Enter' && gameModal.style.display === 'flex') {
+            document.getElementById('start-game-btn').click(); // Appuyer sur le bouton "Commencer"
         }
     });
 
     // Ajouter un écouteur pour le mouvement de la souris
     document.addEventListener('mousemove', movePlayer);
 
-    // Ajouter un écouteur pour d��tecter lorsque l'utilisateur quitte la page
+    // Ajouter un écouteur pour détecter lorsque l'utilisateur quitte la page
     window.addEventListener('blur', () => {
         if (!isPaused && !gameOver) {
             togglePause();
@@ -316,7 +324,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function accelerateYellowObstacles() {
-        yellowSpeed += 0.3;
+        if (yellowSpeed < yellowSpeedLimit) {
+            yellowSpeed += 0.3;
+        }
     }
 
     function moveYellowObstacles() {
@@ -369,20 +379,22 @@ document.addEventListener('DOMContentLoaded', () => {
             if (top > window.innerHeight) {
                 top = -50; // Régénérer en haut
                 obstacle.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
+                const info = getRandomInfo('basique'); // Prendre un autre élément aléatoire
+                obstacle.textContent = `${info.nom_info} ${info.info}`;
                 score++;
                 scoreElement.textContent = `Score: ${score}`;
                 if (score % 10 === 0 && blueSpeed < 10 && score <= 1000) {
                     blueSpeed += 0.5; // Augmenter la vitesse tous les 10 points, jusqu'à un maximum de 10
                 }
-                // Générer un nouvel obstacle bleu si moins de 7 sur l'écran
-                if (document.querySelectorAll('.obstacle').length < 7) {
+                // Générer un nouvel obstacle bleu si moins de 6 sur l'écran
+                if (document.querySelectorAll('.obstacle').length < 6) {
                     createObstacle();
                 }
-                // Générer un nouvel obstacle jaune si moins de 2 sur l'écran et tous les 20 points
+                // Générer un nouvel obstacle jaune si moins de 3 sur l'écran et tous les 20 points
                 if (score % yellowObstacleThreshold === 0 && document.querySelectorAll('.yellow-obstacle').length < 3) {
                     createYellowObstacle();
                 }
-                // Générer un nouvel obstacle rouge si tous les 30 points et moins de 1 sur l'écran
+                // Générer un nouvel obstacle rouge si tous les 30 points et moins de 2 sur l'écran
                 if (score >= 30 && score % 30 === 0 && document.querySelectorAll('.red-obstacle').length < 2) {
                     createRedObstacle();
                 }
@@ -409,4 +421,52 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     `;
     document.body.appendChild(emptyModal);
+
+    const closePauseBtn = document.createElement('button');
+    closePauseBtn.classList.add('close-btn');
+    closePauseBtn.style.display = 'none'; // Masquer le bouton par défaut
+    document.body.appendChild(closePauseBtn);
+
+    const passwordModal = document.createElement('div');
+    passwordModal.classList.add('modal');
+    passwordModal.style.display = 'none';
+    passwordModal.innerHTML = `
+        <div class="modal-content">
+            <h2>Entrez le mot de passe</h2>
+            <input type="password" id="password-input" class="password-input" placeholder="Mot de passe">
+            <button id="submit-password-btn" class="btn">Valider</button>
+        </div>
+    `;
+    document.body.appendChild(passwordModal);
+
+    closePauseBtn.addEventListener('click', () => {
+        passwordModal.style.display = 'flex';
+        const passwordInput = document.getElementById('password-input');
+        passwordInput.value = ''; // Vider la zone de texte
+        passwordInput.focus(); // Sélectionner automatiquement la zone de texte
+    });
+
+    document.getElementById('submit-password-btn').addEventListener('click', () => {
+        const passwordInput = document.getElementById('password-input').value;
+        if (passwordInput === 'godmod') {
+            passwordModal.style.display = 'none';
+            isAdminMode = true;
+            isPasswordEntered = true;
+            player.classList.add('admin'); // Ajouter la classe admin pour la bordure bleu ciel
+        } else {
+            alert('Mot de passe incorrect');
+        }
+    });
+
+    document.getElementById('password-input').addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            document.getElementById('submit-password-btn').click(); // Valider l'action en appuyant sur Entrée
+        }
+    });
+
+    const closePauseBtnInModal = document.createElement('button');
+    closePauseBtnInModal.classList.add('close-btn');
+    pauseModal.querySelector('.modal-content').appendChild(closePauseBtnInModal);
+
+    closePauseBtnInModal.addEventListener('click', togglePause);
 });

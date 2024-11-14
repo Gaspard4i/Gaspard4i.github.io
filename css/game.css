@@ -42,6 +42,10 @@ a {
     pointer-events: none;
 }
 
+.player.admin {
+    border: 2px solid #87CEEB; /* Bordure bleu ciel pour le mode admin */
+}
+
 .block {
     position: absolute;
     background-color: #0000FF; /* Couleur bleue */
@@ -180,13 +184,24 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px; /* Taille du texte adaptée pour ne pas dépasser */
+    font-size: calc(8px + 0.8vw); /* Taille du texte adaptée à la taille de l'écran */
     text-align: center;
     overflow: hidden;
+    border-radius: 10px; /* Arrondir les bords des blocs */
+    clip-path: inset(0 round 10px); /* Arrondir la hitbox des blocs */
 }
 
 .red-obstacle, .yellow-obstacle {
     color: #000000; /* Couleur du texte en noir */
+}
+
+.obstacle span, .red-obstacle span, .yellow-obstacle span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: calc(8px + 0.8vw); /* Taille du texte adaptée à la taille de l'écran */
 }
 
 .info-table {
@@ -233,4 +248,64 @@ a {
         width: 75px; /* Réduire la largeur pour les téléphones */
         height: 37.5px; /* Réduire la hauteur pour les téléphones */
     }
+
+    .obstacle, .red-obstacle, .yellow-obstacle {
+        font-size: calc(6px + 0.8vw); /* Taille du texte adaptée à la taille de l'écran pour les téléphones */
+    }
+
+    .obstacle span, .red-obstacle span, .yellow-obstacle span {
+        font-size: calc(6px + 0.8vw); /* Taille du texte adaptée à la taille de l'écran pour les téléphones */
+    }
+}
+
+.pause-modal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pause-modal .close-btn:hover {
+    background-color: #f2f2f2;
+}
+
+.close-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Mettre le bouton au-dessus de tout */
+}
+
+.close-btn:hover {
+    background-color: #f2f2f2;
+}
+
+.password-input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
 }
