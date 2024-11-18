@@ -177,12 +177,12 @@ a {
 .yellow-obstacle {
     background-color: #4B9720; /* Couleur 4B9720 */
     color: #000000; /* Couleur du texte en noir */
+
 }
 
 .obstacle span, .red-obstacle span, .yellow-obstacle span {
     display: block;
     width: 100%;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: calc(8px + 0.8vw); /* Taille du texte adaptée à la taille de l'écran */
