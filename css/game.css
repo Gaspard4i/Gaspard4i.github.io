@@ -7,9 +7,11 @@ body {
     -webkit-user-select: none; /* Désactiver la sélection de texte pour Safari */
     -ms-user-select: none; /* Désactiver la sélection de texte pour Internet Explorer/Edge */
 }
+
 a {
     text-decoration: none;
 }
+
 .platform-game {
     position: absolute;
     width: 100%;
@@ -46,13 +48,6 @@ a {
     border: 2px solid #87CEEB; /* Bordure bleu ciel pour le mode admin */
 }
 
-.block {
-    position: absolute;
-    top: -50px; /* Commencer au-dessus de l'écran */
-    left: 50%; /* Positionner au centre */
-    transform: translateX(-50%);
-}
-
 .modal {
     display: flex;
     align-items: center;
@@ -78,14 +73,8 @@ a {
 }
 
 .modal-content .btn {
-    position: static; /* Réinitialiser la position absolue */
     margin: 20px auto 0; /* Centrer le bouton et ajouter une marge en haut */
     display: block; /* Centrer le bouton */
-}
-
-.empty-modal .modal-content {
-    width: 300px;
-    height: 200px;
 }
 
 .btn {
@@ -103,13 +92,11 @@ a {
 
 .btn:hover {
     background-color: #9BD47D;
-    color: #fff;
     transform: translateY(-2px);
 }
 
 .btn:active {
     background-color: #4B9720;
-    color: #fff;
     transform: translateY(1px);
 }
 
@@ -157,73 +144,39 @@ a {
     z-index: 10; /* Mettre le header au-dessus de la boule */
 }
 
-.obstacle {
-    position: absolute;
-    width: 100px; /* Augmenter la largeur pour le texte */
-    height: 50px; /* Taille des carrés */
-    background-color: #003366; /* Couleur bleu foncé */
-}
-
-.red-obstacle {
-    position: absolute;
-    width: 200px; /* Augmenter la largeur pour le texte */
-    height: 100px; /* Taille des rectangles */
-    background-color: #E8871E; /* Couleur E8871E */
-}
-
-.yellow-obstacle {
-    position: absolute;
-    width: 150px; /* Augmenter la largeur pour le texte */
-    height: 75px; /* Taille des rectangles */
-    background-color: #4B9720; /* Couleur 4B9720 */
-}
-
-.obstacle{
-    color: #FFFFFF; /* Couleur du texte en blanc */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(5px + 0.4vw); /* Réduire encore la taille du texte */
-    text-align: center;
-    overflow: hidden;
-    border-radius: 10px; /* Arrondir les bords des blocs */
-    clip-path: inset(0 round 10px); /* Arrondir la hitbox des blocs */
-    white-space: normal; /* Permettre le retour à la ligne */
-    word-wrap: break-word; /* Casser les mots longs */
-    width: auto; /* Adapter la largeur au texte */
-    height: auto; /* Adapter la hauteur au texte */
-    padding: 10px; /* Ajouter du padding pour le texte */
-    box-sizing: border-box; /* Inclure le padding dans la taille totale */
-}
-
-.red-obstacle, .yellow-obstacle {
-    color: #FFFFFF; /* Couleur du texte en blanc */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 0.4vw); /* Réduire encore la taille du texte */
-    text-align: center;
-    overflow: hidden;
-    border-radius: 10px; /* Arrondir les bords des blocs */
-    clip-path: inset(0 round 10px); /* Arrondir la hitbox des blocs */
-    white-space: normal; /* Permettre le retour à la ligne */
-    word-wrap: break-word; /* Casser les mots longs */
-    width: auto; /* Adapter la largeur au texte */
-    height: auto; /* Adapter la hauteur au texte */
-    padding: 10px; /* Ajouter du padding pour le texte */
-    box-sizing: border-box; /* Inclure le padding dans la taille totale */
-}
-
-.red-obstacle, .yellow-obstacle {
-    color: #000000; /* Couleur du texte en noir */
-}
-
 .obstacle, .red-obstacle, .yellow-obstacle {
-    font-size: calc(1vw + 1vh + 0.5vmin); /* Adapter la taille du texte à la taille de l'écran */
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px; /* Arrondir les bords des blocs */
+    clip-path: inset(0 round 10px); /* Arrondir la hitbox des blocs */
+    white-space: normal; /* Permettre le retour à la ligne */
+    word-wrap: break-word; /* Casser les mots longs */
     width: auto; /* Adapter la largeur au texte */
     height: auto; /* Adapter la hauteur au texte */
     padding: 1vw; /* Adapter le padding à la taille de l'écran */
     box-sizing: border-box; /* Inclure le padding dans la taille totale */
+    font-size: calc(1vw + 1vh + 0.5vmin); /* Adapter la taille du texte à la taille de l'écran */
+}
+
+.obstacle {
+    background-color: #003366; /* Couleur bleu foncé */
+    color: #FFFFFF; /* Couleur du texte en blanc */
+    font-size: calc(0.8vw + 0.5vh); /* Augmenter légèrement la taille du texte */
+    padding: 5px; /* Ajouter du padding pour le texte */
+}
+
+.red-obstacle {
+    background-color: #E8871E; /* Couleur E8871E */
+    color: #000000; /* Couleur du texte en noir */
+}
+
+.yellow-obstacle {
+    background-color: #4B9720; /* Couleur 4B9720 */
+    color: #000000; /* Couleur du texte en noir */
 }
 
 .obstacle span, .red-obstacle span, .yellow-obstacle span {
@@ -268,6 +221,7 @@ a {
     .obstacle {
         width: 50px; /* Réduire la largeur pour les téléphones */
         height: 25px; /* Réduire la hauteur pour les téléphones */
+        font-size: 0; /* Ne pas afficher le texte si la fenêtre est trop petite */
     }
 
     .red-obstacle {
@@ -282,38 +236,12 @@ a {
 
     .obstacle, .red-obstacle, .yellow-obstacle {
         font-size: calc(0.8vw + 0.8vh + 0.4vmin); /* Adapter la taille du texte à la taille de l'écran pour les téléphones */
-        white-space: normal; /* Permettre le retour à la ligne */
-        word-wrap: break-word; /* Casser les mots longs */
-        width: auto; /* Adapter la largeur au texte pour les téléphones */
-        height: auto; /* Adapter la hauteur au texte pour les téléphones */
         padding: 0.8vw; /* Adapter le padding à la taille de l'écran pour les téléphones */
-        box-sizing: border-box; /* Inclure le padding dans la taille totale */
     }
 
     .obstacle span, .red-obstacle span, .yellow-obstacle span {
         font-size: calc(6px + 0.8vw); /* Taille du texte adaptée à la taille de l'écran pour les téléphones */
     }
-}
-
-.pause-modal .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    background-color: #fff;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.pause-modal .close-btn:hover {
-    background-color: #f2f2f2;
 }
 
 .close-btn {
