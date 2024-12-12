@@ -455,6 +455,16 @@ header .navbar ul li a:hover {
 .social-icons a.instagram:hover {
   background-color: #ee00da;
 }
+
+/* ...existing code... */
+
+a.fab.fa-github,
+a.fab.fa-gitlab {
+    color: #fff !important;
+}
+
+/* ...existing code... */
+
 /* social icons end */
 
 /* hero media queries starts*/
@@ -1658,4 +1668,32 @@ button[type="submit"]:hover {
   color: #003366; /* Bleu foncé */
   background: #fff; /* Blanc */
   border: solid 1px #003366; /* Bleu foncé */
+}
+.portfolios .fas {
+  color: #fff !important;
+}
+
+.portfolios .fas.fa-briefcase {
+  color: inherit; 
+}
+
+.portfolios .fas {
+  color: #fff !important;
+}
+
+a.fab.fa-github,
+a.fab.fa-gitlab {
+  color: #fff !important;
+}
+.portfolios .portfolio-item .hover-items .icons .icon.github {
+  background-color: #333;
+}
+.portfolios .portfolio-item .hover-items .icons .icon.github i {
+  color: #fff;
+}
+.portfolios .portfolio-item .hover-items .icons .icon.github:hover {
+  background-color: #fff;
+}
+.portfolios .portfolio-item .hover-items .icons .icon.github:hover i {
+  color: #333;
 }

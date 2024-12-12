@@ -435,45 +435,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contact-form').addEventListener('submit', submitForm);
 });
 
-async function submitForm(event) {
-  event.preventDefault();
-  const form = document.getElementById("contact-form");
-  const formData = new FormData(form);
-  const statusMessage = document.getElementById("status-message");
-
-  try {
-    const response = await fetch("/api/sendEmail", {
-      method: "POST",
-      body: JSON.stringify({
-        name: formData.get("name"),
-        email: formData.get("email"),
-        message: formData.get("message"),
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    const result = await response.json();
-
-    if (response.ok) {
-      statusMessage.textContent = "Message sent successfully!";
-      statusMessage.style.color = "green";
-      form.reset();
-    } else {
-      statusMessage.textContent = `Error: ${result.error}`;
-      statusMessage.style.color = "red";
-    }
-  } catch (error) {
-    statusMessage.textContent = `Error: ${error.message}`;
-    statusMessage.style.color = "red";
-  }
-}
-
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", (event) => submitForm(event));
-
 fetchData().then((data) => {
   showSkills(data);
 });
