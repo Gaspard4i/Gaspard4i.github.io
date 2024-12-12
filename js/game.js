@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let yellowObstacleThreshold = 20;
     let isAdminMode = false;
     let isPasswordEntered = false;
-    const yellowSpeedLimit = 5; // Limite de vitesse pour les blocs jaunes
+    const yellowSpeedLimit = 5;
 
     fetch('./data/informations.json')
         .then(response => response.json())
@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => {
             console.error('Erreur lors du chargement des informations:', error);
-            informations = null; // Indiquer qu'il y a eu une erreur
+            informations = null;
         });
 
     function getRandomInfo(type) {
         if (!informations || !informations[type] || informations[type].length === 0) {
-            return { nom_info: "", info: "Information" }; // Retourner "Information" en cas d'erreur
+            return { nom_info: "", info: "Information" };
         }
         const infoList = informations[type];
         return infoList[Math.floor(Math.random() * infoList.length)];
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     recordElement.textContent = `Record: ${record}`;
 
+    // Reset game variables
     function resetGameVariables() {
         blueSpeed = 2;
         redSpeed = 0.5;
@@ -67,23 +68,25 @@ document.addEventListener('DOMContentLoaded', () => {
         gameOver = false;
     }
 
+    // Start the game
     function startGame() {
         gameModal.style.display = 'none';
         gameOverModal.style.display = 'none';
         pauseModal.style.display = 'none';
         emptyModal.style.display = 'none';
-        resetGameVariables(); // Réinitialiser les variables de jeu
-        scoreElement.textContent = `Score: ${score}`; // Réinitialiser le score affiché
+        resetGameVariables();
+        scoreElement.textContent = `Score: ${score}`;
         playerPosition = { x: platformGame.offsetWidth / 2 - player.offsetWidth / 2, y: platformGame.offsetHeight / 2 - player.offsetHeight / 2 };
         player.style.left = `${playerPosition.x}px`;
         player.style.top = `${playerPosition.y}px`;
         startTime = Date.now();
         timerInterval = setInterval(updateTimer, 1000);
-        createObstacles(); // Régénérer les obstacles
+        createObstacles();
         requestAnimationFrame(updatePlayer);
         requestAnimationFrame(updateObstacles);
     }
 
+    // Update the timer
     function updateTimer() {
         if (!isPaused) {
             const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
@@ -91,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Move the player
     function movePlayer(event) {
         if (event.touches) {
             mousePosition.x = event.touches[0].clientX;
@@ -101,8 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Check for collisions
     function checkCollisions() {
-        if (isAdminMode) return; // Désactiver les collisions en mode admin
+        if (isAdminMode) return;
         const playerRect = player.getBoundingClientRect();
         const obstacles = document.querySelectorAll('.obstacle, .red-obstacle, .yellow-obstacle');
 
@@ -117,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 gameOver = true;
                 gameOverModal.style.display = 'flex';
                 clearInterval(timerInterval);
-                // Mettre à jour le record si le score actuel est supérieur
                 if (score > record) {
                     record = score;
                     localStorage.setItem('record', record);
@@ -127,14 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Update the player's position
     function updatePlayer() {
         if (!isPaused && !gameOver) {
             const dx = mousePosition.x - (playerPosition.x + player.offsetWidth / 2);
             const dy = mousePosition.y - (playerPosition.y + player.offsetHeight / 2);
-            playerPosition.x += dx * 0.35; // Ajuster la vitesse de suivi
-            playerPosition.y += dy * 0.35; // Ajuster la vitesse de suivi
+            playerPosition.x += dx * 0.35;
+            playerPosition.y += dy * 0.35;
 
-            // Vérifier que le rond reste dans la zone visible
             if (playerPosition.x < 0) playerPosition.x = 0;
             if (playerPosition.y < 0) playerPosition.y = 0;
             if (playerPosition.x + player.offsetWidth > platformGame.offsetWidth) playerPosition.x = platformGame.offsetWidth - player.offsetWidth;
@@ -143,7 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
             player.style.left = `${playerPosition.x}px`;
             player.style.top = `${playerPosition.y}px`;
 
-            // Vérifier la collision avec le header
             const headerRect = gameHeader.getBoundingClientRect();
             const playerRect = player.getBoundingClientRect();
             if (
@@ -155,31 +158,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 playerPosition.y = headerRect.bottom;
             }
 
-            // Vérifier les collisions avec les obstacles
             checkCollisions();
 
             requestAnimationFrame(updatePlayer);
         }
     }
 
+    // Toggle pause state
     function togglePause() {
         if (gameModal.style.display === 'flex' || gameOverModal.style.display === 'flex') {
-            return; // Ne pas permettre la pause si le jeu est dans le menu de présentation ou de Game Over
+            return;
         }
         isPaused = !isPaused;
         if (isPaused) {
             clearInterval(timerInterval);
             pauseScoreElement.textContent = `Score: ${score}`;
             pauseModal.style.display = 'flex';
-            closePauseBtn.style.display = 'block'; // Afficher le bouton en pause
+            closePauseBtn.style.display = 'block';
         } else {
             startTime = Date.now() - (parseInt(timerElement.textContent.split(' ')[1]) * 1000);
             timerInterval = setInterval(updateTimer, 1000);
             pauseModal.style.display = 'none';
-            closePauseBtn.style.display = 'none'; // Masquer le bouton en reprenant le jeu
-            passwordModal.style.display = 'none'; // Masquer la fenêtre de mot de passe en reprenant le jeu
+            closePauseBtn.style.display = 'none';
+            passwordModal.style.display = 'none';
             requestAnimationFrame(updatePlayer);
-            requestAnimationFrame(updateObstacles); // Ajouter cette ligne pour reprendre le mouvement des obstacles
+            requestAnimationFrame(updateObstacles);
         }
     }
 
@@ -187,12 +190,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     quitGameBtn.addEventListener('click', () => {
         score = 0;
-        scoreElement.textContent = `Score: ${score}`; // Réinitialiser le score affiché
-        timerElement.textContent = `Temps: 0s`; // Réinitialiser le temps affiché
-        clearInterval(timerInterval); // Arrêter le timer
+        scoreElement.textContent = `Score: ${score}`;
+        timerElement.textContent = `Temps: 0s`;
+        clearInterval(timerInterval);
         const obstaclesContainer = document.getElementById('obstacles-container');
-        obstaclesContainer.innerHTML = ''; // Vider les obstacles
-        window.close(); // Fermer la page
+        obstaclesContainer.innerHTML = '';
+        window.close();
     });
 
     startGameBtn.addEventListener('click', startGame);
@@ -208,20 +211,15 @@ document.addEventListener('DOMContentLoaded', () => {
     platformGame.addEventListener('mousemove', movePlayer);
     platformGame.addEventListener('touchmove', movePlayer);
 
-    // Désactiver les fonctionnalités de copier-coller et de sélection de texte
     document.addEventListener('copy', (event) => event.preventDefault());
     document.addEventListener('cut', (event) => event.preventDefault());
     document.addEventListener('paste', (event) => event.preventDefault());
     document.addEventListener('contextmenu', (event) => event.preventDefault());
 
-    // Masquer la fenêtre de Game Over et Pause au chargement de la page
     gameOverModal.style.display = 'none';
     pauseModal.style.display = 'none';
-
-    // Afficher la fenêtre modale au chargement de la page
     gameModal.style.display = 'flex';
 
-    // Ajouter un écouteur pour la barre d'espace pour faire pause
     document.addEventListener('keydown', (event) => {
         if (event.code === 'Space' || event.key === 'Escape') {
             togglePause();
@@ -232,37 +230,34 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (event.key === '*') {
             if (isAdminMode) {
                 isAdminMode = false;
-                player.classList.remove('admin'); // Retirer la classe admin pour désactiver le mode admin
+                player.classList.remove('admin');
             } else if (isPasswordEntered) {
                 isAdminMode = true;
-                player.classList.add('admin'); // Activer le mode admin sans redemander le mot de passe
+                player.classList.add('admin');
             } else {
                 togglePause();
-                passwordModal.style.display = 'flex'; // Afficher la fenêtre de mot de passe
+                passwordModal.style.display = 'flex';
                 const passwordInput = document.getElementById('password-input');
-                passwordInput.focus(); // Sélectionner automatiquement la zone de texte
-
+                passwordInput.focus();
             }
         } else if (event.key === 'Enter' && gameModal.style.display === 'flex') {
-            document.getElementById('start-game-btn').click(); // Appuyer sur le bouton "Commencer"
+            document.getElementById('start-game-btn').click();
         }
     });
 
-    // Ajouter un écouteur pour le mouvement de la souris
     document.addEventListener('mousemove', movePlayer);
 
-    // Ajouter un écouteur pour détecter lorsque l'utilisateur quitte la page
     window.addEventListener('blur', () => {
         if (!isPaused && !gameOver) {
             togglePause();
         }
     });
 
-    // Positionner la boule au centre de l'écran au chargement de la page
     playerPosition = { x: platformGame.offsetWidth / 2 - player.offsetWidth / 2, y: platformGame.offsetHeight / 2 - player.offsetHeight / 2 };
     player.style.left = `${playerPosition.x}px`;
     player.style.top = `${playerPosition.y}px`;
 
+    // Create a blue obstacle
     function createObstacle() {
         const obstaclesContainer = document.getElementById('obstacles-container');
         const obstacle = document.createElement('div');
@@ -270,9 +265,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const info = getRandomInfo('basique');
         obstacle.textContent = `${info.nom_info} ${info.info}`;
 
-        // Générer une position aléatoire en évitant le header
-        const obstacleWidth = window.innerWidth < 768 ? 50 : 100; // Largeur des rectangles
-        const obstacleHeight = window.innerWidth < 768 ? 25 : 50; // Hauteur des rectangles
+        const obstacleWidth = window.innerWidth < 768 ? 50 : 100;
+        const obstacleHeight = window.innerWidth < 768 ? 25 : 50;
         const leftPosition = Math.random() * (window.innerWidth - obstacleWidth);
         const topPosition = Math.random() * (gameHeader.offsetHeight - obstacleHeight);
 
@@ -284,6 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
         obstaclesContainer.appendChild(obstacle);
     }
 
+    // Create a yellow obstacle
     function createYellowObstacle() {
         const obstaclesContainer = document.getElementById('obstacles-container');
         const yellowObstacle = document.createElement('div');
@@ -292,69 +287,73 @@ document.addEventListener('DOMContentLoaded', () => {
         yellowObstacle.textContent = `${info.nom_info} ${info.info}`;
         const side = Math.random() < 0.5 ? 'left' : 'right';
         yellowObstacle.style[side] = '0px';
-        yellowObstacle.style.top = `${Math.random() * (window.innerHeight - (window.innerWidth < 768 ? 37.5 : 75))}px`; // Ajuster pour la nouvelle hauteur
+        yellowObstacle.style.top = `${Math.random() * (window.innerHeight - (window.innerWidth < 768 ? 37.5 : 75))}px`;
         obstaclesContainer.appendChild(yellowObstacle);
     }
 
+    // Create a red obstacle
     function createRedObstacle() {
         const obstaclesContainer = document.getElementById('obstacles-container');
         const redObstacle = document.createElement('div');
         redObstacle.classList.add('red-obstacle');
         const info = getRandomInfo('importante');
         redObstacle.textContent = `${info.nom_info} ${info.info}`;
-        redObstacle.style.left = `${Math.random() * (window.innerWidth - (window.innerWidth < 768 ? 100 : 200))}px`; // Ajuster pour la nouvelle largeur
-        redObstacle.style.top = `0px`; // Commencer en haut
+        redObstacle.style.left = `${Math.random() * (window.innerWidth - (window.innerWidth < 768 ? 100 : 200))}px`;
+        redObstacle.style.top = `0px`;
         obstaclesContainer.appendChild(redObstacle);
     }
 
+    // Create obstacles
     function createObstacles() {
         const obstaclesContainer = document.getElementById('obstacles-container');
-        obstaclesContainer.innerHTML = ''; // Vider les obstacles existants
-
-        // Générer le premier obstacle bleu
+        obstaclesContainer.innerHTML = '';
         createObstacle();
     }
 
+    // Accelerate blue obstacles
     function accelerateBlueObstacles() {
         blueSpeed += 0.5;
     }
 
+    // Accelerate red obstacles
     function accelerateRedObstacles() {
         redSpeed += 0.2;
     }
 
+    // Accelerate yellow obstacles
     function accelerateYellowObstacles() {
         if (yellowSpeed < yellowSpeedLimit) {
             yellowSpeed += 0.3;
         }
     }
 
+    // Move yellow obstacles
     function moveYellowObstacles() {
         const yellowObstacles = document.querySelectorAll('.yellow-obstacle');
         yellowObstacles.forEach(obstacle => {
             let left = parseFloat(obstacle.style.left) || 0;
             let right = parseFloat(obstacle.style.right) || 0;
             if (obstacle.style.left !== '') {
-                left += yellowSpeed; // Utiliser la vitesse des obstacles jaunes
+                left += yellowSpeed;
                 if (left > window.innerWidth) {
-                    left = -100; // Réinitialiser à gauche
-                    const info = getRandomInfo('cool'); // Prendre un autre élément aléatoire
+                    left = -100;
+                    const info = getRandomInfo('cool');
                     obstacle.textContent = `${info.nom_info} ${info.info}`;
-                    accelerateYellowObstacles(); // Augmenter la vitesse des obstacles jaunes
+                    accelerateYellowObstacles();
                     if (yellowObstacleThreshold > 3) {
-                        yellowObstacleThreshold--; // Réduire le seuil jusqu'à 3
+                        yellowObstacleThreshold--;
                     }
                 }
                 obstacle.style.left = `${left}px`;
             } else {
-                right += yellowSpeed; // Utiliser la vitesse des obstacles jaunes
+                right += yellowSpeed;
                 if (right > window.innerWidth) {
-                    right = -100; // Réinitialiser à droite
-                    const info = getRandomInfo('cool'); // Prendre un autre élément aléatoire
+                    right = -100;
+                    const info = getRandomInfo('cool');
                     obstacle.textContent = `${info.nom_info} ${info.info}`;
-                    accelerateYellowObstacles(); // Augmenter la vitesse des obstacles jaunes
+                    accelerateYellowObstacles();
                     if (yellowObstacleThreshold > 3) {
-                        yellowObstacleThreshold--; // Réduire le seuil jusqu'à 3
+                        yellowObstacleThreshold--;
                     }
                 }
                 obstacle.style.right = `${right}px`;
@@ -362,14 +361,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Move red obstacles
     function moveRedObstacles() {
         const redObstacles = document.querySelectorAll('.red-obstacle');
         redObstacles.forEach(obstacle => {
             let top = parseFloat(obstacle.style.top);
-            top += redSpeed; // Utiliser la vitesse des obstacles rouges
+            top += redSpeed;
             if (top > window.innerHeight) {
-                obstacle.remove(); // Supprimer l'obstacle lorsqu'il sort de l'écran
-                const info = getRandomInfo('importante'); // Prendre un autre élément aléatoire
+                obstacle.remove();
+                const info = getRandomInfo('importante');
                 obstacle.textContent = `${info.nom_info} ${info.info}`;
             } else {
                 obstacle.style.top = `${top}px`;
@@ -377,40 +377,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Move obstacles
     function moveObstacles() {
         const obstacles = document.querySelectorAll('.obstacle');
         obstacles.forEach(obstacle => {
             let top = parseFloat(obstacle.style.top);
-            top += blueSpeed; // Utiliser la vitesse des obstacles bleus
+            top += blueSpeed;
             if (top > window.innerHeight) {
-                top = -50; // Régénérer en haut
+                top = -50;
                 obstacle.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
-                const info = getRandomInfo('basique'); // Prendre un autre élément aléatoire
+                const info = getRandomInfo('basique');
                 obstacle.textContent = `${info.nom_info} ${info.info}`;
                 score++;
                 scoreElement.textContent = `Score: ${score}`;
                 if (score % 10 === 0 && blueSpeed < 10 && score <= 1000) {
-                    blueSpeed += 0.5; // Augmenter la vitesse tous les 10 points, jusqu'à un maximum de 10
+                    blueSpeed += 0.5;
                 }
-                // Générer un nouvel obstacle bleu si moins de 6 sur l'écran
                 if (document.querySelectorAll('.obstacle').length < 6) {
                     createObstacle();
                 }
-                // Générer un nouvel obstacle jaune si moins de 3 sur l'écran et tous les 20 points
                 if (score % yellowObstacleThreshold === 0 && document.querySelectorAll('.yellow-obstacle').length < 3) {
                     createYellowObstacle();
                 }
-                // Générer un nouvel obstacle rouge si tous les 30 points et moins de 2 sur l'écran
                 if (score >= 30 && score % 30 === 0 && document.querySelectorAll('.red-obstacle').length < 2) {
                     createRedObstacle();
                 }
             }
             obstacle.style.top = `${top}px`;
         });
-        moveYellowObstacles(); // Déplacer les obstacles jaunes
-        moveRedObstacles(); // Déplacer les obstacles rouges
+        moveYellowObstacles();
+        moveRedObstacles();
     }
 
+    // Update obstacles
     function updateObstacles() {
         if (!isPaused && !gameOver) {
             moveObstacles();
@@ -430,7 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closePauseBtn = document.createElement('button');
     closePauseBtn.classList.add('close-btn');
-    closePauseBtn.style.display = 'none'; // Masquer le bouton par défaut
+    closePauseBtn.style.display = 'none';
     document.body.appendChild(closePauseBtn);
 
     const passwordModal = document.createElement('div');
@@ -448,8 +447,8 @@ document.addEventListener('DOMContentLoaded', () => {
     closePauseBtn.addEventListener('click', () => {
         passwordModal.style.display = 'flex';
         const passwordInput = document.getElementById('password-input');
-        passwordInput.value = ''; // Vider la zone de texte
-        passwordInput.focus(); // Sélectionner automatiquement la zone de texte
+        passwordInput.value = '';
+        passwordInput.focus();
     });
 
     document.getElementById('submit-password-btn').addEventListener('click', () => {
@@ -458,7 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
             passwordModal.style.display = 'none';
             isAdminMode = true;
             isPasswordEntered = true;
-            player.classList.add('admin'); // Ajouter la classe admin pour la bordure bleu ciel
+            player.classList.add('admin');
         } else {
             alert('Mot de passe incorrect');
         }
@@ -466,7 +465,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('password-input').addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
-            document.getElementById('submit-password-btn').click(); // Valider l'action en appuyant sur Entrée
+            document.getElementById('submit-password-btn').click();
         }
     });
 
