@@ -1046,7 +1046,7 @@ header .navbar ul li a:hover {
   width: 100%;
   background: #fff; 
   border-radius: 1.5rem;
-  margin: 2rem 5rem;
+  margin: 2rem auto; /* Centrer horizontalement */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 .contact .container .content {
