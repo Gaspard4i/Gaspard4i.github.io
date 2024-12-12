@@ -265,15 +265,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const info = getRandomInfo('basique');
         obstacle.textContent = `${info.nom_info} ${info.info}`;
 
-        const obstacleWidth = window.innerWidth < 768 ? 50 : 100;
-        const obstacleHeight = window.innerWidth < 768 ? 25 : 50;
-        const leftPosition = Math.random() * (window.innerWidth - obstacleWidth);
-        const topPosition = Math.random() * (gameHeader.offsetHeight - obstacleHeight);
+        // Adjust the size of the obstacle to fit the text
+        obstacle.style.width = 'auto';
+        obstacle.style.height = 'auto';
+        obstacle.style.padding = '10px';
+        obstacle.style.whiteSpace = 'nowrap';
+
+        const leftPosition = Math.random() * (window.innerWidth - obstacle.offsetWidth);
+        const topPosition = Math.random() * (gameHeader.offsetHeight - obstacle.offsetHeight);
 
         obstacle.style.left = `${leftPosition}px`;
         obstacle.style.top = `${topPosition}px`;
-        obstacle.style.width = `${obstacleWidth}px`;
-        obstacle.style.height = `${obstacleHeight}px`;
 
         obstaclesContainer.appendChild(obstacle);
     }
@@ -285,9 +287,16 @@ document.addEventListener('DOMContentLoaded', () => {
         yellowObstacle.classList.add('yellow-obstacle');
         const info = getRandomInfo('cool');
         yellowObstacle.textContent = `${info.nom_info} ${info.info}`;
+
+        // Adjust the size of the obstacle to fit the text
+        yellowObstacle.style.width = 'auto';
+        yellowObstacle.style.height = 'auto';
+        yellowObstacle.style.padding = '10px';
+        yellowObstacle.style.whiteSpace = 'nowrap';
+
         const side = Math.random() < 0.5 ? 'left' : 'right';
         yellowObstacle.style[side] = '0px';
-        yellowObstacle.style.top = `${Math.random() * (window.innerHeight - (window.innerWidth < 768 ? 37.5 : 75))}px`;
+        yellowObstacle.style.top = `${Math.random() * (window.innerHeight - yellowObstacle.offsetHeight)}px`;
         obstaclesContainer.appendChild(yellowObstacle);
     }
 
@@ -298,7 +307,14 @@ document.addEventListener('DOMContentLoaded', () => {
         redObstacle.classList.add('red-obstacle');
         const info = getRandomInfo('importante');
         redObstacle.textContent = `${info.nom_info} ${info.info}`;
-        redObstacle.style.left = `${Math.random() * (window.innerWidth - (window.innerWidth < 768 ? 100 : 200))}px`;
+
+        // Adjust the size of the obstacle to fit the text
+        redObstacle.style.width = 'auto';
+        redObstacle.style.height = 'auto';
+        redObstacle.style.padding = '10px';
+        redObstacle.style.whiteSpace = 'nowrap';
+
+        redObstacle.style.left = `${Math.random() * (window.innerWidth - redObstacle.offsetWidth)}px`;
         redObstacle.style.top = `0px`;
         obstaclesContainer.appendChild(redObstacle);
     }
@@ -385,7 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
             top += blueSpeed;
             if (top > window.innerHeight) {
                 top = -50;
-                obstacle.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
+                obstacle.style.left = `${Math.random() * (window.innerWidth - obstacle.offsetWidth)}px`;
                 const info = getRandomInfo('basique');
                 obstacle.textContent = `${info.nom_info} ${info.info}`;
                 score++;

@@ -10,7 +10,9 @@
     <div id="game-modal" class="modal"> 
         <div class="modal-content">
             <h2>Bienvenue dans le Jeu des Informations</h2>
-            <p>Dans ce jeu, les éléments de vos informations vont descendre et tomber sur le joueur (la boule). Chaque 10 éléments tombés, la vitesse augmente. Le but est de rester en vie le plus longtemps possible et de collecter le plus d'éléments.</p>
+            <p style="text-align: justify;">
+                Dans ce jeu, les éléments de vos informations vont descendre et tomber sur le joueur (la boule). Chaque 10 éléments tombés, la vitesse augmente. Le but est de rester en vie le plus longtemps possible et de collecter le plus d'éléments. Gare à vous, cela va de plus en plus vite et certaines informations importantes pourraient vous compliquer la tâche.
+            </p>
             <button id="start-game-btn" class="btn">Commencer</button>
         </div>
     </div>
@@ -47,14 +49,13 @@
         </div>
     </header>
     <div class="platform-game">
-        <div class="player" id="player"></div> <!-- Renommer l'élément en `player` -->
-         <div id="obstacles-container"></div> <!--Ajouter ce conteneur pour les obstacles -->
+        <div class="player" id="player"></div> 
+         <div id="obstacles-container"></div> 
     </div>
     <div class="pause-hint">Échap pour faire pause</div>
     <script>
         try {
             document.addEventListener('DOMContentLoaded', () => {
-                // ...existing code...
             });
         } catch (error) {
             const errorModal = document.getElementById('error-modal');
