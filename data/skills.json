@@ -25,7 +25,7 @@
     },
     {
       "name": "GitLab",
-      "icon": "https://img.icons8.com/ios/50/gitlab.png"
+      "icon": "https://img.icons8.com/?size=100&id=34886&format=png&color=000000"
     },
     {
       "name": "C++",
@@ -76,10 +76,6 @@
         "icon": "https://img.icons8.com/fluency/48/replit.png"
     },
     {
-        "name": "Figma",
-        "icon": "https://img.icons8.com/color/48/figma--v1.png"
-    },
-    {
         "name": "Français",
         "icon": "https://img.icons8.com/color/48/france-circular.png"
     },
@@ -94,6 +90,10 @@
     {
         "name": "Russe",
         "icon": "https://img.icons8.com/color/48/russian-federation-circular.png"
+    },
+    {
+        "name": "Figma",
+        "icon": "https://img.icons8.com/color/48/figma--v1.png"
     }
       
   ]
