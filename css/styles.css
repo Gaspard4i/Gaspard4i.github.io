@@ -898,15 +898,15 @@ header .navbar ul li a:hover {
 }
 /* work section ends */
 
-/* experience section starts */
-.experience .timeline {
+/*   section starts */
+.timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 0;
 }
 
-.experience .timeline::after {
+.timeline::after {
   content: '';
   position: absolute;
   width: 6px;
@@ -917,14 +917,14 @@ header .navbar ul li a:hover {
   margin-left: -3px;
 }
 
-.experience .timeline-item {
+.timeline-item {
   padding: 20px 30px;
   position: relative;
   background-color: inherit;
   width: 50%;
 }
 
-.experience .timeline-item::after {
+.timeline-item::after {
   content: '';
   position: absolute;
   width: 25px;
@@ -937,15 +937,15 @@ header .navbar ul li a:hover {
   z-index: 1;
 }
 
-.experience .timeline-item.left {
+.timeline-item.left {
   left: 0;
 }
 
-.experience .timeline-item.right {
+.timeline-item.right {
   left: 50%;
 }
 
-.experience .timeline-item.left::before {
+.timeline-item.left::before {
   content: " ";
   height: 0;
   position: absolute;
@@ -958,7 +958,7 @@ header .navbar ul li a:hover {
   border-color: transparent transparent transparent #003366; /* Bleu foncé */
 }
 
-.experience .timeline-item.right::before {
+.timeline-item.right::before {
   content: " ";
   height: 0;
   position: absolute;
@@ -971,7 +971,7 @@ header .navbar ul li a:hover {
   border-color: transparent #003366 transparent transparent; /* Bleu foncé */
 }
 
-.experience .timeline-item .date {
+.timeline-item .date {
   padding: 5px 10px;
   background: #003366; /* Bleu foncé */
   color: white;
@@ -982,12 +982,12 @@ header .navbar ul li a:hover {
   border-radius: 6px;
 }
 
-.experience .timeline-item.right .date {
+.timeline-item.right .date {
   left: auto;
   right: -60px;
 }
 
-.experience .timeline-item .details {
+.timeline-item .details {
   padding: 20px;
   background: white;
   position: relative;
@@ -995,45 +995,45 @@ header .navbar ul li a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.experience .timeline-item .details h4 {
+.timeline-item .details h4 {
   margin-top: 0;
   color: #003366; /* Bleu foncé */
 }
 
-.experience .timeline-item .details p {
+.timeline-item .details p {
   margin: 0;
   color: #333; /* Noir/gris foncé */
 }
 
 @media screen and (max-width: 768px) {
-  .experience .timeline-item {
+  .timeline-item {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
   }
 
-  .experience .timeline-item.left::before,
-  .experience .timeline-item.right::before {
+  .timeline-item.left::before,
+  .timeline-item.right::before {
     left: 60px;
     border: medium solid #003366; /* Bleu foncé */
     border-width: 10px 10px 10px 0;
     border-color: transparent #003366 transparent transparent; /* Bleu foncé */
   }
 
-  .experience .timeline-item.left::after,
-  .experience .timeline-item.right::after {
+  .timeline-item.left::after,
+  .timeline-item.right::after {
     left: 15px;
   }
 
-  .experience .timeline-item .date {
+  .timeline-item .date {
     left: 15px;
   }
 
-  .experience .timeline-item.right .date {
+  .timeline-item.right .date {
     right: auto;
   }
 }
-/* experience section ends */
+/*   section ends */
 
 /* contact section starts */
 .contact {
@@ -1323,7 +1323,7 @@ form .button-area {
     padding-left: 0;
   }
 
-  .timeline {
+ .timeline {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
   }
@@ -1497,7 +1497,7 @@ form .button-area {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .timeline {
+ .timeline {
     grid-template-columns: repeat(1, 1fr);
   }
 
