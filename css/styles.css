@@ -603,6 +603,10 @@ header .navbar ul li a:hover {
 }
 .skills .heading span {
   color: rgb(255, 230, 0);
+  border: 2px solid #003366; 
+  background-color: #003366; 
+  border-radius: 5px; 
+  padding: 0 5px; 
 }
 .skills .container {
   background: #003366; /* Bleu foncé */
