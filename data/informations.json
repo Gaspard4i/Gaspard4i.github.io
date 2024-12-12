@@ -10,59 +10,14 @@
         "type": "basique"
     },
     {
-        "nom_info": "Mes 3 Prénoms:",
-        "info": "Gaspard,Bernard,Omer",
-        "type": "cool"
-    },
-    {
-        "nom_info": "Pseudo:",
-        "info": "Gaspard4i",
-        "type": "basique"
-    },
-    {
-        "nom_info": "Âge:",
-        "info": "19 ans",
-        "type": "basique"
-    },
-    {
         "nom_info": "Années d'études:",
         "info": "2ème année de BUT Informatique",
         "type": "cool"
     },
     {
-        "nom_info": "École:",
+        "nom_info": "École Actuelle:",
         "info": "IUT de Lille",
         "type": "basique"
-    },
-    {
-        "nom_info": "Lycée:",
-        "info": "Lycée Saint Paul à Lens", 
-        "type": "basique"
-    },
-    {
-        "nom_info": "Mon chat:",
-        "info": "Vanille",
-        "type": "basique"
-    },
-    {
-        "nom_info": "Série animé préférée:",
-        "info": "Adventure Time",
-        "type": "cool"
-    },
-    {
-        "nom_info": "Film préféré:",
-        "info": "The Truman Show",
-        "type": "basique"
-    },
-    {
-        "nom_info": "Série sf préférée:",
-        "info": "Rick et Morty",
-        "type": "cool"
-    },
-    {
-        "nom_info": "Animé préféré:",
-        "info": "Sword Art Online",
-        "type": "cool"
     },
     {
         "nom_info": "Langage préféré:",
@@ -88,50 +43,5 @@
         "nom_info": "Outil de versioning préféré:",
         "info": "Git",
         "type": "importante"
-    },
-    {
-        "nom_info": "Plat préféré:",
-        "info": "Tacos",
-        "type": "cool"
-    },
-    {
-        "nom_info": "Hobby 1:",
-        "info": "jeux vidéos",
-        "type": "basique"
-    },    
-    {
-        "nom_info": "Hobby 2:",
-        "info": "coder",
-        "type": "basique"
-    },
-    {
-        "nom_info": "Hobby 3:",
-        "info": "dessiner",
-        "type": "basique"
-    },
-    {
-        "nom_info": "Hobby 4:",
-        "info": "débattre",
-        "type": "basique"
-    },
-    {
-        "nom_info": "Hobby 5:",
-        "info": "socialiser",
-        "type": "basique"
-    },
-    {
-        "nom_info": "Sport préféré:",
-        "info": "Badminton",
-        "type": "cool"
-    },
-    {
-        "nom_info": "Couleur préférée:",
-        "info": "Bleu",
-        "type": "basique"
-    },
-    {
-        "nom_info": "Musique préférée:",
-        "info": "Indie",
-        "type": "basique"
     }
 ]
