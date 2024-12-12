@@ -403,6 +403,39 @@ function showProjects(projects) {
 }
 
 async function submitForm(event) {
+    event.preventDefault();
+    const form = document.getElementById('contact-form');
+    const formData = new FormData(form);
+    const statusMessage = document.getElementById('status-message');
+
+    try {
+        const response = await fetch('https://formspree.io/f/{your_form_id}', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            statusMessage.textContent = 'Message envoyé avec succès!';
+            statusMessage.style.color = 'green';
+            form.reset();
+        } else {
+            statusMessage.textContent = 'Une erreur est survenue. Veuillez réessayer.';
+            statusMessage.style.color = 'red';
+        }
+    } catch (error) {
+        statusMessage.textContent = 'Une erreur est survenue. Veuillez réessayer.';
+        statusMessage.style.color = 'red';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('contact-form').addEventListener('submit', submitForm);
+});
+
+async function submitForm(event) {
   event.preventDefault();
   const form = document.getElementById("contact-form");
   const formData = new FormData(form);
