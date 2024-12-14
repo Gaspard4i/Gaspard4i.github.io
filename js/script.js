@@ -326,7 +326,7 @@ $(document).ready(function () {
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-  strings: ["Etudiant", "Consultant Bullshit", "Chat-gpt User", "Joueur de Minecraft"/*, "Stop, ne regarde pas mon écran stp", "OH", "STOP!" */],
+  strings: ["Etudiant", "Developpeur Web", "Developpeur BackEnd", "Freelancer"],
   loop: true,
   typeSpeed: 50,
   backSpeed: 25,
