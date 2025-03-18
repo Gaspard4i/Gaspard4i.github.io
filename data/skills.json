@@ -28,8 +28,8 @@
     "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
   },
   {
-    "name": "C++",
-    "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
+    "name": "C",
+    "icon": "https://img.icons8.com/color/48/000000/c-programming.png"
   },
   {
     "name": "Shell",
@@ -48,20 +48,16 @@
     "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
   },
   {
+    "name": "Tomcat",
+    "icon": "https://img.icons8.com/color/48/000000/tomcat.png"
+  },
+  {
     "name": "HTML5",
     "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
   },
   {
     "name": "CSS3",
     "icon": "https://img.icons8.com/color/48/000000/css3.png"
-  },
-  {
-    "name": "PHP",
-    "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
-  },
-  {
-    "name": "VueJS",
-    "icon": "https://img.icons8.com/color/48/000000/vue-js.png"
   },
   {
     "name": "VSCode",
@@ -84,12 +80,8 @@
     "icon": "https://img.icons8.com/color/48/great-britain-circular.png"
   },
   {
-    "name": "Espagnol",
+    "name": "Español (un poquito)",
     "icon": "https://img.icons8.com/color/48/spain2-circular.png"
-  },
-  {
-    "name": "Russe",
-    "icon": "https://img.icons8.com/color/48/russian-federation-circular.png"
   },
   {
     "name": "Figma",
