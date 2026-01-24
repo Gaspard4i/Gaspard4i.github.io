@@ -1,90 +1,67 @@
 [
-  {
-    "name": "PostgreSQL",
-    "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
-  },
-  {
-    "name": "Python",
-    "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
-  },
-  {
-    "name": "GitLab",
-    "icon": "https://img.icons8.com/?size=100&id=34886&format=png&color=000000"
-  },
-  {
-    "name": "JavaScript",
-    "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
-  },
-  {
-    "name": "Java",
-    "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
-  },
-  {
-    "name": "GitHub",
-    "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
-  },
-  {
-    "name": "NodeJS",
-    "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
-  },
-  {
-    "name": "C",
-    "icon": "https://img.icons8.com/color/48/000000/c-programming.png"
-  },
-  {
-    "name": "Shell",
-    "icon": "https://img.icons8.com/?size=100&id=120413&format=png&color=000000"
-  },
-  {
-    "name": "MySQL",
-    "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
-  },
-  {
-    "name": "Jupyter",
-    "icon": "https://img.icons8.com/?size=100&id=J0SgMWzAxqFj&format=png&color=000000"
-  },
-  {
-    "name": "Bootstrap",
-    "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
-  },
-  {
-    "name": "Tomcat",
-    "icon": "https://img.icons8.com/color/48/000000/tomcat.png"
-  },
-  {
-    "name": "HTML5",
-    "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
-  },
-  {
-    "name": "CSS3",
-    "icon": "https://img.icons8.com/color/48/000000/css3.png"
-  },
-  {
-    "name": "VSCode",
-    "icon": "https://img.icons8.com/color/48/visual-studio-code-2019.png"
-  },
-  {
-    "name": "intellij",
-    "icon": "https://img.icons8.com/color/48/intellij-idea.png"
-  },
-  {
-    "name": "Replit",
-    "icon": "https://img.icons8.com/fluency/48/replit.png"
-  },
-  {
-    "name": "Français",
-    "icon": "https://img.icons8.com/color/48/france-circular.png"
-  },
-  {
-    "name": "Anglais",
-    "icon": "https://img.icons8.com/color/48/great-britain-circular.png"
-  },
-  {
-    "name": "Español (un poquito)",
-    "icon": "https://img.icons8.com/color/48/spain2-circular.png"
-  },
-  {
-    "name": "Figma",
-    "icon": "https://img.icons8.com/color/48/figma--v1.png"
-  }
+  { "name": "PostgreSQL", "icon": "https://img.icons8.com/color/48/000000/postgreesql.png" },
+  { "name": "MySQL", "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png" },
+  { "name": "MariaDB", "icon": "https://img.icons8.com/color/48/000000/mariadb.png" },
+  { "name": "MongoDB", "icon": "https://img.icons8.com/color/48/000000/mongodb.png" },
+  { "name": "H2 Database", "icon": "https://img.icons8.com/color/48/database.png" },
+  { "name": "Adminer", "icon": "https://img.icons8.com/color/48/database.png" },
+
+  { "name": "Python", "icon": "https://img.icons8.com/color/48/000000/python--v1.png" },
+  { "name": "Matplotlib", "icon": "https://img.icons8.com/color/48/combo-chart--v1.png" },
+  { "name": "Pyplot", "icon": "https://img.icons8.com/color/48/line-chart--v1.png" },
+  { "name": "Seaborn", "icon": "https://img.icons8.com/color/48/statistics.png" },
+  { "name": "Pandas", "icon": "https://img.icons8.com/color/48/pandas.png" },
+  { "name": "NumPy", "icon": "https://img.icons8.com/color/48/numpy.png" },
+  
+  { "name": "Java", "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png" },
+  { "name": "Spring Boot", "icon": "https://img.icons8.com/color/48/spring-logo.png" },
+  { "name": "JSP (Java)", "icon": "https://img.icons8.com/color/48/java-web-token.png" },
+  { "name": "Kotlin", "icon": "https://img.icons8.com/color/48/kotlin.png" },
+  { "name": "Tomcat", "icon": "https://img.icons8.com/color/48/000000/tomcat.png" },
+
+  { "name": "JavaScript", "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png" },
+  { "name": "TypeScript", "icon": "https://img.icons8.com/color/48/typescript.png" },
+  { "name": "NodeJS", "icon": "https://img.icons8.com/color/48/000000/nodejs.png" },
+  { "name": "Vue.js", "icon": "https://img.icons8.com/color/48/vue-js.png" },
+  { "name": "Webpack", "icon": "https://img.icons8.com/color/48/webpack.png" },
+
+  { "name": "HTML5", "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png" },
+  { "name": "CSS3", "icon": "https://img.icons8.com/color/48/000000/css3.png" },
+  { "name": "Bootstrap", "icon": "https://img.icons8.com/color/48/000000/bootstrap.png" },
+  { "name": "Tailwind CSS", "icon": "https://img.icons8.com/color/48/tailwindcss.png" },
+
+  { "name": "PHP", "icon": "https://img.icons8.com/color/48/php.png" },
+  { "name": "Symfony", "icon": "https://img.icons8.com/color/48/symfony.png" },
+  { "name": "Twig", "icon": "https://img.icons8.com/color/48/code.png" },
+  { "name": "Nginx", "icon": "https://img.icons8.com/color/48/nginx.png" },
+  { "name": "Traefik", "icon": "https://img.icons8.com/color/48/traefik.png" },
+
+  { "name": "GitHub", "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png" },
+  { "name": "GitLab", "icon": "https://img.icons8.com/?size=100&id=34886&format=png&color=000000" },
+
+  { "name": "Docker", "icon": "https://img.icons8.com/color/48/docker.png" },
+  { "name": "Podman", "icon": "https://img.icons8.com/color/48/container.png" }, 
+  { "name": "Terraform", "icon": "https://img.icons8.com/color/48/terraform.png" },
+  { "name": "OpenTofu", "icon": "https://img.icons8.com/color/48/cloud.png" },
+
+  { "name": "C", "icon": "https://img.icons8.com/color/48/000000/c-programming.png" },
+  { "name": "Shell", "icon": "https://img.icons8.com/?size=100&id=120413&format=png&color=000000" },
+
+  { "name": "Linux", "icon": "https://img.icons8.com/color/48/linux.png" },
+  { "name": "Windows", "icon": "https://img.icons8.com/color/48/windows-10.png" },
+  { "name": "Debian", "icon": "https://img.icons8.com/color/48/debian.png" },
+  { "name": "Ubuntu", "icon": "https://img.icons8.com/color/48/ubuntu--v1.png" },
+  { "name": "Bash", "icon": "https://img.icons8.com/color/48/bash.png" },
+  { "name": "WSL", "icon": "https://img.icons8.com/color/48/linux.png" },
+  { "name": "JetBrains Tools", "icon": "https://img.icons8.com/color/48/jetbrains.png" },
+
+{ "name": "VSCode", "icon": "https://img.icons8.com/color/48/visual-studio-code-2019.png" },
+  { "name": "IntelliJ IDEA", "icon": "https://img.icons8.com/color/48/intellij-idea.png" },
+  { "name": "Jupyter", "icon": "https://img.icons8.com/?size=100&id=J0SgMWzAxqFj&format=png&color=000000" },
+  { "name": "Replit", "icon": "https://img.icons8.com/fluency/48/replit.png" },
+  { "name": "Figma", "icon": "https://img.icons8.com/color/48/figma--v1.png" },
+
+  { "name": "Français", "icon": "https://img.icons8.com/color/48/france-circular.png" },
+  { "name": "Anglais", "icon": "https://img.icons8.com/color/48/great-britain-circular.png" },
+  { "name": "Español", "icon": "https://img.icons8.com/color/48/spain2-circular.png" }
 ]
