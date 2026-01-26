@@ -3,7 +3,7 @@
     "title": "FinnFoundDaChest",
     "year": "2023",
     "description": "Java, Swing, Jeu, Projet individuel",
-    "image": "/resources/images/FFDC.png",
+    "image": "@/assets/images/FFDC.png",
     "links": [
       {
         "type": "gitlab",
@@ -16,7 +16,7 @@
     "title": "Projet Agile de Rentrée",
     "year": "2024",
     "description": "Java, Agile, Rogue-Like, Travail d'équipe",
-    "image": "/resources/images/Donjon_Hexagone.png",
+    "image": "@/assets/images/Donjon_Hexagone.png",
     "links": [
       {
         "type": "gitlab",
@@ -29,7 +29,7 @@
     "title": "Projet SAE 3.3",
     "year": "2024",
     "description": "Java, JavaFX, MVC, Travail d'équipe",
-    "image": "/resources/images/MFC.png",
+    "image": "@/assets/images/MFC.png",
     "links": [
       {
         "type": "gitlab",
@@ -42,14 +42,14 @@
     "title": "MineToEarn",
     "year": "2024",
     "description": "Java, HTML, CSS, JS, Plugins, Travail d'équipe",
-    "image": "/resources/images/mte.png",
+    "image": "@/assets/images/mte.png",
     "links": []
   },
   {
     "title": "Projet Nuit de l'Info : CorpsAMer",
     "year": "2024",
     "description": "HTML, CSS, JavaScript, Webapp, Travail d'équipe",
-    "image": "/resources/images/CorpsAMer.png",
+    "image": "@/assets/images/CorpsAMer.png",
     "links": [
       {
         "type": "github",
@@ -67,7 +67,7 @@
     "title": "Talkul",
     "year": "2025",
     "description": "HTML, CSS, Java EE, Webapp",
-    "image": "/resources/images/Talkul_connexion.png",
+    "image": "@/assets/images/Talkul_connexion.png",
     "links": [
       {
         "type": "gitlab",

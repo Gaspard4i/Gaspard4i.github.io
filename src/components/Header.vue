@@ -4,7 +4,7 @@
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition">
-          <img src="/resources/images/finnstay.gif" alt="Logo" class="w-8 h-8" />
+          <img src="@/assets/images/finnstay.gif" alt="Logo" class="w-8 h-8" />
           <span class="text-xl font-bold text-base-content">Gaspard Catry</span>
         </a>
 
