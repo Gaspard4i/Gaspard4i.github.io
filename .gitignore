@@ -1,0 +1,33 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dépendances (NE JAMAIS PUBLIER CA)
+node_modules
+.pnpm-store
+
+# Dossier de build (C'est ce qu'on va déployer, mais on ne le versionne pas dans le code source)
+dist
+dist-ssr
+coverage
+
+# Environnement local
+.env
+.env.local
+.env.*.local
+
+# Editeurs
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs
+*.njsproj
+*.sln
+*.sw?

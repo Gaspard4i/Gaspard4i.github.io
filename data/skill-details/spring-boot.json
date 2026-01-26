@@ -1,0 +1,61 @@
+{
+  "slug": "spring-boot",
+  "name": "Spring Boot",
+  "icon": "https://api.iconify.design/devicon/spring.svg",
+  "description": "Framework Java pour créer des applications backend robustes et scalables.",
+
+  "yearsOfExperience": 2,
+  "proficiencyLevel": "avancé",
+
+  "learningPath": [
+    {
+      "period": "2e année BUT - Stage Nextoo-Academy",
+      "duration": "1.5 mois de formation + 3 projets",
+      "description": "Formation intensive suivie de 3 projets en situation réelle",
+      "topics": [
+        "Spring Boot et architecture MVC",
+        "Spring Data JPA avec PostgreSQL",
+        "API REST",
+        "Tests unitaires avec Mockito",
+        "Base H2 pour les tests"
+      ]
+    },
+    {
+      "period": "3e année BUT",
+      "duration": "Cours académique",
+      "description": "Approfondissement avec Spring Security",
+      "topics": [
+        "Spring Security",
+        "Authentification et autorisation",
+        "Optimisation JPA"
+      ]
+    }
+  ],
+
+  "usedInProjects": [
+    {
+      "name": "3 projets stage Nextoo",
+      "description": "Applications complètes avec Spring Boot, PostgreSQL et Vue.js. Tests unitaires et intégration.",
+      "technologies": ["Spring Boot", "PostgreSQL", "Vue.js", "H2", "Mockito", "Tomcat"]
+    }
+  ],
+
+  "keyFeatures": [
+    {
+      "title": "Spring Data JPA",
+      "description": "Repositories, entités, PostgreSQL en prod et H2 pour les tests."
+    },
+    {
+      "title": "Spring Security",
+      "description": "Authentification, autorisation, gestion des rôles."
+    },
+    {
+      "title": "Tests Mockito",
+      "description": "Mocking des Controllers, Services et Repositories."
+    }
+  ],
+
+  "relatedSkills": ["Java", "PostgreSQL", "H2", "Vue.js", "Tomcat", "Mockito"],
+
+  "personalNotes": "Mon framework backend préféré. La formation Nextoo-Academy m'a donné des bases solides, complétées par Spring Security en 3e année. Stack Spring Boot + Vue.js + PostgreSQL très efficace."
+}

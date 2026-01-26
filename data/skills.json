@@ -1,67 +1,311 @@
 [
-  { "name": "PostgreSQL", "icon": "https://img.icons8.com/color/48/000000/postgreesql.png" },
-  { "name": "MySQL", "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png" },
-  { "name": "MariaDB", "icon": "https://img.icons8.com/color/48/000000/mariadb.png" },
-  { "name": "MongoDB", "icon": "https://img.icons8.com/color/48/000000/mongodb.png" },
-  { "name": "H2 Database", "icon": "https://img.icons8.com/color/48/database.png" },
-  { "name": "Adminer", "icon": "https://img.icons8.com/color/48/database.png" },
-
-  { "name": "Python", "icon": "https://img.icons8.com/color/48/000000/python--v1.png" },
-  { "name": "Matplotlib", "icon": "https://img.icons8.com/color/48/combo-chart--v1.png" },
-  { "name": "Pyplot", "icon": "https://img.icons8.com/color/48/line-chart--v1.png" },
-  { "name": "Seaborn", "icon": "https://img.icons8.com/color/48/statistics.png" },
-  { "name": "Pandas", "icon": "https://img.icons8.com/color/48/pandas.png" },
-  { "name": "NumPy", "icon": "https://img.icons8.com/color/48/numpy.png" },
+  {
+    "name": "PostgreSQL",
+    "icon": "https://api.iconify.design/devicon/postgresql.svg",
+    "categories": ["database", "backend"],
+    "featured": true
+  },
+  {
+    "name": "MySQL",
+    "icon": "https://api.iconify.design/devicon/mysql.svg",
+    "categories": ["database", "backend"],
+    "featured": false
+  },
+  {
+    "name": "MariaDB",
+    "icon": "https://api.iconify.design/devicon/mariadb.svg",
+    "categories": ["database", "backend"],
+    "featured": false
+  },
+  {
+    "name": "MongoDB",
+    "icon": "https://api.iconify.design/devicon/mongodb.svg",
+    "categories": ["database", "backend"],
+    "featured": false
+  },
+  {
+    "name": "H2 Database",
+    "icon": "https://api.iconify.design/programming/database.svg",
+    "categories": ["database", "backend"],
+    "featured": false
+  },
+  {
+    "name": "Adminer",
+    "icon": "https://api.iconify.design/simple-icons/adminer.svg",
+    "categories": ["database", "tools"],
+    "featured": false
+  },
+  {
+    "name": "Python",
+    "icon": "https://api.iconify.design/devicon/python.svg",
+    "categories": ["backend", "data-science"],
+    "featured": false,
+    "hasDetailPage": true
+  },
+  {
+    "name": "Matplotlib",
+    "icon": "https://api.iconify.design/devicon/matplotlib.svg",
+    "categories": ["data-science"],
+    "featured": false
+  },
+  {
+    "name": "Seaborn",
+    "icon": "https://api.iconify.design/mdi/chart-box.svg",
+    "categories": ["data-science"],
+    "featured": false
+  },
+  {
+    "name": "Pandas",
+    "icon": "https://api.iconify.design/devicon/pandas.svg",
+    "categories": ["data-science"],
+    "featured": false
+  },
+  {
+    "name": "NumPy",
+    "icon": "https://api.iconify.design/devicon/numpy.svg",
+    "categories": ["data-science"],
+    "featured": false
+  },
   
-  { "name": "Java", "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png" },
-  { "name": "Spring Boot", "icon": "https://img.icons8.com/color/48/spring-logo.png" },
-  { "name": "JSP (Java)", "icon": "https://img.icons8.com/color/48/java-web-token.png" },
-  { "name": "Kotlin", "icon": "https://img.icons8.com/color/48/kotlin.png" },
-  { "name": "Tomcat", "icon": "https://img.icons8.com/color/48/000000/tomcat.png" },
+  {
+    "name": "Java",
+    "icon": "https://api.iconify.design/devicon/java.svg",
+    "categories": ["backend"],
+    "featured": true,
+    "hasDetailPage": true
+  },
+  {
+    "name": "Spring Boot",
+    "icon": "https://api.iconify.design/devicon/spring.svg",
+    "categories": ["backend", "fullstack"],
+    "featured": true,
+    "hasDetailPage": true
+  },
+  {
+    "name": "JSP (Java)",
+    "icon": "https://api.iconify.design/mdi/language-java.svg",
+    "categories": ["backend", "frontend"],
+    "featured": false
+  },
+  {
+    "name": "Kotlin",
+    "icon": "https://api.iconify.design/devicon/kotlin.svg",
+    "categories": ["backend"],
+    "featured": false
+  },
+  {
+    "name": "Tomcat",
+    "icon": "https://api.iconify.design/devicon/tomcat.svg",
+    "categories": ["backend", "devops"],
+    "featured": false
+  },
 
-  { "name": "JavaScript", "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png" },
-  { "name": "TypeScript", "icon": "https://img.icons8.com/color/48/typescript.png" },
-  { "name": "NodeJS", "icon": "https://img.icons8.com/color/48/000000/nodejs.png" },
-  { "name": "Vue.js", "icon": "https://img.icons8.com/color/48/vue-js.png" },
-  { "name": "Webpack", "icon": "https://img.icons8.com/color/48/webpack.png" },
+  {
+    "name": "JavaScript",
+    "icon": "https://api.iconify.design/devicon/javascript.svg",
+    "categories": ["frontend", "backend"],
+    "featured": false
+  },
+  {
+    "name": "TypeScript",
+    "icon": "https://api.iconify.design/devicon/typescript.svg",
+    "categories": ["frontend", "backend"],
+    "featured": false
+  },
+  {
+    "name": "NodeJS",
+    "icon": "https://api.iconify.design/devicon/nodejs.svg",
+    "categories": ["backend", "fullstack"],
+    "featured": false
+  },
+  {
+    "name": "Vue.js",
+    "icon": "https://api.iconify.design/devicon/vuejs.svg",
+    "categories": ["frontend", "fullstack"],
+    "featured": true
+  },
+  {
+    "name": "Webpack",
+    "icon": "https://api.iconify.design/devicon/webpack.svg",
+    "categories": ["frontend", "tools"],
+    "featured": false
+  },
 
-  { "name": "HTML5", "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png" },
-  { "name": "CSS3", "icon": "https://img.icons8.com/color/48/000000/css3.png" },
-  { "name": "Bootstrap", "icon": "https://img.icons8.com/color/48/000000/bootstrap.png" },
-  { "name": "Tailwind CSS", "icon": "https://img.icons8.com/color/48/tailwindcss.png" },
+  {
+    "name": "HTML5",
+    "icon": "https://api.iconify.design/devicon/html5.svg",
+    "categories": ["frontend"],
+    "featured": false
+  },
+  {
+    "name": "CSS3",
+    "icon": "https://api.iconify.design/devicon/css3.svg",
+    "categories": ["frontend"],
+    "featured": false
+  },
+  {
+    "name": "Bootstrap",
+    "icon": "https://api.iconify.design/devicon/bootstrap.svg",
+    "categories": ["frontend"],
+    "featured": false
+  },
+  {
+    "name": "Tailwind CSS",
+    "icon": "https://api.iconify.design/devicon/tailwindcss.svg",
+    "categories": ["frontend"],
+    "featured": true
+  },
 
-  { "name": "PHP", "icon": "https://img.icons8.com/color/48/php.png" },
-  { "name": "Symfony", "icon": "https://img.icons8.com/color/48/symfony.png" },
-  { "name": "Twig", "icon": "https://img.icons8.com/color/48/code.png" },
-  { "name": "Nginx", "icon": "https://img.icons8.com/color/48/nginx.png" },
-  { "name": "Traefik", "icon": "https://img.icons8.com/color/48/traefik.png" },
+  {
+    "name": "PHP",
+    "icon": "https://api.iconify.design/devicon/php.svg",
+    "categories": ["backend"],
+    "featured": false
+  },
+  {
+    "name": "Symfony",
+    "icon": "https://api.iconify.design/devicon/symfony.svg",
+    "categories": ["backend", "fullstack"],
+    "featured": true
+  },
+  {
+    "name": "Twig",
+    "icon": "https://api.iconify.design/devicon/twig.svg",
+    "categories": ["frontend", "backend"],
+    "featured": true
+  },
+  {
+    "name": "Nginx",
+    "icon": "https://api.iconify.design/devicon/nginx.svg",
+    "categories": ["backend", "devops"],
+    "featured": false
+  },
+  {
+    "name": "Traefik",
+    "icon": "https://api.iconify.design/devicon/traefikproxy.svg",
+    "categories": ["backend", "devops"],
+    "featured": false
+  },
 
-  { "name": "GitHub", "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png" },
-  { "name": "GitLab", "icon": "https://img.icons8.com/?size=100&id=34886&format=png&color=000000" },
+  {
+    "name": "GitHub",
+    "icon": "https://api.iconify.design/devicon/github.svg",
+    "categories": ["devops", "tools"],
+    "featured": false
+  },
+  {
+    "name": "GitLab",
+    "icon": "https://api.iconify.design/devicon/gitlab.svg",
+    "categories": ["devops", "tools"],
+    "featured": true
+  },
 
-  { "name": "Docker", "icon": "https://img.icons8.com/color/48/docker.png" },
-  { "name": "Podman", "icon": "https://img.icons8.com/color/48/container.png" }, 
-  { "name": "Terraform", "icon": "https://img.icons8.com/color/48/terraform.png" },
-  { "name": "OpenTofu", "icon": "https://img.icons8.com/color/48/cloud.png" },
+  {
+    "name": "Docker",
+    "icon": "https://api.iconify.design/devicon/docker.svg",
+    "categories": ["devops"],
+    "featured": false
+  },
+  {
+    "name": "Podman",
+    "icon": "https://api.iconify.design/devicon/podman.svg",
+    "categories": ["devops"],
+    "featured": false
+  },
+  {
+    "name": "Terraform",
+    "icon": "https://api.iconify.design/devicon/terraform.svg",
+    "categories": ["devops"],
+    "featured": false
+  },
+  {
+    "name": "OpenTofu",
+    "icon": "https://api.iconify.design/simple-icons/opentofu.svg",
+    "categories": ["devops"],
+    "featured": false
+  },
 
-  { "name": "C", "icon": "https://img.icons8.com/color/48/000000/c-programming.png" },
-  { "name": "Shell", "icon": "https://img.icons8.com/?size=100&id=120413&format=png&color=000000" },
+  {
+    "name": "C",
+    "icon": "https://api.iconify.design/devicon/cplusplus.svg",
+    "categories": ["system"],
+    "featured": false
+  },
+  {
+    "name": "Shell",
+    "icon": "https://api.iconify.design/mdi/bash.svg",
+    "categories": ["system", "devops"],
+    "featured": false
+  },
 
-  { "name": "Linux", "icon": "https://img.icons8.com/color/48/linux.png" },
-  { "name": "Windows", "icon": "https://img.icons8.com/color/48/windows-10.png" },
-  { "name": "Debian", "icon": "https://img.icons8.com/color/48/debian.png" },
-  { "name": "Ubuntu", "icon": "https://img.icons8.com/color/48/ubuntu--v1.png" },
-  { "name": "Bash", "icon": "https://img.icons8.com/color/48/bash.png" },
-  { "name": "WSL", "icon": "https://img.icons8.com/color/48/linux.png" },
-  { "name": "JetBrains Tools", "icon": "https://img.icons8.com/color/48/jetbrains.png" },
+  {
+    "name": "Linux",
+    "icon": "https://api.iconify.design/devicon/linux.svg",
+    "categories": ["system"],
+    "featured": false
+  },
+  {
+    "name": "Windows",
+    "icon": "https://api.iconify.design/devicon/windows11.svg",
+    "categories": ["system"],
+    "featured": false
+  },
+  {
+    "name": "Debian",
+    "icon": "https://api.iconify.design/devicon/debian.svg",
+    "categories": ["system"],
+    "featured": false
+  },
+  {
+    "name": "Ubuntu",
+    "icon": "https://api.iconify.design/devicon/ubuntu.svg",
+    "categories": ["system"],
+    "featured": false
+  },
+  {
+    "name": "Bash",
+    "icon": "https://api.iconify.design/devicon/bash.svg",
+    "categories": ["system", "devops"],
+    "featured": false
+  },
+  {
+    "name": "WSL",
+    "icon": "https://api.iconify.design/simple-icons/windowsterminal.svg",
+    "categories": ["system", "tools"],
+    "featured": false
+  },
+  {
+    "name": "JetBrains Tools",
+    "icon": "https://api.iconify.design/devicon/jetbrains.svg",
+    "categories": ["tools"],
+    "featured": false
+  },
+  {
+    "name": "Maven",
+    "icon": "https://api.iconify.design/devicon/maven.svg",
+    "categories": ["tools", "backend"],
+    "featured": false
+  },
+  {
+    "name": "Gradle",
+    "icon": "https://api.iconify.design/devicon/gradle.svg",
+    "categories": ["tools", "backend"],
+    "featured": false
+  },
+  {
+    "name": "Mockito",
+    "icon": "https://api.iconify.design/simple-icons/mockito.svg",
+    "categories": ["tools", "backend"],
+    "featured": false
+  },
 
-{ "name": "VSCode", "icon": "https://img.icons8.com/color/48/visual-studio-code-2019.png" },
-  { "name": "IntelliJ IDEA", "icon": "https://img.icons8.com/color/48/intellij-idea.png" },
-  { "name": "Jupyter", "icon": "https://img.icons8.com/?size=100&id=J0SgMWzAxqFj&format=png&color=000000" },
-  { "name": "Replit", "icon": "https://img.icons8.com/fluency/48/replit.png" },
-  { "name": "Figma", "icon": "https://img.icons8.com/color/48/figma--v1.png" },
+  { "name": "VSCode", "icon": "https://api.iconify.design/devicon/vscode.svg", "categories": ["tools", "frontend"], "featured": true },
+  { "name": "IntelliJ IDEA", "icon": "https://api.iconify.design/devicon/intellij.svg", "categories": ["tools", "backend"], "featured": true },
+  { "name": "Jupyter", "icon": "https://api.iconify.design/devicon/jupyter.svg", "categories": ["tools", "data-science"], "featured": false },
+  { "name": "Replit", "icon": "https://api.iconify.design/simple-icons/replit.svg", "categories": ["tools"], "featured": false },
+  { "name": "Figma", "icon": "https://api.iconify.design/devicon/figma.svg", "categories": ["tools", "frontend"], "featured": false },
 
-  { "name": "Français", "icon": "https://img.icons8.com/color/48/france-circular.png" },
-  { "name": "Anglais", "icon": "https://img.icons8.com/color/48/great-britain-circular.png" },
-  { "name": "Español", "icon": "https://img.icons8.com/color/48/spain2-circular.png" }
+  { "name": "Français", "icon": "https://api.iconify.design/circle-flags/fr.svg", "categories": ["language"], "featured": false },
+  { "name": "Anglais", "icon": "https://api.iconify.design/circle-flags/gb.svg", "categories": ["language"], "featured": false },
+  { "name": "Español", "icon": "https://api.iconify.design/circle-flags/es.svg", "categories": ["language"], "featured": false }
 ]
