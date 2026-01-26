@@ -1,0 +1,311 @@
+[
+  {
+    "name": "PostgreSQL",
+    "icon": "https://api.iconify.design/devicon/postgresql.svg",
+    "categories": ["database", "backend"],
+    "featured": true
+  },
+  {
+    "name": "MySQL",
+    "icon": "https://api.iconify.design/devicon/mysql.svg",
+    "categories": ["database", "backend"],
+    "featured": false
+  },
+  {
+    "name": "MariaDB",
+    "icon": "https://api.iconify.design/devicon/mariadb.svg",
+    "categories": ["database", "backend"],
+    "featured": false
+  },
+  {
+    "name": "MongoDB",
+    "icon": "https://api.iconify.design/devicon/mongodb.svg",
+    "categories": ["database", "backend"],
+    "featured": false
+  },
+  {
+    "name": "H2 Database",
+    "icon": "https://api.iconify.design/programming/database.svg",
+    "categories": ["database", "backend"],
+    "featured": false
+  },
+  {
+    "name": "Adminer",
+    "icon": "https://api.iconify.design/simple-icons/adminer.svg",
+    "categories": ["database", "tools"],
+    "featured": false
+  },
+  {
+    "name": "Python",
+    "icon": "https://api.iconify.design/devicon/python.svg",
+    "categories": ["backend", "data-science"],
+    "featured": false,
+    "hasDetailPage": true
+  },
+  {
+    "name": "Matplotlib",
+    "icon": "https://api.iconify.design/devicon/matplotlib.svg",
+    "categories": ["data-science"],
+    "featured": false
+  },
+  {
+    "name": "Seaborn",
+    "icon": "https://api.iconify.design/mdi/chart-box.svg",
+    "categories": ["data-science"],
+    "featured": false
+  },
+  {
+    "name": "Pandas",
+    "icon": "https://api.iconify.design/devicon/pandas.svg",
+    "categories": ["data-science"],
+    "featured": false
+  },
+  {
+    "name": "NumPy",
+    "icon": "https://api.iconify.design/devicon/numpy.svg",
+    "categories": ["data-science"],
+    "featured": false
+  },
+  
+  {
+    "name": "Java",
+    "icon": "https://api.iconify.design/devicon/java.svg",
+    "categories": ["backend"],
+    "featured": true,
+    "hasDetailPage": true
+  },
+  {
+    "name": "Spring Boot",
+    "icon": "https://api.iconify.design/devicon/spring.svg",
+    "categories": ["backend", "fullstack"],
+    "featured": true,
+    "hasDetailPage": true
+  },
+  {
+    "name": "JSP (Java)",
+    "icon": "https://api.iconify.design/mdi/language-java.svg",
+    "categories": ["backend", "frontend"],
+    "featured": false
+  },
+  {
+    "name": "Kotlin",
+    "icon": "https://api.iconify.design/devicon/kotlin.svg",
+    "categories": ["backend"],
+    "featured": false
+  },
+  {
+    "name": "Tomcat",
+    "icon": "https://api.iconify.design/devicon/tomcat.svg",
+    "categories": ["backend", "devops"],
+    "featured": false
+  },
+
+  {
+    "name": "JavaScript",
+    "icon": "https://api.iconify.design/devicon/javascript.svg",
+    "categories": ["frontend", "backend"],
+    "featured": false
+  },
+  {
+    "name": "TypeScript",
+    "icon": "https://api.iconify.design/devicon/typescript.svg",
+    "categories": ["frontend", "backend"],
+    "featured": false
+  },
+  {
+    "name": "NodeJS",
+    "icon": "https://api.iconify.design/devicon/nodejs.svg",
+    "categories": ["backend", "fullstack"],
+    "featured": false
+  },
+  {
+    "name": "Vue.js",
+    "icon": "https://api.iconify.design/devicon/vuejs.svg",
+    "categories": ["frontend", "fullstack"],
+    "featured": true
+  },
+  {
+    "name": "Webpack",
+    "icon": "https://api.iconify.design/devicon/webpack.svg",
+    "categories": ["frontend", "tools"],
+    "featured": false
+  },
+
+  {
+    "name": "HTML5",
+    "icon": "https://api.iconify.design/devicon/html5.svg",
+    "categories": ["frontend"],
+    "featured": false
+  },
+  {
+    "name": "CSS3",
+    "icon": "https://api.iconify.design/devicon/css3.svg",
+    "categories": ["frontend"],
+    "featured": false
+  },
+  {
+    "name": "Bootstrap",
+    "icon": "https://api.iconify.design/devicon/bootstrap.svg",
+    "categories": ["frontend"],
+    "featured": false
+  },
+  {
+    "name": "Tailwind CSS",
+    "icon": "https://api.iconify.design/devicon/tailwindcss.svg",
+    "categories": ["frontend"],
+    "featured": true
+  },
+
+  {
+    "name": "PHP",
+    "icon": "https://api.iconify.design/devicon/php.svg",
+    "categories": ["backend"],
+    "featured": false
+  },
+  {
+    "name": "Symfony",
+    "icon": "https://api.iconify.design/devicon/symfony.svg",
+    "categories": ["backend", "fullstack"],
+    "featured": true
+  },
+  {
+    "name": "Twig",
+    "icon": "https://api.iconify.design/devicon/twig.svg",
+    "categories": ["frontend", "backend"],
+    "featured": true
+  },
+  {
+    "name": "Nginx",
+    "icon": "https://api.iconify.design/devicon/nginx.svg",
+    "categories": ["backend", "devops"],
+    "featured": false
+  },
+  {
+    "name": "Traefik",
+    "icon": "https://api.iconify.design/devicon/traefikproxy.svg",
+    "categories": ["backend", "devops"],
+    "featured": false
+  },
+
+  {
+    "name": "GitHub",
+    "icon": "https://api.iconify.design/devicon/github.svg",
+    "categories": ["devops", "tools"],
+    "featured": false
+  },
+  {
+    "name": "GitLab",
+    "icon": "https://api.iconify.design/devicon/gitlab.svg",
+    "categories": ["devops", "tools"],
+    "featured": true
+  },
+
+  {
+    "name": "Docker",
+    "icon": "https://api.iconify.design/devicon/docker.svg",
+    "categories": ["devops"],
+    "featured": false
+  },
+  {
+    "name": "Podman",
+    "icon": "https://api.iconify.design/devicon/podman.svg",
+    "categories": ["devops"],
+    "featured": false
+  },
+  {
+    "name": "Terraform",
+    "icon": "https://api.iconify.design/devicon/terraform.svg",
+    "categories": ["devops"],
+    "featured": false
+  },
+  {
+    "name": "OpenTofu",
+    "icon": "https://api.iconify.design/simple-icons/opentofu.svg",
+    "categories": ["devops"],
+    "featured": false
+  },
+
+  {
+    "name": "C",
+    "icon": "https://api.iconify.design/devicon/cplusplus.svg",
+    "categories": ["system"],
+    "featured": false
+  },
+  {
+    "name": "Shell",
+    "icon": "https://api.iconify.design/mdi/bash.svg",
+    "categories": ["system", "devops"],
+    "featured": false
+  },
+
+  {
+    "name": "Linux",
+    "icon": "https://api.iconify.design/devicon/linux.svg",
+    "categories": ["system"],
+    "featured": false
+  },
+  {
+    "name": "Windows",
+    "icon": "https://api.iconify.design/devicon/windows11.svg",
+    "categories": ["system"],
+    "featured": false
+  },
+  {
+    "name": "Debian",
+    "icon": "https://api.iconify.design/devicon/debian.svg",
+    "categories": ["system"],
+    "featured": false
+  },
+  {
+    "name": "Ubuntu",
+    "icon": "https://api.iconify.design/devicon/ubuntu.svg",
+    "categories": ["system"],
+    "featured": false
+  },
+  {
+    "name": "Bash",
+    "icon": "https://api.iconify.design/devicon/bash.svg",
+    "categories": ["system", "devops"],
+    "featured": false
+  },
+  {
+    "name": "WSL",
+    "icon": "https://api.iconify.design/simple-icons/windowsterminal.svg",
+    "categories": ["system", "tools"],
+    "featured": false
+  },
+  {
+    "name": "JetBrains Tools",
+    "icon": "https://api.iconify.design/devicon/jetbrains.svg",
+    "categories": ["tools"],
+    "featured": false
+  },
+  {
+    "name": "Maven",
+    "icon": "https://api.iconify.design/devicon/maven.svg",
+    "categories": ["tools", "backend"],
+    "featured": false
+  },
+  {
+    "name": "Gradle",
+    "icon": "https://api.iconify.design/devicon/gradle.svg",
+    "categories": ["tools", "backend"],
+    "featured": false
+  },
+  {
+    "name": "Mockito",
+    "icon": "https://api.iconify.design/simple-icons/mockito.svg",
+    "categories": ["tools", "backend"],
+    "featured": false
+  },
+
+  { "name": "VSCode", "icon": "https://api.iconify.design/devicon/vscode.svg", "categories": ["tools", "frontend"], "featured": true },
+  { "name": "IntelliJ IDEA", "icon": "https://api.iconify.design/devicon/intellij.svg", "categories": ["tools", "backend"], "featured": true },
+  { "name": "Jupyter", "icon": "https://api.iconify.design/devicon/jupyter.svg", "categories": ["tools", "data-science"], "featured": false },
+  { "name": "Replit", "icon": "https://api.iconify.design/simple-icons/replit.svg", "categories": ["tools"], "featured": false },
+  { "name": "Figma", "icon": "https://api.iconify.design/devicon/figma.svg", "categories": ["tools", "frontend"], "featured": false },
+
+  { "name": "Français", "icon": "https://api.iconify.design/circle-flags/fr.svg", "categories": ["language"], "featured": false },
+  { "name": "Anglais", "icon": "https://api.iconify.design/circle-flags/gb.svg", "categories": ["language"], "featured": false },
+  { "name": "Español", "icon": "https://api.iconify.design/circle-flags/es.svg", "categories": ["language"], "featured": false }
+]

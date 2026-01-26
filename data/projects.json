@@ -1,0 +1,79 @@
+[
+  {
+    "title": "FinnFoundDaChest",
+    "year": "2023",
+    "description": "Java, Swing, Jeu, Projet individuel",
+    "image": "/resources/images/FFDC.png",
+    "links": [
+      {
+        "type": "gitlab",
+        "url": "https://gitlab.univ-lille.fr/gaspard.catry.etu/FFDC",
+        "icon": "fa-brands fa-gitlab"
+      }
+    ]
+  },
+  {
+    "title": "Projet Agile de Rentrée",
+    "year": "2024",
+    "description": "Java, Agile, Rogue-Like, Travail d'équipe",
+    "image": "/resources/images/Donjon_Hexagone.png",
+    "links": [
+      {
+        "type": "gitlab",
+        "url": "https://gitlab.univ-lille.fr/2024-projet-agile-de-rentree/groupe-4",
+        "icon": "fa-brands fa-gitlab"
+      }
+    ]
+  },
+  {
+    "title": "Projet SAE 3.3",
+    "year": "2024",
+    "description": "Java, JavaFX, MVC, Travail d'équipe",
+    "image": "/resources/images/MFC.png",
+    "links": [
+      {
+        "type": "gitlab",
+        "url": "https://gitlab.univ-lille.fr/sae302/2024/G3_SAE3.3",
+        "icon": "fa-brands fa-gitlab"
+      }
+    ]
+  },
+  {
+    "title": "MineToEarn",
+    "year": "2024",
+    "description": "Java, HTML, CSS, JS, Plugins, Travail d'équipe",
+    "image": "/resources/images/mte.png",
+    "links": []
+  },
+  {
+    "title": "Projet Nuit de l'Info : CorpsAMer",
+    "year": "2024",
+    "description": "HTML, CSS, JavaScript, Webapp, Travail d'équipe",
+    "image": "/resources/images/CorpsAMer.png",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/YvanSerikoff/CorpsAMer",
+        "icon": "fa-brands fa-github"
+      },
+      {
+        "type": "live",
+        "url": "https://nuitdelinfo.septhime.fr/game.html",
+        "icon": "fa-solid fa-gamepad"
+      }
+    ]
+  },
+  {
+    "title": "Talkul",
+    "year": "2025",
+    "description": "HTML, CSS, Java EE, Webapp",
+    "image": "/resources/images/Talkul_connexion.png",
+    "links": [
+      {
+        "type": "gitlab",
+        "url": "https://gitlab.univ-lille.fr/team-g/talkul",
+        "icon": "fa-brands fa-gitlab"
+      }
+    ]
+  }
+]
