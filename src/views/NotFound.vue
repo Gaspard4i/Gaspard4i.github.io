@@ -11,7 +11,7 @@
       <!-- Finn GIF -->
       <div class="mb-8 flex justify-center">
         <img 
-          src="@/assets/images/finnstay.gif" 
+          src="/resources/images/finnstay.gif" 
           alt="Finn" 
           class="w-32 h-32 object-contain"
         />
