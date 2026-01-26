@@ -30,7 +30,7 @@
           </p>
 
           <a
-            href="/#about"
+            href="#about"
             class="inline-flex items-center space-x-3 bg-primary hover:bg-secondary text-primary-content transition-all duration-300 transform hover:scale-105 shadow-lg"
             style="border-radius: var(--radius-selector); padding: 1rem 2rem"
           >

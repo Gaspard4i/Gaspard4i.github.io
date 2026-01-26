@@ -85,7 +85,7 @@
 
     <!-- Scroll to top button -->
     <a 
-      href="/#home" 
+      href="#home" 
       class="scroll-top"
       aria-label="Retour en haut"
     >
@@ -96,12 +96,12 @@
 
 <script setup>
 const navItems = [
-  { id: 'home', label: 'Accueil', href: '/#home' },
-  { id: 'about', label: 'À propos', href: '/#about' },
-  { id: 'skills', label: 'Compétences', href: '/#skills' },
-  { id: 'education', label: 'Parcours', href: '/#education' },
-  { id: 'work', label: 'Projets', href: '/#work' },
-  { id: 'experience', label: 'Expérience', href: '/#experience' },
+  { id: 'home', label: 'Accueil', href: '#home' },
+  { id: 'about', label: 'À propos', href: '#about' },
+  { id: 'skills', label: 'Compétences', href: '#skills' },
+  { id: 'education', label: 'Parcours', href: '#education' },
+  { id: 'work', label: 'Projets', href: '#work' },
+  { id: 'experience', label: 'Expérience', href: '#experience' },
 ]
 </script>
 

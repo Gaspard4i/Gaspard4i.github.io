@@ -50,13 +50,13 @@ const isMenuOpen = ref(false)
 const activeSection = ref('home')
 
 const navItems = [
-  { id: 'home', label: 'Accueil', href: '/#home' },
-  { id: 'about', label: 'À propos', href: '/#about' },
-  { id: 'skills', label: 'Compétences', href: '/#skills' },
-  { id: 'education', label: 'Parcours', href: '/#education' },
-  { id: 'work', label: 'Projets', href: '/#work' },
-  { id: 'experience', label: 'Expérience', href: '/#experience' },
-  { id: 'contact', label: 'Contact', href: '/#contact' },
+  { id: 'home', label: 'Accueil', href: '#home' },
+  { id: 'about', label: 'À propos', href: '#about' },
+  { id: 'skills', label: 'Compétences', href: '#skills' },
+  { id: 'education', label: 'Parcours', href: '#education' },
+  { id: 'work', label: 'Projets', href: '#work' },
+  { id: 'experience', label: 'Expérience', href: '#experience' },
+  { id: 'contact', label: 'Contact', href: '#contact' },
 ]
 
 const toggleMenu = () => {

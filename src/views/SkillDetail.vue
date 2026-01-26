@@ -31,7 +31,7 @@
       <div v-else-if="skillDetail" class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <!-- Back Button -->
         <router-link
-          to="/#skills"
+          to="#skills"
           class="inline-flex items-center gap-2 mb-8 text-primary hover:text-secondary transition-colors duration-300"
         >
           <i class="fa-solid fa-arrow-left"></i>
