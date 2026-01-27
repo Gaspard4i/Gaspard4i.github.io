@@ -170,7 +170,7 @@
   },
   {
     "name": "Twig",
-    "icon": "https://api.iconify.design/devicon/twig.svg",
+    "icon": "https://api.iconify.design/material-icon-theme:twig.svg",
     "categories": ["frontend", "backend"],
     "featured": true
   },
