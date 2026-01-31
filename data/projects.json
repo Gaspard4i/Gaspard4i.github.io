@@ -6,9 +6,9 @@
     "image": "/resources/images/FFDC.png",
     "links": [
       {
-        "type": "gitlab",
-        "url": "https://gitlab.univ-lille.fr/gaspard.catry.etu/FFDC",
-        "icon": "fa-brands fa-gitlab"
+        "type": "github",
+        "url": "https://github.com/Gaspard4i/FFDC",
+        "icon": "fa-brands fa-github"
       }
     ]
   },
@@ -19,9 +19,9 @@
     "image": "/resources/images/Donjon_Hexagone.png",
     "links": [
       {
-        "type": "gitlab",
-        "url": "https://gitlab.univ-lille.fr/2024-projet-agile-de-rentree/groupe-4",
-        "icon": "fa-brands fa-gitlab"
+        "type": "github",
+        "url": "https://github.com/Gaspard4i/groupe-4",
+        "icon": "fa-brands fa-github"
       }
     ]
   },
@@ -32,9 +32,9 @@
     "image": "/resources/images/MFC.png",
     "links": [
       {
-        "type": "gitlab",
-        "url": "https://gitlab.univ-lille.fr/sae302/2024/G3_SAE3.3",
-        "icon": "fa-brands fa-gitlab"
+        "type": "github",
+        "url": "https://github.com/Gaspard4i/G3_SAE3.3",
+        "icon": "fa-brands fa-github"
       }
     ]
   },
@@ -70,9 +70,35 @@
     "image": "/resources/images/Talkul_connexion.png",
     "links": [
       {
-        "type": "gitlab",
-        "url": "https://gitlab.univ-lille.fr/team-g/talkul",
-        "icon": "fa-brands fa-gitlab"
+        "type": "github",
+        "url": "https://github.com/Gaspard4i/talkul",
+        "icon": "fa-brands fa-github"
+      }
+    ]
+  },
+    {
+    "title": "Woze",
+    "year": "2025",
+    "description": "Java, JavaFX, MVC, KNN, Travail d'équipe",
+    "image": "/resources/images/woze_knn.png",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/Gaspard4i/E3",
+        "icon": "fa-brands fa-github"
+      }
+    ]
+  },
+  {
+    "title": "Ma.io",
+    "year": "2025",
+    "description": "HTML, CSS, Javacript, Webapp",
+    "image": "/resources/images/Maio.png",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/Gaspard4i/equipe-5",
+        "icon": "fa-brands fa-github"
       }
     ]
   }
