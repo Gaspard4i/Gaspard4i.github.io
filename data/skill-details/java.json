@@ -1,0 +1,127 @@
+{
+  "slug": "java",
+  "name": "Java",
+  "icon": "https://api.iconify.design/devicon/java.svg",
+  "description": "Langage orienté objet robuste et scalable pour le développement backend et applications d'entreprise.",
+
+  "yearsOfExperience": 3,
+  "proficiencyLevel": "avancé",
+
+  "learningPath": [
+    {
+      "period": "1ère année BUT",
+      "duration": "1 an",
+      "description": "Découverte avec iJava puis bases de la POO",
+      "topics": [
+        "iJava - outil pédagogique par Yann Secq (mélange Java/Python)",
+        "Fondamentaux Java et POO",
+        "Design patterns",
+        "Projet PédagoPic - jeu de plateau éducatif",
+        "Algorithmique de base"
+      ]
+    },
+    {
+      "period": "2ème année BUT + Stage Nextoo",
+      "duration": "1 an + 3 mois stage",
+      "description": "Java Web, tests et DevOps",
+      "topics": [
+        "JEE, JSP, Jakarta",
+        "Servlets et bases de données (H2, PostgreSQL)",
+        "API REST, JSON, XML",
+        "JUnit et mocks",
+        "DevOps et qualité de code",
+        "Java Streams (découvert au stage)"
+      ]
+    },
+    {
+      "period": "3ème année BUT",
+      "duration": "1 an",
+      "description": "Spring et qualité avancée",
+      "topics": [
+        "Spring Framework et JPA",
+        "Qualité de code avancée",
+        "Qualité algorithmique",
+        "Architecture et compilation"
+      ]
+    }
+  ],
+
+  "usedInProjects": [
+    {
+      "name": "PédagoPic",
+      "description": "Jeu de plateau éducatif (1-7 joueurs) avec niveaux progressifs. Premier vrai projet Java avec iJava.",
+      "technologies": ["Java", "iJava"],
+      "link": "https://github.com/Gaspard4i/S1.02"
+    },
+    {
+      "name": "Woze - SAE 2.01-2.02",
+      "description": "Système de recherche d'itinéraires multi-critères avec graphes. 3 versions : mono-transport, multi-modal avec correspondances, optimisation multi-critères. Algorithme de Dijkstra et kpcc.",
+      "technologies": ["Java", "Algorithmes de graphes", "CSV", "Sérialisation"],
+      "link": "https://github.com/Gaspard4i/E3"
+    },
+    {
+      "name": "Isola - R3.04 TDD",
+      "description": "Jeu de plateau en TDD Ping-Pong. MVC avec JavaFX, variantes de déplacement, IA basique.",
+      "technologies": ["Java", "JavaFX", "JUnit", "TDD", "Maven"],
+      "link": "https://github.com/Gaspard4i/isola"
+    },
+    {
+      "name": "TalkUL",
+      "description": "Application web avec servlets, JSP et Tomcat. Config properties, Jackson XML/JSON.",
+      "technologies": ["Java", "JSP", "Servlet", "Tomcat", "Bootstrap", "PostgreSQL"],
+      "link": "https://github.com/Gaspard4i/talkul"
+    },
+    {
+      "name": "NextMovie",
+      "description": "Projet final Nextoo Academy démontrant les compétences acquises.",
+      "technologies": ["Java", "Spring Boot", "PostgreSQL", "Vue.js"],
+      "link": "https://github.com/Gaspard4i/nextmovie"
+    },
+    {
+      "name": "Finn Found Da Chest",
+      "description": "Speed run game en Java.",
+      "technologies": ["Java"],
+      "link": "https://github.com/Gaspard4i/FFDC"
+    },
+    {
+      "name": "Adventure Time RPG",
+      "description": "RPG en Java.",
+      "technologies": ["Java"],
+      "link": "https://github.com/Gaspard4i/ad-rpg"
+    },
+    {
+      "name": "Projet Agile - Groupe 4",
+      "description": "Jeu terminal en 1 semaine avec méthode agile en 2ème année. Groupes aléatoires.",
+      "technologies": ["Java", "Agile"],
+      "link": "https://github.com/Gaspard4i/groupe-4"
+    },
+    {
+      "name": "3 projets stage Nextoo",
+      "description": "Applications Spring Boot complètes avec PostgreSQL, Vue.js, tests JUnit et Mockito.",
+      "technologies": ["Java", "Spring Boot", "PostgreSQL", "JUnit", "Mockito"]
+    }
+  ],
+
+  "keyFeatures": [
+    {
+      "title": "Programmation Orientée Objet",
+      "description": "Maîtrise complète des principes POO, design patterns, architecture propre."
+    },
+    {
+      "title": "Java Web & JEE",
+      "description": "Servlets, JSP, Jakarta. API REST avec JSON/XML. Bases H2 et PostgreSQL."
+    },
+    {
+      "title": "Tests & Qualité",
+      "description": "JUnit, mocks, DevOps. Qualité de code et algorithmique."
+    },
+    {
+      "title": "Spring Ecosystem",
+      "description": "Spring Boot, Spring Data JPA, Streams. Stack complète pour backend moderne."
+    }
+  ],
+
+  "relatedSkills": ["Spring Boot", "PostgreSQL", "H2", "JUnit", "Mockito", "Maven"],
+
+  "personalNotes": "Java a été mon premier vrai langage de programmation. J'ai adoré l'apprendre avec iJava en 1ère année, un outil vraiment pédagogique créé par Yann Secq. Le projet PédagoPic m'a donné les bases, puis j'ai vraiment progressé avec Java Web en 2ème année. Le stage Nextoo m'a ouvert les yeux sur Spring et les Streams. Aujourd'hui c'est mon langage backend de prédilection."
+}

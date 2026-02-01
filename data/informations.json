@@ -1,0 +1,102 @@
+[
+    {
+        "nom_info": "Nom:",
+        "info": "Catry",
+        "type": "Basique"
+    },
+    {
+        "nom_info": "Prénom:",
+        "info": "Gaspard",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Surnom:",
+        "info": "Gas",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Pseudo:",
+        "info": "Gaspard4i",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Langage connu:",
+        "info": "Java",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Langage connu:",
+        "info": "Python",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Langage connu:",
+        "info": "C",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Langage connu:",
+        "info": "JavaScript",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Langage connu:",
+        "info": "iJava",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Système d'exploitation utilisé:",
+        "info": "Windows 10,11",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Système d'exploitation utilisé:",
+        "info": "Linux",
+        "type": "basique"
+    },
+    {
+        "nom_info": "IDE connu:",
+        "info": "VS Code",
+        "type": "basique"
+    },
+    {
+        "nom_info": "IDE connu:",
+        "info": "Intellij",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Années d'études:",
+        "info": "2ème année de BUT Informatique",
+        "type": "cool"
+    },
+    {
+        "nom_info": "École Actuelle:",
+        "info": "IUT de Lille",
+        "type": "basique"
+    },
+    {
+        "nom_info": "Langage préféré:",
+        "info": "Java",
+        "type": "importante"
+    },
+    {
+        "nom_info": "Base de données habituel:",
+        "info": "PostgreSQL",
+        "type": "importante"
+    },
+    {
+        "nom_info": "Système d'exploitation habituel:",
+        "info": "Windows 10,11",
+        "type": "cool"
+    },
+    {
+        "nom_info": "IDE préféré:",
+        "info": "VS Code",
+        "type": "importante"
+    },
+    {
+        "nom_info": "Outil de versioning préféré:",
+        "info": "Git",
+        "type": "importante"
+    }
+]
