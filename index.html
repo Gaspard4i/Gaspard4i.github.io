@@ -14,6 +14,17 @@
     />
   </head>
   <body>
+    <script>
+      // SPA redirect restore for GitHub Pages
+      (function() {
+        var p = window.location.search.slice(1).split('&').reduce(function(acc, kv) {
+          var parts = kv.split('=');
+          if (parts[0] === 'p') acc = decodeURIComponent(parts[1]);
+          return acc;
+        }, null);
+        if (p) window.history.replaceState(null, null, p);
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
