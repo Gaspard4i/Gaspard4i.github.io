@@ -11,10 +11,8 @@ const NAV_LINKS = [
   { to: '/contact', key: 'nav.contact' },
 ]
 
-const LANGUAGES = [
-  { code: 'fr', label: 'Français' },
-  { code: 'en', label: 'English' },
-]
+import { SUPPORTED_LOCALES } from '@/lib/locales'
+const LANGUAGES = SUPPORTED_LOCALES as readonly { code: string; label: string }[]
 
 function LanguageSwitcher() {
   const { i18n } = useTranslation()

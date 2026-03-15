@@ -1,6 +1,7 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import HttpBackend from 'i18next-http-backend'
+import { SUPPORTED_LANGS } from '@/lib/locales'
 
 i18n
   .use(HttpBackend)
@@ -8,7 +9,7 @@ i18n
   .init({
     lng: 'fr',
     fallbackLng: 'fr',
-    supportedLngs: ['fr', 'en'],
+    supportedLngs: SUPPORTED_LANGS,
     ns: ['translation'],
     defaultNS: 'translation',
     backend: {
