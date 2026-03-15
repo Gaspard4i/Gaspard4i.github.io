@@ -11,7 +11,7 @@ const SOCIAL_LINKS = [
   },
   {
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/gaspard-catry',
+    href: 'https://www.linkedin.com/in/gaspard-catry-070b70289/',
     icon: <Linkedin size={18} />,
   },
 ]

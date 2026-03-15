@@ -7,7 +7,7 @@ import ContactForm from '@/components/organisms/ContactForm'
 
 const SOCIAL_LINKS: { label: string; href: string; icon: ReactNode }[] = [
   { label: 'GitHub', href: 'https://github.com/Gaspard4i', icon: <SiGithub size={18} /> },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/gaspard-catry', icon: <Linkedin size={18} /> },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/gaspard-catry-070b70289/', icon: <Linkedin size={18} /> },
 ]
 
 export default function Contact() {

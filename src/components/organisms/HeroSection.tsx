@@ -17,7 +17,7 @@ const ROLES = [
 
 const SOCIAL = [
   { href: 'https://github.com/Gaspard4i', label: 'GitHub', icon: <SiGithub size={18} /> },
-  { href: 'https://linkedin.com/in/gaspard-catry', label: 'LinkedIn', icon: <Linkedin size={18} /> },
+  { href: 'https://www.linkedin.com/in/gaspard-catry-070b70289/', label: 'LinkedIn', icon: <Linkedin size={18} /> },
 ]
 
 export default function HeroSection() {
