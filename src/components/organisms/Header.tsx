@@ -23,7 +23,8 @@ export default function Header() {
     <header className="sticky top-0 z-40 bg-base-100/90 backdrop-blur-sm border-b border-base-300">
       <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="font-mono font-bold text-primary text-lg">
+        <a href="/" className="flex items-center gap-2 font-mono font-bold text-primary text-lg">
+          <img src="/favicon.gif" alt="Finn" className="w-8 h-8 rounded-full" />
           gaspard<span className="text-base-content/50">4i</span>
         </a>
 
