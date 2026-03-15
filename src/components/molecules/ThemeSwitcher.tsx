@@ -1,6 +1,13 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, type ReactNode } from 'react'
+import { Sun, Monitor, Music, ChevronDown, Check } from 'lucide-react'
 import { useTheme } from '@/hooks/useTheme'
 import type { ThemeName } from '@/types/theme'
+
+const THEME_ICONS: Record<ThemeName, ReactNode> = {
+  original: <Sun size={15} />,
+  vscode: <Monitor size={15} />,
+  spotify: <Music size={15} />,
+}
 
 export default function ThemeSwitcher() {
   const { theme, setTheme, themes, currentTheme } = useTheme()
@@ -20,21 +27,14 @@ export default function ThemeSwitcher() {
   return (
     <div className="relative" ref={dropdownRef}>
       <button
-        className="btn btn-ghost btn-sm gap-2"
+        className="btn btn-ghost btn-sm gap-1.5"
         onClick={() => setIsOpen((o) => !o)}
         aria-label="Changer de thème"
         aria-expanded={isOpen}
       >
-        <span>{currentTheme.icon}</span>
+        {THEME_ICONS[theme]}
         <span className="hidden sm:inline text-sm">{currentTheme.name}</span>
-        <svg
-          className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
+        <ChevronDown size={13} className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {isOpen && (
@@ -50,17 +50,9 @@ export default function ThemeSwitcher() {
                 setIsOpen(false)
               }}
             >
-              <span>{t.icon}</span>
+              {THEME_ICONS[t.id as ThemeName]}
               <span>{t.name}</span>
-              {theme === t.id && (
-                <svg className="w-4 h-4 ml-auto" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              )}
+              {theme === t.id && <Check size={14} className="ml-auto" />}
             </button>
           ))}
         </div>

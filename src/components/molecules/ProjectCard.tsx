@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next'
+import { ExternalLink } from 'lucide-react'
+import { SiGithub } from '@icons-pack/react-simple-icons'
 import type { Project } from '@/types/project'
 import Badge from '@/components/atoms/Badge'
 
@@ -52,13 +54,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               rel="noopener noreferrer"
               className="btn btn-outline btn-sm gap-2"
             >
-              <img
-                src="https://api.iconify.design/mdi/github.svg"
-                alt="GitHub"
-                width={16}
-                height={16}
-                className="invert-[0.5]"
-              />
+              <SiGithub size={14} />
               {t('projects.viewGithub')}
             </a>
           )}
@@ -67,8 +63,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary btn-sm"
+              className="btn btn-primary btn-sm gap-2"
             >
+              <ExternalLink size={14} />
               {t('projects.viewLive')}
             </a>
           )}

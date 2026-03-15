@@ -5,9 +5,9 @@ const STORAGE_KEY = 'portfolio-theme'
 const DEFAULT_THEME: ThemeName = 'original'
 
 const THEMES: ThemeDefinition[] = [
-  { id: 'original', name: 'Original', icon: '🌿', prefersDark: false, primaryColor: '#5c8a4a' },
-  { id: 'vscode', name: 'VS Code', icon: '💻', prefersDark: true, primaryColor: '#4fc3f7' },
-  { id: 'spotify', name: 'Spotify', icon: '🎵', prefersDark: true, primaryColor: '#1db954' },
+  { id: 'original', name: 'Original', prefersDark: false, primaryColor: '#5c8a4a' },
+  { id: 'vscode', name: 'VS Code', prefersDark: true, primaryColor: '#4fc3f7' },
+  { id: 'spotify', name: 'Spotify', prefersDark: true, primaryColor: '#1db954' },
 ]
 
 export function useTheme() {

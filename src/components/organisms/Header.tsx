@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Menu, X, Globe, ChevronDown, Check } from 'lucide-react'
 import NavItem from '@/components/molecules/NavItem'
 import ThemeSwitcher from '@/components/molecules/ThemeSwitcher'
 
@@ -11,12 +12,65 @@ const NAV_LINKS = [
 ]
 
 const LANGUAGES = [
-  { code: 'fr', label: 'FR' },
-  { code: 'en', label: 'EN' },
+  { code: 'fr', label: 'Français' },
+  { code: 'en', label: 'English' },
 ]
 
+function LanguageSwitcher() {
+  const { i18n } = useTranslation()
+  const [isOpen, setIsOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+  const current = LANGUAGES.find((l) => l.code === i18n.language) ?? LANGUAGES[0]
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
+  return (
+    <div className="relative" ref={dropdownRef}>
+      <button
+        className="btn btn-ghost btn-sm gap-1.5"
+        onClick={() => setIsOpen((o) => !o)}
+        aria-label="Changer de langue"
+        aria-expanded={isOpen}
+      >
+        <Globe size={15} />
+        <span className="hidden sm:inline text-sm font-mono">{current.code.toUpperCase()}</span>
+        <ChevronDown size={13} className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+
+      {isOpen && (
+        <div className="absolute right-0 mt-2 w-36 bg-base-200 rounded-box shadow-lg z-50 py-1">
+          {LANGUAGES.map((lang) => (
+            <button
+              key={lang.code}
+              className={`w-full flex items-center gap-3 px-4 py-2 text-sm hover:bg-base-300 transition-colors ${
+                i18n.language === lang.code ? 'text-primary font-semibold' : 'text-base-content'
+              }`}
+              onClick={() => {
+                i18n.changeLanguage(lang.code)
+                setIsOpen(false)
+              }}
+            >
+              <span className="font-mono text-xs">{lang.code.toUpperCase()}</span>
+              <span>{lang.label}</span>
+              {i18n.language === lang.code && <Check size={14} className="ml-auto" />}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function Header() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
@@ -36,22 +90,8 @@ export default function Header() {
         </nav>
 
         {/* Controls */}
-        <div className="flex items-center gap-2">
-          {/* Language switcher */}
-          <div className="flex items-center gap-1">
-            {LANGUAGES.map((lang) => (
-              <button
-                key={lang.code}
-                onClick={() => i18n.changeLanguage(lang.code)}
-                className={`btn btn-ghost btn-xs font-mono ${
-                  i18n.language === lang.code ? 'text-primary font-bold' : 'text-base-content/50'
-                }`}
-              >
-                {lang.label}
-              </button>
-            ))}
-          </div>
-
+        <div className="flex items-center gap-1">
+          <LanguageSwitcher />
           <ThemeSwitcher />
 
           {/* Mobile menu button */}
@@ -60,13 +100,7 @@ export default function Header() {
             onClick={() => setMobileOpen((o) => !o)}
             aria-label="Menu"
           >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              {mobileOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
+            {mobileOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
         </div>
       </div>

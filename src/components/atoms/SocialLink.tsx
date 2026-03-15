@@ -1,7 +1,9 @@
+import type { ReactNode } from 'react'
+
 interface SocialLinkProps {
   href: string
   label: string
-  icon: string
+  icon: ReactNode
   className?: string
 }
 
@@ -14,7 +16,7 @@ export default function SocialLink({ href, label, icon, className = '' }: Social
       aria-label={label}
       className={`btn btn-ghost btn-square btn-sm hover:text-primary transition-colors ${className}`}
     >
-      <img src={icon} alt={label} width={20} height={20} />
+      {icon}
     </a>
   )
 }

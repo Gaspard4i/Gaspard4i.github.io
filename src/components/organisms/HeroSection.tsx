@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import { Linkedin } from 'lucide-react'
+import { SiGithub } from '@icons-pack/react-simple-icons'
 import Avatar from '@/components/atoms/Avatar'
 import SocialLink from '@/components/atoms/SocialLink'
 
@@ -11,16 +13,8 @@ const ROLES = [
 ]
 
 const SOCIAL = [
-  {
-    href: 'https://github.com/Gaspard4i',
-    label: 'GitHub',
-    icon: 'https://api.iconify.design/mdi/github.svg',
-  },
-  {
-    href: 'https://linkedin.com/in/gaspard-catry',
-    label: 'LinkedIn',
-    icon: 'https://api.iconify.design/mdi/linkedin.svg',
-  },
+  { href: 'https://github.com/Gaspard4i', label: 'GitHub', icon: <SiGithub size={18} /> },
+  { href: 'https://linkedin.com/in/gaspard-catry', label: 'LinkedIn', icon: <Linkedin size={18} /> },
 ]
 
 export default function HeroSection() {
@@ -42,7 +36,6 @@ export default function HeroSection() {
   return (
     <section className="min-h-[calc(100vh-4rem)] flex items-center">
       <div className="max-w-5xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-12 w-full">
-        {/* Text */}
         <div className="flex-1 animate-slide-up">
           <p className="text-base-content/60 text-sm font-mono mb-2">{t('hero.greeting')}</p>
           <h1 className="text-5xl md:text-6xl font-bold text-base-content mb-3">
@@ -73,7 +66,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Avatar */}
         <div className="animate-fade-in">
           <Avatar alt="Gaspard Catry" size="xl" />
         </div>

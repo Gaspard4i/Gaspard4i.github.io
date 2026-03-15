@@ -1,15 +1,18 @@
 import { useTranslation } from 'react-i18next'
+import { Linkedin } from 'lucide-react'
+import { SiGithub } from '@icons-pack/react-simple-icons'
+import SocialLink from '@/components/atoms/SocialLink'
 
 const SOCIAL_LINKS = [
   {
     label: 'GitHub',
     href: 'https://github.com/Gaspard4i',
-    icon: 'https://api.iconify.design/mdi/github.svg',
+    icon: <SiGithub size={18} />,
   },
   {
     label: 'LinkedIn',
     href: 'https://linkedin.com/in/gaspard-catry',
-    icon: 'https://api.iconify.design/mdi/linkedin.svg',
+    icon: <Linkedin size={18} />,
   },
 ]
 
@@ -23,18 +26,9 @@ export default function Footer() {
         <p className="text-sm text-base-content/50">
           © {year} Gaspard Catry — {t('footer.madeWith')}
         </p>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
           {SOCIAL_LINKS.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={link.label}
-              className="btn btn-ghost btn-sm btn-square hover:text-primary"
-            >
-              <img src={link.icon} alt={link.label} width={18} height={18} />
-            </a>
+            <SocialLink key={link.label} href={link.href} label={link.label} icon={link.icon} />
           ))}
         </div>
       </div>

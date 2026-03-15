@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(git stash:*)",
+      "WebSearch",
+      "Bash(node:*)"
+    ]
+  }
+}
