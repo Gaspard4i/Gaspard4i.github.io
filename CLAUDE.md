@@ -153,7 +153,9 @@ Exemples :
 - `chore: update daisyui to 4.13`
 - `ci: add loco-sync workflow`
 
-**Commits :** ne jamais ajouter de `Co-Authored-By` dans les messages de commit. Le seul auteur est Gaspard Catry.
+**Commits :** ne jamais ajouter de `Co-Authored-By` dans les messages de commit. Le seul auteur est :
+- Nom : `Gaspard4i`
+- Email : `catry.gaspard@gmail.com`
 
 ---
 
