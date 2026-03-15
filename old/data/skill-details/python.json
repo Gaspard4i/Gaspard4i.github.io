@@ -1,0 +1,78 @@
+{
+  "slug": "python",
+  "name": "Python",
+  "icon": "https://api.iconify.design/devicon/python.svg",
+  "description": "Langage polyvalent pour scripting, data science et automatisation.",
+
+  "yearsOfExperience": 3,
+  "proficiencyLevel": "intermédiaire",
+
+  "learningPath": [
+    {
+      "period": "Lycée - Spécialité NSI",
+      "duration": "3 ans",
+      "description": "Découverte de la programmation et algorithmique",
+      "topics": [
+        "Bases de Python et structures de données",
+        "Piles et files",
+        "Programmation orientée objet",
+        "Binaire et représentation des données",
+        "Algorithmes de tri et de recherche",
+        "Complexité algorithmique (exponentielle, logarithmique)",
+        "Qualité algorithmique et optimisation",
+        "Librairies Python standard"
+      ]
+    },
+    {
+      "period": "3e année BUT",
+      "duration": "En cours",
+      "description": "Data science et traitement d'images",
+      "topics": [
+        "Matplotlib et visualisation de données",
+        "Pandas pour l'analyse de données",
+        "NumPy pour le calcul scientifique",
+        "Seaborn pour les graphiques statistiques",
+        "TP sur le dataset Titanic",
+        "Traitement et manipulation d'images",
+        "Reconnaissance de données sur images"
+      ]
+    }
+  ],
+
+  "usedInProjects": [
+    {
+      "name": "Projet NSI - Bac",
+      "description": "Projet de fin d'année lycée pour l'épreuve de NSI. Note : 18/20 au Bac.",
+      "technologies": ["Python"]
+    },
+    {
+      "name": "TP Titanic Dataset",
+      "description": "Analyse et visualisation des données du Titanic en 3e année BUT. Utilisation de Pandas, Seaborn et Matplotlib.",
+      "technologies": ["Python", "Pandas", "Seaborn", "Matplotlib"]
+    },
+    {
+      "name": "Traitement d'images",
+      "description": "TPs sur la manipulation et reconnaissance de données dans les images en 3e année.",
+      "technologies": ["Python", "NumPy"]
+    }
+  ],
+
+  "keyFeatures": [
+    {
+      "title": "Algorithmique",
+      "description": "Tris, recherche, complexité. Optimisation des performances."
+    },
+    {
+      "title": "Structures de données",
+      "description": "Piles, files, listes, dictionnaires. POO en Python."
+    },
+    {
+      "title": "Data Science",
+      "description": "Matplotlib, Pandas, NumPy, Seaborn pour l'analyse et la visualisation."
+    }
+  ],
+
+  "relatedSkills": ["Matplotlib", "Pandas", "NumPy", "Seaborn"],
+
+  "personalNotes": "Python a été mon premier langage de programmation au lycée en NSI. J'ai adoré l'apprentissage de l'algorithmique et j'ai eu 18 au Bac. En BUT, je l'utilise principalement pour la data science : analyses de datasets (Titanic), visualisations avec Matplotlib/Seaborn, et traitement d'images."
+}
