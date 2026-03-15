@@ -17,10 +17,10 @@ function since(days: number) {
 
 export default function AdminDashboard() {
   const { data: viewsData7 } = useSupabase<any[]>(() =>
-    supabase.from('page_views').select('id').gte('created_at', since(7))
+    supabase.from('page_views').select('visitor_id').gte('created_at', since(7))
   )
   const { data: viewsData30 } = useSupabase<any[]>(() =>
-    supabase.from('page_views').select('id').gte('created_at', since(30))
+    supabase.from('page_views').select('visitor_id').gte('created_at', since(30))
   )
   const { data: unreadData } = useSupabase<any[]>(() =>
     supabase.from('contact_messages').select('id').eq('read', false)
@@ -29,8 +29,8 @@ export default function AdminDashboard() {
     supabase.from('project_clicks').select('project_title').gte('created_at', since(30))
   )
 
-  const v7 = viewsData7?.length ?? 0
-  const v30 = viewsData30?.length ?? 0
+  const v7 = new Set(viewsData7?.map((r) => r.visitor_id).filter(Boolean)).size
+  const v30 = new Set(viewsData30?.map((r) => r.visitor_id).filter(Boolean)).size
   const unread = unreadData?.length ?? 0
 
   // Aggregate clicks by project
@@ -51,13 +51,13 @@ export default function AdminDashboard() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
         <div className="card bg-base-100">
           <div className="card-body py-4">
-            <div className="flex items-center gap-2 text-base-content/50 text-xs mb-1"><Eye size={14} /> Vues (7 jours)</div>
+            <div className="flex items-center gap-2 text-base-content/50 text-xs mb-1"><Eye size={14} /> Visiteurs uniques (7j)</div>
             <p className="text-3xl font-bold text-base-content">{v7}</p>
           </div>
         </div>
         <div className="card bg-base-100">
           <div className="card-body py-4">
-            <div className="flex items-center gap-2 text-base-content/50 text-xs mb-1"><Eye size={14} /> Vues (30 jours)</div>
+            <div className="flex items-center gap-2 text-base-content/50 text-xs mb-1"><Eye size={14} /> Visiteurs uniques (30j)</div>
             <p className="text-3xl font-bold text-base-content">{v30}</p>
           </div>
         </div>
