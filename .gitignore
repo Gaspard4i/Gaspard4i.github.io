@@ -7,25 +7,36 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Dépendances (NE JAMAIS PUBLIER CA)
+# Dependencies - NEVER commit these
 node_modules
+old/node_modules/
 .pnpm-store
 
-# Dossier de build (C'est ce qu'on va déployer, mais on ne le versionne pas dans le code source)
+# Build output
 dist
 dist-ssr
-coverage
+old/dist/
 
-# Environnement local
+# Test coverage
+coverage/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Vite cache
+.vite/
+
+# Environment variables - NEVER commit these, use .env.example as template
 .env
 .env.local
 .env.*.local
 
-# Editeurs
+# Editors
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+Thumbs.db
 *.suo
 *.ntvs
 *.njsproj

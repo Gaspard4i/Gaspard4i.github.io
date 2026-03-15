@@ -1,0 +1,32 @@
+import { useState, useEffect, useCallback } from 'react'
+import type { ThemeName, ThemeDefinition } from '@/types/theme'
+
+const STORAGE_KEY = 'portfolio-theme'
+const DEFAULT_THEME: ThemeName = 'original'
+
+const THEMES: ThemeDefinition[] = [
+  { id: 'original', name: 'Original', icon: '🌿', prefersDark: false, primaryColor: '#5c8a4a' },
+  { id: 'vscode', name: 'VS Code', icon: '💻', prefersDark: true, primaryColor: '#4fc3f7' },
+  { id: 'spotify', name: 'Spotify', icon: '🎵', prefersDark: true, primaryColor: '#1db954' },
+]
+
+export function useTheme() {
+  const [theme, setThemeState] = useState<ThemeName>(() => {
+    const stored = localStorage.getItem(STORAGE_KEY) as ThemeName | null
+    const isValid = stored && THEMES.some((t) => t.id === stored)
+    return isValid ? stored : DEFAULT_THEME
+  })
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem(STORAGE_KEY, theme)
+  }, [theme])
+
+  const setTheme = useCallback((name: ThemeName) => {
+    setThemeState(name)
+  }, [])
+
+  const currentTheme = THEMES.find((t) => t.id === theme) ?? THEMES[0]
+
+  return { theme, setTheme, themes: THEMES, currentTheme }
+}

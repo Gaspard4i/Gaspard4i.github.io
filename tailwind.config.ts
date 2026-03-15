@@ -1,0 +1,99 @@
+import type { Config } from 'tailwindcss'
+import daisyui from 'daisyui'
+
+export default {
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.4s ease-out',
+        'spin-slow': 'spin 3s linear infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+    },
+  },
+  plugins: [daisyui],
+  daisyui: {
+    themes: [
+      {
+        original: {
+          primary: 'oklch(55% 0.15 135)',
+          'primary-content': 'oklch(98% 0.01 135)',
+          secondary: 'oklch(25% 0.08 250)',
+          'secondary-content': 'oklch(98% 0.01 250)',
+          accent: 'oklch(65% 0.14 145)',
+          'accent-content': 'oklch(98% 0.01 145)',
+          neutral: 'oklch(35% 0.04 257)',
+          'neutral-content': 'oklch(98% 0.003 247)',
+          'base-100': 'oklch(98% 0.003 247)',
+          'base-200': 'oklch(96% 0.007 247)',
+          'base-300': 'oklch(92% 0.013 255)',
+          'base-content': 'oklch(20% 0.042 265)',
+          info: 'oklch(78% 0.154 211)',
+          success: 'oklch(84% 0.238 128)',
+          warning: 'oklch(85% 0.199 91)',
+          error: 'oklch(71% 0.202 349)',
+        },
+      },
+      {
+        vscode: {
+          primary: 'oklch(71% 0.15 239.15)',
+          'primary-content': 'oklch(94% 0.03 232.39)',
+          secondary: 'oklch(88% 0.059 254.128)',
+          'secondary-content': 'oklch(0% 0 0)',
+          accent: 'oklch(56.36% 0.017 273.66)',
+          'accent-content': 'oklch(86% 0.022 252.894)',
+          neutral: 'oklch(86% 0.022 252.894)',
+          'neutral-content': 'oklch(14% 0 0)',
+          'base-100': 'oklch(18% 0.02 271.27)',
+          'base-200': 'oklch(22% 0.02 271.67)',
+          'base-300': 'oklch(28% 0.03 270.91)',
+          'base-content': 'oklch(99.4% 0 0)',
+          info: 'oklch(60% 0.1 269.83)',
+          success: 'oklch(70% 0.15 159.83)',
+          warning: 'oklch(80% 0.1 100.65)',
+          error: 'oklch(64% 0.25 19.69)',
+        },
+      },
+      {
+        spotify: {
+          primary: 'oklch(70% 0.18 153.85)',
+          'primary-content': 'oklch(100% 0 0)',
+          secondary: 'oklch(98% 0.031 120.757)',
+          'secondary-content': 'oklch(27% 0.072 132.109)',
+          accent: 'oklch(45% 0.05 250.05)',
+          'accent-content': 'oklch(95% 0.01 238.46)',
+          neutral: 'oklch(100% 0 0)',
+          'neutral-content': 'oklch(14% 0 0)',
+          'base-100': 'oklch(19.64% 0.017 268.77)',
+          'base-200': 'oklch(9.3% 0.007 145)',
+          'base-300': 'oklch(15% 0.01 0)',
+          'base-content': 'oklch(98% 0.003 247)',
+          info: 'oklch(60% 0.1 269.83)',
+          success: 'oklch(72% 0.12 201.79)',
+          warning: 'oklch(80% 0.1 100.65)',
+          error: 'oklch(64% 0.25 19.69)',
+        },
+      },
+    ],
+    darkTheme: 'vscode',
+    base: true,
+    styled: true,
+    utils: true,
+    logs: false,
+  },
+} satisfies Config

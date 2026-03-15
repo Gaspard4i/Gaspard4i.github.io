@@ -1,0 +1,72 @@
+name: Sync Translations from Loco
+
+on:
+  schedule:
+    # Every Monday at 08:00 UTC
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+    inputs:
+      locale:
+        description: 'Specific locale to sync (leave empty for all: fr, en)'
+        required: false
+        default: ''
+
+jobs:
+  sync:
+    name: Fetch & Commit Translations
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch translations from Loco
+        run: |
+          fetch_locale() {
+            local LOCALE=$1
+            echo "Fetching $LOCALE..."
+            HTTP_STATUS=$(curl -sf \
+              -H "Authorization: Loco ${{ secrets.LOCO_API_KEY }}" \
+              "https://localise.biz/api/export/locale/${LOCALE}.json?format=i18next" \
+              -o "public/locales/${LOCALE}.json" \
+              -w "%{http_code}")
+            if [ "$HTTP_STATUS" != "200" ] && [ "$HTTP_STATUS" != "" ]; then
+              echo "Warning: HTTP $HTTP_STATUS for locale $LOCALE"
+            else
+              echo "Saved public/locales/${LOCALE}.json"
+            fi
+          }
+
+          mkdir -p public/locales
+
+          if [ -n "${{ github.event.inputs.locale }}" ]; then
+            fetch_locale "${{ github.event.inputs.locale }}"
+          else
+            fetch_locale "fr"
+            fetch_locale "en"
+          fi
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet public/locales/; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No translation changes detected."
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Translation changes detected."
+            git diff --stat public/locales/
+          fi
+
+      - name: Commit and push if changed
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/locales/
+          git commit -m "chore(i18n): sync translations from Loco [skip ci]"
+          git push

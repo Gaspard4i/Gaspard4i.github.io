@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je m'appelle",
+    "name": "Gaspard",
+    "bio": "Étudiant en 2ème année de BUT Informatique à l'IUT de Lille, passionné par le développement web et la création de projets innovants.",
+    "cta": "À propos de moi",
+    "ctaProjects": "Mes projets"
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "subtitle": "Une sélection de mes réalisations personnelles et académiques.",
+    "featuredTitle": "Projets en vedette",
+    "featuredSubtitle": "Quelques projets dont je suis particulièrement fier.",
+    "seeAll": "Voir tous les projets",
+    "viewGithub": "GitHub",
+    "viewLive": "Voir le projet",
+    "featured": "En vedette"
+  },
+  "about": {
+    "title": "À propos",
+    "subtitle": "Qui suis-je ?",
+    "bio": "Je suis Gaspard Catry, étudiant en 2ème année de BUT Informatique à l'IUT de Lille. Passionné par le développement web full-stack, j'apprécie créer des applications modernes et performantes.",
+    "skills": "Compétences",
+    "skillsSubtitle": "Les technologies que j'utilise au quotidien.",
+    "experience": "Expérience",
+    "experienceSubtitle": "Mon parcours académique et professionnel."
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Une question ou une opportunité ? N'hésitez pas à me contacter !",
+    "name": "Votre Nom",
+    "email": "Votre Email",
+    "message": "Votre Message",
+    "messagePlaceholder": "Bonjour Gaspard, je souhaitais...",
+    "send": "Envoyer le message",
+    "success": "Message envoyé avec succès ! Je vous répondrai dès que possible.",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "findMe": "Retrouvez-moi sur"
+  },
+  "footer": {
+    "madeWith": "Fait avec React, Tailwind & DaisyUI"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "subtitle": "La page que vous recherchez n'existe pas.",
+    "cta": "Retour à l'accueil"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue lors du chargement des données."
+  }
+}
