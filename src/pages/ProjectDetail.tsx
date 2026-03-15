@@ -89,7 +89,7 @@ export default function ProjectDetail() {
             {t('projects.viewGithub')}
           </a>
         )}
-        {project.url && (
+        {project.url?.startsWith('http') && (
           <a href={project.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary gap-2">
             <ExternalLink size={16} />
             {t('projects.viewLive')}

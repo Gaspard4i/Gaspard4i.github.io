@@ -9,6 +9,12 @@ function trackClick(projectId: string, projectTitle: string) {
   supabase.from('project_clicks').insert([{ project_id: projectId, project_title: projectTitle }]).then(() => {})
 }
 
+function validUrl(url: string | null): string | null {
+  if (!url) return null
+  if (url.startsWith('http://') || url.startsWith('https://')) return url
+  return null
+}
+
 interface ProjectCardProps {
   project: Project
 }
@@ -78,9 +84,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               {t('projects.viewGithub')}
             </a>
           )}
-          {project.url && (
+          {validUrl(project.url) && (
             <a
-              href={project.url}
+              href={validUrl(project.url)!}
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
