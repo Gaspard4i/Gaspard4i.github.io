@@ -31,6 +31,9 @@ coverage/
 .env.local
 .env.*.local
 
+# Claude Code memory
+.claude/
+
 # Editors
 .vscode/*
 !.vscode/extensions.json
