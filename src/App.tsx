@@ -18,6 +18,7 @@ const AdminProfile = lazy(() => import('@/pages/admin/AdminProfile'))
 const AdminProjects = lazy(() => import('@/pages/admin/AdminProjects'))
 const AdminSkills = lazy(() => import('@/pages/admin/AdminSkills'))
 const AdminExperiences = lazy(() => import('@/pages/admin/AdminExperiences'))
+const AdminMessages = lazy(() => import('@/pages/admin/AdminMessages'))
 
 function AppContent() {
   useTheme()
@@ -50,6 +51,7 @@ function AppContent() {
           <Route path="projects" element={<AdminProjects />} />
           <Route path="skills" element={<AdminSkills />} />
           <Route path="experiences" element={<AdminExperiences />} />
+          <Route path="messages" element={<AdminMessages />} />
         </Route>
       </Routes>
     </BrowserRouter>

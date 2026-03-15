@@ -41,7 +41,8 @@
     "send": "Envoyer le message",
     "success": "Message envoyé avec succès ! Je vous répondrai dès que possible.",
     "error": "Une erreur est survenue. Veuillez réessayer.",
-    "findMe": "Retrouvez-moi sur"
+    "findMe": "Retrouvez-moi sur",
+    "gdpr": "Vos données (nom, email, message) sont utilisées uniquement pour vous répondre. Elles ne sont jamais revendues ni utilisées à des fins commerciales."
   },
   "footer": {
     "madeWith": "Fait avec React, Tailwind & DaisyUI"

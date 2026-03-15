@@ -41,7 +41,8 @@
     "send": "Send message",
     "success": "Message sent successfully! I'll get back to you as soon as possible.",
     "error": "An error occurred. Please try again.",
-    "findMe": "Find me on"
+    "findMe": "Find me on",
+    "gdpr": "Your data (name, email, message) is used solely to reply to you. It is never sold or used for commercial purposes."
   },
   "footer": {
     "madeWith": "Made with React, Tailwind & DaisyUI"

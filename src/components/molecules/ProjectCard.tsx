@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom'
 import { ExternalLink } from 'lucide-react'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import type { Project } from '@/types/project'
+import { supabase } from '@/lib/supabase'
+
+function trackClick(projectId: string, projectTitle: string) {
+  supabase.from('project_clicks').insert([{ project_id: projectId, project_title: projectTitle }]).then(() => {})
+}
 
 interface ProjectCardProps {
   project: Project
@@ -18,7 +23,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <div className="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300 h-full">
-      <Link to={`/projects/${project.id}`} className="block">
+      <Link to={`/projects/${project.id}`} className="block" onClick={() => trackClick(project.id, project.title)}>
         {imageUrl && (
           <figure className="h-48 overflow-hidden">
             <img
