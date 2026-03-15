@@ -1,5 +1,6 @@
+const GRAVATAR_HASH = 'ea7dd79c8a54c68d3149de07d613daa105ab40f29c64da6cbbe540d6f362f93c'
+
 interface AvatarProps {
-  src?: string
   alt: string
   size?: 'sm' | 'md' | 'lg' | 'xl'
   className?: string
@@ -12,19 +13,16 @@ const sizeClasses = {
   xl: 'w-40 h-40',
 }
 
-export default function Avatar({ src, alt, size = 'md', className = '' }: AvatarProps) {
+const pixelSizes = { sm: 96, md: 160, lg: 256, xl: 320 }
+
+export default function Avatar({ alt, size = 'md', className = '' }: AvatarProps) {
+  const px = pixelSizes[size]
+  const src = `https://www.gravatar.com/avatar/${GRAVATAR_HASH}?s=${px}&d=identicon`
+
   return (
     <div className={`avatar ${className}`}>
       <div className={`${sizeClasses[size]} rounded-full ring ring-primary ring-offset-base-100 ring-offset-2`}>
-        {src ? (
-          <img src={src} alt={alt} />
-        ) : (
-          <div className="bg-base-300 flex items-center justify-center w-full h-full rounded-full">
-            <span className="text-2xl font-bold text-base-content">
-              {alt.charAt(0).toUpperCase()}
-            </span>
-          </div>
-        )}
+        <img src={src} alt={alt} />
       </div>
     </div>
   )
