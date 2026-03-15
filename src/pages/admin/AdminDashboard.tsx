@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
-import { FolderKanban, Wrench, Briefcase, ArrowRight } from 'lucide-react'
+import { FolderKanban, Wrench, Briefcase, User, ArrowRight } from 'lucide-react'
 
 const CARDS = [
+  { to: '/admin/profile', label: 'Profil', icon: <User size={24} /> },
   { to: '/admin/projects', label: 'Projets', icon: <FolderKanban size={24} /> },
   { to: '/admin/skills', label: 'Compétences', icon: <Wrench size={24} /> },
   { to: '/admin/experiences', label: 'Expériences', icon: <Briefcase size={24} /> },

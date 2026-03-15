@@ -5,6 +5,9 @@ import { Linkedin } from 'lucide-react'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import Avatar from '@/components/atoms/Avatar'
 import SocialLink from '@/components/atoms/SocialLink'
+import { useSupabase } from '@/hooks/useSupabase'
+import { supabase } from '@/lib/supabase'
+import type { Profile } from '@/types/profile'
 
 const ROLES = [
   'étudiant en BUT informatique',
@@ -18,9 +21,15 @@ const SOCIAL = [
 ]
 
 export default function HeroSection() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [roleIndex, setRoleIndex] = useState(0)
   const [visible, setVisible] = useState(true)
+  const { data: profile } = useSupabase<Profile>(() =>
+    supabase.from('profile').select('*').single()
+  )
+  const bio = profile
+    ? (i18n.language.startsWith('fr') ? profile.hero_fr : profile.hero_en)
+    : t('hero.bio')
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,7 +59,7 @@ export default function HeroSection() {
               {ROLES[roleIndex]}
             </p>
           </div>
-          <p className="text-base-content/70 max-w-md mb-8">{t('hero.bio')}</p>
+          <p className="text-base-content/70 max-w-md mb-8">{bio}</p>
           <div className="flex items-center gap-4 flex-wrap">
             <Link to="/about" className="btn btn-primary">
               {t('hero.cta')}

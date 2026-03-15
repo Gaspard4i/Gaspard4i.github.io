@@ -79,7 +79,7 @@ export default function Header() {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 font-mono font-bold text-primary text-lg">
           <img src="/favicon.gif" alt="Finn" className="w-8 h-8 mask mask-squircle" />
-          gaspard<span className="text-base-content/50">4i</span>
+          Gaspard<span className="text-base-content/50">4i</span>
         </a>
 
         {/* Desktop nav */}

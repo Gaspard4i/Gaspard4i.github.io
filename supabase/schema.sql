@@ -115,6 +115,31 @@ create policy "Authenticated users can manage project_skills"
   on public.project_skills for all using (auth.role() = 'authenticated');
 
 -- ============================================================
+-- PROFILE (single row)
+-- ============================================================
+create table public.profile (
+  id         integer primary key default 1,
+  hero_fr    text not null default '',
+  hero_en    text not null default '',
+  about_fr   text not null default '',
+  about_en   text not null default '',
+  constraint single_row check (id = 1)
+);
+
+insert into public.profile (hero_fr, hero_en, about_fr, about_en) values (
+  'Étudiant en 2ème année de BUT Informatique à l''IUT de Lille, passionné par le développement web et la création de projets innovants.',
+  'Second-year Computer Science student at IUT de Lille, passionate about web development and building innovative projects.',
+  'Je suis Gaspard Catry, étudiant en 2ème année de BUT Informatique à l''IUT de Lille. Passionné par le développement web full-stack, j''apprécie créer des applications modernes et performantes.',
+  'I''m Gaspard Catry, a second-year Computer Science student at IUT de Lille. Passionate about full-stack web development, I enjoy building modern and performant applications.'
+);
+
+alter table public.profile enable row level security;
+create policy "Profile is viewable by everyone"
+  on public.profile for select using (true);
+create policy "Authenticated users can manage profile"
+  on public.profile for all using (auth.role() = 'authenticated');
+
+-- ============================================================
 -- EXPERIENCES
 -- ============================================================
 create table public.experiences (

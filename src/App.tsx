@@ -12,6 +12,7 @@ import NotFound from '@/pages/NotFound'
 
 const AdminLogin = lazy(() => import('@/pages/admin/AdminLogin'))
 const AdminDashboard = lazy(() => import('@/pages/admin/AdminDashboard'))
+const AdminProfile = lazy(() => import('@/pages/admin/AdminProfile'))
 const AdminProjects = lazy(() => import('@/pages/admin/AdminProjects'))
 const AdminSkills = lazy(() => import('@/pages/admin/AdminSkills'))
 const AdminExperiences = lazy(() => import('@/pages/admin/AdminExperiences'))
@@ -41,6 +42,7 @@ function AppContent() {
           }
         >
           <Route index element={<AdminDashboard />} />
+          <Route path="profile" element={<AdminProfile />} />
           <Route path="projects" element={<AdminProjects />} />
           <Route path="skills" element={<AdminSkills />} />
           <Route path="experiences" element={<AdminExperiences />} />
