@@ -21,7 +21,7 @@ export default function Avatar({ alt, size = 'md', className = '' }: AvatarProps
 
   return (
     <div className={`avatar ${className}`}>
-      <div className={`${sizeClasses[size]} rounded-full ring ring-primary ring-offset-base-100 ring-offset-2`}>
+      <div className={`${sizeClasses[size]} mask mask-squircle ring ring-primary ring-offset-base-100 ring-offset-2`}>
         <img src={src} alt={alt} />
       </div>
     </div>

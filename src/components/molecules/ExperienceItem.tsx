@@ -19,7 +19,7 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
 
   return (
     <li className="mb-6 ml-4">
-      <div className="absolute w-3 h-3 bg-primary rounded-full mt-1.5 -left-1.5 border border-base-100" />
+      <div className="absolute w-3 h-3 bg-primary mt-1.5 -left-1.5 border border-base-100" />
       <time className="text-xs font-normal text-base-content/50">
         {startDate} – {endDate}
       </time>

@@ -26,7 +26,7 @@ export default function SectionLayout({
             {subtitle && (
               <p className="text-base-content/60">{subtitle}</p>
             )}
-            <div className="w-16 h-1 bg-primary rounded-full mt-3" />
+            <div className="w-16 h-1 bg-primary mt-3" />
           </div>
         )}
         {children}

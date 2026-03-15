@@ -6,7 +6,7 @@ interface SkillTagProps {
 
 export default function SkillTag({ skill }: SkillTagProps) {
   return (
-    <div className="flex items-center gap-2 bg-base-200 rounded-lg px-3 py-2 hover:bg-base-300 transition-colors">
+    <div className="flex items-center gap-2 bg-base-200 px-3 py-2 hover:bg-base-300 transition-colors">
       {skill.icon && (
         <img
           src={skill.icon}

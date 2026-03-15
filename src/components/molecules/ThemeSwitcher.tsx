@@ -5,6 +5,7 @@ import type { ThemeName } from '@/types/theme'
 
 const THEME_ICONS: Record<ThemeName, ReactNode> = {
   original: <Sun size={15} />,
+  'original-dark': <Sun size={15} />,
   vscode: <Monitor size={15} />,
   spotify: <Music size={15} />,
 }

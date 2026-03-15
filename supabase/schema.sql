@@ -13,7 +13,6 @@ create table public.projects (
   id          uuid primary key default uuid_generate_v4(),
   title       text not null,
   description text not null,
-  techs       text[] not null default '{}',
   url         text,
   github_url  text,
   image_url   text,
@@ -22,19 +21,22 @@ create table public.projects (
   created_at  timestamptz not null default now()
 );
 
-insert into public.projects (title, description, techs, github_url, image_url, year, featured) values
-  ('FinnFoundDaChest',                'Jeu Java Swing, projet individuel',                            array['Java','Swing'],                           'https://github.com/Gaspard4i/FFDC',         'FFDC.png',              2023, false),
-  ('Projet Agile de Rentrée',         'Rogue-Like Java, travail d''équipe',                           array['Java','Agile'],                           'https://github.com/Gaspard4i/groupe-4',     'Donjon_Hexagone.png',   2024, false),
-  ('Projet SAE 3.3',                  'Application JavaFX MVC, travail d''équipe',                    array['Java','JavaFX','MVC'],                    'https://github.com/Gaspard4i/G3_SAE3.3',   'MFC.png',               2024, false),
-  ('MineToEarn',                      'Plugin Minecraft + interface web, travail d''équipe',           array['Java','HTML','CSS','JavaScript'],          null,                                        'mte.png',               2024, false),
-  ('Projet Nuit de l''Info : CorpsAMer', 'Webapp HTML/CSS/JS, Nuit de l''Info, travail d''équipe',   array['HTML','CSS','JavaScript'],                'https://github.com/YvanSerikoff/CorpsAMer', 'CorpsAMer.png',         2024, true),
-  ('Talkul',                          'Webapp Java EE, messagerie en temps réel',                     array['HTML','CSS','Java EE'],                   'https://github.com/Gaspard4i/talkul',      'Talkul_connexion.png',  2025, false),
-  ('Woze',                            'Classifieur KNN avec interface JavaFX, travail d''équipe',     array['Java','JavaFX','MVC','KNN'],              'https://github.com/Gaspard4i/E3',          'woze_knn.png',          2025, true),
-  ('Ma.io',                           'Webapp JavaScript, travail d''équipe',                         array['HTML','CSS','JavaScript'],                'https://github.com/Gaspard4i/equipe-5',    'Maio.png',              2025, false);
+insert into public.projects (title, description, github_url, image_url, year, featured) values
+  ('FinnFoundDaChest',                   'Jeu Java Swing, projet individuel',                          'https://github.com/Gaspard4i/FFDC',         'FFDC.png',              2023, false),
+  ('Projet Agile de Rentrée',            'Rogue-Like Java, travail d''équipe',                         'https://github.com/Gaspard4i/groupe-4',     'Donjon_Hexagone.png',   2024, false),
+  ('Projet SAE 3.3',                     'Application JavaFX MVC, travail d''équipe',                  'https://github.com/Gaspard4i/G3_SAE3.3',   'MFC.png',               2024, false),
+  ('MineToEarn',                         'Plugin Minecraft + interface web, travail d''équipe',         null,                                        'mte.png',               2024, false),
+  ('Projet Nuit de l''Info : CorpsAMer', 'Webapp HTML/CSS/JS, Nuit de l''Info, travail d''équipe',     'https://github.com/YvanSerikoff/CorpsAMer', 'CorpsAMer.png',         2024, true),
+  ('Talkul',                             'Webapp Java EE, messagerie en temps réel',                   'https://github.com/Gaspard4i/talkul',      'Talkul_connexion.png',  2025, false),
+  ('Woze',                               'Classifieur KNN avec interface JavaFX, travail d''équipe',   'https://github.com/Gaspard4i/E3',          'woze_knn.png',          2025, true),
+  ('Ma.io',                              'Webapp JavaScript, travail d''équipe',                       'https://github.com/Gaspard4i/equipe-5',    'Maio.png',              2025, false),
+  ('MaGare',                             'Application web de gestion de gare, projet académique',      null,                                        null,                    2025, true);
 
 alter table public.projects enable row level security;
 create policy "Public projects are viewable by everyone"
   on public.projects for select using (true);
+create policy "Authenticated users can manage projects"
+  on public.projects for all using (auth.role() = 'authenticated');
 
 -- ============================================================
 -- SKILLS
@@ -81,6 +83,36 @@ insert into public.skills (name, category, icon, featured) values
 alter table public.skills enable row level security;
 create policy "Public skills are viewable by everyone"
   on public.skills for select using (true);
+create policy "Authenticated users can manage skills"
+  on public.skills for all using (auth.role() = 'authenticated');
+
+-- ============================================================
+-- PROJECT_SKILLS (junction table)
+-- ============================================================
+create table public.project_skills (
+  project_id uuid not null references public.projects(id) on delete cascade,
+  skill_id   uuid not null references public.skills(id)   on delete cascade,
+  primary key (project_id, skill_id)
+);
+
+-- Seed project_skills
+insert into public.project_skills (project_id, skill_id)
+select p.id, s.id from public.projects p, public.skills s where
+  (p.title = 'FinnFoundDaChest'                   and s.name in ('Java')) or
+  (p.title = 'Projet Agile de Rentrée'             and s.name in ('Java')) or
+  (p.title = 'Projet SAE 3.3'                      and s.name in ('Java')) or
+  (p.title = 'MineToEarn'                          and s.name in ('Java', 'HTML', 'CSS', 'JavaScript')) or
+  (p.title = 'Projet Nuit de l''Info : CorpsAMer'  and s.name in ('HTML', 'CSS', 'JavaScript')) or
+  (p.title = 'Talkul'                              and s.name in ('Java', 'HTML', 'CSS')) or
+  (p.title = 'Woze'                                and s.name in ('Java')) or
+  (p.title = 'Ma.io'                               and s.name in ('HTML', 'CSS', 'JavaScript')) or
+  (p.title = 'MaGare'                              and s.name in ('HTML', 'CSS', 'JavaScript'));
+
+alter table public.project_skills enable row level security;
+create policy "Public project_skills are viewable by everyone"
+  on public.project_skills for select using (true);
+create policy "Authenticated users can manage project_skills"
+  on public.project_skills for all using (auth.role() = 'authenticated');
 
 -- ============================================================
 -- EXPERIENCES
@@ -106,6 +138,8 @@ insert into public.experiences (company, role, description, start_date, end_date
 alter table public.experiences enable row level security;
 create policy "Public experiences are viewable by everyone"
   on public.experiences for select using (true);
+create policy "Authenticated users can manage experiences"
+  on public.experiences for all using (auth.role() = 'authenticated');
 
 -- ============================================================
 -- CONTACT MESSAGES

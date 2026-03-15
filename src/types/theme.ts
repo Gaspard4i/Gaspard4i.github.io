@@ -1,4 +1,4 @@
-export type ThemeName = 'original' | 'vscode' | 'spotify'
+export type ThemeName = 'original' | 'original-dark' | 'vscode' | 'spotify'
 
 export interface ThemeDefinition {
   id: ThemeName

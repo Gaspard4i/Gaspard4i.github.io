@@ -16,7 +16,7 @@ export default function ProjectGrid({ featuredOnly = false, limit }: ProjectGrid
   const { data: projects, loading, error } = useSupabase<Project[]>(() => {
     let query = supabase
       .from('projects')
-      .select('*')
+      .select('*, project_skills(skill_id, skills(id, name, icon))')
       .order('year', { ascending: false })
 
     if (featuredOnly) query = query.eq('featured', true)
@@ -30,7 +30,7 @@ export default function ProjectGrid({ featuredOnly = false, limit }: ProjectGrid
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {Array.from({ length: limit ?? 6 }).map((_, i) => (
           <div key={i} className="card bg-base-200 p-4 gap-3">
-            <SkeletonBox className="h-48 w-full rounded-lg" />
+            <SkeletonBox className="h-48 w-full" />
             <SkeletonBox className="h-4 w-3/4" />
             <SkeletonBox className="h-3 w-full" count={2} />
           </div>

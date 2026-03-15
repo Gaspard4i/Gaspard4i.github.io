@@ -6,6 +6,7 @@ const DEFAULT_THEME: ThemeName = 'original'
 
 const THEMES: ThemeDefinition[] = [
   { id: 'original', name: 'Original', prefersDark: false, primaryColor: '#5c8a4a' },
+  { id: 'original-dark', name: 'Original Dark', prefersDark: true, primaryColor: '#6aad56' },
   { id: 'vscode', name: 'VS Code', prefersDark: true, primaryColor: '#4fc3f7' },
   { id: 'spotify', name: 'Spotify', prefersDark: true, primaryColor: '#1db954' },
 ]

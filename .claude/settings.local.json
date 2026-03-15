@@ -7,7 +7,8 @@
       "Bash(npm run:*)",
       "Bash(git stash:*)",
       "WebSearch",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(curl:*)"
     ]
   }
 }

@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next'
 import { ExternalLink } from 'lucide-react'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import type { Project } from '@/types/project'
-import Badge from '@/components/atoms/Badge'
 
 interface ProjectCardProps {
   project: Project
@@ -13,6 +12,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const imageUrl = project.image_url
     ? `/project-images/${project.image_url.split('/').pop()}`
     : null
+
+  const skills = project.project_skills?.map((ps) => ps.skills) ?? []
 
   return (
     <div className="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300 h-full">
@@ -40,11 +41,18 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         <p className="text-base-content/70 text-sm flex-1">{project.description}</p>
 
-        <div className="flex flex-wrap gap-1 mt-1">
-          {project.techs.map((tech) => (
-            <Badge key={tech} label={tech} size="sm" variant="ghost" />
-          ))}
-        </div>
+        {skills.length > 0 && (
+          <div className="flex flex-wrap gap-2 mt-1">
+            {skills.map((skill) => (
+              <div key={skill.id} className="flex items-center gap-1 badge badge-ghost badge-sm">
+                {skill.icon && (
+                  <img src={skill.icon} alt={skill.name} width={12} height={12} />
+                )}
+                <span>{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        )}
 
         <div className="card-actions justify-end mt-2">
           {project.github_url && (
