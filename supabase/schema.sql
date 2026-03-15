@@ -52,16 +52,16 @@ create table public.skills (
 insert into public.skills (name, category, icon, featured) values
   -- Backend
   ('Java',        'backend',      'https://api.iconify.design/devicon/java.svg',           true),
-  ('Spring Boot', 'backend',      'https://api.iconify.design/devicon/spring.svg',         false),
+  ('Spring Boot', 'backend',      'https://api.iconify.design/devicon/spring.svg',         true),
   ('Python',      'backend',      'https://api.iconify.design/devicon/python.svg',         false),
   ('PHP',         'backend',      'https://api.iconify.design/devicon/php.svg',            false),
   ('Node.js',     'backend',      'https://api.iconify.design/devicon/nodejs.svg',         false),
   -- Frontend
-  ('HTML',        'frontend',     'https://api.iconify.design/devicon/html5.svg',          true),
-  ('CSS',         'frontend',     'https://api.iconify.design/devicon/css3.svg',           true),
+  ('HTML',        'frontend',     'https://api.iconify.design/devicon/html5.svg',          false),
+  ('CSS',         'frontend',     'https://api.iconify.design/devicon/css3.svg',           false),
   ('JavaScript',  'frontend',     'https://api.iconify.design/devicon/javascript.svg',     true),
   ('TypeScript',  'frontend',     'https://api.iconify.design/devicon/typescript.svg',     false),
-  ('React',       'frontend',     'https://api.iconify.design/devicon/react.svg',          true),
+  ('React',       'frontend',     'https://api.iconify.design/devicon/react.svg',          false),
   ('Vue.js',      'frontend',     'https://api.iconify.design/devicon/vuejs.svg',          false),
   ('Tailwind CSS','frontend',     'https://api.iconify.design/devicon/tailwindcss.svg',    false),
   -- Database

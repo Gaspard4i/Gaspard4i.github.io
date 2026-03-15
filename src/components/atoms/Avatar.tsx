@@ -7,13 +7,13 @@ interface AvatarProps {
 }
 
 const sizeClasses = {
-  sm: 'w-12 h-12',
-  md: 'w-20 h-20',
-  lg: 'w-32 h-32',
-  xl: 'w-40 h-40',
+  sm: 'w-16 h-16',
+  md: 'w-28 h-28',
+  lg: 'w-48 h-48',
+  xl: 'w-64 h-64',
 }
 
-const pixelSizes = { sm: 96, md: 160, lg: 256, xl: 320 }
+const pixelSizes = { sm: 128, md: 224, lg: 384, xl: 512 }
 
 export default function Avatar({ alt, size = 'md', className = '' }: AvatarProps) {
   const px = pixelSizes[size]
