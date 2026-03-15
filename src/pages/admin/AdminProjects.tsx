@@ -33,8 +33,9 @@ export default function AdminProjects() {
   const [saving, setSaving] = useState(false)
 
   function openEdit(project: Project) {
-    setEditing(project)
-    setSelectedSkillIds(project.project_skills?.map((ps) => ps.skill_id) ?? [])
+    const { project_skills, ...rest } = project
+    setEditing(rest)
+    setSelectedSkillIds(project_skills?.map((ps) => ps.skill_id) ?? [])
     setIsNew(false)
   }
 
@@ -62,10 +63,12 @@ export default function AdminProjects() {
 
     let projectId = editing.id
     if (isNew) {
-      const { data } = await supabase.from('projects').insert([editing]).select('id').single()
+      const { id: _id, created_at: _ca, ...insertPayload } = editing as Project
+      const { data } = await supabase.from('projects').insert([insertPayload]).select('id').single()
       projectId = data?.id
     } else {
-      await supabase.from('projects').update(editing).eq('id', editing.id)
+      const { id: _id, created_at: _ca, ...updatePayload } = editing as Project
+      await supabase.from('projects').update(updatePayload).eq('id', editing.id)
     }
 
     if (projectId) {
