@@ -8,6 +8,7 @@ import type { Skill } from '@/types/skill'
 const EMPTY: Omit<Project, 'id' | 'created_at' | 'project_skills'> = {
   title: '',
   description: '',
+  long_description: null,
   url: null,
   github_url: null,
   image_url: null,
@@ -119,6 +120,10 @@ export default function AdminProjects() {
               <div className="form-control md:col-span-2">
                 <label className="label"><span className="label-text">Description *</span></label>
                 <textarea className="textarea textarea-bordered" rows={2} value={editing.description ?? ''} onChange={(e) => setEditing({ ...editing, description: e.target.value })} />
+              </div>
+              <div className="form-control md:col-span-2">
+                <label className="label"><span className="label-text">Description longue</span></label>
+                <textarea className="textarea textarea-bordered" rows={5} value={editing.long_description ?? ''} onChange={(e) => setEditing({ ...editing, long_description: e.target.value || null })} />
               </div>
               <div className="form-control md:col-span-2">
                 <label className="label"><span className="label-text">Technologies</span></label>

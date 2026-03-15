@@ -16,4 +16,5 @@ export interface Skill {
   level: 1 | 2 | 3 | 4 | 5
   icon: string | null
   featured: boolean
+  description: string | null
 }

@@ -11,6 +11,7 @@ export interface Project {
   id: string
   title: string
   description: string
+  long_description: string | null
   url: string | null
   github_url: string | null
   image_url: string | null

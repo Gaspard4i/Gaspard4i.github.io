@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type { Skill } from '@/types/skill'
 
 interface SkillTagProps {
@@ -6,7 +7,10 @@ interface SkillTagProps {
 
 export default function SkillTag({ skill }: SkillTagProps) {
   return (
-    <div className="flex items-center gap-2 bg-base-200 px-3 py-2 hover:bg-base-300 transition-colors">
+    <Link
+      to={`/skills/${skill.id}`}
+      className="flex items-center gap-2 bg-base-200 px-3 py-2 hover:bg-base-300 transition-colors"
+    >
       {skill.icon && (
         <img
           src={skill.icon}
@@ -18,6 +22,6 @@ export default function SkillTag({ skill }: SkillTagProps) {
         />
       )}
       <span className="text-sm font-medium text-base-content">{skill.name}</span>
-    </div>
+    </Link>
   )
 }

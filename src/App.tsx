@@ -9,6 +9,8 @@ import Projects from '@/pages/Projects'
 import About from '@/pages/About'
 import Contact from '@/pages/Contact'
 import NotFound from '@/pages/NotFound'
+import ProjectDetail from '@/pages/ProjectDetail'
+import SkillDetail from '@/pages/SkillDetail'
 
 const AdminLogin = lazy(() => import('@/pages/admin/AdminLogin'))
 const AdminDashboard = lazy(() => import('@/pages/admin/AdminDashboard'))
@@ -28,6 +30,8 @@ function AppContent() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
+          <Route path="/skills/:id" element={<SkillDetail />} />
           <Route path="*" element={<NotFound />} />
         </Route>
 

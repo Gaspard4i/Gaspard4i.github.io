@@ -12,6 +12,7 @@ const EMPTY: Omit<Skill, 'id'> = {
   level: 3,
   icon: null,
   featured: false,
+  description: null,
 }
 
 export default function AdminSkills() {
@@ -72,6 +73,10 @@ export default function AdminSkills() {
               <div className="form-control md:col-span-2">
                 <label className="label"><span className="label-text">URL icône (iconify)</span></label>
                 <input className="input input-bordered" placeholder="https://api.iconify.design/devicon/java.svg" value={editing.icon ?? ''} onChange={(e) => setEditing({ ...editing, icon: e.target.value || null })} />
+              </div>
+              <div className="form-control md:col-span-2">
+                <label className="label"><span className="label-text">Description</span></label>
+                <textarea className="textarea textarea-bordered" rows={4} value={editing.description ?? ''} onChange={(e) => setEditing({ ...editing, description: e.target.value || null })} />
               </div>
               <div className="form-control">
                 <label className="label"><span className="label-text">Niveau (1-5)</span></label>
