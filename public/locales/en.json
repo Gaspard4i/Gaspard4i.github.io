@@ -1,59 +1,58 @@
 {
-  "nav": {
-    "home": "Home",
-    "projects": "Projects",
-    "about": "About",
-    "contact": "Contact"
-  },
-  "hero": {
-    "greeting": "Hello, my name is",
-    "name": "Gaspard",
-    "bio": "Second-year Computer Science student at IUT de Lille, passionate about web development and building innovative projects.",
-    "cta": "About me",
-    "ctaProjects": "My projects"
-  },
-  "projects": {
-    "title": "My Projects",
-    "subtitle": "A selection of my personal and academic work.",
-    "featuredTitle": "Featured Projects",
-    "featuredSubtitle": "A few projects I'm particularly proud of.",
-    "seeAll": "View all projects",
-    "viewGithub": "GitHub",
-    "viewLive": "View project",
-    "featured": "Featured"
-  },
-  "about": {
-    "title": "About",
-    "subtitle": "Who am I?",
-    "bio": "I'm Gaspard Catry, a second-year Computer Science student at IUT de Lille. Passionate about full-stack web development, I enjoy building modern and performant applications.",
-    "skills": "Skills",
-    "skillsSubtitle": "Technologies I work with on a daily basis.",
-    "experience": "Experience",
-    "experienceSubtitle": "My academic and professional journey."
-  },
-  "contact": {
-    "title": "Contact Me",
-    "subtitle": "A question or an opportunity? Feel free to reach out!",
-    "name": "Your Name",
-    "email": "Your Email",
-    "message": "Your Message",
-    "messagePlaceholder": "Hello Gaspard, I wanted to...",
-    "send": "Send message",
-    "success": "Message sent successfully! I'll get back to you as soon as possible.",
-    "error": "An error occurred. Please try again.",
-    "findMe": "Find me on",
-    "gdpr": "Your data (name, email, message) is used solely to reply to you. It is never sold or used for commercial purposes."
-  },
-  "footer": {
-    "madeWith": "Made with React, Tailwind & DaisyUI"
-  },
-  "notFound": {
-    "title": "Page not found",
-    "subtitle": "The page you're looking for doesn't exist.",
-    "cta": "Back to home"
-  },
-  "common": {
-    "loading": "Loading...",
-    "error": "An error occurred while loading data."
-  }
+    "nav": {
+        "home": "Home",
+        "projects": "Projects",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "hero": {
+        "greeting": "Hello, my name is",
+        "name": "Gaspard",
+        "bio": "Second-year Computer Science student at IUT Lille, passionate about web development and creating innovative projects.",
+        "cta": "About me",
+        "ctaProjects": "My projects"
+    },
+    "projects": {
+        "title": "My Projects",
+        "subtitle": "A selection of my personal and academic achievements.",
+        "featuredTitle": "Featured projects",
+        "featuredSubtitle": "Some projects I am particularly proud of.",
+        "seeAll": "View all projects",
+        "viewGithub": "GitHub",
+        "viewLive": "View project",
+        "featured": "Featured"
+    },
+    "about": {
+        "title": "About",
+        "subtitle": "Who am I?",
+        "bio": "I am Gaspard Catry, a second-year Computer Science student at IUT Lille. Passionate about full-stack web development, I enjoy creating modern and high-performance applications.",
+        "skills": "Skills",
+        "skillsSubtitle": "The technologies I use daily.",
+        "experience": "Experience",
+        "experienceSubtitle": "My academic and professional background."
+    },
+    "contact": {
+        "title": "Contact me",
+        "subtitle": "Have a question or an opportunity? Feel free to contact me!",
+        "name": "Your Name",
+        "email": "Your Email",
+        "message": "Your Message",
+        "messagePlaceholder": "Hello Gaspard, I wanted to...",
+        "send": "Send message",
+        "success": "Message sent successfully! I will reply as soon as possible.",
+        "error": "An error occurred. Please try again.",
+        "findMe": "Find me on"
+    },
+    "footer": {
+        "madeWith": "Made with React, Tailwind & DaisyUI"
+    },
+    "notFound": {
+        "title": "Page not found",
+        "subtitle": "The page you are looking for does not exist.",
+        "cta": "Back to home"
+    },
+    "common": {
+        "loading": "Loading...",
+        "error": "An error occurred while loading data."
+    }
 }
