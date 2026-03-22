@@ -16,7 +16,7 @@ export default function ProjectGrid({ featuredOnly = false, limit }: ProjectGrid
   const { data: projects, loading, error } = useSupabase<Project[]>(() => {
     let query = supabase
       .from('projects')
-      .select('*, project_skills(skill_id, skills(id, name, icon))')
+      .select('*, project_skills(skill_id, skills(id, name, icon, category))')
       .order('year', { ascending: false })
 
     if (featuredOnly) query = query.eq('featured', true)
