@@ -13,7 +13,7 @@ export default function ProjectDetail() {
   const { data: project, loading, error } = useSupabase<Project>(() =>
     supabase
       .from('projects')
-      .select('*, project_skills(skill_id, skills(id, name, icon))')
+      .select('*, project_skills(skill_id, skills(id, name, icon, category))')
       .eq('id', id!)
       .single()
   )
@@ -38,7 +38,9 @@ export default function ProjectDetail() {
   const imageUrl = project.image_url
     ? `/project-images/${project.image_url.split('/').pop()}`
     : null
-  const skills = project.project_skills?.map((ps) => ps.skills) ?? []
+  const allSkills = project.project_skills?.map((ps) => ps.skills) ?? []
+  const techSkills = allSkills.filter((s) => s.category !== 'soft-skill')
+  const softSkills = allSkills.filter((s) => s.category === 'soft-skill')
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
@@ -67,18 +69,39 @@ export default function ProjectDetail() {
 
       <p className="text-base-content/70 text-lg mb-8 leading-relaxed">{project.description}</p>
 
-      {skills.length > 0 && (
-        <div className="flex flex-wrap gap-2 mb-8">
-          {skills.map((skill) => (
-            <Link
-              key={skill.id}
-              to={`/skills/${skill.id}`}
-              className="flex items-center gap-1.5 badge badge-ghost hover:badge-primary transition-colors py-3 px-3"
-            >
-              {skill.icon && <img src={skill.icon} alt={skill.name} width={14} height={14} />}
-              <span className="text-sm">{skill.name}</span>
-            </Link>
-          ))}
+      {techSkills.length > 0 && (
+        <div className="mb-4">
+          <h3 className="text-sm font-medium text-base-content/50 mb-2">{t('projects.technologies')}</h3>
+          <div className="flex flex-wrap gap-2">
+            {techSkills.map((skill) => (
+              <Link
+                key={skill.id}
+                to={`/skills/${skill.id}`}
+                className="flex items-center gap-1.5 badge badge-ghost hover:badge-primary transition-colors py-3 px-3"
+              >
+                {skill.icon && <img src={skill.icon} alt={skill.name} width={14} height={14} />}
+                <span className="text-sm">{skill.name}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {softSkills.length > 0 && (
+        <div className="mb-8">
+          <h3 className="text-sm font-medium text-base-content/50 mb-2">{t('projects.softSkills')}</h3>
+          <div className="flex flex-wrap gap-2">
+            {softSkills.map((skill) => (
+              <Link
+                key={skill.id}
+                to={`/skills/${skill.id}`}
+                className="flex items-center gap-1.5 badge badge-secondary badge-outline hover:badge-secondary transition-colors py-3 px-3"
+              >
+                {skill.icon && <img src={skill.icon} alt={skill.name} width={14} height={14} />}
+                <span className="text-sm">{skill.name}</span>
+              </Link>
+            ))}
+          </div>
         </div>
       )}
 

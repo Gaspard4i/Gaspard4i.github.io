@@ -20,7 +20,9 @@
         "seeAll": "View all projects",
         "viewGithub": "GitHub",
         "viewLive": "View project",
-        "featured": "Featured"
+        "featured": "Featured",
+        "softSkills": "Soft skills",
+        "technologies": "Technologies"
     },
     "about": {
         "title": "About",

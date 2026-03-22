@@ -6,10 +6,16 @@ interface SkillTagProps {
 }
 
 export default function SkillTag({ skill }: SkillTagProps) {
+  const isSoft = skill.category === 'soft-skill'
+
   return (
     <Link
       to={`/skills/${skill.id}`}
-      className="flex items-center gap-2 bg-base-200 px-3 py-2 hover:bg-base-300 transition-colors"
+      className={`flex items-center gap-2 px-3 py-2 transition-colors ${
+        isSoft
+          ? 'bg-secondary/10 border border-secondary/30 hover:bg-secondary/20'
+          : 'bg-base-200 hover:bg-base-300'
+      }`}
     >
       {skill.icon && (
         <img

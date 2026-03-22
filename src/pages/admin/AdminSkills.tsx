@@ -4,7 +4,7 @@ import { supabase } from '@/lib/supabase'
 import { useSupabase } from '@/hooks/useSupabase'
 import type { Skill, SkillCategory } from '@/types/skill'
 
-const CATEGORIES: SkillCategory[] = ['backend', 'frontend', 'database', 'devops', 'tools', 'system', 'data-science', 'language', 'fullstack']
+const CATEGORIES: SkillCategory[] = ['backend', 'frontend', 'database', 'devops', 'tools', 'system', 'data-science', 'language', 'fullstack', 'soft-skill']
 
 const EMPTY: Omit<Skill, 'id'> = {
   name: '',

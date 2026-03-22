@@ -8,6 +8,7 @@ export type SkillCategory =
   | 'data-science'
   | 'language'
   | 'fullstack'
+  | 'soft-skill'
 
 export interface Skill {
   id: string
