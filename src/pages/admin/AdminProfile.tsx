@@ -19,8 +19,20 @@ export default function AdminProfile() {
   async function handleSave() {
     if (!editing) return
     setSaving(true)
-    const { hero_fr, hero_en, about_fr, about_en } = editing
-    await supabase.from('profile').update({ hero_fr, hero_en, about_fr, about_en }).eq('id', 1)
+    const {
+      hero_fr, hero_en, about_fr, about_en,
+      positioning_fr, positioning_en,
+      reflexive_fr, reflexive_en,
+      strengths_fr, strengths_en,
+      improvements_fr, improvements_en,
+    } = editing
+    await supabase.from('profile').update({
+      hero_fr, hero_en, about_fr, about_en,
+      positioning_fr, positioning_en,
+      reflexive_fr, reflexive_en,
+      strengths_fr, strengths_en,
+      improvements_fr, improvements_en,
+    }).eq('id', 1)
     setSaving(false)
     setEditing(null)
     refetch()
@@ -31,6 +43,21 @@ export default function AdminProfile() {
   if (loading) {
     return <div className="p-8 flex justify-center"><span className="loading loading-spinner loading-lg" /></div>
   }
+
+  const fields: { label: string; key: keyof Profile; rows?: number }[] = [
+    { label: 'Bio courte — FR (hero)', key: 'hero_fr', rows: 3 },
+    { label: 'Bio courte — EN (hero)', key: 'hero_en', rows: 3 },
+    { label: 'Bio longue — FR (à propos)', key: 'about_fr', rows: 4 },
+    { label: 'Bio longue — EN (à propos)', key: 'about_en', rows: 4 },
+    { label: 'Positionnement — FR', key: 'positioning_fr', rows: 4 },
+    { label: 'Positionnement — EN', key: 'positioning_en', rows: 4 },
+    { label: 'Analyse réflexive — FR', key: 'reflexive_fr', rows: 5 },
+    { label: 'Analyse réflexive — EN', key: 'reflexive_en', rows: 5 },
+    { label: 'Points forts — FR', key: 'strengths_fr', rows: 4 },
+    { label: 'Points forts — EN', key: 'strengths_en', rows: 4 },
+    { label: "Axes d'amélioration — FR", key: 'improvements_fr', rows: 4 },
+    { label: "Axes d'amélioration — EN", key: 'improvements_en', rows: 4 },
+  ]
 
   return (
     <div className="p-8 max-w-2xl">
@@ -43,41 +70,21 @@ export default function AdminProfile() {
 
       <div className="card bg-base-100">
         <div className="card-body flex flex-col gap-4">
-          <div className="form-control">
-            <label className="label"><span className="label-text font-medium">Bio courte — FR (hero)</span></label>
-            {editing ? (
-              <textarea className="textarea textarea-bordered" rows={3} value={editing.hero_fr ?? ''} onChange={(e) => setEditing({ ...editing, hero_fr: e.target.value })} />
-            ) : (
-              <p className="text-base-content/70 text-sm">{data?.hero_fr}</p>
-            )}
-          </div>
-
-          <div className="form-control">
-            <label className="label"><span className="label-text font-medium">Bio courte — EN (hero)</span></label>
-            {editing ? (
-              <textarea className="textarea textarea-bordered" rows={3} value={editing.hero_en ?? ''} onChange={(e) => setEditing({ ...editing, hero_en: e.target.value })} />
-            ) : (
-              <p className="text-base-content/70 text-sm">{data?.hero_en}</p>
-            )}
-          </div>
-
-          <div className="form-control">
-            <label className="label"><span className="label-text font-medium">Bio longue — FR (à propos)</span></label>
-            {editing ? (
-              <textarea className="textarea textarea-bordered" rows={4} value={editing.about_fr ?? ''} onChange={(e) => setEditing({ ...editing, about_fr: e.target.value })} />
-            ) : (
-              <p className="text-base-content/70 text-sm">{data?.about_fr}</p>
-            )}
-          </div>
-
-          <div className="form-control">
-            <label className="label"><span className="label-text font-medium">Bio longue — EN (à propos)</span></label>
-            {editing ? (
-              <textarea className="textarea textarea-bordered" rows={4} value={editing.about_en ?? ''} onChange={(e) => setEditing({ ...editing, about_en: e.target.value })} />
-            ) : (
-              <p className="text-base-content/70 text-sm">{data?.about_en}</p>
-            )}
-          </div>
+          {fields.map(({ label, key, rows }) => (
+            <div key={key} className="form-control">
+              <label className="label"><span className="label-text font-medium">{label}</span></label>
+              {editing ? (
+                <textarea
+                  className="textarea textarea-bordered"
+                  rows={rows ?? 3}
+                  value={(editing[key] as string) ?? ''}
+                  onChange={(e) => setEditing({ ...editing, [key]: e.target.value })}
+                />
+              ) : (
+                <p className="text-base-content/70 text-sm whitespace-pre-line">{data?.[key] as string}</p>
+              )}
+            </div>
+          ))}
 
           {editing && (
             <div className="flex justify-end gap-2 mt-2">
