@@ -5,7 +5,11 @@ import ExperienceItem from '@/components/molecules/ExperienceItem'
 import SkeletonBox from '@/components/atoms/SkeletonBox'
 import type { Experience } from '@/types/experience'
 
-export default function ExperienceTimeline() {
+interface ExperienceTimelineProps {
+  excludeTypes?: string[]
+}
+
+export default function ExperienceTimeline({ excludeTypes }: ExperienceTimelineProps) {
   const { t } = useTranslation()
 
   const { data: experiences, loading, error } = useSupabase<Experience[]>(() =>
@@ -24,9 +28,13 @@ export default function ExperienceTimeline() {
     )
   }
 
+  const filtered = excludeTypes
+    ? (experiences ?? []).filter((exp) => !excludeTypes.includes(exp.type))
+    : experiences
+
   return (
     <ol className="relative border-l border-base-300 ml-2">
-      {experiences?.map((exp) => (
+      {filtered?.map((exp) => (
         <ExperienceItem key={exp.id} experience={exp} />
       ))}
     </ol>

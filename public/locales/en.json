@@ -8,7 +8,7 @@
     "hero": {
         "greeting": "Hello, my name is",
         "name": "Gaspard",
-        "bio": "Second-year Computer Science student at IUT Lille, passionate about web development and creating innovative projects.",
+        "bio": "Full-stack developer apprentice at Mandarine Academy, 3rd year Computer Science student at IUT de Lille.",
         "cta": "About me",
         "ctaProjects": "My projects"
     },
@@ -25,11 +25,39 @@
     "about": {
         "title": "About",
         "subtitle": "Who am I?",
-        "bio": "I am Gaspard Catry, a second-year Computer Science student at IUT Lille. Passionate about full-stack web development, I enjoy creating modern and high-performance applications.",
-        "skills": "Skills",
+        "bio": "I am Gaspard Catry, a 20-year-old full-stack developer based in Lille. Currently in my 3rd year of Computer Science (BUT) at IUT de Lille, doing my work-study at Mandarine Academy.",
+        "skills": "Technical Skills",
         "skillsSubtitle": "The technologies I use daily.",
-        "experience": "Experience",
-        "experienceSubtitle": "My academic and professional background."
+        "experience": "Full Timeline",
+        "experienceSubtitle": "My academic and professional background.",
+        "positioning": "Professional Positioning",
+        "positioningSubtitle": "My project and vision.",
+        "proExperience": "Professional Experiences",
+        "proExperienceSubtitle": "Details of my internships and work-study programs.",
+        "softSkills": "Soft Skills",
+        "softSkillsSubtitle": "The interpersonal skills that define my professional approach.",
+        "reflexive": "Self-Reflection",
+        "reflexiveSubtitle": "What my professional experiences taught me about myself.",
+        "strengths": "Strengths",
+        "improvements": "Areas for Improvement",
+        "context": "Context",
+        "missions": "Missions",
+        "autonomy": "Autonomy",
+        "interactions": "Interactions",
+        "situation": "Concrete Situation",
+        "analysis": "My Analysis"
+    },
+    "softSkillCategories": {
+        "maniere_etre": "Way of Being",
+        "maniere_communiquer": "Way of Communicating",
+        "maniere_travailler": "Way of Working with Others"
+    },
+    "experienceTypes": {
+        "stage": "Internship",
+        "alternance": "Work-Study",
+        "education": "Education",
+        "job": "Employment",
+        "other": "Other"
     },
     "contact": {
         "title": "Contact me",
@@ -41,7 +69,8 @@
         "send": "Send message",
         "success": "Message sent successfully! I will reply as soon as possible.",
         "error": "An error occurred. Please try again.",
-        "findMe": "Find me on"
+        "findMe": "Find me on",
+        "gdpr": "Your data (name, email, message) is used only to respond to you. It is never resold or used for commercial purposes."
     },
     "footer": {
         "madeWith": "Made with React, Tailwind & DaisyUI"
@@ -53,6 +82,7 @@
     },
     "common": {
         "loading": "Loading...",
-        "error": "An error occurred while loading data."
+        "error": "An error occurred while loading data.",
+        "present": "Present"
     }
 }

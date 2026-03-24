@@ -1,20 +1,29 @@
+import { useTranslation } from 'react-i18next'
 import type { Experience } from '@/types/experience'
 
 interface ExperienceItemProps {
   experience: Experience
 }
 
-function formatDate(dateStr: string): string {
+function formatDate(dateStr: string, locale: string): string {
   const date = new Date(dateStr)
-  return date.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })
+  return date.toLocaleDateString(locale === 'fr' ? 'fr-FR' : 'en-US', { month: 'long', year: 'numeric' })
 }
 
 export default function ExperienceItem({ experience }: ExperienceItemProps) {
-  const startDate = formatDate(experience.start_date)
+  const { t, i18n } = useTranslation()
+  const fr = i18n.language.startsWith('fr')
+  const locale = fr ? 'fr' : 'en'
+
+  const company = (fr ? experience.company : experience.company_en) ?? experience.company
+  const role = (fr ? experience.role : experience.role_en) ?? experience.role
+  const description = (fr ? experience.description : experience.description_en) ?? experience.description
+
+  const startDate = formatDate(experience.start_date, locale)
   const endDate = experience.current
-    ? "Présent"
+    ? t('common.present')
     : experience.end_date
-      ? formatDate(experience.end_date)
+      ? formatDate(experience.end_date, locale)
       : ''
 
   return (
@@ -23,10 +32,10 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
       <time className="text-xs font-normal text-base-content/50">
         {startDate} – {endDate}
       </time>
-      <h3 className="text-sm font-semibold text-base-content mt-0.5">{experience.role}</h3>
-      <p className="text-xs text-primary font-medium">{experience.company}</p>
-      {experience.description && (
-        <p className="text-xs text-base-content/70 mt-1">{experience.description}</p>
+      <h3 className="text-sm font-semibold text-base-content mt-0.5">{role}</h3>
+      <p className="text-xs text-primary font-medium">{company}</p>
+      {description && (
+        <p className="text-xs text-base-content/70 mt-1">{description}</p>
       )}
     </li>
   )
