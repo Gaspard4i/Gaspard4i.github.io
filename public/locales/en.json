@@ -45,7 +45,9 @@
         "autonomy": "Autonomy",
         "interactions": "Interactions",
         "situation": "Concrete Situation",
-        "analysis": "My Analysis"
+        "analysis": "My Analysis",
+        "seeMore": "See details",
+        "seeLess": "Show less"
     },
     "softSkillCategories": {
         "maniere_etre": "Way of Being",

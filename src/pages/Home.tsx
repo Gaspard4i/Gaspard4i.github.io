@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import HeroSection from '@/components/organisms/HeroSection'
 import ProjectGrid from '@/components/organisms/ProjectGrid'
 import SkillsGrid from '@/components/organisms/SkillsGrid'
+import ProExperienceSection from '@/components/organisms/ProExperienceSection'
 import ExperienceTimeline from '@/components/organisms/ExperienceTimeline'
 import SectionLayout from '@/components/templates/SectionLayout'
 
@@ -13,11 +14,25 @@ export default function Home() {
     <>
       <HeroSection />
 
+      {/* Expériences pro — le recruteur voit ça en premier après le hero */}
+      <SectionLayout
+        id="pro-experience"
+        title={t('about.proExperience')}
+        subtitle={t('about.proExperienceSubtitle')}
+        className="bg-base-200"
+      >
+        <ProExperienceSection />
+        <div className="mt-4 text-center">
+          <Link to="/about#reflexive" className="btn btn-ghost btn-sm text-base-content/60 hover:text-primary">
+            {t('about.reflexive')} →
+          </Link>
+        </div>
+      </SectionLayout>
+
       <SectionLayout
         id="projects"
         title={t('projects.featuredTitle')}
         subtitle={t('projects.featuredSubtitle')}
-        className="bg-base-200"
       >
         <ProjectGrid featuredOnly limit={3} />
         <div className="mt-8 text-center">
@@ -27,10 +42,10 @@ export default function Home() {
         </div>
       </SectionLayout>
 
-      <SectionLayout id="skills" title={t('about.skills')} subtitle={t('about.skillsSubtitle')}>
+      <SectionLayout id="skills" title={t('about.skills')} subtitle={t('about.skillsSubtitle')} className="bg-base-200">
         <SkillsGrid featuredOnly />
         <div className="mt-6 text-center">
-          <Link to="/about" className="btn btn-ghost btn-sm text-base-content/60 hover:text-primary">
+          <Link to="/about#skills" className="btn btn-ghost btn-sm text-base-content/60 hover:text-primary">
             {t('about.skills')} →
           </Link>
         </div>
@@ -40,12 +55,11 @@ export default function Home() {
         id="experience"
         title={t('about.experience')}
         subtitle={t('about.experienceSubtitle')}
-        className="bg-base-200"
       >
         <ExperienceTimeline />
       </SectionLayout>
 
-      <SectionLayout id="contact" title={t('contact.title')} subtitle={t('contact.subtitle')}>
+      <SectionLayout id="contact" title={t('contact.title')} subtitle={t('contact.subtitle')} className="bg-base-200">
         <div className="text-center">
           <Link to="/contact" className="btn btn-primary btn-lg">
             {t('contact.send')}
