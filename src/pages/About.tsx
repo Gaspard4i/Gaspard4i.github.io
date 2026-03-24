@@ -3,7 +3,6 @@ import SectionLayout from '@/components/templates/SectionLayout'
 import SkillsGrid from '@/components/organisms/SkillsGrid'
 import ExperienceTimeline from '@/components/organisms/ExperienceTimeline'
 import ProExperienceSection from '@/components/organisms/ProExperienceSection'
-import SoftSkillsSection from '@/components/organisms/SoftSkillsSection'
 import ReflexiveSection from '@/components/organisms/ReflexiveSection'
 import { useSupabase } from '@/hooks/useSupabase'
 import { supabase } from '@/lib/supabase'
@@ -60,31 +59,21 @@ export default function About() {
         <SkillsGrid />
       </SectionLayout>
 
-      {/* 4. Compétences comportementales (soft skills) */}
-      <SectionLayout
-        id="soft-skills"
-        title={t('about.softSkills')}
-        subtitle={t('about.softSkillsSubtitle')}
-        className="bg-base-200"
-      >
-        <SoftSkillsSection />
-      </SectionLayout>
-
-      {/* 5. Analyse réflexive */}
+      {/* 4. Analyse réflexive */}
       <SectionLayout
         id="reflexive"
         title={t('about.reflexive')}
         subtitle={t('about.reflexiveSubtitle')}
+        className="bg-base-200"
       >
         <ReflexiveSection />
       </SectionLayout>
 
-      {/* 6. Parcours complet (timeline) */}
+      {/* 5. Parcours complet (timeline) */}
       <SectionLayout
         id="experience"
         title={t('about.experience')}
         subtitle={t('about.experienceSubtitle')}
-        className="bg-base-200"
       >
         <ExperienceTimeline />
       </SectionLayout>
