@@ -54,18 +54,6 @@
         "seeMore": "Voir le détail",
         "seeLess": "Réduire"
     },
-    "softSkillCategories": {
-        "maniere_etre": "Manière d'être",
-        "maniere_communiquer": "Manière de communiquer",
-        "maniere_travailler": "Manière de travailler avec les autres"
-    },
-    "experienceTypes": {
-        "stage": "Stage",
-        "alternance": "Alternance",
-        "education": "Formation",
-        "job": "Emploi",
-        "other": "Autre"
-    },
     "contact": {
         "title": "Contactez-moi",
         "subtitle": "Une question ou une opportunité ? N'hésitez pas à me contacter !",
@@ -92,13 +80,17 @@
         "error": "Une erreur est survenue lors du chargement des données.",
         "present": "Présent"
     },
-    "profile": {
-        "hero": "Développeur full-stack en alternance chez Mandarine Academy, étudiant en 3ème année de BUT Informatique à l'IUT de Lille. Passionné par la conception d'applications web modernes — Java, Spring Boot, Vue.js, PHP/Symfony.",
-        "about": "Je suis Gaspard Catry, développeur full-stack de 20 ans basé à Lille. Actuellement en 3ème année de BUT Informatique à l'IUT de Lille (classé 12/72 en S5, moyenne 14.81/20), je réalise mon alternance chez Mandarine Academy sur un stack PHP/Symfony/Tailwind.\n\nMon stage chez Nextoo (Roubaix) m'a permis de suivre une formation intensive Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker et de développer 3 applications web internes. Le Directeur Général Délégué de Nextoo m'a recommandé pour ma rigueur, mon autonomie et ma curiosité intellectuelle.\n\nEn dehors du travail et des études, je développe des projets personnels déployés en production : MaGare (reproduction web de l'app SNCF). Je contribue aussi bénévolement à des projets open-source le week-end. Mon objectif : devenir ingénieur logiciel spécialisé dans la conception d'applications web full-stack robustes et performantes.",
-        "positioning": "Développeur full-stack en fin de BUT Informatique, je me spécialise dans la conception d'applications web robustes et performantes. Mon expérience combine un stage intensif chez Nextoo (Java/Spring Boot/Vue.js) et une alternance chez Mandarine Academy (PHP/Symfony/Tailwind). Je recherche un poste de développeur full-stack ou ingénieur logiciel junior, idéalement dans une équipe technique exigeante où je pourrai continuer à progresser sur des problématiques d'architecture et de qualité logicielle.",
-        "reflexive": "Mes expériences professionnelles m'ont appris que j'apprends vite et efficacement quand je suis immergé dans un environnement technique exigeant. Chez Nextoo, passer d'un niveau académique à un niveau professionnel en 10 semaines m'a montré que je suis capable de monter en compétence rapidement sur des technologies nouvelles. Chez Mandarine Academy, travailler sur une application en production m'a fait prendre conscience de l'importance de la rigueur dans le code : chaque modification a un impact réel sur des utilisateurs.\n\nJ'ai aussi réalisé que je suis plus efficace quand je comprends le \"pourquoi\" derrière les tâches. Les moments où j'ai le plus progressé sont ceux où mon tuteur prenait le temps d'expliquer les choix d'architecture, pas seulement le \"comment faire\".\n\nLe passage du monde académique au monde professionnel m'a également appris à gérer mon temps différemment : en entreprise, il faut savoir estimer, prioriser et communiquer sur l'avancement, pas seulement coder.",
-        "strengths": "Capacité d'apprentissage rapide : confirmée par la formation intensive Nextoo (3 projets complets en 10 semaines sur un stack inconnu) et la recommandation du DGD.\n\nRigueur technique : revues de code positives, habitude de tester et documenter mon code, respect des conventions (GitFlow, commits conventionnels, architecture propre).\n\nCuriosité intellectuelle : je développe des projets personnels en dehors du travail (DinnerMatch, MaGare, ce portfolio), je contribue à l'open-source le week-end, et j'explore constamment de nouvelles technologies.\n\nPolyvalence : capacité à travailler sur différents stacks (Java/Spring, PHP/Symfony, React/TypeScript, Vue.js) et à m'adapter rapidement aux environnements techniques variés.",
-        "improvements": "Communication en réunion : j'ai tendance à être réservé lors des premiers échanges en équipe. J'ai progressé chez Mandarine en participant activement aux daily stand-ups, mais c'est un axe que je continue de travailler.\n\nEstimation des temps : j'ai souvent sous-estimé la durée de certaines tâches chez Nextoo, notamment sur l'intégration frontend. J'apprends à mieux découper mes tâches et à ajouter des marges réalistes.\n\nPrise de recul : quand je suis concentré sur un problème technique, j'ai tendance à m'y plonger trop longtemps avant de demander de l'aide. J'apprends à identifier plus tôt quand il est plus efficace de solliciter un collègue.\n\nGestion du stress : les premières semaines en entreprise ont été intenses. J'ai appris à mieux organiser mon travail pour réduire la pression, mais la gestion des deadlines serrées reste un point d'attention."
+    "softSkillCategories": {
+        "maniere_etre": "Manière d'être",
+        "maniere_communiquer": "Manière de communiquer",
+        "maniere_travailler": "Manière de travailler avec les autres"
+    },
+    "experienceTypes": {
+        "stage": "Stage",
+        "alternance": "Alternance",
+        "education": "Formation",
+        "job": "Emploi",
+        "other": "Autre"
     },
     "project": {
         "ffdc": {
@@ -176,5 +168,13 @@
             "description": "Bot Node.js qui joue automatiquement à Weerdle (Wordle Pokémon) avec dashboard web de contrôle.",
             "long_description": "WeerdleBot est un bot personnel qui automatise le jeu Weerdle, une variante Pokémon du célèbre Wordle hébergée sur pokengine.com.\n\nLe bot envoie automatiquement des requêtes HTTP authentifiées pour soumettre des propositions de mots, analyse les réponses et adapte sa stratégie en fonction des lettres trouvées ou manquées.\n\nUn dashboard web (Node.js + HTML/CSS/JS) permet de démarrer/arrêter le bot, d'afficher les logs en temps réel via le terminal, et de déclencher une rotation de VPN (NordVPN) pour éviter les bans d'IP. Le tout tourne en conteneur Docker pour une portabilité maximale."
         }
+    },
+    "profile": {
+        "hero": "Développeur full-stack en alternance chez Mandarine Academy, étudiant en 3ème année de BUT Informatique à l'IUT de Lille. Passionné par la conception d'applications web modernes — Java, Spring Boot, Vue.js, PHP/Symfony.",
+        "about": "Je suis Gaspard Catry, développeur full-stack de 20 ans basé à Lille. Actuellement en 3ème année de BUT Informatique à l'IUT de Lille (classé 12/72 en S5, moyenne 14.81/20), je réalise mon alternance chez Mandarine Academy sur un stack PHP/Symfony/Tailwind.\n\nMon stage chez Nextoo (Roubaix) m'a permis de suivre une formation intensive Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker et de développer 3 applications web internes. Le Directeur Général Délégué de Nextoo m'a recommandé pour ma rigueur, mon autonomie et ma curiosité intellectuelle.\n\nEn dehors du travail et des études, je développe des projets personnels déployés en production : MaGare (reproduction web de l'app SNCF). Je contribue aussi bénévolement à des projets open-source le week-end. Mon objectif : devenir ingénieur logiciel spécialisé dans la conception d'applications web full-stack robustes et performantes.",
+        "positioning": "Développeur full-stack en fin de BUT Informatique, je me spécialise dans la conception d'applications web robustes et performantes. Mon expérience combine un stage intensif chez Nextoo (Java/Spring Boot/Vue.js) et une alternance chez Mandarine Academy (PHP/Symfony/Tailwind). Je recherche un poste de développeur full-stack ou ingénieur logiciel junior, idéalement dans une équipe technique exigeante où je pourrai continuer à progresser sur des problématiques d'architecture et de qualité logicielle.",
+        "reflexive": "Mes expériences professionnelles m'ont appris que j'apprends vite et efficacement quand je suis immergé dans un environnement technique exigeant. Chez Nextoo, passer d'un niveau académique à un niveau professionnel en 10 semaines m'a montré que je suis capable de monter en compétence rapidement sur des technologies nouvelles. Chez Mandarine Academy, travailler sur une application en production m'a fait prendre conscience de l'importance de la rigueur dans le code : chaque modification a un impact réel sur des utilisateurs.\n\nJ'ai aussi réalisé que je suis plus efficace quand je comprends le \"pourquoi\" derrière les tâches. Les moments où j'ai le plus progressé sont ceux où mon tuteur prenait le temps d'expliquer les choix d'architecture, pas seulement le \"comment faire\".\n\nLe passage du monde académique au monde professionnel m'a également appris à gérer mon temps différemment : en entreprise, il faut savoir estimer, prioriser et communiquer sur l'avancement, pas seulement coder.",
+        "strengths": "Capacité d'apprentissage rapide : confirmée par la formation intensive Nextoo (3 projets complets en 10 semaines sur un stack inconnu) et la recommandation du DGD.\n\nRigueur technique : revues de code positives, habitude de tester et documenter mon code, respect des conventions (GitFlow, commits conventionnels, architecture propre).\n\nCuriosité intellectuelle : je développe des projets personnels en dehors du travail (DinnerMatch, MaGare, ce portfolio), je contribue à l'open-source le week-end, et j'explore constamment de nouvelles technologies.\n\nPolyvalence : capacité à travailler sur différents stacks (Java/Spring, PHP/Symfony, React/TypeScript, Vue.js) et à m'adapter rapidement aux environnements techniques variés.",
+        "improvements": "Communication en réunion : j'ai tendance à être réservé lors des premiers échanges en équipe. J'ai progressé chez Mandarine en participant activement aux daily stand-ups, mais c'est un axe que je continue de travailler.\n\nEstimation des temps : j'ai souvent sous-estimé la durée de certaines tâches chez Nextoo, notamment sur l'intégration frontend. J'apprends à mieux découper mes tâches et à ajouter des marges réalistes.\n\nPrise de recul : quand je suis concentré sur un problème technique, j'ai tendance à m'y plonger trop longtemps avant de demander de l'aide. J'apprends à identifier plus tôt quand il est plus efficace de solliciter un collègue.\n\nGestion du stress : les premières semaines en entreprise ont été intenses. J'ai appris à mieux organiser mon travail pour réduire la pression, mais la gestion des deadlines serrées reste un point d'attention."
     }
 }

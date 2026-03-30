@@ -54,18 +54,6 @@
         "seeMore": "See details",
         "seeLess": "Show less"
     },
-    "softSkillCategories": {
-        "maniere_etre": "Way of Being",
-        "maniere_communiquer": "Way of Communicating",
-        "maniere_travailler": "Way of Working with Others"
-    },
-    "experienceTypes": {
-        "stage": "Internship",
-        "alternance": "Work-Study",
-        "education": "Education",
-        "job": "Employment",
-        "other": "Other"
-    },
     "contact": {
         "title": "Contact me",
         "subtitle": "Have a question or an opportunity? Feel free to contact me!",
@@ -92,13 +80,17 @@
         "error": "An error occurred while loading data.",
         "present": "Present"
     },
-    "profile": {
-        "hero": "Full-stack developer apprentice at Mandarine Academy, studying Computer Science (BUT) at IUT de Lille. Passionate about building modern web applications — Java, Spring Boot, Vue.js, PHP/Symfony.",
-        "about": "I'm Gaspard Catry, a 20-year-old full-stack developer based in Lille. Currently in my 3rd year of BUT Computer Science at IUT de Lille (ranked 12/72 in S5, GPA 14.81/20), doing my work-study at Mandarine Academy on a PHP/Symfony/Tailwind stack.\n\nMy internship at Nextoo (Roubaix) gave me intensive training in Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker and hands-on experience building 3 internal web applications. The Managing Director of Nextoo recommended me for my rigor, autonomy and intellectual curiosity.\n\nOutside of work and studies, I build personal projects deployed in production: MaGare (web reproduction of the SNCF app). I also contribute to open-source projects on weekends. My goal: become a software engineer specializing in robust, performant full-stack web applications.",
-        "positioning": "Full-stack developer completing my Computer Science degree (BUT), I specialize in building robust, high-performance web applications. My experience combines an intensive internship at Nextoo (Java/Spring Boot/Vue.js) and a work-study program at Mandarine Academy (PHP/Symfony/Tailwind). I am looking for a full-stack developer or junior software engineer position, ideally in a demanding technical team where I can continue to grow in software architecture and quality.",
-        "reflexive": "My professional experiences taught me that I learn quickly and effectively when immersed in a demanding technical environment. At Nextoo, going from an academic level to a professional one in 10 weeks showed me I can ramp up rapidly on new technologies. At Mandarine Academy, working on a production application made me realize the importance of code rigor: every change has a real impact on users.\n\nI also realized I am most effective when I understand the \"why\" behind tasks. The moments where I grew the most were when my supervisor took the time to explain architectural choices, not just \"how to do it.\"\n\nThe transition from academia to the professional world also taught me to manage my time differently: in a company, you need to estimate, prioritize and communicate on progress, not just code.",
-        "strengths": "Fast learning ability: confirmed by the intensive Nextoo training (3 complete projects in 10 weeks on an unknown stack) and the Deputy MD's recommendation.\n\nTechnical rigor: positive code reviews, habit of testing and documenting my code, respect for conventions (GitFlow, conventional commits, clean architecture).\n\nIntellectual curiosity: I develop personal projects outside of work (DinnerMatch, MaGare, this portfolio), contribute to open-source on weekends, and constantly explore new technologies.\n\nVersatility: ability to work on different stacks (Java/Spring, PHP/Symfony, React/TypeScript, Vue.js) and adapt quickly to varied technical environments.",
-        "improvements": "Meeting communication: I tend to be reserved during initial team exchanges. I improved at Mandarine by actively participating in daily stand-ups, but this remains an area I continue to work on.\n\nTime estimation: I often underestimated task duration at Nextoo, especially for frontend integration. I am learning to better break down tasks and add realistic buffers.\n\nStepping back: when focused on a technical problem, I tend to dive in too long before asking for help. I am learning to identify earlier when it is more efficient to consult a colleague.\n\nStress management: the first weeks in a professional environment were intense. I learned to better organize my work to reduce pressure, but managing tight deadlines remains a point of attention."
+    "softSkillCategories": {
+        "maniere_etre": "Way of Being",
+        "maniere_communiquer": "Way of Communicating",
+        "maniere_travailler": "Way of Working with Others"
+    },
+    "experienceTypes": {
+        "stage": "Internship",
+        "alternance": "Work-Study",
+        "education": "Education",
+        "job": "Employment",
+        "other": "Other"
     },
     "project": {
         "ffdc": {
@@ -176,5 +168,13 @@
             "description": "Node.js bot that automatically plays Weerdle (Pokémon Wordle) with web control dashboard.",
             "long_description": "WeerdleBot is a personal bot that automates the game Weerdle, a Pokémon variant of the famous Wordle hosted on pokengine.com.\n\nThe bot automatically sends authenticated HTTP requests to submit word proposals, analyzes responses and adapts its strategy based on found or missed letters.\n\nA web dashboard (Node.js + HTML/CSS/JS) allows starting/stopping the bot, displaying real-time logs via the terminal, and triggering VPN rotation (NordVPN) to avoid IP bans. Everything runs in a Docker container for maximum portability."
         }
+    },
+    "profile": {
+        "hero": "Full-stack developer apprentice at Mandarine Academy, studying Computer Science (BUT) at IUT de Lille. Passionate about building modern web applications — Java, Spring Boot, Vue.js, PHP/Symfony.",
+        "about": "I'm Gaspard Catry, a 20-year-old full-stack developer based in Lille. Currently in my 3rd year of BUT Computer Science at IUT de Lille (ranked 12/72 in S5, GPA 14.81/20), doing my work-study at Mandarine Academy on a PHP/Symfony/Tailwind stack.\n\nMy internship at Nextoo (Roubaix) gave me intensive training in Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker and hands-on experience building 3 internal web applications. The Managing Director of Nextoo recommended me for my rigor, autonomy and intellectual curiosity.\n\nOutside of work and studies, I build personal projects deployed in production: MaGare (web reproduction of the SNCF app). I also contribute to open-source projects on weekends. My goal: become a software engineer specializing in robust, performant full-stack web applications.",
+        "positioning": "Full-stack developer completing my Computer Science degree (BUT), I specialize in building robust, high-performance web applications. My experience combines an intensive internship at Nextoo (Java/Spring Boot/Vue.js) and a work-study program at Mandarine Academy (PHP/Symfony/Tailwind). I am looking for a full-stack developer or junior software engineer position, ideally in a demanding technical team where I can continue to grow in software architecture and quality.",
+        "reflexive": "My professional experiences taught me that I learn quickly and effectively when immersed in a demanding technical environment. At Nextoo, going from an academic level to a professional one in 10 weeks showed me I can ramp up rapidly on new technologies. At Mandarine Academy, working on a production application made me realize the importance of code rigor: every change has a real impact on users.\n\nI also realized I am most effective when I understand the \"why\" behind tasks. The moments where I grew the most were when my supervisor took the time to explain architectural choices, not just \"how to do it.\"\n\nThe transition from academia to the professional world also taught me to manage my time differently: in a company, you need to estimate, prioritize and communicate on progress, not just code.",
+        "strengths": "Fast learning ability: confirmed by the intensive Nextoo training (3 complete projects in 10 weeks on an unknown stack) and the Deputy MD's recommendation.\n\nTechnical rigor: positive code reviews, habit of testing and documenting my code, respect for conventions (GitFlow, conventional commits, clean architecture).\n\nIntellectual curiosity: I develop personal projects outside of work (DinnerMatch, MaGare, this portfolio), contribute to open-source on weekends, and constantly explore new technologies.\n\nVersatility: ability to work on different stacks (Java/Spring, PHP/Symfony, React/TypeScript, Vue.js) and adapt quickly to varied technical environments.",
+        "improvements": "Meeting communication: I tend to be reserved during initial team exchanges. I improved at Mandarine by actively participating in daily stand-ups, but this remains an area I continue to work on.\n\nTime estimation: I often underestimated task duration at Nextoo, especially for frontend integration. I am learning to better break down tasks and add realistic buffers.\n\nStepping back: when focused on a technical problem, I tend to dive in too long before asking for help. I am learning to identify earlier when it is more efficient to consult a colleague.\n\nStress management: the first weeks in a professional environment were intense. I learned to better organize my work to reduce pressure, but managing tight deadlines remains a point of attention."
     }
 }
