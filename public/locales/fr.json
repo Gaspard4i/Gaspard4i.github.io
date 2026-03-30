@@ -8,7 +8,7 @@
     "hero": {
         "greeting": "Bonjour, je m'appelle",
         "name": "Gaspard",
-        "bio": "Développeur full-stack en alternance chez Mandarine Academy, étudiant en 3ème année de BUT Informatique à l'IUT de Lille.",
+        "bio": "Étudiant en 2ème année de BUT Informatique à l'IUT de Lille, passionné par le développement web et la création de projets innovants.",
         "cta": "À propos de moi",
         "ctaProjects": "Mes projets"
     },
@@ -25,41 +25,11 @@
     "about": {
         "title": "À propos",
         "subtitle": "Qui suis-je ?",
-        "bio": "Je suis Gaspard Catry, développeur full-stack de 20 ans basé à Lille. Actuellement en 3ème année de BUT Informatique à l'IUT de Lille, je réalise mon alternance chez Mandarine Academy.",
-        "skills": "Compétences techniques",
+        "bio": "Je suis Gaspard Catry, étudiant en 2ème année de BUT Informatique à l'IUT de Lille. Passionné par le développement web full-stack, j'apprécie créer des applications modernes et performantes.",
+        "skills": "Compétences",
         "skillsSubtitle": "Les technologies que j'utilise au quotidien.",
-        "experience": "Parcours complet",
-        "experienceSubtitle": "Mon parcours académique et professionnel.",
-        "positioning": "Positionnement professionnel",
-        "positioningSubtitle": "Mon projet et ma vision.",
-        "proExperience": "Expériences professionnelles",
-        "proExperienceSubtitle": "Détail de mes stages et alternances.",
-        "softSkills": "Compétences comportementales",
-        "softSkillsSubtitle": "Les savoir-être qui définissent ma posture professionnelle.",
-        "reflexive": "Analyse réflexive",
-        "reflexiveSubtitle": "Ce que mes expériences professionnelles m'ont appris sur moi-même.",
-        "strengths": "Points forts",
-        "improvements": "Axes d'amélioration",
-        "context": "Contexte",
-        "missions": "Missions",
-        "autonomy": "Autonomie",
-        "interactions": "Interactions",
-        "situation": "Situation concrète",
-        "analysis": "Mon analyse",
-        "seeMore": "Voir le détail",
-        "seeLess": "Réduire"
-    },
-    "softSkillCategories": {
-        "maniere_etre": "Manière d'être",
-        "maniere_communiquer": "Manière de communiquer",
-        "maniere_travailler": "Manière de travailler avec les autres"
-    },
-    "experienceTypes": {
-        "stage": "Stage",
-        "alternance": "Alternance",
-        "education": "Formation",
-        "job": "Emploi",
-        "other": "Autre"
+        "experience": "Expérience",
+        "experienceSubtitle": "Mon parcours académique et professionnel."
     },
     "contact": {
         "title": "Contactez-moi",
@@ -71,8 +41,7 @@
         "send": "Envoyer le message",
         "success": "Message envoyé avec succès ! Je vous répondrai dès que possible.",
         "error": "Une erreur est survenue. Veuillez réessayer.",
-        "findMe": "Retrouvez-moi sur",
-        "gdpr": "Vos données (nom, email, message) sont utilisées uniquement pour vous répondre. Elles ne sont jamais revendues ni utilisées à des fins commerciales."
+        "findMe": "Retrouvez-moi sur"
     },
     "footer": {
         "madeWith": "Fait avec React, Tailwind & DaisyUI"
@@ -84,7 +53,6 @@
     },
     "common": {
         "loading": "Chargement...",
-        "error": "Une erreur est survenue lors du chargement des données.",
-        "present": "Présent"
+        "error": "Une erreur est survenue lors du chargement des données."
     }
 }
