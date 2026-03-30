@@ -7,6 +7,26 @@ export const SUPPORTED_LOCALES = [
   {
     "code": "en",
     "label": "English"
+  },
+  {
+    "code": "es",
+    "label": "Español"
+  },
+  {
+    "code": "it",
+    "label": "Italiano"
+  },
+  {
+    "code": "de",
+    "label": "Deutsch"
+  },
+  {
+    "code": "nl",
+    "label": "Nederlands"
+  },
+  {
+    "code": "pt",
+    "label": "Português"
   }
 ] as const
 

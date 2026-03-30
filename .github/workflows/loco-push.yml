@@ -5,8 +5,7 @@ on:
   push:
     branches: [main, develop]
     paths:
-      - 'public/locales/fr.json'
-      - 'public/locales/en.json'
+      - 'public/locales/*.json'
 
 jobs:
   push:
@@ -17,18 +16,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Push French (source locale)
+      - name: Push all locale files to Loco
         run: |
-          RESPONSE=$(curl -sf -X POST \
-            -H "Authorization: Loco ${{ secrets.LOCO_API_KEY }}" \
-            --data-binary @public/locales/fr.json \
-            "https://localise.biz/api/import/json?locale=fr-FR&index=id&tag-new=auto-imported")
-          echo "FR import: $RESPONSE"
-
-      - name: Push English
-        run: |
-          RESPONSE=$(curl -sf -X POST \
-            -H "Authorization: Loco ${{ secrets.LOCO_API_KEY }}" \
-            --data-binary @public/locales/en.json \
-            "https://localise.biz/api/import/json?locale=en-GB&index=id&ignore-new=true")
-          echo "EN import: $RESPONSE"
+          LOCALE_MAP="fr:fr-FR en:en-GB es:es-ES it:it-IT de:de-DE nl:nl-NL pt:pt-PT"
+          for PAIR in $LOCALE_MAP; do
+            SHORT="${PAIR%%:*}"
+            FULL="${PAIR##*:}"
+            FILE="public/locales/${SHORT}.json"
+            if [ ! -f "$FILE" ]; then
+              echo "Skipping $SHORT (no file)"
+              continue
+            fi
+            # Source locale (fr) can create new assets, others cannot
+            if [ "$SHORT" = "fr" ]; then
+              EXTRA="&tag-new=auto-imported"
+            else
+              EXTRA="&ignore-new=true"
+            fi
+            echo "Pushing $FILE → Loco locale $FULL"
+            curl -sf -X POST \
+              -H "Authorization: Loco ${{ secrets.LOCO_API_KEY }}" \
+              --data-binary @"$FILE" \
+              "https://localise.biz/api/import/json?locale=${FULL}&index=id${EXTRA}"
+          done
