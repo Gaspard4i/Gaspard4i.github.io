@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 
 export function useI18nField() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   return function resolve(key: string | null | undefined, fallback: string): string {
     if (!key) return fallback
