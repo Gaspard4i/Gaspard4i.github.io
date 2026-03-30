@@ -1,1 +1,172 @@
-{}
+{
+    "nav": {
+        "home": "Home",
+        "projects": "Projecten",
+        "about": "Over mij",
+        "contact": "Contact"
+    },
+    "hero": {
+        "greeting": "Hallo, ik heet",
+        "name": "Gaspard",
+        "bio": "Full-stack developer in een duaal traject bij Mandarine Academy, 3e jaars Informatica student aan het IUT de Lille.",
+        "cta": "Over mij",
+        "ctaProjects": "Mijn projecten",
+        "role": {
+            "student": "informatica student",
+            "fullstack": "full-stack developer",
+            "web": "webontwikkelaar"
+        }
+    },
+    "projects": {
+        "title": "Mijn Projecten",
+        "subtitle": "Een selectie van mijn persoonlijke en academische prestaties.",
+        "featuredTitle": "Uitgelichte projecten",
+        "featuredSubtitle": "Enkele projecten waar ik bijzonder trots op ben.",
+        "seeAll": "Alle projecten bekijken",
+        "viewGithub": "GitHub",
+        "viewLive": "Project bekijken",
+        "featured": "Uitgelicht"
+    },
+    "about": {
+        "title": "Over mij",
+        "subtitle": "Wie ben ik?",
+        "bio": "Ik ben Gaspard Catry, een 20-jarige full-stack developer uit Lille. Momenteel in mijn 3e jaar Informatica aan het IUT de Lille, loop ik mijn duaal traject bij Mandarine Academy.",
+        "skills": "Technische vaardigheden",
+        "skillsSubtitle": "De technologieën die ik dagelijks gebruik.",
+        "experience": "Volledig parcours",
+        "experienceSubtitle": "Mijn academisch en professioneel parcours.",
+        "positioning": "Professionele positionering",
+        "positioningSubtitle": "Mijn project en mijn visie.",
+        "proExperience": "Professionele ervaringen",
+        "proExperienceSubtitle": "Details van mijn stages en duale trajecten.",
+        "softSkills": "Gedragscompetenties",
+        "softSkillsSubtitle": "De soft skills die mijn professionele houding definiëren.",
+        "reflexive": "Reflectieve analyse",
+        "reflexiveSubtitle": "Wat mijn professionele ervaringen mij over mezelf hebben geleerd.",
+        "strengths": "Sterke punten",
+        "improvements": "Verbeterpunten",
+        "context": "Context",
+        "missions": "Opdrachten",
+        "autonomy": "Zelfstandigheid",
+        "interactions": "Interacties",
+        "situation": "Concrete situatie",
+        "analysis": "Mijn analyse",
+        "seeMore": "Details bekijken",
+        "seeLess": "Minder tonen"
+    },
+    "softSkillCategories": {
+        "maniere_etre": "Manier van zijn",
+        "maniere_communiquer": "Manier van communiceren",
+        "maniere_travailler": "Manier van samenwerken"
+    },
+    "experienceTypes": {
+        "stage": "Stage",
+        "alternance": "Duaal traject",
+        "education": "Opleiding",
+        "job": "Baan",
+        "other": "Overig"
+    },
+    "contact": {
+        "title": "Neem contact op",
+        "subtitle": "Een vraag of een kans? Aarzel niet om contact op te nemen!",
+        "name": "Je Naam",
+        "email": "Je Email",
+        "message": "Je Bericht",
+        "messagePlaceholder": "Hallo Gaspard, ik wilde...",
+        "send": "Bericht versturen",
+        "success": "Bericht succesvol verzonden! Ik antwoord zo snel mogelijk.",
+        "error": "Er is een fout opgetreden. Probeer het opnieuw.",
+        "findMe": "Vind mij op",
+        "gdpr": "Je gegevens (naam, email, bericht) worden uitsluitend gebruikt om je te antwoorden. Ze worden nooit doorverkocht of voor commerciële doeleinden gebruikt."
+    },
+    "footer": {
+        "madeWith": "Gemaakt met React, Tailwind & DaisyUI"
+    },
+    "notFound": {
+        "title": "Pagina niet gevonden",
+        "subtitle": "De pagina die je zoekt bestaat niet.",
+        "cta": "Terug naar home"
+    },
+    "common": {
+        "loading": "Laden...",
+        "error": "Er is een fout opgetreden bij het laden van de gegevens.",
+        "present": "Huidig"
+    },
+    "project": {
+        "ffdc": {
+            "title": "FinnFoundDaChest",
+            "description": "Java Swing-spel, individueel project",
+            "long_description": ""
+        },
+        "agile": {
+            "title": "Agile Introductieproject",
+            "description": "Rogue-Like Java, teamwerk",
+            "long_description": ""
+        },
+        "sae33": {
+            "title": "Project SAE 3.3",
+            "description": "JavaFX MVC-applicatie, teamwerk",
+            "long_description": ""
+        },
+        "mte": {
+            "title": "MineToEarn",
+            "description": "Minecraft-plugin + webinterface, teamwerk",
+            "long_description": ""
+        },
+        "corpsamer": {
+            "title": "Nuit de l'Info: CorpsAMer",
+            "description": "HTML/CSS/JS-webapp, hackathon Nuit de l'Info, teamwerk",
+            "long_description": ""
+        },
+        "talkul": {
+            "title": "Talkul",
+            "description": "Java EE-webapp, realtime messaging",
+            "long_description": ""
+        },
+        "woze": {
+            "title": "Woze",
+            "description": "KNN-classificator met JavaFX-interface, teamwerk",
+            "long_description": ""
+        },
+        "maio": {
+            "title": "Ma.io",
+            "description": "Eigenzinnig multiplayerspel (mayonaise en aliens), Node.js + JS",
+            "long_description": ""
+        },
+        "magare": {
+            "title": "MaGare",
+            "description": "Webreproductie van de SNCF-app met realtime API",
+            "long_description": ""
+        },
+        "weathersport": {
+            "title": "WeatherSport",
+            "description": "Weer + sportaanbevelingen, stageproject Nextoo",
+            "long_description": ""
+        },
+        "nextmovie": {
+            "title": "NextMovie",
+            "description": "Filmaanbevelingsmotor, stageproject Nextoo",
+            "long_description": ""
+        },
+        "gds": {
+            "title": "GDS",
+            "description": "Voorraadbeheer met REST API en dynamische interface, stage Nextoo",
+            "long_description": ""
+        },
+        "dinnermatch": {
+            "title": "DinnerMatch",
+            "description": "Full-stack sociaal platform om eetpartners te vinden. Node.js, React, PostgreSQL.",
+            "long_description": ""
+        },
+        "refugegourmand": {
+            "title": "Le Refuge Gourmand",
+            "description": "Reserveringswebsite van een fictief restaurant — Next.js, Prisma, NextAuth, Stripe.",
+            "long_description": ""
+        },
+        "weerdlebot": {
+            "title": "WeerdleBot",
+            "description": "Node.js-bot die automatisch Weerdle (Pokémon Wordle) speelt met web-dashboard.",
+            "long_description": ""
+        }
+    }
+}

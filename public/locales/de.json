@@ -1,1 +1,172 @@
-{}
+{
+    "nav": {
+        "home": "Startseite",
+        "projects": "Projekte",
+        "about": "Über mich",
+        "contact": "Kontakt"
+    },
+    "hero": {
+        "greeting": "Hallo, ich heiße",
+        "name": "Gaspard",
+        "bio": "Full-Stack-Entwickler im dualen Studium bei Mandarine Academy, Student im 3. Jahr Informatik am IUT de Lille.",
+        "cta": "Über mich",
+        "ctaProjects": "Meine Projekte",
+        "role": {
+            "student": "Informatikstudent",
+            "fullstack": "Full-Stack-Entwickler",
+            "web": "Webentwickler"
+        }
+    },
+    "projects": {
+        "title": "Meine Projekte",
+        "subtitle": "Eine Auswahl meiner persönlichen und akademischen Arbeiten.",
+        "featuredTitle": "Ausgewählte Projekte",
+        "featuredSubtitle": "Einige Projekte, auf die ich besonders stolz bin.",
+        "seeAll": "Alle Projekte ansehen",
+        "viewGithub": "GitHub",
+        "viewLive": "Projekt ansehen",
+        "featured": "Ausgewählt"
+    },
+    "about": {
+        "title": "Über mich",
+        "subtitle": "Wer bin ich?",
+        "bio": "Ich bin Gaspard Catry, 20-jähriger Full-Stack-Entwickler aus Lille. Derzeit im 3. Jahr Informatik am IUT de Lille, absolviere ich mein duales Studium bei Mandarine Academy.",
+        "skills": "Technische Kompetenzen",
+        "skillsSubtitle": "Die Technologien, die ich täglich verwende.",
+        "experience": "Vollständiger Werdegang",
+        "experienceSubtitle": "Mein akademischer und beruflicher Werdegang.",
+        "positioning": "Berufliche Positionierung",
+        "positioningSubtitle": "Mein Projekt und meine Vision.",
+        "proExperience": "Berufserfahrungen",
+        "proExperienceSubtitle": "Details meiner Praktika und dualen Ausbildungen.",
+        "softSkills": "Soziale Kompetenzen",
+        "softSkillsSubtitle": "Die Soft Skills, die meine berufliche Haltung definieren.",
+        "reflexive": "Reflexive Analyse",
+        "reflexiveSubtitle": "Was meine Berufserfahrungen mich über mich selbst gelehrt haben.",
+        "strengths": "Stärken",
+        "improvements": "Verbesserungsbereiche",
+        "context": "Kontext",
+        "missions": "Aufgaben",
+        "autonomy": "Selbstständigkeit",
+        "interactions": "Interaktionen",
+        "situation": "Konkrete Situation",
+        "analysis": "Meine Analyse",
+        "seeMore": "Details anzeigen",
+        "seeLess": "Weniger anzeigen"
+    },
+    "softSkillCategories": {
+        "maniere_etre": "Art zu sein",
+        "maniere_communiquer": "Art zu kommunizieren",
+        "maniere_travailler": "Art mit anderen zu arbeiten"
+    },
+    "experienceTypes": {
+        "stage": "Praktikum",
+        "alternance": "Duales Studium",
+        "education": "Ausbildung",
+        "job": "Beschäftigung",
+        "other": "Sonstiges"
+    },
+    "contact": {
+        "title": "Kontaktiere mich",
+        "subtitle": "Eine Frage oder eine Möglichkeit? Zögere nicht, mich zu kontaktieren!",
+        "name": "Dein Name",
+        "email": "Deine Email",
+        "message": "Deine Nachricht",
+        "messagePlaceholder": "Hallo Gaspard, ich wollte...",
+        "send": "Nachricht senden",
+        "success": "Nachricht erfolgreich gesendet! Ich werde so schnell wie möglich antworten.",
+        "error": "Ein Fehler ist aufgetreten. Bitte versuche es erneut.",
+        "findMe": "Finde mich auf",
+        "gdpr": "Deine Daten (Name, Email, Nachricht) werden ausschließlich verwendet, um dir zu antworten. Sie werden niemals weiterverkauft oder für kommerzielle Zwecke genutzt."
+    },
+    "footer": {
+        "madeWith": "Erstellt mit React, Tailwind & DaisyUI"
+    },
+    "notFound": {
+        "title": "Seite nicht gefunden",
+        "subtitle": "Die gesuchte Seite existiert nicht.",
+        "cta": "Zurück zur Startseite"
+    },
+    "common": {
+        "loading": "Wird geladen...",
+        "error": "Beim Laden der Daten ist ein Fehler aufgetreten.",
+        "present": "Aktuell"
+    },
+    "project": {
+        "ffdc": {
+            "title": "FinnFoundDaChest",
+            "description": "Java-Swing-Spiel, Einzelprojekt",
+            "long_description": ""
+        },
+        "agile": {
+            "title": "Agiles Einführungsprojekt",
+            "description": "Rogue-Like Java, Teamarbeit",
+            "long_description": ""
+        },
+        "sae33": {
+            "title": "Projekt SAE 3.3",
+            "description": "JavaFX-MVC-Anwendung, Teamarbeit",
+            "long_description": ""
+        },
+        "mte": {
+            "title": "MineToEarn",
+            "description": "Minecraft-Plugin + Weboberfläche, Teamarbeit",
+            "long_description": ""
+        },
+        "corpsamer": {
+            "title": "Nuit de l'Info: CorpsAMer",
+            "description": "HTML/CSS/JS-Webapp, Hackathon Nuit de l'Info, Teamarbeit",
+            "long_description": ""
+        },
+        "talkul": {
+            "title": "Talkul",
+            "description": "Java-EE-Webapp, Echtzeit-Messaging",
+            "long_description": ""
+        },
+        "woze": {
+            "title": "Woze",
+            "description": "KNN-Klassifikator mit JavaFX-Oberfläche, Teamarbeit",
+            "long_description": ""
+        },
+        "maio": {
+            "title": "Ma.io",
+            "description": "Verrücktes Multiplayer-Spiel (Mayonnaise und Aliens), Node.js + JS",
+            "long_description": ""
+        },
+        "magare": {
+            "title": "MaGare",
+            "description": "Web-Nachbildung der SNCF-App mit Echtzeit-API",
+            "long_description": ""
+        },
+        "weathersport": {
+            "title": "WeatherSport",
+            "description": "Wetter + Sportempfehlungen, Praktikumsprojekt Nextoo",
+            "long_description": ""
+        },
+        "nextmovie": {
+            "title": "NextMovie",
+            "description": "Filmempfehlungsmotor, Praktikumsprojekt Nextoo",
+            "long_description": ""
+        },
+        "gds": {
+            "title": "GDS",
+            "description": "Lagerverwaltung mit REST-API und dynamischer Oberfläche, Praktikum Nextoo",
+            "long_description": ""
+        },
+        "dinnermatch": {
+            "title": "DinnerMatch",
+            "description": "Full-Stack-Sozialplattform zum Finden von Essenspartnern. Node.js, React, PostgreSQL.",
+            "long_description": ""
+        },
+        "refugegourmand": {
+            "title": "Le Refuge Gourmand",
+            "description": "Reservierungswebsite eines fiktiven Restaurants — Next.js, Prisma, NextAuth, Stripe.",
+            "long_description": ""
+        },
+        "weerdlebot": {
+            "title": "WeerdleBot",
+            "description": "Node.js-Bot, der automatisch Weerdle (Pokémon Wordle) spielt, mit Web-Dashboard.",
+            "long_description": ""
+        }
+    }
+}

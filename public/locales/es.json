@@ -1,1 +1,172 @@
-{}
+{
+    "nav": {
+        "home": "Inicio",
+        "projects": "Proyectos",
+        "about": "Sobre mí",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "greeting": "Hola, me llamo",
+        "name": "Gaspard",
+        "bio": "Desarrollador full-stack en alternancia en Mandarine Academy, estudiante de 3er año de Ingeniería Informática en el IUT de Lille.",
+        "cta": "Sobre mí",
+        "ctaProjects": "Mis proyectos",
+        "role": {
+            "student": "estudiante de informática",
+            "fullstack": "desarrollador full-stack",
+            "web": "desarrollador web"
+        }
+    },
+    "projects": {
+        "title": "Mis Proyectos",
+        "subtitle": "Una selección de mis logros personales y académicos.",
+        "featuredTitle": "Proyectos destacados",
+        "featuredSubtitle": "Algunos proyectos de los que estoy especialmente orgulloso.",
+        "seeAll": "Ver todos los proyectos",
+        "viewGithub": "GitHub",
+        "viewLive": "Ver el proyecto",
+        "featured": "Destacado"
+    },
+    "about": {
+        "title": "Sobre mí",
+        "subtitle": "¿Quién soy?",
+        "bio": "Soy Gaspard Catry, desarrollador full-stack de 20 años con sede en Lille. Actualmente en 3er año de Ingeniería Informática en el IUT de Lille, realizo mi alternancia en Mandarine Academy.",
+        "skills": "Competencias técnicas",
+        "skillsSubtitle": "Las tecnologías que utilizo a diario.",
+        "experience": "Trayectoria completa",
+        "experienceSubtitle": "Mi recorrido académico y profesional.",
+        "positioning": "Posicionamiento profesional",
+        "positioningSubtitle": "Mi proyecto y mi visión.",
+        "proExperience": "Experiencias profesionales",
+        "proExperienceSubtitle": "Detalle de mis prácticas y alternancias.",
+        "softSkills": "Competencias interpersonales",
+        "softSkillsSubtitle": "Las habilidades blandas que definen mi postura profesional.",
+        "reflexive": "Análisis reflexivo",
+        "reflexiveSubtitle": "Lo que mis experiencias profesionales me han enseñado sobre mí mismo.",
+        "strengths": "Puntos fuertes",
+        "improvements": "Áreas de mejora",
+        "context": "Contexto",
+        "missions": "Misiones",
+        "autonomy": "Autonomía",
+        "interactions": "Interacciones",
+        "situation": "Situación concreta",
+        "analysis": "Mi análisis",
+        "seeMore": "Ver detalle",
+        "seeLess": "Reducir"
+    },
+    "softSkillCategories": {
+        "maniere_etre": "Manera de ser",
+        "maniere_communiquer": "Manera de comunicar",
+        "maniere_travailler": "Manera de trabajar con los demás"
+    },
+    "experienceTypes": {
+        "stage": "Prácticas",
+        "alternance": "Alternancia",
+        "education": "Formación",
+        "job": "Empleo",
+        "other": "Otro"
+    },
+    "contact": {
+        "title": "Contáctame",
+        "subtitle": "¿Una pregunta o una oportunidad? ¡No dudes en contactarme!",
+        "name": "Tu Nombre",
+        "email": "Tu Email",
+        "message": "Tu Mensaje",
+        "messagePlaceholder": "Hola Gaspard, quería...",
+        "send": "Enviar el mensaje",
+        "success": "¡Mensaje enviado con éxito! Te responderé lo antes posible.",
+        "error": "Ha ocurrido un error. Por favor, inténtalo de nuevo.",
+        "findMe": "Encuéntrame en",
+        "gdpr": "Tus datos (nombre, email, mensaje) se utilizan únicamente para responderte. Nunca se revenden ni se usan con fines comerciales."
+    },
+    "footer": {
+        "madeWith": "Hecho con React, Tailwind & DaisyUI"
+    },
+    "notFound": {
+        "title": "Página no encontrada",
+        "subtitle": "La página que buscas no existe.",
+        "cta": "Volver al inicio"
+    },
+    "common": {
+        "loading": "Cargando...",
+        "error": "Ha ocurrido un error al cargar los datos.",
+        "present": "Presente"
+    },
+    "project": {
+        "ffdc": {
+            "title": "FinnFoundDaChest",
+            "description": "Juego Java Swing, proyecto individual",
+            "long_description": ""
+        },
+        "agile": {
+            "title": "Proyecto Agile de Rentrée",
+            "description": "Rogue-Like Java, trabajo en equipo",
+            "long_description": ""
+        },
+        "sae33": {
+            "title": "Proyecto SAE 3.3",
+            "description": "Aplicación JavaFX MVC, trabajo en equipo",
+            "long_description": ""
+        },
+        "mte": {
+            "title": "MineToEarn",
+            "description": "Plugin Minecraft + interfaz web, trabajo en equipo",
+            "long_description": ""
+        },
+        "corpsamer": {
+            "title": "Nuit de l'Info: CorpsAMer",
+            "description": "Webapp HTML/CSS/JS, hackathon Nuit de l'Info, trabajo en equipo",
+            "long_description": ""
+        },
+        "talkul": {
+            "title": "Talkul",
+            "description": "Webapp Java EE, mensajería en tiempo real",
+            "long_description": ""
+        },
+        "woze": {
+            "title": "Woze",
+            "description": "Clasificador KNN con interfaz JavaFX, trabajo en equipo",
+            "long_description": ""
+        },
+        "maio": {
+            "title": "Ma.io",
+            "description": "Juego multijugador peculiar (mayonesa y alienígenas), Node.js + JS",
+            "long_description": ""
+        },
+        "magare": {
+            "title": "MaGare",
+            "description": "Reproducción web de la app SNCF con API en tiempo real",
+            "long_description": ""
+        },
+        "weathersport": {
+            "title": "WeatherSport",
+            "description": "Clima + recomendaciones deportivas, proyecto de prácticas Nextoo",
+            "long_description": ""
+        },
+        "nextmovie": {
+            "title": "NextMovie",
+            "description": "Motor de recomendación de películas, proyecto de prácticas Nextoo",
+            "long_description": ""
+        },
+        "gds": {
+            "title": "GDS",
+            "description": "Gestión de stock con API REST e interfaz dinámica, prácticas Nextoo",
+            "long_description": ""
+        },
+        "dinnermatch": {
+            "title": "DinnerMatch",
+            "description": "Plataforma social full-stack para encontrar compañeros de cena. Node.js, React, PostgreSQL.",
+            "long_description": ""
+        },
+        "refugegourmand": {
+            "title": "Le Refuge Gourmand",
+            "description": "Sitio web de reserva de sala de un restaurante ficticio — Next.js, Prisma, NextAuth, Stripe.",
+            "long_description": ""
+        },
+        "weerdlebot": {
+            "title": "WeerdleBot",
+            "description": "Bot Node.js que juega automáticamente a Weerdle (Wordle Pokémon) con panel de control web.",
+            "long_description": ""
+        }
+    }
+}
