@@ -54,18 +54,6 @@
         "seeMore": "Voir le détail",
         "seeLess": "Réduire"
     },
-    "softSkillCategories": {
-        "maniere_etre": "Manière d'être",
-        "maniere_communiquer": "Manière de communiquer",
-        "maniere_travailler": "Manière de travailler avec les autres"
-    },
-    "experienceTypes": {
-        "stage": "Stage",
-        "alternance": "Alternance",
-        "education": "Formation",
-        "job": "Emploi",
-        "other": "Autre"
-    },
     "contact": {
         "title": "Contactez-moi",
         "subtitle": "Une question ou une opportunité ? N'hésitez pas à me contacter !",
@@ -91,6 +79,18 @@
         "loading": "Chargement...",
         "error": "Une erreur est survenue lors du chargement des données.",
         "present": "Présent"
+    },
+    "softSkillCategories": {
+        "maniere_etre": "Manière d'être",
+        "maniere_communiquer": "Manière de communiquer",
+        "maniere_travailler": "Manière de travailler avec les autres"
+    },
+    "experienceTypes": {
+        "stage": "Stage",
+        "alternance": "Alternance",
+        "education": "Formation",
+        "job": "Emploi",
+        "other": "Autre"
     },
     "project": {
         "ffdc": {

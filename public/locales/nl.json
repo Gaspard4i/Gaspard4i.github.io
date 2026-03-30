@@ -54,18 +54,6 @@
         "seeMore": "Details bekijken",
         "seeLess": "Minder tonen"
     },
-    "softSkillCategories": {
-        "maniere_etre": "Manier van zijn",
-        "maniere_communiquer": "Manier van communiceren",
-        "maniere_travailler": "Manier van samenwerken"
-    },
-    "experienceTypes": {
-        "stage": "Stage",
-        "alternance": "Duaal traject",
-        "education": "Opleiding",
-        "job": "Baan",
-        "other": "Overig"
-    },
     "contact": {
         "title": "Neem contact op",
         "subtitle": "Een vraag of een kans? Aarzel niet om contact op te nemen!",
@@ -91,6 +79,18 @@
         "loading": "Laden...",
         "error": "Er is een fout opgetreden bij het laden van de gegevens.",
         "present": "Huidig"
+    },
+    "softSkillCategories": {
+        "maniere_etre": "Manier van zijn",
+        "maniere_communiquer": "Manier van communiceren",
+        "maniere_travailler": "Manier van samenwerken"
+    },
+    "experienceTypes": {
+        "stage": "Stage",
+        "alternance": "Duaal traject",
+        "education": "Opleiding",
+        "job": "Baan",
+        "other": "Overig"
     },
     "project": {
         "ffdc": {

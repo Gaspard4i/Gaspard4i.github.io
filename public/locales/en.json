@@ -54,18 +54,6 @@
         "seeMore": "See details",
         "seeLess": "Show less"
     },
-    "softSkillCategories": {
-        "maniere_etre": "Way of Being",
-        "maniere_communiquer": "Way of Communicating",
-        "maniere_travailler": "Way of Working with Others"
-    },
-    "experienceTypes": {
-        "stage": "Internship",
-        "alternance": "Work-Study",
-        "education": "Education",
-        "job": "Employment",
-        "other": "Other"
-    },
     "contact": {
         "title": "Contact me",
         "subtitle": "Have a question or an opportunity? Feel free to contact me!",
@@ -91,6 +79,18 @@
         "loading": "Loading...",
         "error": "An error occurred while loading data.",
         "present": "Present"
+    },
+    "softSkillCategories": {
+        "maniere_etre": "Way of Being",
+        "maniere_communiquer": "Way of Communicating",
+        "maniere_travailler": "Way of Working with Others"
+    },
+    "experienceTypes": {
+        "stage": "Internship",
+        "alternance": "Work-Study",
+        "education": "Education",
+        "job": "Employment",
+        "other": "Other"
     },
     "project": {
         "ffdc": {

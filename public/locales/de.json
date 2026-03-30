@@ -54,18 +54,6 @@
         "seeMore": "Details anzeigen",
         "seeLess": "Weniger anzeigen"
     },
-    "softSkillCategories": {
-        "maniere_etre": "Art zu sein",
-        "maniere_communiquer": "Art zu kommunizieren",
-        "maniere_travailler": "Art mit anderen zu arbeiten"
-    },
-    "experienceTypes": {
-        "stage": "Praktikum",
-        "alternance": "Duales Studium",
-        "education": "Ausbildung",
-        "job": "Beschäftigung",
-        "other": "Sonstiges"
-    },
     "contact": {
         "title": "Kontaktiere mich",
         "subtitle": "Eine Frage oder eine Möglichkeit? Zögere nicht, mich zu kontaktieren!",
@@ -91,6 +79,18 @@
         "loading": "Wird geladen...",
         "error": "Beim Laden der Daten ist ein Fehler aufgetreten.",
         "present": "Aktuell"
+    },
+    "softSkillCategories": {
+        "maniere_etre": "Art zu sein",
+        "maniere_communiquer": "Art zu kommunizieren",
+        "maniere_travailler": "Art mit anderen zu arbeiten"
+    },
+    "experienceTypes": {
+        "stage": "Praktikum",
+        "alternance": "Duales Studium",
+        "education": "Ausbildung",
+        "job": "Beschäftigung",
+        "other": "Sonstiges"
     },
     "project": {
         "ffdc": {
