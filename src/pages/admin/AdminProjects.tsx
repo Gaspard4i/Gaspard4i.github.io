@@ -7,8 +7,11 @@ import type { Skill } from '@/types/skill'
 
 const EMPTY: Omit<Project, 'id' | 'created_at' | 'project_skills'> = {
   title: '',
+  title_key: null,
   description: '',
+  description_key: null,
   long_description: null,
+  long_description_key: null,
   url: null,
   github_url: null,
   image_url: null,
@@ -110,20 +113,33 @@ export default function AdminProjects() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="form-control">
-                <label className="label"><span className="label-text">Titre *</span></label>
+                <label className="label"><span className="label-text">Titre * (fallback FR)</span></label>
                 <input className="input input-bordered" value={editing.title ?? ''} onChange={(e) => setEditing({ ...editing, title: e.target.value })} />
+              </div>
+              <div className="form-control">
+                <label className="label"><span className="label-text">Clé i18n titre</span></label>
+                <input className="input input-bordered input-sm font-mono text-xs" placeholder="project.xxx.title" value={editing.title_key ?? ''} onChange={(e) => setEditing({ ...editing, title_key: e.target.value || null })} />
               </div>
               <div className="form-control">
                 <label className="label"><span className="label-text">Année</span></label>
                 <input className="input input-bordered" type="number" value={editing.year ?? ''} onChange={(e) => setEditing({ ...editing, year: Number(e.target.value) })} />
               </div>
+              <div className="form-control" />
               <div className="form-control md:col-span-2">
-                <label className="label"><span className="label-text">Description *</span></label>
+                <label className="label"><span className="label-text">Description * (fallback FR)</span></label>
                 <textarea className="textarea textarea-bordered" rows={2} value={editing.description ?? ''} onChange={(e) => setEditing({ ...editing, description: e.target.value })} />
               </div>
               <div className="form-control md:col-span-2">
-                <label className="label"><span className="label-text">Description longue</span></label>
+                <label className="label"><span className="label-text">Clé i18n description</span></label>
+                <input className="input input-bordered input-sm font-mono text-xs" placeholder="project.xxx.description" value={editing.description_key ?? ''} onChange={(e) => setEditing({ ...editing, description_key: e.target.value || null })} />
+              </div>
+              <div className="form-control md:col-span-2">
+                <label className="label"><span className="label-text">Description longue (fallback FR)</span></label>
                 <textarea className="textarea textarea-bordered" rows={5} value={editing.long_description ?? ''} onChange={(e) => setEditing({ ...editing, long_description: e.target.value || null })} />
+              </div>
+              <div className="form-control md:col-span-2">
+                <label className="label"><span className="label-text">Clé i18n description longue</span></label>
+                <input className="input input-bordered input-sm font-mono text-xs" placeholder="project.xxx.long_description" value={editing.long_description_key ?? ''} onChange={(e) => setEditing({ ...editing, long_description_key: e.target.value || null })} />
               </div>
               <div className="form-control md:col-span-2">
                 <label className="label"><span className="label-text">Technologies</span></label>

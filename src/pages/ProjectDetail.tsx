@@ -4,6 +4,7 @@ import { ArrowLeft, ExternalLink, Calendar } from 'lucide-react'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import { supabase } from '@/lib/supabase'
 import { useSupabase } from '@/hooks/useSupabase'
+import { useI18nField } from '@/hooks/useI18nField'
 import type { Project } from '@/types/project'
 
 export default function ProjectDetail() {
@@ -35,6 +36,11 @@ export default function ProjectDetail() {
     )
   }
 
+  const resolve = useI18nField()
+  const title = resolve(project.title_key, project.title)
+  const description = resolve(project.description_key, project.description)
+  const longDescription = resolve(project.long_description_key, project.long_description ?? '')
+
   const imageUrl = project.image_url
     ? `/project-images/${project.image_url.split('/').pop()}`
     : null
@@ -49,12 +55,12 @@ export default function ProjectDetail() {
 
       {imageUrl && (
         <div className="w-full h-64 md:h-96 overflow-hidden mb-8 bg-base-200">
-          <img src={imageUrl} alt={project.title} className="w-full h-full object-cover" />
+          <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
         </div>
       )}
 
       <div className="flex flex-wrap items-start gap-3 mb-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-base-content flex-1">{project.title}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-base-content flex-1">{title}</h1>
         {project.featured && <span className="badge badge-primary">{t('projects.featured')}</span>}
       </div>
 
@@ -65,7 +71,7 @@ export default function ProjectDetail() {
         </div>
       )}
 
-      <p className="text-base-content/70 text-lg mb-8 leading-relaxed">{project.description}</p>
+      <p className="text-base-content/70 text-lg mb-8 leading-relaxed">{description}</p>
 
       {skills.length > 0 && (
         <div className="flex flex-wrap gap-2 mb-8">
@@ -97,9 +103,9 @@ export default function ProjectDetail() {
         )}
       </div>
 
-      {project.long_description && (
+      {longDescription && (
         <div className="prose max-w-none text-base-content/80">
-          {project.long_description.split('\n\n').map((para, i) => (
+          {longDescription.split('\n\n').map((para, i) => (
             <p key={i} className="mb-4 leading-relaxed">{para}</p>
           ))}
         </div>

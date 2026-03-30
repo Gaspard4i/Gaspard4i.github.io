@@ -6,10 +6,12 @@ import { SiGithub } from '@icons-pack/react-simple-icons'
 import Avatar from '@/components/atoms/Avatar'
 import SocialLink from '@/components/atoms/SocialLink'
 import { useSupabase } from '@/hooks/useSupabase'
+import { useI18nField } from '@/hooks/useI18nField'
 import { supabase } from '@/lib/supabase'
 import type { Profile } from '@/types/profile'
+import type { HeroRole } from '@/types/project'
 
-const ROLES = [
+const FALLBACK_ROLES = [
   'étudiant en BUT informatique',
   'développeur full-stack',
   'développeur web',
@@ -22,25 +24,33 @@ const SOCIAL = [
 
 export default function HeroSection() {
   const { t, i18n } = useTranslation()
+  const resolve = useI18nField()
   const [roleIndex, setRoleIndex] = useState(0)
   const [visible, setVisible] = useState(true)
   const { data: profile } = useSupabase<Profile>(() =>
     supabase.from('profile').select('*').single()
   )
+  const { data: heroRoles } = useSupabase<HeroRole[]>(() =>
+    supabase.from('hero_roles').select('*').order('sort_order')
+  )
   const bio = profile
     ? (i18n.language.startsWith('fr') ? profile.hero_fr : profile.hero_en)
     : t('hero.bio')
+
+  const roles = heroRoles && heroRoles.length > 0
+    ? heroRoles.map((r) => resolve(r.text_key, r.text_default))
+    : FALLBACK_ROLES
 
   useEffect(() => {
     const interval = setInterval(() => {
       setVisible(false)
       setTimeout(() => {
-        setRoleIndex((i) => (i + 1) % ROLES.length)
+        setRoleIndex((i) => (i + 1) % roles.length)
         setVisible(true)
       }, 300)
     }, 3000)
     return () => clearInterval(interval)
-  }, [])
+  }, [roles.length])
 
   return (
     <section className="min-h-[calc(100vh-4rem)] flex items-center">
@@ -56,7 +66,7 @@ export default function HeroSection() {
                 visible ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              {ROLES[roleIndex]}
+              {roles[roleIndex]}
             </p>
           </div>
           <p className="text-base-content/70 max-w-md mb-8">{bio}</p>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ExternalLink } from 'lucide-react'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import type { Project } from '@/types/project'
+import { useI18nField } from '@/hooks/useI18nField'
 import { supabase } from '@/lib/supabase'
 
 function trackClick(projectId: string, projectTitle: string) {
@@ -21,6 +22,9 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   const { t } = useTranslation()
+  const resolve = useI18nField()
+  const title = resolve(project.title_key, project.title)
+  const description = resolve(project.description_key, project.description)
   const imageUrl = project.image_url
     ? `/project-images/${project.image_url.split('/').pop()}`
     : null
@@ -42,7 +46,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         )}
         <div className="card-body gap-3 pb-2">
           <div className="flex items-start justify-between gap-2">
-            <h3 className="card-title text-base-content text-lg">{project.title}</h3>
+            <h3 className="card-title text-base-content text-lg">{title}</h3>
             {project.featured && (
               <span className="badge badge-primary badge-sm shrink-0">{t('projects.featured')}</span>
             )}
@@ -50,7 +54,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.year && (
             <span className="text-base-content/50 text-sm">{project.year}</span>
           )}
-          <p className="text-base-content/70 text-sm flex-1">{project.description}</p>
+          <p className="text-base-content/70 text-sm flex-1">{description}</p>
         </div>
       </Link>
 
