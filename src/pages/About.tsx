@@ -5,21 +5,23 @@ import ExperienceTimeline from '@/components/organisms/ExperienceTimeline'
 import ProExperienceSection from '@/components/organisms/ProExperienceSection'
 import ReflexiveSection from '@/components/organisms/ReflexiveSection'
 import { useSupabase } from '@/hooks/useSupabase'
+import { useI18nField } from '@/hooks/useI18nField'
 import { supabase } from '@/lib/supabase'
 import type { Profile } from '@/types/profile'
 
 export default function About() {
   const { t, i18n } = useTranslation()
+  const resolve = useI18nField()
   const { data: profile } = useSupabase<Profile>(() =>
     supabase.from('profile').select('*').single()
   )
   const fr = i18n.language.startsWith('fr')
 
   const positioning = profile
-    ? (fr ? profile.positioning_fr : profile.positioning_en)
+    ? resolve(profile.positioning_key, fr ? profile.positioning_fr : profile.positioning_en)
     : ''
   const bio = profile
-    ? (fr ? profile.about_fr : profile.about_en)
+    ? resolve(profile.about_key, fr ? profile.about_fr : profile.about_en)
     : t('about.bio')
 
   return (

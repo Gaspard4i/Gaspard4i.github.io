@@ -34,7 +34,7 @@ export default function HeroSection() {
     supabase.from('hero_roles').select('*').order('sort_order')
   )
   const bio = profile
-    ? (i18n.language.startsWith('fr') ? profile.hero_fr : profile.hero_en)
+    ? resolve(profile.hero_key, i18n.language.startsWith('fr') ? profile.hero_fr : profile.hero_en)
     : t('hero.bio')
 
   const roles = heroRoles && heroRoles.length > 0

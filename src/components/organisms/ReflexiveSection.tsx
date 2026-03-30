@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useSupabase } from '@/hooks/useSupabase'
+import { useI18nField } from '@/hooks/useI18nField'
 import { supabase } from '@/lib/supabase'
 import SkeletonBox from '@/components/atoms/SkeletonBox'
 import type { Profile } from '@/types/profile'
@@ -67,9 +68,10 @@ export default function ReflexiveSection() {
     )
   }
 
-  const reflexive = fr ? profile.reflexive_fr : profile.reflexive_en
-  const strengths = fr ? profile.strengths_fr : profile.strengths_en
-  const improvements = fr ? profile.improvements_fr : profile.improvements_en
+  const resolve = useI18nField()
+  const reflexive = resolve(profile.reflexive_key, fr ? profile.reflexive_fr : profile.reflexive_en)
+  const strengths = resolve(profile.strengths_key, fr ? profile.strengths_fr : profile.strengths_en)
+  const improvements = resolve(profile.improvements_key, fr ? profile.improvements_fr : profile.improvements_en)
 
   return (
     <div className="space-y-5">

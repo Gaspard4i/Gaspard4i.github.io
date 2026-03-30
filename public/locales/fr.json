@@ -2,88 +2,62 @@
     "nav": {
         "home": "Accueil",
         "projects": "Projets",
-        "about": "À propos",
+        "about": "Ã€ propos",
         "contact": "Contact"
     },
     "hero": {
         "greeting": "Bonjour, je m'appelle",
         "name": "Gaspard",
-        "bio": "Développeur full-stack en alternance chez Mandarine Academy, étudiant en 3ème année de BUT Informatique à l'IUT de Lille.",
-        "cta": "À propos de moi",
+        "bio": "DÃ©veloppeur full-stack en alternance chez Mandarine Academy, Ã©tudiant en 3Ã¨me annÃ©e de BUT Informatique Ã  l'IUT de Lille.",
+        "cta": "Ã€ propos de moi",
         "ctaProjects": "Mes projets",
         "role": {
-            "student": "étudiant en BUT informatique",
-            "fullstack": "développeur full-stack",
-            "web": "développeur web"
+            "student": "Ã©tudiant en BUT informatique",
+            "fullstack": "dÃ©veloppeur full-stack",
+            "web": "dÃ©veloppeur web"
         }
     },
     "projects": {
         "title": "Mes Projets",
-        "subtitle": "Une sélection de mes réalisations personnelles et académiques.",
+        "subtitle": "Une sÃ©lection de mes rÃ©alisations personnelles et acadÃ©miques.",
         "featuredTitle": "Projets en vedette",
-        "featuredSubtitle": "Quelques projets dont je suis particulièrement fier.",
+        "featuredSubtitle": "Quelques projets dont je suis particuliÃ¨rement fier.",
         "seeAll": "Voir tous les projets",
         "viewGithub": "GitHub",
         "viewLive": "Voir le projet",
         "featured": "En vedette"
     },
     "about": {
-        "title": "À propos",
+        "title": "Ã€ propos",
         "subtitle": "Qui suis-je ?",
-        "bio": "Je suis Gaspard Catry, développeur full-stack de 20 ans basé à Lille. Actuellement en 3ème année de BUT Informatique à l'IUT de Lille, je réalise mon alternance chez Mandarine Academy.",
-        "skills": "Compétences techniques",
+        "bio": "Je suis Gaspard Catry, dÃ©veloppeur full-stack de 20 ans basÃ© Ã  Lille. Actuellement en 3Ã¨me annÃ©e de BUT Informatique Ã  l'IUT de Lille, je rÃ©alise mon alternance chez Mandarine Academy.",
+        "skills": "CompÃ©tences techniques",
         "skillsSubtitle": "Les technologies que j'utilise au quotidien.",
         "experience": "Parcours complet",
-        "experienceSubtitle": "Mon parcours académique et professionnel.",
+        "experienceSubtitle": "Mon parcours acadÃ©mique et professionnel.",
         "positioning": "Positionnement professionnel",
         "positioningSubtitle": "Mon projet et ma vision.",
-        "proExperience": "Expériences professionnelles",
-        "proExperienceSubtitle": "Détail de mes stages et alternances.",
-        "softSkills": "Compétences comportementales",
-        "softSkillsSubtitle": "Les savoir-être qui définissent ma posture professionnelle.",
-        "reflexive": "Analyse réflexive",
-        "reflexiveSubtitle": "Ce que mes expériences professionnelles m'ont appris sur moi-même.",
+        "proExperience": "ExpÃ©riences professionnelles",
+        "proExperienceSubtitle": "DÃ©tail de mes stages et alternances.",
+        "softSkills": "CompÃ©tences comportementales",
+        "softSkillsSubtitle": "Les savoir-Ãªtre qui dÃ©finissent ma posture professionnelle.",
+        "reflexive": "Analyse rÃ©flexive",
+        "reflexiveSubtitle": "Ce que mes expÃ©riences professionnelles m'ont appris sur moi-mÃªme.",
         "strengths": "Points forts",
-        "improvements": "Axes d'amélioration",
+        "improvements": "Axes d'amÃ©lioration",
         "context": "Contexte",
         "missions": "Missions",
         "autonomy": "Autonomie",
         "interactions": "Interactions",
-        "situation": "Situation concrète",
+        "situation": "Situation concrÃ¨te",
         "analysis": "Mon analyse",
-        "seeMore": "Voir le détail",
-        "seeLess": "Réduire"
-    },
-    "contact": {
-        "title": "Contactez-moi",
-        "subtitle": "Une question ou une opportunité ? N'hésitez pas à me contacter !",
-        "name": "Votre Nom",
-        "email": "Votre Email",
-        "message": "Votre Message",
-        "messagePlaceholder": "Bonjour Gaspard, je souhaitais...",
-        "send": "Envoyer le message",
-        "success": "Message envoyé avec succès ! Je vous répondrai dès que possible.",
-        "error": "Une erreur est survenue. Veuillez réessayer.",
-        "findMe": "Retrouvez-moi sur",
-        "gdpr": "Vos données (nom, email, message) sont utilisées uniquement pour vous répondre. Elles ne sont jamais revendues ni utilisées à des fins commerciales."
-    },
-    "footer": {
-        "madeWith": "Fait avec React, Tailwind & DaisyUI"
-    },
-    "notFound": {
-        "title": "Page introuvable",
-        "subtitle": "La page que vous recherchez n'existe pas.",
-        "cta": "Retour à l'accueil"
-    },
-    "common": {
-        "loading": "Chargement...",
-        "error": "Une erreur est survenue lors du chargement des données.",
-        "present": "Présent"
+        "seeMore": "Voir le dÃ©tail",
+        "seeLess": "RÃ©duire"
     },
     "softSkillCategories": {
-        "maniere_etre": "Manière d'être",
-        "maniere_communiquer": "Manière de communiquer",
-        "maniere_travailler": "Manière de travailler avec les autres"
+        "maniere_etre": "ManiÃ¨re d'Ãªtre",
+        "maniere_communiquer": "ManiÃ¨re de communiquer",
+        "maniere_travailler": "ManiÃ¨re de travailler avec les autres"
     },
     "experienceTypes": {
         "stage": "Stage",
@@ -92,6 +66,40 @@
         "job": "Emploi",
         "other": "Autre"
     },
+    "contact": {
+        "title": "Contactez-moi",
+        "subtitle": "Une question ou une opportunitÃ© ? N'hÃ©sitez pas Ã  me contacter !",
+        "name": "Votre Nom",
+        "email": "Votre Email",
+        "message": "Votre Message",
+        "messagePlaceholder": "Bonjour Gaspard, je souhaitais...",
+        "send": "Envoyer le message",
+        "success": "Message envoyÃ© avec succÃ¨s ! Je vous rÃ©pondrai dÃ¨s que possible.",
+        "error": "Une erreur est survenue. Veuillez rÃ©essayer.",
+        "findMe": "Retrouvez-moi sur",
+        "gdpr": "Vos donnÃ©es (nom, email, message) sont utilisÃ©es uniquement pour vous rÃ©pondre. Elles ne sont jamais revendues ni utilisÃ©es Ã  des fins commerciales."
+    },
+    "footer": {
+        "madeWith": "Fait avec React, Tailwind & DaisyUI"
+    },
+    "notFound": {
+        "title": "Page introuvable",
+        "subtitle": "La page que vous recherchez n'existe pas.",
+        "cta": "Retour Ã  l'accueil"
+    },
+    "common": {
+        "loading": "Chargement...",
+        "error": "Une erreur est survenue lors du chargement des donnÃ©es.",
+        "present": "PrÃ©sent"
+    },
+    "profile": {
+        "hero": "DÃ©veloppeur full-stack en alternance chez Mandarine Academy, Ã©tudiant en 3Ã¨me annÃ©e de BUT Informatique Ã  l'IUT de Lille. PassionnÃ© par la conception d'applications web modernes â€” Java, Spring Boot, Vue.js, PHP/Symfony.",
+        "about": "Je suis Gaspard Catry, dÃ©veloppeur full-stack de 20 ans basÃ© Ã  Lille. Actuellement en 3Ã¨me annÃ©e de BUT Informatique Ã  l'IUT de Lille (classÃ© 12/72 en S5, moyenne 14.81/20), je rÃ©alise mon alternance chez Mandarine Academy sur un stack PHP/Symfony/Tailwind.\n\nMon stage chez Nextoo (Roubaix) m'a permis de suivre une formation intensive Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker et de dÃ©velopper 3 applications web internes. Le Directeur GÃ©nÃ©ral DÃ©lÃ©guÃ© de Nextoo m'a recommandÃ© pour ma rigueur, mon autonomie et ma curiositÃ© intellectuelle.\n\nEn dehors du travail et des Ã©tudes, je dÃ©veloppe des projets personnels dÃ©ployÃ©s en production : MaGare (reproduction web de l'app SNCF). Je contribue aussi bÃ©nÃ©volement Ã  des projets open-source le week-end. Mon objectif : devenir ingÃ©nieur logiciel spÃ©cialisÃ© dans la conception d'applications web full-stack robustes et performantes.",
+        "positioning": "DÃ©veloppeur full-stack en fin de BUT Informatique, je me spÃ©cialise dans la conception d'applications web robustes et performantes. Mon expÃ©rience combine un stage intensif chez Nextoo (Java/Spring Boot/Vue.js) et une alternance chez Mandarine Academy (PHP/Symfony/Tailwind). Je recherche un poste de dÃ©veloppeur full-stack ou ingÃ©nieur logiciel junior, idÃ©alement dans une Ã©quipe technique exigeante oÃ¹ je pourrai continuer Ã  progresser sur des problÃ©matiques d'architecture et de qualitÃ© logicielle.",
+        "reflexive": "Mes expÃ©riences professionnelles m'ont appris que j'apprends vite et efficacement quand je suis immergÃ© dans un environnement technique exigeant. Chez Nextoo, passer d'un niveau acadÃ©mique Ã  un niveau professionnel en 10 semaines m'a montrÃ© que je suis capable de monter en compÃ©tence rapidement sur des technologies nouvelles. Chez Mandarine Academy, travailler sur une application en production m'a fait prendre conscience de l'importance de la rigueur dans le code : chaque modification a un impact rÃ©el sur des utilisateurs.\n\nJ'ai aussi rÃ©alisÃ© que je suis plus efficace quand je comprends le \"pourquoi\" derriÃ¨re les tÃ¢ches. Les moments oÃ¹ j'ai le plus progressÃ© sont ceux oÃ¹ mon tuteur prenait le temps d'expliquer les choix d'architecture, pas seulement le \"comment faire\".\n\nLe passage du monde acadÃ©mique au monde professionnel m'a Ã©galement appris Ã  gÃ©rer mon temps diffÃ©remment : en entreprise, il faut savoir estimer, prioriser et communiquer sur l'avancement, pas seulement coder.",
+        "strengths": "CapacitÃ© d'apprentissage rapide : confirmÃ©e par la formation intensive Nextoo (3 projets complets en 10 semaines sur un stack inconnu) et la recommandation du DGD.\n\nRigueur technique : revues de code positives, habitude de tester et documenter mon code, respect des conventions (GitFlow, commits conventionnels, architecture propre).\n\nCuriositÃ© intellectuelle : je dÃ©veloppe des projets personnels en dehors du travail (DinnerMatch, MaGare, ce portfolio), je contribue Ã  l'open-source le week-end, et j'explore constamment de nouvelles technologies.\n\nPolyvalence : capacitÃ© Ã  travailler sur diffÃ©rents stacks (Java/Spring, PHP/Symfony, React/TypeScript, Vue.js) et Ã  m'adapter rapidement aux environnements techniques variÃ©s.",
+        "improvements": "Communication en rÃ©union : j'ai tendance Ã  Ãªtre rÃ©servÃ© lors des premiers Ã©changes en Ã©quipe. J'ai progressÃ© chez Mandarine en participant activement aux daily stand-ups, mais c'est un axe que je continue de travailler.\n\nEstimation des temps : j'ai souvent sous-estimÃ© la durÃ©e de certaines tÃ¢ches chez Nextoo, notamment sur l'intÃ©gration frontend. J'apprends Ã  mieux dÃ©couper mes tÃ¢ches et Ã  ajouter des marges rÃ©alistes.\n\nPrise de recul : quand je suis concentrÃ© sur un problÃ¨me technique, j'ai tendance Ã  m'y plonger trop longtemps avant de demander de l'aide. J'apprends Ã  identifier plus tÃ´t quand il est plus efficace de solliciter un collÃ¨gue.\n\nGestion du stress : les premiÃ¨res semaines en entreprise ont Ã©tÃ© intenses. J'ai appris Ã  mieux organiser mon travail pour rÃ©duire la pression, mais la gestion des deadlines serrÃ©es reste un point d'attention."
+    },
     "project": {
         "ffdc": {
             "title": "FinnFoundDaChest",
@@ -99,48 +107,48 @@
             "long_description": ""
         },
         "agile": {
-            "title": "Projet Agile de Rentrée",
-            "description": "Rogue-Like Java, travail d'équipe",
+            "title": "Projet Agile de RentrÃ©e",
+            "description": "Rogue-Like Java, travail d'Ã©quipe",
             "long_description": ""
         },
         "sae33": {
             "title": "Projet SAE 3.3",
-            "description": "Application JavaFX MVC, travail d'équipe",
+            "description": "Application JavaFX MVC, travail d'Ã©quipe",
             "long_description": ""
         },
         "mte": {
             "title": "MineToEarn",
-            "description": "Plugin Minecraft + interface web, travail d'équipe",
+            "description": "Plugin Minecraft + interface web, travail d'Ã©quipe",
             "long_description": ""
         },
         "corpsamer": {
             "title": "Projet Nuit de l'Info : CorpsAMer",
-            "description": "Webapp HTML/CSS/JS, Nuit de l'Info, travail d'équipe",
+            "description": "Webapp HTML/CSS/JS, Nuit de l'Info, travail d'Ã©quipe",
             "long_description": ""
         },
         "talkul": {
             "title": "Talkul",
-            "description": "Webapp Java EE, messagerie en temps réel",
+            "description": "Webapp Java EE, messagerie en temps rÃ©el",
             "long_description": ""
         },
         "woze": {
             "title": "Woze",
-            "description": "Classifieur KNN avec interface JavaFX, travail d'équipe",
+            "description": "Classifieur KNN avec interface JavaFX, travail d'Ã©quipe",
             "long_description": ""
         },
         "maio": {
             "title": "Ma.io",
-            "description": "Jeu multijoueur décalé (mayonnaise et aliens), Node.js + JS",
+            "description": "Jeu multijoueur dÃ©calÃ© (mayonnaise et aliens), Node.js + JS",
             "long_description": ""
         },
         "magare": {
             "title": "MaGare",
-            "description": "Reproduction web de l'app SNCF avec API temps réel",
+            "description": "Reproduction web de l'app SNCF avec API temps rÃ©el",
             "long_description": ""
         },
         "weathersport": {
             "title": "WeatherSport",
-            "description": "Météo + recommandations sportives, projet de stage Nextoo",
+            "description": "MÃ©tÃ©o + recommandations sportives, projet de stage Nextoo",
             "long_description": ""
         },
         "nextmovie": {
@@ -160,13 +168,13 @@
         },
         "refugegourmand": {
             "title": "Le Refuge Gourmand",
-            "description": "Site web de réservation de salle d'un restaurant fictif — Next.js, Prisma, NextAuth, Stripe.",
-            "long_description": ""
+            "description": "Site web de rÃ©servation de salle d'un restaurant fictif â€” Next.js, Prisma, NextAuth, Stripe.",
+            "long_description": "Le Refuge Gourmand est un projet acadÃ©mique d'entrepreneuriat : un site web complet pour un restaurant fictif permettant la rÃ©servation de salles en ligne.\n\nRÃ©alisÃ© en Next.js (export statique dÃ©ployÃ© sur GitHub Pages), le projet intÃ¨gre une stack moderne et complÃ¨te :\n- Authentification sÃ©curisÃ©e avec NextAuth et hachage bcrypt\n- Paiement en ligne via Stripe\n- Gestion des donnÃ©es avec Prisma ORM (PostgreSQL)\n- Validation des formulaires avec React Hook Form + Zod\n- Design responsive avec Tailwind CSS\n\nLe projet suit l'Atomic Design et a Ã©tÃ© l'occasion d'explorer une architecture full-stack moderne en TypeScript."
         },
         "weerdlebot": {
             "title": "WeerdleBot",
-            "description": "Bot Node.js qui joue automatiquement à Weerdle (Wordle Pokémon) avec dashboard web de contrôle.",
-            "long_description": ""
+            "description": "Bot Node.js qui joue automatiquement Ã  Weerdle (Wordle PokÃ©mon) avec dashboard web de contrÃ´le.",
+            "long_description": "WeerdleBot est un bot personnel qui automatise le jeu Weerdle, une variante PokÃ©mon du cÃ©lÃ¨bre Wordle hÃ©bergÃ©e sur pokengine.com.\n\nLe bot envoie automatiquement des requÃªtes HTTP authentifiÃ©es pour soumettre des propositions de mots, analyse les rÃ©ponses et adapte sa stratÃ©gie en fonction des lettres trouvÃ©es ou manquÃ©es.\n\nUn dashboard web (Node.js + HTML/CSS/JS) permet de dÃ©marrer/arrÃªter le bot, d'afficher les logs en temps rÃ©el via le terminal, et de dÃ©clencher une rotation de VPN (NordVPN) pour Ã©viter les bans d'IP. Le tout tourne en conteneur Docker pour une portabilitÃ© maximale."
         }
     }
 }
