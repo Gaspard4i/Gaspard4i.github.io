@@ -152,6 +152,21 @@
             "title": "GDS",
             "description": "Stock management with REST API and dynamic interface, Nextoo internship",
             "long_description": ""
+        },
+        "dinnermatch": {
+            "title": "DinnerMatch",
+            "description": "Full-stack social platform to find dining partners. Node.js, React, PostgreSQL.",
+            "long_description": ""
+        },
+        "refugegourmand": {
+            "title": "Le Refuge Gourmand",
+            "description": "Restaurant room booking website — Next.js, Prisma, NextAuth, Stripe.",
+            "long_description": ""
+        },
+        "weerdlebot": {
+            "title": "WeerdleBot",
+            "description": "Node.js bot that automatically plays Weerdle (Pokémon Wordle) with web control dashboard.",
+            "long_description": ""
         }
     }
 }
