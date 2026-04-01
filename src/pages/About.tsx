@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next'
+import { Crosshair, User, Lightbulb } from 'lucide-react'
 import SectionLayout from '@/components/templates/SectionLayout'
+import ProseBlock from '@/components/molecules/ProseBlock'
 import SkillsGrid from '@/components/organisms/SkillsGrid'
 import ExperienceTimeline from '@/components/organisms/ExperienceTimeline'
 import ProExperienceSection from '@/components/organisms/ProExperienceSection'
@@ -19,10 +21,11 @@ export default function About() {
 
   const positioning = profile
     ? resolve(profile.positioning_key, fr ? profile.positioning_fr : profile.positioning_en)
-    : ''
+    : t('profile.positioning')
   const bio = profile
     ? resolve(profile.about_key, fr ? profile.about_fr : profile.about_en)
-    : t('about.bio')
+    : t('profile.about')
+  const vision = t('profile.aboutVision')
 
   return (
     <>
@@ -32,13 +35,26 @@ export default function About() {
         title={t('about.positioning')}
         subtitle={t('about.positioningSubtitle')}
       >
-        <div className="prose max-w-none text-base-content/80">
-          {positioning && positioning.split('\n\n').map((para, i) => (
-            <p key={i} className="leading-relaxed">{para}</p>
-          ))}
-          {bio && bio.split('\n\n').map((para, i) => (
-            <p key={`bio-${i}`} className="leading-relaxed">{para}</p>
-          ))}
+        <div className="space-y-5">
+          <ProseBlock
+            title={t('about.positioning')}
+            content={positioning}
+            accent="border-primary"
+            icon={<Crosshair size={18} />}
+            defaultOpen
+          />
+          <ProseBlock
+            title={t('about.whoAmI')}
+            content={bio}
+            accent="border-secondary"
+            icon={<User size={18} />}
+          />
+          <ProseBlock
+            title={t('about.vision')}
+            content={vision}
+            accent="border-accent"
+            icon={<Lightbulb size={18} />}
+          />
         </div>
       </SectionLayout>
 
