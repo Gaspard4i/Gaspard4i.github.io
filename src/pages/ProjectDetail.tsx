@@ -10,6 +10,7 @@ import type { Project } from '@/types/project'
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>()
   const { t } = useTranslation()
+  const resolve = useI18nField()
 
   const { data: project, loading, error } = useSupabase<Project>(() =>
     supabase
@@ -35,8 +36,6 @@ export default function ProjectDetail() {
       </div>
     )
   }
-
-  const resolve = useI18nField()
   const title = resolve(project.title_key, project.title)
   const description = resolve(project.description_key, project.description)
   const longDescription = resolve(project.long_description_key, project.long_description ?? '')

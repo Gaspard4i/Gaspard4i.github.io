@@ -50,6 +50,7 @@ function ProseBlock({ title, content, accent = 'border-primary', defaultOpen = f
 
 export default function ReflexiveSection() {
   const { t, i18n } = useTranslation()
+  const resolve = useI18nField()
   const fr = i18n.language.startsWith('fr')
 
   const { data: profile, loading, error } = useSupabase<Profile>(() =>
@@ -68,7 +69,6 @@ export default function ReflexiveSection() {
     )
   }
 
-  const resolve = useI18nField()
   const reflexive = resolve(profile.reflexive_key, fr ? profile.reflexive_fr : profile.reflexive_en)
   const strengths = resolve(profile.strengths_key, fr ? profile.strengths_fr : profile.strengths_en)
   const improvements = resolve(profile.improvements_key, fr ? profile.improvements_fr : profile.improvements_en)
