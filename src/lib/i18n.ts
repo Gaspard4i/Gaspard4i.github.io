@@ -4,12 +4,12 @@ import HttpBackend from 'i18next-http-backend'
 import { SUPPORTED_LANGS } from '@/lib/locales'
 import { supabase } from '@/lib/supabase'
 
-async function loadWithOverrides(url: string, _options: unknown, callback: (err: unknown, data: unknown) => void) {
+async function loadWithOverrides(_options: unknown, url: string, _payload: unknown, callback: (err: unknown, data: unknown) => void) {
   try {
-    const langMatch = url.match(/locales\/(\w+)\.json/)
+    const langMatch = (url as string).match(/locales\/(\w+)\.json/)
     const lang = langMatch ? langMatch[1] : 'fr'
 
-    const res = await fetch(url)
+    const res = await fetch(url as string)
     const staticData = await res.json()
 
     const { data: overrides } = await supabase
@@ -29,7 +29,7 @@ async function loadWithOverrides(url: string, _options: unknown, callback: (err:
       }
     }
 
-    callback(null, staticData)
+    callback(null, { status: 200, data: staticData })
   } catch (err) {
     callback(err, null)
   }
