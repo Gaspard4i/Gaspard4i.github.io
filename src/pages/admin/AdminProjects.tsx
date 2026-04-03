@@ -23,7 +23,7 @@ export default function AdminProjects() {
   const { data: projects, loading, refetch } = useSupabase<Project[]>(() =>
     supabase
       .from('projects')
-      .select('*, project_skills(skill_id, skills(id, name, icon))')
+      .select('*, project_skills(skill_id, skills(id, name, icon, category))')
       .order('year', { ascending: false })
   )
 

@@ -25,7 +25,9 @@
         "seeAll": "Voir tous les projets",
         "viewGithub": "GitHub",
         "viewLive": "Voir le projet",
-        "featured": "En vedette"
+        "featured": "En vedette",
+        "softSkills": "Soft skills",
+        "technologies": "Technologies"
     },
     "about": {
         "title": "À propos",

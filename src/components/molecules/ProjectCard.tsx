@@ -35,7 +35,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       ? '/project-images/nextoo.png'
       : null
 
-  const skills = project.project_skills?.map((ps) => ps.skills) ?? []
+  const allSkills = project.project_skills?.map((ps) => ps.skills) ?? []
+  const techSkills = allSkills.filter((s) => s.category !== 'soft-skill')
+  const softSkills = allSkills.filter((s) => s.category === 'soft-skill')
 
   return (
     <div className="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300 h-full">
@@ -65,14 +67,31 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </Link>
 
       <div className="card-body pt-0 gap-3">
-        {skills.length > 0 && (
+        {techSkills.length > 0 && (
           <div className="flex flex-wrap gap-1">
-            {skills.map((skill) => (
+            {techSkills.map((skill) => (
               <Link
                 key={skill.id}
                 to={`/skills/${skill.id}`}
                 onClick={(e) => e.stopPropagation()}
                 className="flex items-center gap-1 badge badge-ghost badge-sm hover:badge-primary transition-colors"
+              >
+                {skill.icon && <img src={skill.icon} alt={skill.name} width={12} height={12} />}
+                <span>{skill.name}</span>
+              </Link>
+            ))}
+          </div>
+        )}
+
+        {softSkills.length > 0 && (
+          <div className="flex flex-wrap gap-1">
+            <span className="text-xs text-base-content/40 w-full">{t('projects.softSkills')}</span>
+            {softSkills.map((skill) => (
+              <Link
+                key={skill.id}
+                to={`/skills/${skill.id}`}
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center gap-1 badge badge-secondary badge-outline badge-sm hover:badge-secondary transition-colors"
               >
                 {skill.icon && <img src={skill.icon} alt={skill.name} width={12} height={12} />}
                 <span>{skill.name}</span>

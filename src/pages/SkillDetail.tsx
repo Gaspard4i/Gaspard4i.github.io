@@ -20,7 +20,7 @@ export default function SkillDetail() {
   const { data: projectLinks } = useSupabase<any[]>(() =>
     supabase
       .from('project_skills')
-      .select('projects(id, title, title_key, description, image_url, featured, year, github_url, url, long_description, project_skills(skill_id, skills(id, name, icon)))')
+      .select('projects(id, title, title_key, description, image_url, featured, year, github_url, url, long_description, project_skills(skill_id, skills(id, name, icon, category)))')
       .eq('skill_id', id!)
   )
 
