@@ -40,9 +40,15 @@ export default function ProjectDetail() {
   const description = resolve(project.description_key, project.description)
   const longDescription = resolve(project.long_description_key, project.long_description ?? '')
 
+  const NEXTOO_PROJECTS = ['weathersport', 'nextmovie', 'gds']
+  const isNextooProject = NEXTOO_PROJECTS.some(
+    (key) => project.title_key?.includes(key)
+  )
   const imageUrl = project.image_url
     ? `/project-images/${project.image_url.split('/').pop()}`
-    : null
+    : isNextooProject
+      ? '/project-images/nextoo.svg'
+      : null
   const skills = project.project_skills?.map((ps) => ps.skills) ?? []
 
   return (
