@@ -32,7 +32,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const imageUrl = project.image_url
     ? `/project-images/${project.image_url.split('/').pop()}`
     : isNextooProject
-      ? '/project-images/nextoo.svg'
+      ? '/project-images/nextoo.png'
       : null
 
   const skills = project.project_skills?.map((ps) => ps.skills) ?? []
