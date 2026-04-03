@@ -20,14 +20,12 @@ export default function AdminProfile() {
     if (!editing) return
     setSaving(true)
     const {
-      hero_fr, hero_en, about_fr, about_en,
       positioning_fr, positioning_en,
       reflexive_fr, reflexive_en,
       strengths_fr, strengths_en,
       improvements_fr, improvements_en,
     } = editing
     await supabase.from('profile').update({
-      hero_fr, hero_en, about_fr, about_en,
       positioning_fr, positioning_en,
       reflexive_fr, reflexive_en,
       strengths_fr, strengths_en,
@@ -45,10 +43,6 @@ export default function AdminProfile() {
   }
 
   const fields: { label: string; key: keyof Profile; rows?: number }[] = [
-    { label: 'Bio courte — FR (hero)', key: 'hero_fr', rows: 3 },
-    { label: 'Bio courte — EN (hero)', key: 'hero_en', rows: 3 },
-    { label: 'Bio longue — FR (à propos)', key: 'about_fr', rows: 4 },
-    { label: 'Bio longue — EN (à propos)', key: 'about_en', rows: 4 },
     { label: 'Positionnement — FR', key: 'positioning_fr', rows: 4 },
     { label: 'Positionnement — EN', key: 'positioning_en', rows: 4 },
     { label: 'Analyse réflexive — FR', key: 'reflexive_fr', rows: 5 },
