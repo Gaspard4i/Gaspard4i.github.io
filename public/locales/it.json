@@ -160,7 +160,7 @@
         },
         "refugegourmand": {
             "title": "Le Refuge Gourmand",
-            "description": "Sito web di prenotazione sala di un ristorante fittizio — Next.js, Prisma, NextAuth, Stripe.",
+            "description": "Sito web di prenotazione sala di un ristorante fittizio - Next.js, Prisma, NextAuth, Stripe.",
             "long_description": ""
         },
         "weerdlebot": {
@@ -170,7 +170,7 @@
         }
     },
     "profile": {
-        "hero": "Sviluppatore full-stack in alternanza presso Mandarine Academy, studente al 3° anno di Informatica all'IUT di Lille. Appassionato di progettazione di applicazioni web moderne — Java, Spring Boot, Vue.js, PHP/Symfony.",
+        "hero": "Sviluppatore full-stack in alternanza presso Mandarine Academy, studente al 3° anno di Informatica all'IUT di Lille. Appassionato di progettazione di applicazioni web moderne - Java, Spring Boot, Vue.js, PHP/Symfony.",
         "about": "Sono Gaspard Catry, sviluppatore full-stack di 20 anni con sede a Lille. Attualmente al 3° anno di Informatica all'IUT di Lille (12° su 72 al S5, media 14.81/20), svolgo la mia alternanza presso Mandarine Academy con uno stack PHP/Symfony/Tailwind.\n\nIl mio stage presso Nextoo (Roubaix) mi ha permesso di seguire una formazione intensiva su Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker e di sviluppare 3 applicazioni web interne. Il Direttore Generale Delegato di Nextoo mi ha raccomandato per il mio rigore, la mia autonomia e la mia curiosità intellettuale.\n\nAl di fuori del lavoro e degli studi, sviluppo progetti personali in produzione: MaGare (riproduzione web dell'app SNCF). Contribuisco anche a progetti open-source nei weekend. Il mio obiettivo: diventare ingegnere software specializzato nella progettazione di applicazioni web full-stack robuste e performanti.",
         "positioning": "Sviluppatore full-stack in fase di completamento della laurea in Informatica, mi specializzo nella progettazione di applicazioni web robuste e performanti. La mia esperienza combina uno stage intensivo presso Nextoo (Java/Spring Boot/Vue.js) e un'alternanza presso Mandarine Academy (PHP/Symfony/Tailwind). Cerco una posizione come sviluppatore full-stack o ingegnere software junior, idealmente in un team tecnico esigente dove poter continuare a crescere in architettura e qualità del software.",
         "reflexive": "Le mie esperienze professionali mi hanno insegnato che imparo velocemente ed efficacemente quando sono immerso in un ambiente tecnico esigente. Presso Nextoo, passare da un livello accademico a uno professionale in 10 settimane mi ha dimostrato che sono capace di acquisire rapidamente competenze su nuove tecnologie. Presso Mandarine Academy, lavorare su un'applicazione in produzione mi ha fatto prendere coscienza dell'importanza del rigore nel codice: ogni modifica ha un impatto reale sugli utenti.\n\nHo anche realizzato che sono più efficace quando comprendo il \"perché\" dietro le attività. I momenti in cui sono cresciuto di più sono quelli in cui il mio tutor si prendeva il tempo di spiegare le scelte architetturali, non solo il \"come fare\".\n\nIl passaggio dal mondo accademico a quello professionale mi ha anche insegnato a gestire il mio tempo diversamente: in azienda, bisogna saper stimare, dare priorità e comunicare sui progressi, non solo programmare.",

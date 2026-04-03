@@ -160,7 +160,7 @@
         },
         "refugegourmand": {
             "title": "Le Refuge Gourmand",
-            "description": "Reservierungswebsite eines fiktiven Restaurants — Next.js, Prisma, NextAuth, Stripe.",
+            "description": "Reservierungswebsite eines fiktiven Restaurants - Next.js, Prisma, NextAuth, Stripe.",
             "long_description": ""
         },
         "weerdlebot": {
@@ -170,7 +170,7 @@
         }
     },
     "profile": {
-        "hero": "Full-Stack-Entwickler im dualen Studium bei Mandarine Academy, Student im 3. Jahr Informatik am IUT de Lille. Leidenschaftlich für die Entwicklung moderner Webanwendungen — Java, Spring Boot, Vue.js, PHP/Symfony.",
+        "hero": "Full-Stack-Entwickler im dualen Studium bei Mandarine Academy, Student im 3. Jahr Informatik am IUT de Lille. Leidenschaftlich für die Entwicklung moderner Webanwendungen - Java, Spring Boot, Vue.js, PHP/Symfony.",
         "about": "Ich bin Gaspard Catry, 20-jähriger Full-Stack-Entwickler aus Lille. Derzeit im 3. Jahr Informatik am IUT de Lille (Rang 12/72 im S5, Durchschnitt 14.81/20), absolviere ich mein duales Studium bei Mandarine Academy mit einem PHP/Symfony/Tailwind-Stack.\n\nMein Praktikum bei Nextoo (Roubaix) ermöglichte mir eine intensive Ausbildung in Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker und die Entwicklung von 3 internen Webanwendungen. Der stellvertretende Geschäftsführer von Nextoo empfahl mich für meine Sorgfalt, Selbstständigkeit und intellektuelle Neugier.\n\nAußerhalb von Arbeit und Studium entwickle ich persönliche Projekte in Produktion: MaGare (Web-Nachbildung der SNCF-App). Ich trage auch am Wochenende zu Open-Source-Projekten bei. Mein Ziel: Software-Ingenieur werden, spezialisiert auf robuste und performante Full-Stack-Webanwendungen.",
         "positioning": "Full-Stack-Entwickler am Ende meines Informatikstudiums, spezialisiere ich mich auf die Entwicklung robuster und performanter Webanwendungen. Meine Erfahrung kombiniert ein intensives Praktikum bei Nextoo (Java/Spring Boot/Vue.js) und ein duales Studium bei Mandarine Academy (PHP/Symfony/Tailwind). Ich suche eine Stelle als Full-Stack-Entwickler oder Junior-Software-Ingenieur, idealerweise in einem anspruchsvollen technischen Team, in dem ich mich in Softwarearchitektur und -qualität weiterentwickeln kann.",
         "reflexive": "Meine Berufserfahrungen haben mir gezeigt, dass ich schnell und effektiv lerne, wenn ich in ein anspruchsvolles technisches Umfeld eintauche. Bei Nextoo hat mir der Übergang vom akademischen zum professionellen Niveau in 10 Wochen gezeigt, dass ich in der Lage bin, mich schnell in neue Technologien einzuarbeiten. Bei Mandarine Academy hat mir die Arbeit an einer Produktionsanwendung die Bedeutung von Code-Sorgfalt bewusst gemacht: Jede Änderung hat eine reale Auswirkung auf die Benutzer.\n\nIch habe auch erkannt, dass ich am effektivsten bin, wenn ich das \"Warum\" hinter den Aufgaben verstehe. Die Momente, in denen ich am meisten gewachsen bin, waren die, in denen mein Betreuer sich die Zeit nahm, Architekturentscheidungen zu erklären, nicht nur das \"Wie\".\n\nDer Übergang von der akademischen in die berufliche Welt hat mir auch beigebracht, meine Zeit anders zu verwalten: Im Unternehmen muss man schätzen, priorisieren und über den Fortschritt kommunizieren können, nicht nur programmieren.",

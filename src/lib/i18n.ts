@@ -2,6 +2,38 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import HttpBackend from 'i18next-http-backend'
 import { SUPPORTED_LANGS } from '@/lib/locales'
+import { supabase } from '@/lib/supabase'
+
+async function loadWithOverrides(url: string, _options: unknown, callback: (err: unknown, data: unknown) => void) {
+  try {
+    const langMatch = url.match(/locales\/(\w+)\.json/)
+    const lang = langMatch ? langMatch[1] : 'fr'
+
+    const res = await fetch(url)
+    const staticData = await res.json()
+
+    const { data: overrides } = await supabase
+      .from('translations')
+      .select('key, value')
+      .eq('lang', lang)
+
+    if (overrides && overrides.length > 0) {
+      for (const { key, value } of overrides) {
+        const keys = key.split('.')
+        let obj = staticData
+        for (let i = 0; i < keys.length - 1; i++) {
+          if (!obj[keys[i]]) obj[keys[i]] = {}
+          obj = obj[keys[i]]
+        }
+        obj[keys[keys.length - 1]] = value
+      }
+    }
+
+    callback(null, staticData)
+  } catch (err) {
+    callback(err, null)
+  }
+}
 
 i18n
   .use(HttpBackend)
@@ -14,6 +46,7 @@ i18n
     defaultNS: 'translation',
     backend: {
       loadPath: '/locales/{{lng}}.json',
+      request: loadWithOverrides,
     },
     interpolation: {
       escapeValue: false,

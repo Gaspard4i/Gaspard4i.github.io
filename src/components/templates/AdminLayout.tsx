@@ -1,6 +1,6 @@
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { useAuth } from '@/hooks/useAuth'
-import { LayoutDashboard, FolderKanban, Wrench, Briefcase, User, MessageSquare, LogOut, Heart, RotateCw } from 'lucide-react'
+import { LayoutDashboard, FolderKanban, Wrench, Briefcase, User, MessageSquare, LogOut, Heart, RotateCw, Languages } from 'lucide-react'
 
 const NAV = [
   { to: '/admin', label: 'Dashboard', icon: <LayoutDashboard size={16} />, end: true },
@@ -11,6 +11,7 @@ const NAV = [
   { to: '/admin/experiences', label: 'Expériences', icon: <Briefcase size={16} /> },
   { to: '/admin/hero-roles', label: 'Roles Hero', icon: <RotateCw size={16} /> },
   { to: '/admin/messages', label: 'Messages', icon: <MessageSquare size={16} /> },
+  { to: '/admin/translations', label: 'Traductions', icon: <Languages size={16} /> },
 ]
 
 export default function AdminLayout() {

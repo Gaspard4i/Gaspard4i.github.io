@@ -21,6 +21,7 @@ const AdminExperiences = lazy(() => import('@/pages/admin/AdminExperiences'))
 const AdminMessages = lazy(() => import('@/pages/admin/AdminMessages'))
 const AdminSoftSkills = lazy(() => import('@/pages/admin/AdminSoftSkills'))
 const AdminHeroRoles = lazy(() => import('@/pages/admin/AdminHeroRoles'))
+const AdminTranslations = lazy(() => import('@/pages/admin/AdminTranslations'))
 
 function AppContent() {
   useTheme()
@@ -56,6 +57,7 @@ function AppContent() {
           <Route path="soft-skills" element={<AdminSoftSkills />} />
           <Route path="hero-roles" element={<AdminHeroRoles />} />
           <Route path="messages" element={<AdminMessages />} />
+          <Route path="translations" element={<AdminTranslations />} />
         </Route>
       </Routes>
     </BrowserRouter>
