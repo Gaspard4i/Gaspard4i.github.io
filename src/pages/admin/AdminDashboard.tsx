@@ -17,13 +17,13 @@ function since(days: number) {
 }
 
 export default function AdminDashboard() {
-  const { data: viewsData7 } = useSupabase<any[]>(() =>
+  const { data: viewsData7 } = useSupabase<{ visitor_id: string }[]>(() =>
     supabase.from('page_views').select('visitor_id').gte('created_at', since(7))
   )
-  const { data: viewsData30 } = useSupabase<any[]>(() =>
+  const { data: viewsData30 } = useSupabase<{ visitor_id: string }[]>(() =>
     supabase.from('page_views').select('visitor_id').gte('created_at', since(30))
   )
-  const { data: unreadData } = useSupabase<any[]>(() =>
+  const { data: unreadData } = useSupabase<{ id: string }[]>(() =>
     supabase.from('contact_messages').select('id').eq('read', false)
   )
   const { data: clicksData } = useSupabase<{ project_title: string }[]>(() =>

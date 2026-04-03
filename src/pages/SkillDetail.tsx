@@ -16,6 +16,7 @@ export default function SkillDetail() {
     supabase.from('skills').select('*').eq('id', id!).single()
   )
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { data: projectLinks } = useSupabase<any[]>(() =>
     supabase
       .from('project_skills')
