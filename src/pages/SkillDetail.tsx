@@ -19,7 +19,7 @@ export default function SkillDetail() {
   const { data: projectLinks } = useSupabase<any[]>(() =>
     supabase
       .from('project_skills')
-      .select('projects(id, title, description, image_url, featured, year, github_url, url, long_description, project_skills(skill_id, skills(id, name, icon)))')
+      .select('projects(id, title, title_key, description, image_url, featured, year, github_url, url, long_description, project_skills(skill_id, skills(id, name, icon)))')
       .eq('skill_id', id!)
   )
 
@@ -86,9 +86,15 @@ export default function SkillDetail() {
           <h2 className="text-xl font-bold text-base-content mb-4">Projets utilisant {skill.name}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {projects.map((project) => {
+              const NEXTOO_PROJECTS = ['weathersport', 'nextmovie', 'gds']
+              const isNextooProject = NEXTOO_PROJECTS.some(
+                (key) => project.title_key?.includes(key)
+              )
               const imageUrl = project.image_url
                 ? `/project-images/${project.image_url.split('/').pop()}`
-                : null
+                : isNextooProject
+                  ? '/project-images/nextoo.svg'
+                  : null
               return (
                 <Link
                   key={project.id}

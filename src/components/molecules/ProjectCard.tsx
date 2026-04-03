@@ -25,9 +25,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const resolve = useI18nField()
   const title = resolve(project.title_key, project.title)
   const description = resolve(project.description_key, project.description)
+  const NEXTOO_PROJECTS = ['weathersport', 'nextmovie', 'gds']
+  const isNextooProject = NEXTOO_PROJECTS.some(
+    (key) => project.title_key?.includes(key)
+  )
   const imageUrl = project.image_url
     ? `/project-images/${project.image_url.split('/').pop()}`
-    : null
+    : isNextooProject
+      ? '/project-images/nextoo.svg'
+      : null
 
   const skills = project.project_skills?.map((ps) => ps.skills) ?? []
 

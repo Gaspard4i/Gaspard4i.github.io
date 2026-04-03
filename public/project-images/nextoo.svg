@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 312" width="600" height="312">
+  <rect width="600" height="312" fill="#ffffff"/>
+  <g transform="translate(300, 156)">
+    <!-- N -->
+    <g fill="#1b2d3e">
+      <polygon points="-245,45 -245,-45 -230,-45 -230,20 -197,-45 -182,-45 -182,45 -197,45 -197,-20 -230,45"/>
+    </g>
+    <!-- E -->
+    <g fill="#1b2d3e">
+      <polygon points="-170,-45 -170,45 -115,45 -115,32 -155,32 -155,5 -120,5 -120,-8 -155,-8 -155,-32 -115,-32 -115,-45"/>
+    </g>
+    <!-- X made of red dots -->
+    <g fill="#c13828">
+      <!-- Top-left to bottom-right diagonal -->
+      <circle cx="-102" cy="-42" r="3.5"/>
+      <circle cx="-96" cy="-36" r="3.5"/>
+      <circle cx="-90" cy="-30" r="3.5"/>
+      <circle cx="-84" cy="-24" r="3.5"/>
+      <circle cx="-78" cy="-18" r="3.5"/>
+      <circle cx="-72" cy="-12" r="3.5"/>
+      <circle cx="-66" cy="-6" r="3.5"/>
+      <circle cx="-60" cy="0" r="3.5"/>
+      <circle cx="-54" cy="6" r="3.5"/>
+      <circle cx="-48" cy="12" r="3.5"/>
+      <circle cx="-42" cy="18" r="3.5"/>
+      <circle cx="-36" cy="24" r="3.5"/>
+      <circle cx="-30" cy="30" r="3.5"/>
+      <circle cx="-24" cy="36" r="3.5"/>
+      <circle cx="-18" cy="42" r="3.5"/>
+
+      <!-- Duplicate rows for thickness - offset right -->
+      <circle cx="-96" cy="-42" r="3.5"/>
+      <circle cx="-90" cy="-36" r="3.5"/>
+      <circle cx="-84" cy="-30" r="3.5"/>
+      <circle cx="-78" cy="-24" r="3.5"/>
+      <circle cx="-72" cy="-18" r="3.5"/>
+      <circle cx="-66" cy="-12" r="3.5"/>
+      <circle cx="-60" cy="-6" r="3.5"/>
+      <circle cx="-54" cy="0" r="3.5"/>
+      <circle cx="-48" cy="6" r="3.5"/>
+      <circle cx="-42" cy="12" r="3.5"/>
+      <circle cx="-36" cy="18" r="3.5"/>
+      <circle cx="-30" cy="24" r="3.5"/>
+      <circle cx="-24" cy="30" r="3.5"/>
+      <circle cx="-18" cy="36" r="3.5"/>
+      <circle cx="-12" cy="42" r="3.5"/>
+
+      <!-- Top-right to bottom-left diagonal -->
+      <circle cx="-18" cy="-42" r="3.5"/>
+      <circle cx="-24" cy="-36" r="3.5"/>
+      <circle cx="-30" cy="-30" r="3.5"/>
+      <circle cx="-36" cy="-24" r="3.5"/>
+      <circle cx="-42" cy="-18" r="3.5"/>
+      <circle cx="-48" cy="-12" r="3.5"/>
+      <circle cx="-54" cy="-6" r="3.5"/>
+      <circle cx="-60" cy="0" r="3.5"/>
+      <circle cx="-66" cy="6" r="3.5"/>
+      <circle cx="-72" cy="12" r="3.5"/>
+      <circle cx="-78" cy="18" r="3.5"/>
+      <circle cx="-84" cy="24" r="3.5"/>
+      <circle cx="-90" cy="30" r="3.5"/>
+      <circle cx="-96" cy="36" r="3.5"/>
+      <circle cx="-102" cy="42" r="3.5"/>
+
+      <!-- Duplicate rows for thickness - offset left -->
+      <circle cx="-24" cy="-42" r="3.5"/>
+      <circle cx="-30" cy="-36" r="3.5"/>
+      <circle cx="-36" cy="-30" r="3.5"/>
+      <circle cx="-42" cy="-24" r="3.5"/>
+      <circle cx="-48" cy="-18" r="3.5"/>
+      <circle cx="-54" cy="-12" r="3.5"/>
+      <circle cx="-60" cy="-6" r="3.5"/>
+      <circle cx="-66" cy="0" r="3.5"/>
+      <circle cx="-72" cy="6" r="3.5"/>
+      <circle cx="-78" cy="12" r="3.5"/>
+      <circle cx="-84" cy="18" r="3.5"/>
+      <circle cx="-90" cy="24" r="3.5"/>
+      <circle cx="-96" cy="30" r="3.5"/>
+      <circle cx="-102" cy="36" r="3.5"/>
+      <circle cx="-108" cy="42" r="3.5"/>
+
+      <circle cx="-12" cy="-42" r="3.5"/>
+      <circle cx="-18" cy="-36" r="3.5"/>
+      <circle cx="-24" cy="-30" r="3.5"/>
+      <circle cx="-30" cy="-24" r="3.5"/>
+      <circle cx="-36" cy="-18" r="3.5"/>
+      <circle cx="-42" cy="-12" r="3.5"/>
+      <circle cx="-48" cy="-6" r="3.5"/>
+      <circle cx="-54" cy="0" r="3.5"/>
+      <circle cx="-48" cy="6" r="3.5"/>
+      <circle cx="-42" cy="12" r="3.5"/>
+      <circle cx="-36" cy="18" r="3.5"/>
+      <circle cx="-30" cy="24" r="3.5"/>
+      <circle cx="-24" cy="30" r="3.5"/>
+      <circle cx="-18" cy="36" r="3.5"/>
+      <circle cx="-12" cy="42" r="3.5"/>
+
+      <circle cx="-108" cy="-42" r="3.5"/>
+      <circle cx="-102" cy="-36" r="3.5"/>
+      <circle cx="-96" cy="-30" r="3.5"/>
+      <circle cx="-90" cy="-24" r="3.5"/>
+      <circle cx="-84" cy="-18" r="3.5"/>
+      <circle cx="-78" cy="-12" r="3.5"/>
+      <circle cx="-72" cy="-6" r="3.5"/>
+      <circle cx="-66" cy="0" r="3.5"/>
+      <circle cx="-72" cy="6" r="3.5"/>
+      <circle cx="-78" cy="12" r="3.5"/>
+      <circle cx="-84" cy="18" r="3.5"/>
+      <circle cx="-90" cy="24" r="3.5"/>
+      <circle cx="-96" cy="30" r="3.5"/>
+      <circle cx="-102" cy="36" r="3.5"/>
+      <circle cx="-108" cy="42" r="3.5"/>
+    </g>
+    <!-- T -->
+    <g fill="#1b2d3e">
+      <polygon points="8,-45 8,-32 38,-32 38,45 53,45 53,-32 83,-32 83,-45"/>
+    </g>
+    <!-- O first -->
+    <path d="M 105,-45 C 130,-45 150,-30 155,-8 C 157,0 157,5 155,15 C 150,35 130,48 105,48 C 80,48 60,35 55,15 C 53,5 53,0 55,-8 C 60,-30 80,-45 105,-45 Z M 105,-32 C 87,-32 72,-18 70,0 C 69,8 69,10 70,15 C 74,32 87,35 105,35 C 123,35 136,32 140,15 C 141,10 141,8 140,0 C 138,-18 123,-32 105,-32 Z" fill="#1b2d3e"/>
+    <!-- O second -->
+    <path d="M 185,-45 C 210,-45 230,-30 235,-8 C 237,0 237,5 235,15 C 230,35 210,48 185,48 C 160,48 140,35 135,15 C 133,5 133,0 135,-8 C 140,-30 160,-45 185,-45 Z M 185,-32 C 167,-32 152,-18 150,0 C 149,8 149,10 150,15 C 154,32 167,35 185,35 C 203,35 216,32 220,15 C 221,10 221,8 220,0 C 218,-18 203,-32 185,-32 Z" fill="#1b2d3e"/>
+  </g>
+</svg>
