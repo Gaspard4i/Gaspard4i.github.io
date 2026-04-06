@@ -25,7 +25,9 @@
         "seeAll": "Ver todos os projetos",
         "viewGithub": "GitHub",
         "viewLive": "Ver o projeto",
-        "featured": "Em destaque"
+        "featured": "Em destaque",
+        "softSkills": "",
+        "technologies": ""
     },
     "about": {
         "title": "Sobre mim",
@@ -52,7 +54,11 @@
         "situation": "Situação concreta",
         "analysis": "A minha análise",
         "seeMore": "Ver detalhe",
-        "seeLess": "Reduzir"
+        "seeLess": "Reduzir",
+        "vision": "",
+        "visionSubtitle": "",
+        "whoAmI": "",
+        "whoAmISubtitle": ""
     },
     "contact": {
         "title": "Contacte-me",
@@ -175,6 +181,7 @@
         "positioning": "Desenvolvedor full-stack em fase final da licenciatura em Informática, especializo-me na conceção de aplicações web robustas e eficientes. A minha experiência combina um estágio intensivo na Nextoo (Java/Spring Boot/Vue.js) e uma alternância na Mandarine Academy (PHP/Symfony/Tailwind). Procuro uma posição de desenvolvedor full-stack ou engenheiro de software júnior, idealmente numa equipa técnica exigente onde possa continuar a evoluir em arquitetura e qualidade de software.",
         "reflexive": "As minhas experiências profissionais ensinaram-me que aprendo rápida e eficazmente quando estou imerso num ambiente técnico exigente. Na Nextoo, passar de um nível académico para um profissional em 10 semanas mostrou-me que sou capaz de adquirir competências rapidamente em novas tecnologias. Na Mandarine Academy, trabalhar numa aplicação em produção fez-me tomar consciência da importância do rigor no código: cada modificação tem um impacto real nos utilizadores.\n\nTambém percebi que sou mais eficaz quando compreendo o \"porquê\" por trás das tarefas. Os momentos em que mais progredi foram aqueles em que o meu tutor dedicava tempo a explicar as escolhas de arquitetura, não apenas o \"como fazer\".\n\nA transição do mundo académico para o profissional também me ensinou a gerir o meu tempo de forma diferente: na empresa, é preciso saber estimar, priorizar e comunicar sobre o progresso, não apenas programar.",
         "strengths": "Capacidade de aprendizagem rápida: confirmada pela formação intensiva Nextoo (3 projetos completos em 10 semanas com um stack desconhecido) e pela recomendação do DGA.\n\nRigor técnico: revisões de código positivas, hábito de testar e documentar o meu código, respeito pelas convenções (GitFlow, commits convencionais, arquitetura limpa).\n\nCuriosidade intelectual: desenvolvo projetos pessoais fora do trabalho (DinnerMatch, MaGare, este portfolio), contribuo para o open-source aos fins de semana e exploro constantemente novas tecnologias.\n\nPolivalência: capacidade de trabalhar com diferentes stacks (Java/Spring, PHP/Symfony, React/TypeScript, Vue.js) e de me adaptar rapidamente a ambientes técnicos variados.",
-        "improvements": "Comunicação em reuniões: tenho tendência a ser reservado nos primeiros intercâmbios em equipa. Melhorei na Mandarine participando ativamente nos daily stand-ups, mas continua a ser um eixo de melhoria.\n\nEstimativa de tempos: subestimei frequentemente a duração de certas tarefas na Nextoo, especialmente na integração frontend. Estou a aprender a decompor melhor as minhas tarefas e a adicionar margens realistas.\n\nTomar distância: quando estou concentrado num problema técnico, tenho tendência a mergulhar demasiado tempo antes de pedir ajuda. Estou a aprender a identificar mais cedo quando é mais eficiente consultar um colega.\n\nGestão do stress: as primeiras semanas na empresa foram intensas. Aprendi a organizar melhor o meu trabalho para reduzir a pressão, mas a gestão de prazos apertados continua a ser um ponto de atenção."
+        "improvements": "Comunicação em reuniões: tenho tendência a ser reservado nos primeiros intercâmbios em equipa. Melhorei na Mandarine participando ativamente nos daily stand-ups, mas continua a ser um eixo de melhoria.\n\nEstimativa de tempos: subestimei frequentemente a duração de certas tarefas na Nextoo, especialmente na integração frontend. Estou a aprender a decompor melhor as minhas tarefas e a adicionar margens realistas.\n\nTomar distância: quando estou concentrado num problema técnico, tenho tendência a mergulhar demasiado tempo antes de pedir ajuda. Estou a aprender a identificar mais cedo quando é mais eficiente consultar um colega.\n\nGestão do stress: as primeiras semanas na empresa foram intensas. Aprendi a organizar melhor o meu trabalho para reduzir a pressão, mas a gestão de prazos apertados continua a ser um ponto de atenção.",
+        "aboutVision": ""
     }
 }

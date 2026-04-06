@@ -25,7 +25,9 @@
         "seeAll": "Alle projecten bekijken",
         "viewGithub": "GitHub",
         "viewLive": "Project bekijken",
-        "featured": "Uitgelicht"
+        "featured": "Uitgelicht",
+        "softSkills": "",
+        "technologies": ""
     },
     "about": {
         "title": "Over mij",
@@ -52,7 +54,11 @@
         "situation": "Concrete situatie",
         "analysis": "Mijn analyse",
         "seeMore": "Details bekijken",
-        "seeLess": "Minder tonen"
+        "seeLess": "Minder tonen",
+        "vision": "",
+        "visionSubtitle": "",
+        "whoAmI": "",
+        "whoAmISubtitle": ""
     },
     "contact": {
         "title": "Neem contact op",
@@ -175,6 +181,7 @@
         "positioning": "Full-stack developer aan het einde van mijn Informatica-opleiding, specialiseer ik mij in het ontwerpen van robuuste en performante webapplicaties. Mijn ervaring combineert een intensieve stage bij Nextoo (Java/Spring Boot/Vue.js) en een duaal traject bij Mandarine Academy (PHP/Symfony/Tailwind). Ik zoek een positie als full-stack developer of junior software-engineer, idealiter in een veeleisend technisch team waar ik kan blijven groeien in software-architectuur en -kwaliteit.",
         "reflexive": "Mijn professionele ervaringen hebben mij geleerd dat ik snel en effectief leer wanneer ik ondergedompeld ben in een veeleisende technische omgeving. Bij Nextoo heeft de overgang van een academisch naar een professioneel niveau in 10 weken mij laten zien dat ik in staat ben om snel competenties op te bouwen in nieuwe technologieën. Bij Mandarine Academy heeft het werken aan een productieapplicatie mij bewust gemaakt van het belang van nauwkeurigheid in code: elke wijziging heeft een reële impact op gebruikers.\n\nIk realiseerde mij ook dat ik het meest effectief ben wanneer ik het \"waarom\" achter taken begrijp. De momenten waarop ik het meest ben gegroeid waren die waarop mijn begeleider de tijd nam om architectuurkeuzes uit te leggen, niet alleen het \"hoe\".\n\nDe overgang van de academische naar de professionele wereld heeft mij ook geleerd om mijn tijd anders te beheren: in een bedrijf moet je kunnen schatten, prioriteren en communiceren over voortgang, niet alleen programmeren.",
         "strengths": "Snel leervermogen: bevestigd door de intensieve Nextoo-opleiding (3 volledige projecten in 10 weken met een onbekende stack) en de aanbeveling van de adjunct-directeur.\n\nTechnische nauwkeurigheid: positieve code reviews, gewoonte om mijn code te testen en documenteren, naleving van conventies (GitFlow, conventionele commits, schone architectuur).\n\nIntellectuele nieuwsgierigheid: ik ontwikkel persoonlijke projecten buiten het werk (DinnerMatch, MaGare, dit portfolio), draag bij aan open-source in het weekend en verken voortdurend nieuwe technologieën.\n\nVerelzijdigheid: vermogen om te werken met verschillende stacks (Java/Spring, PHP/Symfony, React/TypeScript, Vue.js) en mij snel aan te passen aan gevarieerde technische omgevingen.",
-        "improvements": "Communicatie in vergaderingen: ik ben geneigd terughoudend te zijn bij de eerste teamuitwisselingen. Ik ben verbeterd bij Mandarine door actief deel te nemen aan de daily stand-ups, maar het blijft een verbeterpunt.\n\nTijdsinschatting: ik heb bij Nextoo vaak de duur van bepaalde taken onderschat, vooral bij frontend-integratie. Ik leer mijn taken beter op te splitsen en realistische marges toe te voegen.\n\nAfstand nemen: wanneer ik geconcentreerd ben op een technisch probleem, heb ik de neiging om er te lang in te duiken voordat ik om hulp vraag. Ik leer eerder te herkennen wanneer het efficiënter is om een collega te raadplegen.\n\nStressmanagement: de eerste weken in het bedrijf waren intens. Ik heb geleerd mijn werk beter te organiseren om de druk te verminderen, maar het beheer van strakke deadlines blijft een aandachtspunt."
+        "improvements": "Communicatie in vergaderingen: ik ben geneigd terughoudend te zijn bij de eerste teamuitwisselingen. Ik ben verbeterd bij Mandarine door actief deel te nemen aan de daily stand-ups, maar het blijft een verbeterpunt.\n\nTijdsinschatting: ik heb bij Nextoo vaak de duur van bepaalde taken onderschat, vooral bij frontend-integratie. Ik leer mijn taken beter op te splitsen en realistische marges toe te voegen.\n\nAfstand nemen: wanneer ik geconcentreerd ben op een technisch probleem, heb ik de neiging om er te lang in te duiken voordat ik om hulp vraag. Ik leer eerder te herkennen wanneer het efficiënter is om een collega te raadplegen.\n\nStressmanagement: de eerste weken in het bedrijf waren intens. Ik heb geleerd mijn werk beter te organiseren om de druk te verminderen, maar het beheer van strakke deadlines blijft een aandachtspunt.",
+        "aboutVision": ""
     }
 }

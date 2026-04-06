@@ -25,7 +25,9 @@
         "seeAll": "Alle Projekte ansehen",
         "viewGithub": "GitHub",
         "viewLive": "Projekt ansehen",
-        "featured": "Ausgewählt"
+        "featured": "Ausgewählt",
+        "softSkills": "",
+        "technologies": ""
     },
     "about": {
         "title": "Über mich",
@@ -52,7 +54,11 @@
         "situation": "Konkrete Situation",
         "analysis": "Meine Analyse",
         "seeMore": "Details anzeigen",
-        "seeLess": "Weniger anzeigen"
+        "seeLess": "Weniger anzeigen",
+        "vision": "",
+        "visionSubtitle": "",
+        "whoAmI": "",
+        "whoAmISubtitle": ""
     },
     "contact": {
         "title": "Kontaktiere mich",
@@ -175,6 +181,7 @@
         "positioning": "Full-Stack-Entwickler am Ende meines Informatikstudiums, spezialisiere ich mich auf die Entwicklung robuster und performanter Webanwendungen. Meine Erfahrung kombiniert ein intensives Praktikum bei Nextoo (Java/Spring Boot/Vue.js) und ein duales Studium bei Mandarine Academy (PHP/Symfony/Tailwind). Ich suche eine Stelle als Full-Stack-Entwickler oder Junior-Software-Ingenieur, idealerweise in einem anspruchsvollen technischen Team, in dem ich mich in Softwarearchitektur und -qualität weiterentwickeln kann.",
         "reflexive": "Meine Berufserfahrungen haben mir gezeigt, dass ich schnell und effektiv lerne, wenn ich in ein anspruchsvolles technisches Umfeld eintauche. Bei Nextoo hat mir der Übergang vom akademischen zum professionellen Niveau in 10 Wochen gezeigt, dass ich in der Lage bin, mich schnell in neue Technologien einzuarbeiten. Bei Mandarine Academy hat mir die Arbeit an einer Produktionsanwendung die Bedeutung von Code-Sorgfalt bewusst gemacht: Jede Änderung hat eine reale Auswirkung auf die Benutzer.\n\nIch habe auch erkannt, dass ich am effektivsten bin, wenn ich das \"Warum\" hinter den Aufgaben verstehe. Die Momente, in denen ich am meisten gewachsen bin, waren die, in denen mein Betreuer sich die Zeit nahm, Architekturentscheidungen zu erklären, nicht nur das \"Wie\".\n\nDer Übergang von der akademischen in die berufliche Welt hat mir auch beigebracht, meine Zeit anders zu verwalten: Im Unternehmen muss man schätzen, priorisieren und über den Fortschritt kommunizieren können, nicht nur programmieren.",
         "strengths": "Schnelle Lernfähigkeit: bestätigt durch die intensive Nextoo-Ausbildung (3 vollständige Projekte in 10 Wochen mit einem unbekannten Stack) und die Empfehlung des stv. GF.\n\nTechnische Sorgfalt: positive Code-Reviews, Gewohnheit meinen Code zu testen und zu dokumentieren, Einhaltung von Konventionen (GitFlow, konventionelle Commits, saubere Architektur).\n\nIntellektuelle Neugier: Ich entwickle persönliche Projekte außerhalb der Arbeit (DinnerMatch, MaGare, dieses Portfolio), trage am Wochenende zu Open-Source bei und erkunde ständig neue Technologien.\n\nVielseitigkeit: Fähigkeit, mit verschiedenen Stacks zu arbeiten (Java/Spring, PHP/Symfony, React/TypeScript, Vue.js) und mich schnell an verschiedene technische Umgebungen anzupassen.",
-        "improvements": "Kommunikation in Meetings: Ich neige dazu, bei den ersten Teamaustauschen zurückhaltend zu sein. Ich habe mich bei Mandarine durch aktive Teilnahme an den Daily Stand-ups verbessert, aber das bleibt ein Entwicklungsbereich.\n\nZeitschätzung: Ich habe bei Nextoo oft die Dauer bestimmter Aufgaben unterschätzt, besonders bei der Frontend-Integration. Ich lerne, meine Aufgaben besser aufzuteilen und realistische Puffer einzuplanen.\n\nAbstand nehmen: Wenn ich mich auf ein technisches Problem konzentriere, neige ich dazu, zu lange darin einzutauchen, bevor ich um Hilfe bitte. Ich lerne, früher zu erkennen, wann es effizienter ist, einen Kollegen zu konsultieren.\n\nStressmanagement: Die ersten Wochen im Unternehmen waren intensiv. Ich habe gelernt, meine Arbeit besser zu organisieren, um den Druck zu reduzieren, aber das Management enger Fristen bleibt ein Aufmerksamkeitspunkt."
+        "improvements": "Kommunikation in Meetings: Ich neige dazu, bei den ersten Teamaustauschen zurückhaltend zu sein. Ich habe mich bei Mandarine durch aktive Teilnahme an den Daily Stand-ups verbessert, aber das bleibt ein Entwicklungsbereich.\n\nZeitschätzung: Ich habe bei Nextoo oft die Dauer bestimmter Aufgaben unterschätzt, besonders bei der Frontend-Integration. Ich lerne, meine Aufgaben besser aufzuteilen und realistische Puffer einzuplanen.\n\nAbstand nehmen: Wenn ich mich auf ein technisches Problem konzentriere, neige ich dazu, zu lange darin einzutauchen, bevor ich um Hilfe bitte. Ich lerne, früher zu erkennen, wann es effizienter ist, einen Kollegen zu konsultieren.\n\nStressmanagement: Die ersten Wochen im Unternehmen waren intensiv. Ich habe gelernt, meine Arbeit besser zu organisieren, um den Druck zu reduzieren, aber das Management enger Fristen bleibt ein Aufmerksamkeitspunkt.",
+        "aboutVision": ""
     }
 }
