@@ -2,7 +2,11 @@ import { useState, useEffect, useCallback } from 'react'
 import type { ThemeName, ThemeDefinition } from '@/types/theme'
 
 const STORAGE_KEY = 'portfolio-theme'
-const DEFAULT_THEME: ThemeName = 'original'
+
+function getSystemDefault(): ThemeName {
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'original-dark'
+  return 'original'
+}
 
 const THEMES: ThemeDefinition[] = [
   { id: 'original', name: 'Original', prefersDark: false, primaryColor: '#5c8a4a' },
@@ -15,7 +19,7 @@ export function useTheme() {
   const [theme, setThemeState] = useState<ThemeName>(() => {
     const stored = localStorage.getItem(STORAGE_KEY) as ThemeName | null
     const isValid = stored && THEMES.some((t) => t.id === stored)
-    return isValid ? stored : DEFAULT_THEME
+    return isValid ? stored : getSystemDefault()
   })
 
   useEffect(() => {

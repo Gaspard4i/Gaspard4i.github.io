@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-theme="original">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/gif" href="/favicon.gif" />
@@ -15,6 +15,18 @@
   </head>
   <body>
     <script>
+      // Apply theme before React hydrates to prevent flash
+      (function() {
+        var stored = localStorage.getItem('portfolio-theme');
+        var valid = ['original','original-dark','vscode','spotify'];
+        if (stored && valid.indexOf(stored) !== -1) {
+          document.documentElement.setAttribute('data-theme', stored);
+        } else {
+          document.documentElement.setAttribute('data-theme',
+            window.matchMedia('(prefers-color-scheme: dark)').matches ? 'original-dark' : 'original'
+          );
+        }
+      })();
       // SPA redirect restore for GitHub Pages
       (function() {
         var p = window.location.search.slice(1).split('&').reduce(function(acc, kv) {
