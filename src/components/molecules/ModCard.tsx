@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, Gamepad2 } from 'lucide-react'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import Badge from '@/components/atoms/Badge'
 import type { WikiMod } from '@/types/wiki'
@@ -32,8 +32,8 @@ export default function ModCard({ mod, categoryId }: ModCardProps) {
       <Link to={`/wiki/${categoryId}/${mod.id}`} className="block">
         <div className="card-body gap-3">
           <div className="flex items-start gap-4">
-            <div className="w-14 h-14 rounded-lg bg-base-300 flex items-center justify-center text-2xl shrink-0">
-              ⛏️
+            <div className="w-14 h-14 rounded-lg bg-primary/15 flex items-center justify-center shrink-0">
+              <Gamepad2 size={28} className="text-primary" />
             </div>
             <div className="min-w-0">
               <h3 className="card-title text-base-content text-lg">{t(mod.nameKey)}</h3>

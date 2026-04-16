@@ -186,6 +186,7 @@ fix/xxx     → corrections → PR vers develop (ou main si critique)
 
 ## Points d'attention
 
+- **Jamais d'emojis dans l'UI** — utiliser exclusivement des icones (Lucide React, @icons-pack/react-simple-icons). Aucun emoji ne doit apparaître dans le rendu du site.
 - **Ne jamais commiter `.env.local`** — il est dans `.gitignore`
 - **Ne jamais modifier `public/locales/` à la main en prod** — ils sont écrasés par Loco
 - **La clé `LOCO_API_KEY` ne doit pas être préfixée `VITE_`** — elle ne doit pas apparaître dans le bundle

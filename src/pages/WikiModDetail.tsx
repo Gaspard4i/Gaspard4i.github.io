@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useParams, Navigate, NavLink } from 'react-router-dom'
 import { SiGithub } from '@icons-pack/react-simple-icons'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, Gamepad2 } from 'lucide-react'
 import Badge from '@/components/atoms/Badge'
 import WikiSidebar from '@/components/molecules/WikiSidebar'
 import { findMod } from '@/data/wikiMods'
@@ -44,8 +44,8 @@ export default function WikiModDetail() {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-lg bg-base-300 flex items-center justify-center text-2xl shrink-0">
-              ⛏️
+            <div className="w-12 h-12 rounded-lg bg-primary/15 flex items-center justify-center shrink-0">
+              <Gamepad2 size={24} className="text-primary" />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-base-content">{t(mod.nameKey)}</h1>
