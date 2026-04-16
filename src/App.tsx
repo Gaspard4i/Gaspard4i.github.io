@@ -11,6 +11,9 @@ import Contact from '@/pages/Contact'
 import NotFound from '@/pages/NotFound'
 import ProjectDetail from '@/pages/ProjectDetail'
 import SkillDetail from '@/pages/SkillDetail'
+import Wiki from '@/pages/Wiki'
+import WikiCategory from '@/pages/WikiCategory'
+import WikiModDetail from '@/pages/WikiModDetail'
 
 const AdminLogin = lazy(() => import('@/pages/admin/AdminLogin'))
 const AdminDashboard = lazy(() => import('@/pages/admin/AdminDashboard'))
@@ -36,6 +39,10 @@ function AppContent() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/skills/:id" element={<SkillDetail />} />
+          <Route path="/wiki" element={<Wiki />} />
+          <Route path="/wiki/:categoryId" element={<WikiCategory />} />
+          <Route path="/wiki/:categoryId/:modId" element={<WikiModDetail />} />
+          <Route path="/wiki/:categoryId/:modId/:sectionId" element={<WikiModDetail />} />
           <Route path="*" element={<NotFound />} />
         </Route>
 

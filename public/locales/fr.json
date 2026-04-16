@@ -2,6 +2,7 @@
     "nav": {
         "home": "Accueil",
         "projects": "Projets",
+        "wiki": "Wiki",
         "about": "À propos",
         "contact": "Contact"
     },
@@ -183,5 +184,68 @@
         "strengths": "Capacité d'apprentissage rapide : confirmée par la formation intensive Nextoo (3 projets complets en 10 semaines sur un stack inconnu) et la recommandation du DGD.\n\nRigueur technique : revues de code positives, habitude de tester et documenter mon code, respect des conventions (GitFlow, commits conventionnels, architecture propre).\n\nCuriosité intellectuelle : je développe des projets personnels en dehors du travail (DinnerMatch, MaGare, ce portfolio), je contribue à l'open-source le week-end, et j'explore constamment de nouvelles technologies.\n\nPolyvalence : capacité à travailler sur différents stacks (Java/Spring, PHP/Symfony, React/TypeScript, Vue.js) et à m'adapter rapidement aux environnements techniques variés.\n\nMaîtrise de l'IA comme outil : j'intègre l'IA dans mon workflow de développement pour accélérer la production de code, tout en gardant le jugement critique nécessaire pour évaluer si ce qu'elle génère est bon, sécurisé et adapté au contexte. Je sais quand lui faire confiance et quand prendre le relais - comprendre un besoin métier, architecturer un système complexe, débugger en production sous pression, et assumer la responsabilité technique restent des compétences humaines essentielles.",
         "improvements": "Communication en réunion : j'ai tendance à être réservé lors des premiers échanges en équipe. J'ai progressé chez Mandarine en participant activement aux daily stand-ups, mais c'est un axe que je continue de travailler.\n\nEstimation des temps : j'ai souvent sous-estimé la durée de certaines tâches chez Nextoo, notamment sur l'intégration frontend. J'apprends à mieux découper mes tâches et à ajouter des marges réalistes.\n\nPrise de recul : quand je suis concentré sur un problème technique, j'ai tendance à m'y plonger trop longtemps avant de demander de l'aide. J'apprends à identifier plus tôt quand il est plus efficace de solliciter un collègue.\n\nGestion du stress : les premières semaines en entreprise ont été intenses. J'ai appris à mieux organiser mon travail pour réduire la pression, mais la gestion des deadlines serrées reste un point d'attention.",
         "aboutVision": "Ce qui reste **irremplaçable** chez un développeur, c'est la capacité à **comprendre un besoin métier** et le traduire en solution technique, à **architecturer** des systèmes complexes, à assumer la **responsabilité technique**, et à entretenir le **relationnel client/équipe**. L'IA est un outil puissant que j'intègre dans mon workflow quotidien - **pas un remplaçant, mais un amplificateur**.\n\nMon objectif : devenir **ingénieur logiciel** capable d'allier **expertise technique** et **jugement humain** pour concevoir des applications web robustes et performantes."
+    },
+    "wiki": {
+        "title": "Wiki",
+        "subtitle": "Documentation de mes projets open-source.",
+        "viewDocs": "Documentation",
+        "download": "Télécharger",
+        "backToCategory": "Retour",
+        "modCount_one": "{{count}} mod",
+        "modCount_other": "{{count}} mods",
+        "minecraft": {
+            "title": "Mods Minecraft",
+            "subtitle": "Mods pour Minecraft Java Edition."
+        },
+        "mods": {
+            "ghastrider": {
+                "name": "GhastRider",
+                "tagline": "Mécanique de dash pour le Happy Ghast",
+                "sections": {
+                    "overview": {
+                        "title": "Présentation",
+                        "content": "<p>GhastRider ajoute une <strong>mécanique de dash par charge</strong> au Happy Ghast, inspirée de la barre de saut du cheval.</p><p>Maintenez la touche dash pour charger, relâchez pour propulser avec un son de vent. Nourrissez votre ghast avec de la glace pour des bonus de vitesse !</p><h3 class=\"text-lg font-semibold mt-6 mb-2\">Caractéristiques</h3><ul class=\"list-disc list-inside space-y-1\"><li><strong>Barre de charge</strong> — remplace la barre d'XP en montant un Happy Ghast</li><li><strong>Seuil minimum</strong> — les appuis trop courts sont ignorés (2/18 barres)</li><li><strong>Décroissance de surcharge</strong> — maintenir trop longtemps réduit la charge</li><li><strong>Cooldown proportionnel</strong> — charge courte = cooldown court</li><li><strong>Auto-recharge</strong> — gardez G enfoncé pendant le cooldown</li><li><strong>Boost vertical</strong> — maintient l'altitude pendant le dash</li><li><strong>Alimentation en glace</strong> — donnez de la glace pour des effets de vitesse</li><li><strong>Sons custom</strong> — souffle de vent, craquement de glace, ronronnement</li></ul>"
+                    },
+                    "dash": {
+                        "title": "Mécanique de Dash",
+                        "content": "<h3 class=\"text-lg font-semibold mb-2\">Comment dasher</h3><ol class=\"list-decimal list-inside space-y-1\"><li>Montez un Happy Ghast (équipez-le d'un harnais)</li><li>Maintenez <kbd class=\"kbd kbd-sm\">G</kbd> pour charger — la barre se remplit</li><li>Relâchez <kbd class=\"kbd kbd-sm\">G</kbd> au bon moment pour un boost maximum</li><li>La barre affiche le cooldown qui diminue</li><li>Une fois la barre vide, vous pouvez redash — ou gardez G enfoncé pour auto-recharger</li></ol><h3 class=\"text-lg font-semibold mt-6 mb-2\">Paramètres</h3><table class=\"table table-zebra w-full\"><thead><tr><th>Paramètre</th><th>Valeur</th></tr></thead><tbody><tr><td>Charge minimum</td><td>2/18 barres (~11%)</td></tr><tr><td>Temps de charge max</td><td>2 secondes</td></tr><tr><td>Cooldown max</td><td>3 secondes</td></tr><tr><td>Boost vertical</td><td>30%</td></tr><tr><td>Touche</td><td><kbd class=\"kbd kbd-sm\">G</kbd> (configurable)</td></tr></tbody></table>"
+                    },
+                    "ice": {
+                        "title": "Alimentation en Glace",
+                        "content": "<p>Nourrissez votre Happy Ghast avec de la glace (clic droit) pour des <strong>bonus de vitesse temporaires</strong>.</p><table class=\"table table-zebra w-full mt-4\"><thead><tr><th>Item</th><th>Effet</th><th>Durée</th><th>Notes</th></tr></thead><tbody><tr><td>Glace</td><td>Vitesse I</td><td>10s</td><td>Durée cumulable</td></tr><tr><td>Glace compactée</td><td>Vitesse II</td><td>10s</td><td>Durée cumulable</td></tr><tr><td>Glace bleue</td><td>Vitesse III</td><td>10s</td><td>Durée cumulable</td></tr><tr><td>Seau de neige poudreuse</td><td>Vitesse I</td><td>10s</td><td>Se vide en seau</td></tr></tbody></table><p class=\"mt-4 text-base-content/60\">Donner un type de glace différent remet la durée à 10s avec le nouveau niveau de vitesse.</p><h3 class=\"text-lg font-semibold mt-6 mb-2\">Effets</h3><ul class=\"list-disc list-inside space-y-1\"><li>Son de craquement de glace</li><li>Son de ronronnement du ghast</li><li>Particules de l'item donné</li></ul>"
+                    },
+                    "installation": {
+                        "title": "Installation",
+                        "content": "<h3 class=\"text-lg font-semibold mb-2\">Prérequis</h3><ul class=\"list-disc list-inside space-y-1\"><li><strong>Minecraft 26.1.2</strong></li><li><a href=\"https://fabricmc.net/\" class=\"link link-primary\" target=\"_blank\">Fabric Loader</a> ou <a href=\"https://neoforged.net/\" class=\"link link-primary\" target=\"_blank\">NeoForge</a></li><li><a href=\"https://modrinth.com/mod/fabric-api\" class=\"link link-primary\" target=\"_blank\">Fabric API</a> (Fabric uniquement)</li></ul><h3 class=\"text-lg font-semibold mt-6 mb-2\">Étapes</h3><ol class=\"list-decimal list-inside space-y-1\"><li>Installez Fabric Loader ou NeoForge pour MC 26.1.2</li><li>Pour Fabric : installez aussi Fabric API</li><li>Téléchargez le JAR depuis <a href=\"https://github.com/Gaspard4i/ghastrider/releases/latest\" class=\"link link-primary\" target=\"_blank\">GitHub Releases</a></li><li>Placez le JAR dans votre dossier <code>mods/</code></li><li>Lancez le jeu</li></ol>"
+                    },
+                    "commands": {
+                        "title": "Commandes",
+                        "content": "<h3 class=\"text-lg font-semibold mb-2\">Fonction debug</h3><div class=\"mockup-code mb-4\"><pre data-prefix=\"$\"><code>/function ghastrider:debug</code></pre></div><p>Prépare un environnement de test :</p><ul class=\"list-disc list-inside space-y-1 mt-2\"><li>Difficulté pacifique</li><li>Désactive le cycle jour/nuit, spawn de mobs, météo</li><li>Jour + beau temps</li><li>Vide votre inventaire</li><li>Tue les Happy Ghasts existants</li><li>Invoque 3 Happy Ghasts invulnérables</li><li>Donne : harnais, tous types de glace, boules de neige</li></ul><p class=\"mt-4 text-base-content/60\">Nécessite un monde <strong>Créatif avec les commandes activées</strong> (Superflat recommandé).</p>"
+                    },
+                    "changelog": {
+                        "title": "Changelog",
+                        "content": "<h3 class=\"text-lg font-semibold mb-2\">v26.1.2.1-alpha.1</h3><p class=\"text-sm text-base-content/50 mb-3\">16 avril 2026</p><p class=\"mb-2\">Première version publique :</p><ul class=\"list-disc list-inside space-y-1\"><li>Mécanique de dash avec barre de charge</li><li>Décroissance de surcharge avec seuil minimum</li><li>Cooldown proportionnel</li><li>Auto-recharge en maintenant G</li><li>Boost vertical pendant le dash</li><li>Alimentation en glace avec effets de Vitesse</li><li>Sons custom (vent, craquement, ronronnement)</li><li>Particules d'items</li><li>Fonction debug</li><li>Support Fabric et NeoForge pour MC 26.1.2</li></ul>"
+                    }
+                }
+            },
+            "numismatic": {
+                "name": "Numismatic Reimagined",
+                "tagline": "Système de monnaie custom pour Minecraft",
+                "sections": {
+                    "overview": {
+                        "title": "Présentation",
+                        "content": "<p><strong>Numismatic Reimagined</strong> est un mod de monnaie Minecraft inspiré de <a href=\"https://github.com/wisp-forest/numismatic-overhaul\" class=\"link link-primary\" target=\"_blank\">Numismatic Overhaul</a>, reconstruit de zéro.</p><p class=\"mt-2\">Il ajoute un système d'économie complet avec plusieurs dénominations de pièces, des boutiques, des tirelires et une intégration avec les échanges de villageois.</p><div class=\"mt-4 p-4 bg-base-300 rounded-lg\"><p class=\"text-sm\">Ce mod est actuellement en <strong>développement</strong>. La Phase 1 (items de monnaie) est terminée.</p></div>"
+                    },
+                    "currency": {
+                        "title": "Système de Monnaie",
+                        "content": "<p>Cinq dénominations avec un taux de change base 100 :</p><table class=\"table table-zebra w-full mt-4\"><thead><tr><th>Pièce</th><th>Valeur</th><th>Équivalence</th></tr></thead><tbody><tr><td>Bronze</td><td>1</td><td>Unité de base</td></tr><tr><td>Argent</td><td>100</td><td>= 100 Bronze</td></tr><tr><td>Or</td><td>10 000</td><td>= 100 Argent</td></tr><tr><td>Netherite</td><td>1 000 000</td><td>= 100 Or</td></tr><tr><td>Star Coin</td><td>Unique</td><td>Récompense de succès</td></tr></tbody></table><p class=\"mt-4\">Le <strong>Star Coin</strong> est un trophée obtenu en accumulant 1 000 Netherite Coins de transactions. Unique par joueur mais pas lié à l'âme.</p>"
+                    },
+                    "roadmap": {
+                        "title": "Feuille de Route",
+                        "content": "<p>Le mod est développé en 12 phases :</p><ol class=\"list-decimal list-inside space-y-2 mt-4\"><li><strong class=\"text-success\">Items de Monnaie</strong> — Terminé</li><li>Système de Bourse (Purse)</li><li>Bloc Tirelire (Piggy Bank)</li><li>Bloc Boutique</li><li>Système de Configuration</li><li>Loot Tables + Drops de Mobs</li><li>Échanges de Villageois</li><li>Marketplace + Commandes</li><li>Succès + Star Coin</li><li>Sécurité</li><li>API Addon</li><li>Port NeoForge + MC 1.21.1</li></ol>"
+                    }
+                }
+            }
+        }
     }
 }
