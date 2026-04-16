@@ -1,17 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { Zap, Snowflake, Wind, Timer, ArrowUpFromLine, RotateCw, Volume2, Sparkles } from 'lucide-react'
+import { Zap, Snowflake, Gamepad2 } from 'lucide-react'
 import ScreenshotPlaceholder from '@/components/atoms/ScreenshotPlaceholder'
-
-const FEATURES = [
-  { icon: Zap, key: 'wiki.gr.overview.chargeBar' },
-  { icon: Timer, key: 'wiki.gr.overview.minThreshold' },
-  { icon: Wind, key: 'wiki.gr.overview.overchargeDecay' },
-  { icon: RotateCw, key: 'wiki.gr.overview.proportionalCd' },
-  { icon: ArrowUpFromLine, key: 'wiki.gr.overview.autoRecharge' },
-  { icon: Snowflake, key: 'wiki.gr.overview.iceFeeding' },
-  { icon: Volume2, key: 'wiki.gr.overview.customSounds' },
-  { icon: Sparkles, key: 'wiki.gr.overview.particles' },
-]
 
 export default function Overview() {
   const { t } = useTranslation()
@@ -24,21 +13,53 @@ export default function Overview() {
 
       <ScreenshotPlaceholder label={t('wiki.gr.overview.screenshotRiding')} />
 
-      <h3 className="text-xl font-bold text-base-content">{t('wiki.gr.overview.featuresTitle')}</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        {FEATURES.map(({ icon: Icon, key }) => (
-          <div key={key} className="flex items-start gap-3 p-4 bg-base-200 rounded-lg">
-            <div className="w-9 h-9 rounded-lg bg-primary/15 flex items-center justify-center shrink-0">
-              <Icon size={18} className="text-primary" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="card bg-base-200">
+          <div className="card-body">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center">
+                <Zap size={20} className="text-primary" />
+              </div>
+              <h3 className="font-bold text-base-content">{t('wiki.gr.overview.dashTitle')}</h3>
             </div>
-            <p className="text-sm text-base-content/80">{t(key)}</p>
+            <p className="text-sm text-base-content/70">{t('wiki.gr.overview.dashDesc')}</p>
           </div>
-        ))}
+        </div>
+
+        <div className="card bg-base-200">
+          <div className="card-body">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-lg bg-info/15 flex items-center justify-center">
+                <Snowflake size={20} className="text-info" />
+              </div>
+              <h3 className="font-bold text-base-content">{t('wiki.gr.overview.iceTitle')}</h3>
+            </div>
+            <p className="text-sm text-base-content/70">{t('wiki.gr.overview.iceDesc')}</p>
+          </div>
+        </div>
       </div>
 
-      <div className="alert">
-        <Zap size={18} />
-        <span>{t('wiki.gr.overview.tip')}</span>
+      <h3 className="text-xl font-bold text-base-content">{t('wiki.gr.overview.quickStartTitle')}</h3>
+      <ul className="steps steps-vertical">
+        <li className="step step-primary">
+          <div className="text-left">{t('wiki.gr.overview.qs1')}</div>
+        </li>
+        <li className="step step-primary">
+          <div className="text-left">{t('wiki.gr.overview.qs2')}</div>
+        </li>
+        <li className="step step-primary">
+          <div className="text-left">
+            {t('wiki.gr.overview.qs3prefix')} <kbd className="kbd kbd-sm">G</kbd> {t('wiki.gr.overview.qs3suffix')}
+          </div>
+        </li>
+        <li className="step step-primary">
+          <div className="text-left">{t('wiki.gr.overview.qs4')}</div>
+        </li>
+      </ul>
+
+      <div className="alert alert-info">
+        <Gamepad2 size={18} />
+        <span>{t('wiki.gr.overview.compatNote')}</span>
       </div>
     </div>
   )

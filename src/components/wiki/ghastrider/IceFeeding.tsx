@@ -18,6 +18,9 @@ export default function IceFeeding() {
         {t('wiki.gr.ice.intro')}
       </p>
 
+      <h3 className="text-xl font-bold text-base-content">{t('wiki.gr.ice.howTo')}</h3>
+      <p className="text-base-content/70">{t('wiki.gr.ice.howToDesc')}</p>
+
       <div className="overflow-x-auto">
         <table className="table table-zebra">
           <thead>
@@ -47,15 +50,6 @@ export default function IceFeeding() {
       </div>
 
       <ScreenshotPlaceholder label={t('wiki.gr.ice.screenshotFeeding')} />
-
-      <h3 className="text-xl font-bold text-base-content">{t('wiki.gr.ice.effectsTitle')}</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-        {(['crunchSound', 'purrSound', 'itemParticles'] as const).map((key) => (
-          <div key={key} className="card bg-base-200 card-body p-4">
-            <p className="text-sm text-base-content/80">{t(`wiki.gr.ice.${key}`)}</p>
-          </div>
-        ))}
-      </div>
     </div>
   )
 }

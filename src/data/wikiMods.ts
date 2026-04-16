@@ -3,6 +3,7 @@ import type { WikiCategory } from '@/types/wiki'
 import GrOverview from '@/components/wiki/ghastrider/Overview'
 import GrDash from '@/components/wiki/ghastrider/DashMechanic'
 import GrIce from '@/components/wiki/ghastrider/IceFeeding'
+import GrConfig from '@/components/wiki/ghastrider/Configuration'
 import GrInstall from '@/components/wiki/ghastrider/Installation'
 import GrCommands from '@/components/wiki/ghastrider/Commands'
 import GrChangelog from '@/components/wiki/ghastrider/Changelog'
@@ -31,6 +32,7 @@ export const WIKI_CATEGORIES: WikiCategory[] = [
           { id: 'overview', titleKey: 'wiki.gr.sections.overview', component: GrOverview },
           { id: 'dash', titleKey: 'wiki.gr.sections.dash', component: GrDash },
           { id: 'ice-feeding', titleKey: 'wiki.gr.sections.ice', component: GrIce },
+          { id: 'configuration', titleKey: 'wiki.gr.sections.config', component: GrConfig },
           { id: 'installation', titleKey: 'wiki.gr.sections.installation', component: GrInstall },
           { id: 'commands', titleKey: 'wiki.gr.sections.commands', component: GrCommands },
           { id: 'changelog', titleKey: 'wiki.gr.sections.changelog', component: GrChangelog },
