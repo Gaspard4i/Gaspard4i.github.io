@@ -38,6 +38,8 @@ export default function WikiModDetail() {
 
   if (!activeSection) return <Navigate to={`/wiki/${categoryId}/${modId}`} replace />
 
+  const SectionComponent = activeSection.component
+
   return (
     <section className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
@@ -109,15 +111,10 @@ export default function WikiModDetail() {
 
           {/* Main content */}
           <div className="flex-1 min-w-0">
-            <div className="prose max-w-none">
-              <h2 className="text-2xl font-bold text-base-content mb-6">
-                {t(activeSection.titleKey)}
-              </h2>
-              <div
-                className="text-base-content/80 leading-relaxed space-y-4"
-                dangerouslySetInnerHTML={{ __html: t(activeSection.content) }}
-              />
-            </div>
+            <h2 className="text-2xl font-bold text-base-content mb-6">
+              {t(activeSection.titleKey)}
+            </h2>
+            <SectionComponent />
           </div>
         </div>
       </div>

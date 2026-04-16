@@ -1,7 +1,9 @@
+import type { ComponentType } from 'react'
+
 export interface WikiSection {
   id: string
   titleKey: string
-  content: string
+  component: ComponentType
 }
 
 export type ModStatus = 'alpha' | 'beta' | 'release' | 'wip'

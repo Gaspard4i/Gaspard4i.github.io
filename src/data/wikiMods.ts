@@ -1,5 +1,16 @@
 import type { WikiCategory } from '@/types/wiki'
 
+import GrOverview from '@/components/wiki/ghastrider/Overview'
+import GrDash from '@/components/wiki/ghastrider/DashMechanic'
+import GrIce from '@/components/wiki/ghastrider/IceFeeding'
+import GrInstall from '@/components/wiki/ghastrider/Installation'
+import GrCommands from '@/components/wiki/ghastrider/Commands'
+import GrChangelog from '@/components/wiki/ghastrider/Changelog'
+
+import NrOverview from '@/components/wiki/numismatic/Overview'
+import NrCurrency from '@/components/wiki/numismatic/Currency'
+import NrRoadmap from '@/components/wiki/numismatic/Roadmap'
+
 export const WIKI_CATEGORIES: WikiCategory[] = [
   {
     id: 'minecraft',
@@ -17,12 +28,12 @@ export const WIKI_CATEGORIES: WikiCategory[] = [
         repo: 'https://github.com/Gaspard4i/ghastrider',
         icon: null,
         sections: [
-          { id: 'overview', titleKey: 'wiki.mods.ghastrider.sections.overview.title', content: 'wiki.mods.ghastrider.sections.overview.content' },
-          { id: 'dash', titleKey: 'wiki.mods.ghastrider.sections.dash.title', content: 'wiki.mods.ghastrider.sections.dash.content' },
-          { id: 'ice-feeding', titleKey: 'wiki.mods.ghastrider.sections.ice.title', content: 'wiki.mods.ghastrider.sections.ice.content' },
-          { id: 'installation', titleKey: 'wiki.mods.ghastrider.sections.installation.title', content: 'wiki.mods.ghastrider.sections.installation.content' },
-          { id: 'commands', titleKey: 'wiki.mods.ghastrider.sections.commands.title', content: 'wiki.mods.ghastrider.sections.commands.content' },
-          { id: 'changelog', titleKey: 'wiki.mods.ghastrider.sections.changelog.title', content: 'wiki.mods.ghastrider.sections.changelog.content' },
+          { id: 'overview', titleKey: 'wiki.gr.sections.overview', component: GrOverview },
+          { id: 'dash', titleKey: 'wiki.gr.sections.dash', component: GrDash },
+          { id: 'ice-feeding', titleKey: 'wiki.gr.sections.ice', component: GrIce },
+          { id: 'installation', titleKey: 'wiki.gr.sections.installation', component: GrInstall },
+          { id: 'commands', titleKey: 'wiki.gr.sections.commands', component: GrCommands },
+          { id: 'changelog', titleKey: 'wiki.gr.sections.changelog', component: GrChangelog },
         ],
       },
       {
@@ -36,9 +47,9 @@ export const WIKI_CATEGORIES: WikiCategory[] = [
         repo: 'https://github.com/Gaspard4i/numismatic-reimagined',
         icon: null,
         sections: [
-          { id: 'overview', titleKey: 'wiki.mods.numismatic.sections.overview.title', content: 'wiki.mods.numismatic.sections.overview.content' },
-          { id: 'currency', titleKey: 'wiki.mods.numismatic.sections.currency.title', content: 'wiki.mods.numismatic.sections.currency.content' },
-          { id: 'roadmap', titleKey: 'wiki.mods.numismatic.sections.roadmap.title', content: 'wiki.mods.numismatic.sections.roadmap.content' },
+          { id: 'overview', titleKey: 'wiki.nr.sections.overview', component: NrOverview },
+          { id: 'currency', titleKey: 'wiki.nr.sections.currency', component: NrCurrency },
+          { id: 'roadmap', titleKey: 'wiki.nr.sections.roadmap', component: NrRoadmap },
         ],
       },
     ],
