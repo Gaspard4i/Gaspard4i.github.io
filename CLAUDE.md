@@ -157,6 +157,12 @@ Exemples :
 - Nom : `Gaspard4i`
 - Email : `catry.gaspard@gmail.com`
 
+**Aucune mention de Claude / Claude Code** nulle part :
+- Pas dans les messages de commit (pas de `🤖 Generated with Claude Code`, pas de `Co-Authored-By: Claude`)
+- Pas dans les descriptions de PR / issues
+- Pas dans le code, les commentaires, les docs ou les fichiers générés
+- Toute action Git (commit, push, PR, merge) est faite uniquement au nom de `Gaspard4i`
+
 ---
 
 ## Branches
