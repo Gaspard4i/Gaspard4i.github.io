@@ -102,17 +102,17 @@
         "ffdc": {
             "title": "FinnFoundDaChest",
             "description": "Jeu Java Swing, projet individuel",
-            "long_description": ""
+            "long_description": "FinnFoundDaChest est un jeu d'aventure 2D solo inspiré de l'univers Adventure Time, développé en Java pur (sans moteur).\n\nLe joueur incarne Finn et explore une carte fixe pour trouver des clés, ouvrir des portes et atteindre le coffre final le plus rapidement possible (gameplay orienté speedrun). J'ai réalisé moi-même les sprites de Finn ainsi que l'ensemble de la logique de jeu : déplacement (ZQSD), collisions, gestion des objets, mode debug (FPS, latence, coordonnées), musique activable, et génération d'un README HTML via Pandoc.\n\nC'est mon premier projet complet en Java en dehors des TP, développé en me formant sur YouTube (tutoriels RyiSnow). Il m'a appris à structurer un projet Java from scratch (organisation en paquets, gestion des ressources, boucle de jeu), à persévérer seul sur un projet long, et à documenter proprement mon code."
         },
         "agile": {
             "title": "Projet Agile de Rentrée",
             "description": "Rogue-Like Java, travail d'équipe",
-            "long_description": ""
+            "long_description": "Projet Agile de Rentrée (BUT 2e année) : développement en équipe de 4 d'un jeu Rogue-Like en Java jouable au terminal, avec 10 sprints hebdomadaires en méthode Scrum sur GitLab.\n\nLe jeu propose plusieurs classes (guerrier, mage...) avec leurs compétences propres, un système d'étages procéduraux, des coffres, de l'équipement, un boss final et un mode admin avec cheat codes. Chaque sprint avait son cahier des charges, ses issues GitLab, sa rétrospective et son incrément jouable.\n\nCe projet m'a appris concrètement la méthode agile : dailys, planning poker, découpage en issues, merge requests, résolution de conflits Git à 4, et surtout gérer l'écart entre l'ambition du cahier des charges et la réalité du temps disponible. La gestion d'équipe (répartition des tâches, code review, entraide sur les bugs) était aussi nouvelle et formatrice que la partie technique."
         },
         "sae33": {
             "title": "Projet SAE 3.3",
             "description": "Application JavaFX MVC, travail d'équipe",
-            "long_description": ""
+            "long_description": "SAE 3.3 (BUT 2e année, équipe G3 \"Mathieu Fanclub\", 4 développeurs) : application JavaFX de visualisation et classification de données implémentant l'algorithme k-NN (k-Nearest Neighbors).\n\nL'application permet de charger un jeu de données (Iris), de le projeter sous forme de nuage de points 2D avec choix des axes, d'ajouter un point de catégorie inconnue et de déterminer sa classe via k-NN. L'IHM gère la colorisation par catégorie, le drag-and-drop multi-fenêtres de graphes, et un système générique de lecture de fichiers CSV.\n\nMon rôle : maquettage de l'interface, prototypes du jalon 1, système de colorisation et de classification. Architecture MVC stricte en JavaFX/FXML (SceneBuilder), tests JUnit, diagrammes UML complets. Le projet m'a fait approfondir la POO (héritage, généricité), comprendre la séparation modèle/vue/contrôleur en conditions réelles, et travailler sur un algorithme d'apprentissage supervisé de bout en bout."
         },
         "mte": {
             "title": "MineToEarn",
@@ -127,42 +127,42 @@
         "talkul": {
             "title": "Talkul",
             "description": "Webapp Java EE, messagerie en temps réel",
-            "long_description": ""
+            "long_description": "TalkUL est une application de messagerie web développée en Java EE (Servlets, JSP, Tomcat) avec persistance PostgreSQL, dans le cadre du module développement web côté serveur.\n\nL'application gère l'authentification, la création de conversations, l'envoi de messages et leur rafraîchissement. Configuration externalisée via un fichier `config.prop` pour le driver JDBC, l'URL de la BDD et les identifiants, afin de ne jamais hardcoder les credentials. Intégration des bibliothèques Jackson pour la sérialisation JSON/XML et de Jakarta Migration pour l'adaptation aux versions récentes de Servlet.\n\nCe projet m'a permis de comprendre le cycle de vie d'une webapp Java classique (déploiement WAR sur Tomcat, Servlets, context listeners), la gestion des sessions HTTP côté serveur, les bonnes pratiques de configuration (secrets hors du code), et l'articulation entre servlets et templates JSP avant l'arrivée des frameworks modernes."
         },
         "woze": {
             "title": "Woze",
-            "description": "Classifieur KNN avec interface JavaFX, travail d'équipe",
-            "long_description": ""
+            "description": "Calculateur d'itinéraire multi-modal JavaFX, travail d'équipe",
+            "long_description": "Woze (SAE 2.01-2.02 \"E3\", BUT 1re année, équipe de 3) : application Java/JavaFX de calcul d'itinéraires multi-modaux entre villes (train, bus, avion) avec optimisation selon un critère utilisateur (prix, durée ou pollution CO2e).\n\nLe projet s'est construit en 3 versions successives :\n- V1 : plus court chemin mono-modal dans un graphe à partir de données CSV\n- V2 : multi-modalité avec coûts de correspondance entre modes de transport, gestion d'exceptions, affichage des points d'intérêt\n- V3 : pondération relative des critères par l'utilisateur et historique de voyages\n\nMon rôle a couvert la partie POO (modèle Voyage/Lieu/Plateforme, import CSV, gestion d'exceptions, filtrage par bornes) et la partie graphes (pondération des arêtes, intégration des correspondances). Architecture MVC avec maquette papier puis prototype Figma, contrôleurs FXML, tests PMD. J'ai appris à modéliser un problème réel en graphe, à faire évoluer une archi sur 3 itérations sans tout casser, et à collaborer sur GitLab avec tags de version (POO-v2, GRAPHE-v2, IHM-v1)."
         },
         "maio": {
             "title": "Ma.io",
             "description": "Jeu multijoueur décalé (mayonnaise et aliens), Node.js + JS",
-            "long_description": ""
+            "long_description": "Ma.io est un jeu multijoueur web (.io like) développé en équipe dans le cadre de la SAE JavaScript, avec pour thème décalé une bataille de mayonnaise contre des aliens.\n\nArchitecture client/serveur séparée : serveur Node.js (ES modules) qui gère l'état partagé du jeu (positions joueurs, taches de mayo, leaderboard), client en JavaScript bundlé via Webpack, communication temps réel par WebSockets. Le serveur diffuse l'état aux clients ; chaque client envoie ses inputs (déplacement, join/leave).\n\nDifficultés surmontées documentées dans le rendu : refactoring pour séparer proprement client et serveur après un démarrage monolithique, mise en place de tests unitaires en boucle TDD (notamment sur la classe Player), calibrage des formules physiques/collisions par recherche et itérations, et écriture de bots \"intelligents\" (plutôt que d'errer aléatoirement). Projet animé également par ses animations soignées et un très bon esprit d'équipe — \"aucune embrouille, tout le monde a bien travaillé\"."
         },
         "magare": {
             "title": "MaGare",
             "description": "Reproduction web de l'app SNCF avec API temps réel",
-            "long_description": ""
+            "long_description": "Ma Gare SNCF est une reproduction web de l'application mobile \"Ma Gare\" (SNCF), déployée en production sur GitHub Pages. Projet personnel motivé par l'envie de construire une vraie app consommée, pas un énième TP.\n\nStack : React 19, TypeScript, Vite 7, Tailwind CSS 4, DaisyUI 5, React Router 7, architecture Atomic Design (atoms / molecules / organisms / pages / services). Intégration de l'API SNCF Navitia pour les départs/arrivées en temps réel, la recherche de gare avec autocomplétion, et le détail d'un trajet (tous les arrêts).\n\nFonctionnalités principales : tableau des départs (bleu) et arrivées (vert) côte à côte en desktop avec bascule mobile ; feuille glissante (swipe to dismiss) pour le détail d'un train ; filtrage par destination avec favoris ; sélecteur date/heure avec scroll molette ; gare par défaut + favoris persistés en localStorage ; thèmes clair et sombre aux couleurs officielles SNCF ; bulletin de retard encodé en LZ-String dans l'URL.\n\nDéploiement CI/CD via GitHub Actions. Projet mené seul de bout en bout : design, intégration API, archi, déploiement. Il m'a surtout appris à gérer correctement le routing SPA sur GitHub Pages (404.html fallback) et à penser l'ergonomie mobile en premier."
         },
         "weathersport": {
             "title": "WeatherSport",
             "description": "Météo + recommandations sportives, projet de stage Nextoo",
-            "long_description": ""
+            "long_description": "WeatherSport est l'une des 3 applications que j'ai développées pendant mon stage chez Nextoo (Roubaix, avril-juin 2025), dans le cadre de la Nextoo Academy — une formation intensive Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker.\n\nL'application croise les données météo d'une ville avec un catalogue de sports pour recommander des activités adaptées aux conditions du jour (pluie → sports indoor, beau temps → sports outdoor, etc.). Backend Spring Boot exposant une API REST, frontend Vue.js consommant l'API, conteneurisation Docker avec pipeline CI/CD GitLab.\n\nC'était mon premier contact pro avec Spring Boot, Vue 3 Composition API, et la conteneurisation. J'ai découvert la rigueur attendue en entreprise : revues de code systématiques, GitFlow, commits conventionnels, tests unitaires. Le stage m'a fait passer du niveau académique à un niveau professionnel en quelques semaines, et m'a valu une recommandation écrite du Directeur Général Délégué de Nextoo pour ma rigueur, mon autonomie et ma curiosité."
         },
         "nextmovie": {
             "title": "NextMovie",
             "description": "Moteur de recommandation de films, projet de stage Nextoo",
-            "long_description": ""
+            "long_description": "NextMovie est la deuxième application développée pendant mon stage chez Nextoo : un moteur de recommandation de films permettant à l'utilisateur de marquer les films vus, de noter ses préférences, et d'obtenir des suggestions personnalisées.\n\nStack : Spring Boot 3.4 (Java 17), Spring WebFlux pour l'appel d'APIs externes de films, validation Jakarta Bean Validation, Vue.js 3 + Vite en frontend, PostgreSQL pour la persistance, Docker Compose pour orchestrer base + back + front en local. Architecture en couches (controllers / services / repositories / DTOs) respectant les bonnes pratiques Spring.\n\nCe projet m'a permis d'approfondir la réactivité avec WebFlux, la gestion des requêtes HTTP asynchrones vers une API tierce, et le design d'un schéma relationnel propre avec JPA/Hibernate. Il a aussi consolidé ma compréhension du découpage front/back et du contrat d'API entre les deux équipes — très utile pour les projets suivants."
         },
         "gds": {
             "title": "GDS",
             "description": "Gestion de stock avec API REST et interface dynamique, stage Nextoo",
-            "long_description": ""
+            "long_description": "GDS (Gestion De Stock) est la troisième application que j'ai réalisée en fin de stage chez Nextoo : un outil interne de gestion de stock avec API REST, interface dynamique et reporting.\n\nStack identique aux deux précédents (Spring Boot, Vue.js 3, PostgreSQL, Docker) mais avec une complexité métier plus marquée : entités Produit / Catégorie / Stock / Mouvement, endpoints CRUD complets, filtrage/tri/pagination côté serveur, interface responsive pour saisie rapide des entrées/sorties de stock. Workflow GitLab avec CI/CD automatisée.\n\nC'est sur ce dernier projet que j'ai gagné le plus en autonomie : architecture décidée seul, choix des bibliothèques, priorisation des fonctionnalités face au temps restant. Il m'a confronté à l'estimation réaliste du temps — j'avais tendance à sous-estimer l'intégration frontend — et à l'importance de découper les tickets correctement. La formation intensive Nextoo (3 projets complets en 10 semaines) m'a fait progresser d'un cran sur la rigueur, l'utilisation avancée de Git et la pratique du travail en équipe agile."
         },
         "dinnermatch": {
             "title": "DinnerMatch",
             "description": "Plateforme sociale full-stack pour trouver des partenaires de repas. Node.js, React, PostgreSQL.",
-            "long_description": ""
+            "long_description": "DinnerMatch est une plateforme sociale full-stack développée dans le cadre de la Startup Week universitaire (BUT 3e année) : un site qui met en relation les clients d'hôtels pour partager des dîners à thème selon leurs centres d'intérêt.\n\nStack : frontend React 19 + TypeScript + Tailwind 4 + DaisyUI 5 avec éditeur de thèmes pour hôteliers, calendrier responsive et tableaux de bord par rôle (Client / Hôtelier / Admin). Backend Spring Boot 4 + Java 21 avec Spring Security + JWT pour l'authentification, JPA/Hibernate, PostgreSQL 17, envoi d'emails via Scaleway TEM. CI/CD GitLab avec coverage tracking et Docker (Nginx reverse proxy).\n\nJ'ai travaillé côté backend sur l'API, la sécurité JWT, le système de matching et les panels d'administration CRUD. 18 sprints documentés sur 2 mois, avec une équipe de 5 (backend + frontend + infra). Projet déployé en production sur dinnermatch.fr.\n\nPrincipales leçons : gérer la coordination d'une équipe plus large que d'habitude, aligner le contrat d'API entre front et back sans friction, configurer proprement un environnement multi-profils (dev/test/prod) avec H2 en dev et PostgreSQL en prod, et délivrer un MVP utilisable dans un temps court."
         },
         "refugegourmand": {
             "title": "Le Refuge Gourmand",
