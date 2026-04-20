@@ -2,9 +2,9 @@
     "nav": {
         "home": "Home",
         "projects": "Projects",
-        "wiki": "Wiki",
         "about": "About",
-        "contact": "Contact"
+        "contact": "Contact",
+        "wiki": "Wiki"
     },
     "hero": {
         "greeting": "Hello, my name is",
@@ -200,11 +200,51 @@
         "mods": {
             "ghastrider": {
                 "name": "GhastRider",
-                "tagline": "Dash mechanic for the Happy Ghast"
+                "tagline": "Dash mechanic for the Happy Ghast",
+                "sections": {
+                    "overview": {
+                        "title": "Overview",
+                        "content": "<p>GhastRider adds a <strong>charge-and-dash mechanic</strong> to the Happy Ghast mount, inspired by the horse jump bar system.</p><p>Hold the dash key to charge, release to boost forward with a satisfying wind sound. Feed ice to your ghast for speed boosts!</p><h3 class=\"text-lg font-semibold mt-6 mb-2\">Features</h3><ul class=\"list-disc list-inside space-y-1\"><li><strong>Charge bar</strong> — replaces the XP bar when riding a Happy Ghast</li><li><strong>Minimum threshold</strong> — quick taps are ignored (2/18 bars)</li><li><strong>Overcharge decay</strong> — holding too long reduces charge</li><li><strong>Proportional cooldown</strong> — shorter charges mean shorter cooldowns</li><li><strong>Auto-recharge</strong> — keep holding G through cooldown</li><li><strong>Vertical boost</strong> — maintains altitude during dash</li><li><strong>Ice feeding</strong> — feed ice for speed effects</li><li><strong>Custom sounds</strong> — wind whoosh, ice crunch, happy purr</li></ul>"
+                    },
+                    "dash": {
+                        "title": "Dash Mechanic",
+                        "content": "<h3 class=\"text-lg font-semibold mb-2\">How to Dash</h3><ol class=\"list-decimal list-inside space-y-1\"><li>Mount a Happy Ghast (equip it with a harness)</li><li>Hold <kbd class=\"kbd kbd-sm\">G</kbd> to charge — the bar fills up</li><li>Release <kbd class=\"kbd kbd-sm\">G</kbd> at the right moment for maximum power</li><li>The bar shows the cooldown shrinking</li><li>Once empty, dash again — or keep holding G to auto-recharge</li></ol><h3 class=\"text-lg font-semibold mt-6 mb-2\">Parameters</h3><table class=\"table table-zebra w-full\"><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Minimum charge</td><td>2/18 bars (~11%)</td></tr><tr><td>Max charge time</td><td>2 seconds</td></tr><tr><td>Max cooldown</td><td>3 seconds</td></tr><tr><td>Vertical boost</td><td>30%</td></tr><tr><td>Key</td><td><kbd class=\"kbd kbd-sm\">G</kbd> (configurable)</td></tr></tbody></table>"
+                    },
+                    "ice": {
+                        "title": "Ice Feeding",
+                        "content": "<p>Feed ice to your Happy Ghast by right-clicking for temporary <strong>speed boosts</strong>.</p><table class=\"table table-zebra w-full mt-4\"><thead><tr><th>Item</th><th>Effect</th><th>Duration</th><th>Notes</th></tr></thead><tbody><tr><td>Ice</td><td>Speed I</td><td>10s</td><td>Duration stacks</td></tr><tr><td>Packed Ice</td><td>Speed II</td><td>10s</td><td>Duration stacks</td></tr><tr><td>Blue Ice</td><td>Speed III</td><td>10s</td><td>Duration stacks</td></tr><tr><td>Powder Snow Bucket</td><td>Speed I</td><td>10s</td><td>Empties to bucket</td></tr></tbody></table><p class=\"mt-4 text-base-content/60\">Feeding a different ice type resets the duration to 10s with the new speed level.</p><h3 class=\"text-lg font-semibold mt-6 mb-2\">Effects</h3><ul class=\"list-disc list-inside space-y-1\"><li>Ice crunch sound</li><li>Happy ghast purr sound</li><li>Item particles of the block you fed</li></ul>"
+                    },
+                    "installation": {
+                        "title": "Installation",
+                        "content": "<h3 class=\"text-lg font-semibold mb-2\">Requirements</h3><ul class=\"list-disc list-inside space-y-1\"><li><strong>Minecraft 26.1.2</strong></li><li><a href=\"https://fabricmc.net/\" class=\"link link-primary\" target=\"_blank\">Fabric Loader</a> or <a href=\"https://neoforged.net/\" class=\"link link-primary\" target=\"_blank\">NeoForge</a></li><li><a href=\"https://modrinth.com/mod/fabric-api\" class=\"link link-primary\" target=\"_blank\">Fabric API</a> (Fabric only)</li></ul><h3 class=\"text-lg font-semibold mt-6 mb-2\">Steps</h3><ol class=\"list-decimal list-inside space-y-1\"><li>Install Fabric Loader or NeoForge for MC 26.1.2</li><li>For Fabric: also install Fabric API</li><li>Download the JAR from <a href=\"https://github.com/Gaspard4i/ghastrider/releases/latest\" class=\"link link-primary\" target=\"_blank\">GitHub Releases</a></li><li>Place the JAR in your <code>mods/</code> folder</li><li>Launch the game</li></ol>"
+                    },
+                    "commands": {
+                        "title": "Commands",
+                        "content": "<h3 class=\"text-lg font-semibold mb-2\">Debug Function</h3><div class=\"mockup-code mb-4\"><pre data-prefix=\"$\"><code>/function ghastrider:debug</code></pre></div><p>Sets up a test environment:</p><ul class=\"list-disc list-inside space-y-1 mt-2\"><li>Peaceful difficulty</li><li>Disables time, mob spawning, weather</li><li>Day + clear weather</li><li>Clears your inventory</li><li>Kills existing Happy Ghasts</li><li>Spawns 3 invulnerable Happy Ghasts</li><li>Gives: harness, all ice types, snowballs</li></ul><p class=\"mt-4 text-base-content/60\">Requires a <strong>Creative world with cheats enabled</strong> (Superflat recommended).</p>"
+                    },
+                    "changelog": {
+                        "title": "Changelog",
+                        "content": "<h3 class=\"text-lg font-semibold mb-2\">v26.1.2.1-alpha.1</h3><p class=\"text-sm text-base-content/50 mb-3\">April 16, 2026</p><p class=\"mb-2\">First public release:</p><ul class=\"list-disc list-inside space-y-1\"><li>Dash mechanic with charge bar</li><li>Overcharge decay with minimum threshold</li><li>Proportional cooldown</li><li>Auto-recharge when holding G</li><li>Vertical boost during dash</li><li>Ice feeding with Speed effects</li><li>Custom sounds (wind, crunch, purr)</li><li>Item particles</li><li>Debug function</li><li>Fabric and NeoForge support for MC 26.1.2</li></ul>"
+                    }
+                }
             },
             "numismatic": {
                 "name": "Numismatic Reimagined",
-                "tagline": "Custom currency system for Minecraft"
+                "tagline": "Custom currency system for Minecraft",
+                "sections": {
+                    "overview": {
+                        "title": "Overview",
+                        "content": "<p><strong>Numismatic Reimagined</strong> is a Minecraft currency mod inspired by <a href=\"https://github.com/wisp-forest/numismatic-overhaul\" class=\"link link-primary\" target=\"_blank\">Numismatic Overhaul</a>, rebuilt from scratch.</p><p class=\"mt-2\">It adds a full economy system with multiple coin denominations, shops, piggy banks, and villager trade integration.</p><div class=\"mt-4 p-4 bg-base-300 rounded-lg\"><p class=\"text-sm\">This mod is currently in <strong>early development</strong>. Phase 1 (coin items) is complete.</p></div>"
+                    },
+                    "currency": {
+                        "title": "Currency System",
+                        "content": "<p>Five denominations with a base-100 exchange rate:</p><table class=\"table table-zebra w-full mt-4\"><thead><tr><th>Coin</th><th>Value</th><th>Exchange</th></tr></thead><tbody><tr><td>Bronze</td><td>1</td><td>Base unit</td></tr><tr><td>Silver</td><td>100</td><td>= 100 Bronze</td></tr><tr><td>Gold</td><td>10,000</td><td>= 100 Silver</td></tr><tr><td>Netherite</td><td>1,000,000</td><td>= 100 Gold</td></tr><tr><td>Star Coin</td><td>Unique</td><td>Achievement reward</td></tr></tbody></table><p class=\"mt-4\">The <strong>Star Coin</strong> is a trophy earned by accumulating 1,000 Netherite Coins worth of transactions. Unique per player but not soulbound.</p>"
+                    },
+                    "roadmap": {
+                        "title": "Roadmap",
+                        "content": "<p>The mod is being developed in 12 phases:</p><ol class=\"list-decimal list-inside space-y-2 mt-4\"><li><strong class=\"text-success\">Coin Items</strong> — Complete</li><li>Purse System</li><li>Piggy Bank Block</li><li>Shop Block</li><li>Configuration System</li><li>Loot Tables + Mob Drops</li><li>Villager Trades</li><li>Marketplace + Commands</li><li>Achievements + Star Coin</li><li>Security Hardening</li><li>Addon API</li><li>NeoForge + MC 1.21.1 Port</li></ol>"
+                    }
+                }
             }
         },
         "gr": {
@@ -212,14 +252,24 @@
                 "overview": "Overview",
                 "dash": "The Dash",
                 "ice": "Ice Feeding",
-                "config": "Configuration",
                 "installation": "Installation",
                 "commands": "Commands",
-                "changelog": "Changelog"
+                "changelog": "Changelog",
+                "config": "Configuration"
             },
             "overview": {
                 "intro": "GhastRider turns the Happy Ghast into a real aerial combat mount. Charge your dash and blast through the sky, feed your ghast ice to go even faster.",
                 "screenshotRiding": "Screenshot: flying on a Happy Ghast",
+                "featuresTitle": "Features",
+                "chargeBar": "Charge bar — replaces the XP bar when riding a Happy Ghast",
+                "minThreshold": "Minimum threshold — quick taps are ignored (2/18 bars)",
+                "overchargeDecay": "Overcharge decay — holding too long reduces charge",
+                "proportionalCd": "Proportional cooldown — shorter charges mean shorter cooldowns",
+                "autoRecharge": "Auto-recharge — keep holding G through cooldown to recharge",
+                "iceFeeding": "Ice feeding — feed ice for speed effects",
+                "customSounds": "Custom sounds — wind whoosh on dash, ice crunch on feeding",
+                "particles": "Particles — item particles of the block you fed",
+                "tip": "Release at 80%+ charge for the best boost. But don't hold too long — charge decays after max!",
                 "dashTitle": "Aerial Dash",
                 "dashDesc": "Hold G to charge, release to boost through the air. The longer you charge, the more powerful the boost.",
                 "iceTitle": "Speed Boost",
@@ -235,14 +285,27 @@
             "dash": {
                 "intro": "When you ride a Happy Ghast, the XP bar is replaced by a charge bar. That's your dash.",
                 "howTo": "How it works",
+                "key": "G",
                 "step1": "Mount a Happy Ghast equipped with a harness",
                 "step2prefix": "Hold",
                 "step2suffix": "— the bar fills up",
                 "step3prefix": "Release",
                 "step3suffix": "— you get boosted forward",
                 "step4": "Wait for the cooldown (the bar empties) then go again",
+                "step5prefix": "Keep holding",
+                "step5suffix": "to auto-recharge once cooldown ends",
                 "screenshotCharging": "Screenshot: charge bar filling up",
                 "screenshotCooldown": "Screenshot: cooldown after a dash",
+                "params": "Parameters",
+                "paramCol": "Parameter",
+                "valueCol": "Value",
+                "minCharge": "Minimum charge",
+                "maxChargeTime": "Max charge time",
+                "maxCooldown": "Max cooldown",
+                "verticalBoost": "Vertical boost",
+                "keyLabel": "Key",
+                "configurable": "configurable",
+                "overchargeTip": "Overcharge starts when the bar is full. Charge slowly drops to the minimum threshold (2/18). Release before to keep more power!",
                 "tipsTitle": "Tips",
                 "tipRelease": "Release when the bar is almost full for the best boost. No need to wait for 100%.",
                 "tipAutoRecharge": "Keep holding G even during cooldown — the dash will auto-recharge as soon as possible.",
@@ -250,8 +313,6 @@
             },
             "ice": {
                 "intro": "Feed ice to your Happy Ghast (right-click while riding) to get temporary speed boosts.",
-                "howTo": "How to feed",
-                "howToDesc": "Hold an ice block and right-click your Happy Ghast while riding it. The speed effect lasts 10 seconds and can be stacked by feeding the same ice type multiple times.",
                 "itemCol": "Item",
                 "effectCol": "Effect",
                 "durationCol": "Duration",
@@ -263,25 +324,13 @@
                 "stacks": "Duration stacks",
                 "empties": "Empties to bucket",
                 "resetWarning": "Feeding a different ice type resets the duration to 10s with the new speed level. For example, if you feed Blue Ice (Speed III) then regular Ice (Speed I), you lose Speed III.",
-                "screenshotFeeding": "Screenshot: feeding ice to a Happy Ghast"
-            },
-            "config": {
-                "intro": "GhastRider is configurable through Minecraft's options. Here's what you can change.",
-                "keybindTitle": "Change the dash key",
-                "keybindDesc": "By default, the dash key is G. You can change it in the game options:",
-                "keybindStep1prefix": "Press",
-                "keybindStep1suffix": "to open the menu",
-                "keybindStep2": "Go to Options > Controls > Key Binds",
-                "keybindStep3": "Look for \"GhastRider Dash\" in the GhastRider category",
-                "keybindStep4": "Click on it and press your new desired key",
-                "screenshotKeybind": "Screenshot: controls menu showing the GhastRider Dash keybind",
-                "settingsTitle": "Settings",
-                "settingCol": "Setting",
-                "defaultCol": "Default",
-                "descCol": "Description",
-                "settDashKey": "Dash key",
-                "settDashKeyDesc": "The key to charge and activate the dash",
-                "moreSettingsNote": "More configuration options (charge time, cooldown, etc.) will be added in a future update."
+                "screenshotFeeding": "Screenshot: feeding ice to a Happy Ghast",
+                "effectsTitle": "Effects",
+                "crunchSound": "Ice crunch sound when feeding",
+                "purrSound": "Happy ghast purr sound",
+                "itemParticles": "Item particles of the ice block fed",
+                "howTo": "How to feed",
+                "howToDesc": "Hold an ice block and right-click your Happy Ghast while riding it. The speed effect lasts 10 seconds and can be stacked by feeding the same ice type multiple times."
             },
             "install": {
                 "requirements": "Requirements",
@@ -306,13 +355,34 @@
                 "actionCol": "Action",
                 "detailCol": "Detail",
                 "actions": {
-                    "peaceful": { "action": "Difficulty", "detail": "Peaceful" },
-                    "gamerules": { "action": "Gamerules", "detail": "Disables time, mobs, weather" },
-                    "weather": { "action": "Weather", "detail": "Day + clear weather" },
-                    "clearInv": { "action": "Inventory", "detail": "Cleared" },
-                    "killGhasts": { "action": "Existing Ghasts", "detail": "Removed" },
-                    "spawnGhasts": { "action": "Spawn", "detail": "3 invulnerable Happy Ghasts" },
-                    "giveItems": { "action": "Items given", "detail": "Harness, all ice types, snowballs" }
+                    "peaceful": {
+                        "action": "Difficulty",
+                        "detail": "Peaceful"
+                    },
+                    "gamerules": {
+                        "action": "Gamerules",
+                        "detail": "Disables time, mobs, weather"
+                    },
+                    "weather": {
+                        "action": "Weather",
+                        "detail": "Day + clear weather"
+                    },
+                    "clearInv": {
+                        "action": "Inventory",
+                        "detail": "Cleared"
+                    },
+                    "killGhasts": {
+                        "action": "Existing Ghasts",
+                        "detail": "Removed"
+                    },
+                    "spawnGhasts": {
+                        "action": "Spawn",
+                        "detail": "3 invulnerable Happy Ghasts"
+                    },
+                    "giveItems": {
+                        "action": "Items given",
+                        "detail": "Harness, all ice types, snowballs"
+                    }
                 },
                 "screenshotDebug": "Screenshot: environment after /function ghastrider:debug",
                 "requiresCreative": "Requires a Creative world with cheats enabled (Superflat recommended)."
@@ -331,6 +401,24 @@
                     "debugFunction": "Debug function",
                     "loaderSupport": "Fabric and NeoForge support for MC 26.1.2"
                 }
+            },
+            "config": {
+                "intro": "GhastRider is configurable through Minecraft's options. Here's what you can change.",
+                "keybindTitle": "Change the dash key",
+                "keybindDesc": "By default, the dash key is G. You can change it in the game options:",
+                "keybindStep1prefix": "Press",
+                "keybindStep1suffix": "to open the menu",
+                "keybindStep2": "Go to Options > Controls > Key Binds",
+                "keybindStep3": "Look for \"GhastRider Dash\" in the GhastRider category",
+                "keybindStep4": "Click on it and press your new desired key",
+                "screenshotKeybind": "Screenshot: controls menu showing the GhastRider Dash keybind",
+                "settingsTitle": "Settings",
+                "settingCol": "Setting",
+                "defaultCol": "Default",
+                "descCol": "Description",
+                "settDashKey": "Dash key",
+                "settDashKeyDesc": "The key to charge and activate the dash",
+                "moreSettingsNote": "More configuration options (charge time, cooldown, etc.) will be added in a future update."
             }
         },
         "nr": {

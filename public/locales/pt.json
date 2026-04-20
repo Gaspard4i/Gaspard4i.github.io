@@ -3,7 +3,8 @@
         "home": "Início",
         "projects": "Projetos",
         "about": "Sobre mim",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "wiki": ""
     },
     "hero": {
         "greeting": "Olá, chamo-me",
@@ -183,5 +184,288 @@
         "strengths": "Capacidade de aprendizagem rápida: confirmada pela formação intensiva Nextoo (3 projetos completos em 10 semanas com um stack desconhecido) e pela recomendação do DGA.\n\nRigor técnico: revisões de código positivas, hábito de testar e documentar o meu código, respeito pelas convenções (GitFlow, commits convencionais, arquitetura limpa).\n\nCuriosidade intelectual: desenvolvo projetos pessoais fora do trabalho (DinnerMatch, MaGare, este portfolio), contribuo para o open-source aos fins de semana e exploro constantemente novas tecnologias.\n\nPolivalência: capacidade de trabalhar com diferentes stacks (Java/Spring, PHP/Symfony, React/TypeScript, Vue.js) e de me adaptar rapidamente a ambientes técnicos variados.",
         "improvements": "Comunicação em reuniões: tenho tendência a ser reservado nos primeiros intercâmbios em equipa. Melhorei na Mandarine participando ativamente nos daily stand-ups, mas continua a ser um eixo de melhoria.\n\nEstimativa de tempos: subestimei frequentemente a duração de certas tarefas na Nextoo, especialmente na integração frontend. Estou a aprender a decompor melhor as minhas tarefas e a adicionar margens realistas.\n\nTomar distância: quando estou concentrado num problema técnico, tenho tendência a mergulhar demasiado tempo antes de pedir ajuda. Estou a aprender a identificar mais cedo quando é mais eficiente consultar um colega.\n\nGestão do stress: as primeiras semanas na empresa foram intensas. Aprendi a organizar melhor o meu trabalho para reduzir a pressão, mas a gestão de prazos apertados continua a ser um ponto de atenção.",
         "aboutVision": ""
+    },
+    "wiki": {
+        "title": "",
+        "subtitle": "",
+        "viewDocs": "",
+        "download": "",
+        "backToCategory": "",
+        "modCount_one": "",
+        "modCount_other": "",
+        "minecraft": {
+            "title": "",
+            "subtitle": ""
+        },
+        "mods": {
+            "ghastrider": {
+                "name": "",
+                "tagline": "",
+                "sections": {
+                    "overview": {
+                        "title": "",
+                        "content": ""
+                    },
+                    "dash": {
+                        "title": "",
+                        "content": ""
+                    },
+                    "ice": {
+                        "title": "",
+                        "content": ""
+                    },
+                    "installation": {
+                        "title": "",
+                        "content": ""
+                    },
+                    "commands": {
+                        "title": "",
+                        "content": ""
+                    },
+                    "changelog": {
+                        "title": "",
+                        "content": ""
+                    }
+                }
+            },
+            "numismatic": {
+                "name": "",
+                "tagline": "",
+                "sections": {
+                    "overview": {
+                        "title": "",
+                        "content": ""
+                    },
+                    "currency": {
+                        "title": "",
+                        "content": ""
+                    },
+                    "roadmap": {
+                        "title": "",
+                        "content": ""
+                    }
+                }
+            }
+        },
+        "gr": {
+            "sections": {
+                "overview": "",
+                "dash": "",
+                "ice": "",
+                "installation": "",
+                "commands": "",
+                "changelog": "",
+                "config": ""
+            },
+            "overview": {
+                "intro": "",
+                "screenshotRiding": "",
+                "featuresTitle": "",
+                "chargeBar": "",
+                "minThreshold": "",
+                "overchargeDecay": "",
+                "proportionalCd": "",
+                "autoRecharge": "",
+                "iceFeeding": "",
+                "customSounds": "",
+                "particles": "",
+                "tip": "",
+                "dashTitle": "",
+                "dashDesc": "",
+                "iceTitle": "",
+                "iceDesc": "",
+                "quickStartTitle": "",
+                "qs1": "",
+                "qs2": "",
+                "qs3prefix": "",
+                "qs3suffix": "",
+                "qs4": "",
+                "compatNote": ""
+            },
+            "dash": {
+                "intro": "",
+                "howTo": "",
+                "key": "",
+                "step1": "",
+                "step2prefix": "",
+                "step2suffix": "",
+                "step3prefix": "",
+                "step3suffix": "",
+                "step4": "",
+                "step5prefix": "",
+                "step5suffix": "",
+                "screenshotCharging": "",
+                "screenshotCooldown": "",
+                "params": "",
+                "paramCol": "",
+                "valueCol": "",
+                "minCharge": "",
+                "maxChargeTime": "",
+                "maxCooldown": "",
+                "verticalBoost": "",
+                "keyLabel": "",
+                "configurable": "",
+                "overchargeTip": "",
+                "tipsTitle": "",
+                "tipRelease": "",
+                "tipAutoRecharge": "",
+                "tipOvercharge": ""
+            },
+            "ice": {
+                "intro": "",
+                "itemCol": "",
+                "effectCol": "",
+                "durationCol": "",
+                "notesCol": "",
+                "ice": "",
+                "packedIce": "",
+                "blueIce": "",
+                "powderSnow": "",
+                "stacks": "",
+                "empties": "",
+                "resetWarning": "",
+                "screenshotFeeding": "",
+                "effectsTitle": "",
+                "crunchSound": "",
+                "purrSound": "",
+                "itemParticles": "",
+                "howTo": "",
+                "howToDesc": ""
+            },
+            "install": {
+                "requirements": "",
+                "req": {
+                    "mc": "",
+                    "loader": "",
+                    "fabricApi": ""
+                },
+                "stepsTitle": "",
+                "step1": "",
+                "step2": "",
+                "step3": "",
+                "step4prefix": "",
+                "step4suffix": "",
+                "step5": "",
+                "downloadTitle": "",
+                "platforms": ""
+            },
+            "commands": {
+                "debugTitle": "",
+                "debugDesc": "",
+                "actionCol": "",
+                "detailCol": "",
+                "actions": {
+                    "peaceful": {
+                        "action": "",
+                        "detail": ""
+                    },
+                    "gamerules": {
+                        "action": "",
+                        "detail": ""
+                    },
+                    "weather": {
+                        "action": "",
+                        "detail": ""
+                    },
+                    "clearInv": {
+                        "action": "",
+                        "detail": ""
+                    },
+                    "killGhasts": {
+                        "action": "",
+                        "detail": ""
+                    },
+                    "spawnGhasts": {
+                        "action": "",
+                        "detail": ""
+                    },
+                    "giveItems": {
+                        "action": "",
+                        "detail": ""
+                    }
+                },
+                "screenshotDebug": "",
+                "requiresCreative": ""
+            },
+            "changelog": {
+                "firstRelease": "",
+                "items": {
+                    "dashMechanic": "",
+                    "overchargeDecay": "",
+                    "proportionalCd": "",
+                    "autoRecharge": "",
+                    "verticalBoost": "",
+                    "iceFeeding": "",
+                    "customSounds": "",
+                    "itemParticles": "",
+                    "debugFunction": "",
+                    "loaderSupport": ""
+                }
+            },
+            "config": {
+                "intro": "",
+                "keybindTitle": "",
+                "keybindDesc": "",
+                "keybindStep1prefix": "",
+                "keybindStep1suffix": "",
+                "keybindStep2": "",
+                "keybindStep3": "",
+                "keybindStep4": "",
+                "screenshotKeybind": "",
+                "settingsTitle": "",
+                "settingCol": "",
+                "defaultCol": "",
+                "descCol": "",
+                "settDashKey": "",
+                "settDashKeyDesc": "",
+                "moreSettingsNote": ""
+            }
+        },
+        "nr": {
+            "sections": {
+                "overview": "",
+                "currency": "",
+                "roadmap": ""
+            },
+            "overview": {
+                "intro": "",
+                "desc": "",
+                "wipNotice": ""
+            },
+            "currency": {
+                "intro": "",
+                "coinCol": "",
+                "valueCol": "",
+                "exchangeCol": "",
+                "bronze": "",
+                "silver": "",
+                "gold": "",
+                "netherite": "",
+                "starCoin": "",
+                "baseUnit": "",
+                "eq100bronze": "",
+                "eq100silver": "",
+                "eq100gold": "",
+                "achievement": "",
+                "starCoinDesc": ""
+            },
+            "roadmap": {
+                "intro": "",
+                "phases": {
+                    "coinItems": "",
+                    "purse": "",
+                    "piggyBank": "",
+                    "shopBlock": "",
+                    "config": "",
+                    "lootTables": "",
+                    "villagerTrades": "",
+                    "marketplace": "",
+                    "achievements": "",
+                    "security": "",
+                    "addonApi": "",
+                    "neoforgePort": ""
+                }
+            }
+        }
     }
 }
