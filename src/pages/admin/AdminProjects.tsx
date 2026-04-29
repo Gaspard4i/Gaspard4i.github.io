@@ -17,6 +17,7 @@ const EMPTY: Omit<Project, 'id' | 'created_at' | 'project_skills'> = {
   image_url: null,
   featured: false,
   year: new Date().getFullYear(),
+  month: new Date().getMonth() + 1,
 }
 
 export default function AdminProjects() {
@@ -24,7 +25,8 @@ export default function AdminProjects() {
     supabase
       .from('projects')
       .select('*, project_skills(skill_id, skills(id, name, icon, category))')
-      .order('year', { ascending: false })
+      .order('year', { ascending: false, nullsFirst: false })
+      .order('month', { ascending: false, nullsFirst: false })
   )
 
   const { data: allSkills } = useSupabase<Skill[]>(() =>
@@ -124,7 +126,10 @@ export default function AdminProjects() {
                 <label className="label"><span className="label-text">Année</span></label>
                 <input className="input input-bordered" type="number" value={editing.year ?? ''} onChange={(e) => setEditing({ ...editing, year: Number(e.target.value) })} />
               </div>
-              <div className="form-control" />
+              <div className="form-control">
+                <label className="label"><span className="label-text">Mois (1-12)</span></label>
+                <input className="input input-bordered" type="number" min={1} max={12} value={editing.month ?? ''} onChange={(e) => setEditing({ ...editing, month: e.target.value ? Number(e.target.value) : null })} />
+              </div>
               <div className="form-control md:col-span-2">
                 <label className="label"><span className="label-text">Description * (fallback FR)</span></label>
                 <textarea className="textarea textarea-bordered" rows={2} value={editing.description ?? ''} onChange={(e) => setEditing({ ...editing, description: e.target.value })} />

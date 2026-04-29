@@ -7,7 +7,8 @@ import ThemeSwitcher from '@/components/molecules/ThemeSwitcher'
 const NAV_LINKS = [
   { to: '/', key: 'nav.home' },
   { to: '/projects', key: 'nav.projects' },
-  { to: '/wiki', key: 'nav.wiki' },
+  // Wiki Minecraft mods : caché tant que la documentation n'est pas finalisée.
+  // { to: '/wiki', key: 'nav.wiki' },
   { to: '/about', key: 'nav.about' },
   { to: '/contact', key: 'nav.contact' },
 ]
