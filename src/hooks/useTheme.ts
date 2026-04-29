@@ -13,6 +13,8 @@ const THEMES: ThemeDefinition[] = [
   { id: 'original-dark', name: 'Original Dark', prefersDark: true, primaryColor: '#6aad56' },
   { id: 'vscode', name: 'VS Code', prefersDark: true, primaryColor: '#4fc3f7' },
   { id: 'spotify', name: 'Spotify', prefersDark: true, primaryColor: '#1db954' },
+  { id: 'mandarine', name: 'Mandarine', prefersDark: false, primaryColor: '#e8762e' },
+  { id: 'nextoo', name: 'Nextoo', prefersDark: true, primaryColor: '#3a9aef' },
 ]
 
 export function useTheme() {
