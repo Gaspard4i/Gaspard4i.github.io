@@ -22,6 +22,7 @@ export interface Project {
   featured: boolean
   year: number | null
   month: number | null
+  day: number | null
   created_at: string
   project_skills: ProjectSkill[]
 }
