@@ -18,6 +18,7 @@ const EMPTY: Omit<Project, 'id' | 'created_at' | 'project_skills'> = {
   featured: false,
   year: new Date().getFullYear(),
   month: new Date().getMonth() + 1,
+  day: new Date().getDate(),
 }
 
 export default function AdminProjects() {
@@ -27,6 +28,7 @@ export default function AdminProjects() {
       .select('*, project_skills(skill_id, skills(id, name, icon, category))')
       .order('year', { ascending: false, nullsFirst: false })
       .order('month', { ascending: false, nullsFirst: false })
+      .order('day', { ascending: false, nullsFirst: false })
   )
 
   const { data: allSkills } = useSupabase<Skill[]>(() =>
@@ -129,6 +131,10 @@ export default function AdminProjects() {
               <div className="form-control">
                 <label className="label"><span className="label-text">Mois (1-12)</span></label>
                 <input className="input input-bordered" type="number" min={1} max={12} value={editing.month ?? ''} onChange={(e) => setEditing({ ...editing, month: e.target.value ? Number(e.target.value) : null })} />
+              </div>
+              <div className="form-control">
+                <label className="label"><span className="label-text">Jour (1-31)</span></label>
+                <input className="input input-bordered" type="number" min={1} max={31} value={editing.day ?? ''} onChange={(e) => setEditing({ ...editing, day: e.target.value ? Number(e.target.value) : null })} />
               </div>
               <div className="form-control md:col-span-2">
                 <label className="label"><span className="label-text">Description * (fallback FR)</span></label>

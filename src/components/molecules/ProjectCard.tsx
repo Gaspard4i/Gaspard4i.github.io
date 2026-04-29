@@ -68,9 +68,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </div>
           {project.year && (
             <span className="text-base-content/50 text-sm">
-              {project.month
-                ? new Date(project.year, project.month - 1).toLocaleDateString(undefined, { month: 'short', year: 'numeric' })
-                : project.year}
+              {project.month && project.day
+                ? new Date(project.year, project.month - 1, project.day).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' })
+                : project.month
+                  ? new Date(project.year, project.month - 1).toLocaleDateString(undefined, { month: 'short', year: 'numeric' })
+                  : project.year}
             </span>
           )}
           <p className="text-base-content/70 text-sm flex-1">{description}</p>
