@@ -17,7 +17,8 @@ export default function ProjectGrid({ featuredOnly = false, limit }: ProjectGrid
     let query = supabase
       .from('projects')
       .select('*, project_skills(skill_id, skills(id, name, icon, category))')
-      .order('year', { ascending: false })
+      .order('year', { ascending: false, nullsFirst: false })
+      .order('month', { ascending: false, nullsFirst: false })
 
     if (featuredOnly) query = query.eq('featured', true)
     if (limit) query = query.limit(limit)

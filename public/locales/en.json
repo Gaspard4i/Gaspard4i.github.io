@@ -174,6 +174,21 @@
             "title": "WeerdleBot",
             "description": "Node.js bot that automatically plays Weerdle (Pokémon Wordle) with web control dashboard.",
             "long_description": "WeerdleBot is a personal bot that automates the game Weerdle, a Pokémon variant of the famous Wordle hosted on pokengine.com.\n\nThe bot automatically sends authenticated HTTP requests to submit word proposals, analyzes responses and adapts its strategy based on found or missed letters.\n\nA web dashboard (Node.js + HTML/CSS/JS) allows starting/stopping the bot, displaying real-time logs via the terminal, and triggering VPN rotation (NordVPN) to avoid IP bans. Everything runs in a Docker container for maximum portability."
+        },
+        "snackandcatch": {
+            "title": "Snack & Catch",
+            "description": "Cobblemon companion web app: recipes, spawn spots and addon sources. Next.js + Drizzle ORM.",
+            "long_description": "Snack & Catch is a companion app for the Cobblemon mod (Pokémon in Minecraft). It centralizes the mod's cooking recipes, creature spawn spots, and indexes community addon sources.\n\nStack: Next.js 15 (App Router), TypeScript, Tailwind CSS, Drizzle ORM on PostgreSQL, deployed on Vercel with a Neon database. Automated ingestion pipeline scrapes and structures data from community wikis. Built-in i18n, mobile-first responsive design.\n\nPersonal project driven by my interest in Cobblemon and the desire to provide a fast tool for server players — no need to juggle 5 wikis to find a recipe or a spot. Helped me deepen the Next.js App Router, structured data ingestion, and serverless deployment with Vercel + Neon."
+        },
+        "numismatic": {
+            "title": "Numismatic Reimagined (WIP)",
+            "description": "Multi-loader Minecraft currency mod (Fabric + Forge) for MC 1.20.1. Work in progress.",
+            "long_description": "**Status: work in progress, not yet released.**\n\nNumismatic Reimagined is a Minecraft Java mod aiming to add a complete currency system (copper, silver, gold coins, automatic conversion, dedicated inventory slot) inspired by the Numismatic Overhaul mod, rewritten to work on both major loaders: Fabric and Forge.\n\nStack: Java 17, Architectury API for multi-loader, multi-project Gradle (common / fabric / forge), MC 1.20.1. Common code (currency logic, recipes, items) is written once in `common/` and adapted to both loaders via thin wrappers.\n\nOngoing project that lets me learn the Minecraft multi-loader architecture, the deep differences between Fabric and Forge APIs (registries, networking, events), and setting up a complex Gradle build. Planned release on Modrinth and CurseForge once stable."
+        },
+        "ghastrider": {
+            "title": "GhastRider (WIP)",
+            "description": "Minecraft NeoForge mod adding a dash mechanic to the Happy Ghast (MC 1.21+). Work in progress.",
+            "long_description": "**Status: work in progress, not yet released.**\n\nGhastRider is a Minecraft Java mod that adds a propelled dash mechanic to the new \"Happy Ghast\" creature introduced in Minecraft 1.21+. The player can consume ice blocks to propel the Ghast in the look direction, with cooldown and visual particles.\n\nStack: Java 21, NeoForge for MC 1.21+, configuration via TOML file to adjust cooldown, dash strength and ice cost without recompiling. Implementation of a capability handler to persist the amount of ice stored per Ghast.\n\nPersonal project to explore modern Minecraft modding (NeoForge has replaced Forge on recent versions), understand server-side tick events, and client/server synchronization of animations. Detailed documentation planned on the dedicated wiki page of the portfolio (under construction)."
         }
     },
     "profile": {

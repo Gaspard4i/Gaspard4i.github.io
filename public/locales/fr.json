@@ -174,6 +174,21 @@
             "title": "WeerdleBot",
             "description": "Bot Node.js qui joue automatiquement à Weerdle (Wordle Pokémon) avec dashboard web de contrôle.",
             "long_description": "WeerdleBot est un bot personnel qui automatise le jeu Weerdle, une variante Pokémon du célèbre Wordle hébergée sur pokengine.com.\n\nLe bot envoie automatiquement des requêtes HTTP authentifiées pour soumettre des propositions de mots, analyse les réponses et adapte sa stratégie en fonction des lettres trouvées ou manquées.\n\nUn dashboard web (Node.js + HTML/CSS/JS) permet de démarrer/arrêter le bot, d'afficher les logs en temps réel via le terminal, et de déclencher une rotation de VPN (NordVPN) pour éviter les bans d'IP. Le tout tourne en conteneur Docker pour une portabilité maximale."
+        },
+        "snackandcatch": {
+            "title": "Snack & Catch",
+            "description": "Companion web Cobblemon : recettes, spots de spawn et sources d'addons. Next.js + Drizzle ORM, déployé sur Vercel.",
+            "long_description": "Snack & Catch est une application companion pour le mod Cobblemon (Pokémon dans Minecraft). Elle centralise les recettes de cuisine du mod, les spots de spawn des créatures, et indexe les sources d'addons de la communauté.\n\nStack : Next.js 15 (App Router), TypeScript, Tailwind CSS, Drizzle ORM sur PostgreSQL, déployé sur Vercel avec base Neon. Pipeline d'ingestion automatisé pour scraper et structurer les données depuis les wikis communautaires, internationalisation (i18n) intégrée, design responsive mobile-first.\n\nProjet personnel motivé par mon intérêt pour Cobblemon et l'envie de fournir un outil rapide aux joueurs du serveur — pas besoin de jongler entre 5 wikis pour trouver une recette ou un spot. M'a permis d'approfondir l'App Router de Next.js, l'ingestion de données structurées, et le déploiement serverless avec Vercel + Neon."
+        },
+        "numismatic": {
+            "title": "Numismatic Reimagined (WIP)",
+            "description": "Mod Minecraft de monnaie multi-loader Fabric + Forge pour MC 1.20.1. Projet en cours.",
+            "long_description": "**Statut : projet en cours, pas encore publié.**\n\nNumismatic Reimagined est un mod Minecraft Java qui vise à ajouter un système de monnaie complet (pièces de cuivre, argent, or, conversion automatique, slot dédié dans l'inventaire) inspiré du mod Numismatic Overhaul, mais réécrit pour fonctionner sur les deux loaders principaux : Fabric et Forge.\n\nStack : Java 17, Architectury API pour le multi-loader, Gradle multi-projet (common / fabric / forge), MC 1.20.1. Le code commun (logique de monnaie, recettes, items) est écrit une fois dans `common/` et adapté aux deux loaders via des wrappers fins.\n\nProjet en cours qui me permet d'apprendre l'architecture multi-loader Minecraft, les différences profondes entre les API Fabric et Forge (registries, networking, events), et la mise en place d'un build Gradle complexe. Sortie prévue sur Modrinth et CurseForge une fois la version stable."
+        },
+        "ghastrider": {
+            "title": "GhastRider (WIP)",
+            "description": "Mod Minecraft NeoForge qui ajoute une mécanique de dash au Happy Ghast (MC 1.21+). Projet en cours.",
+            "long_description": "**Statut : projet en cours, pas encore publié.**\n\nGhastRider est un mod Minecraft Java qui ajoute une mécanique de dash propulsé à la nouvelle créature \"Happy Ghast\" introduite dans Minecraft 1.21+. Le joueur peut consommer des blocs de glace pour propulser le Ghast dans la direction du regard, avec cooldown et particules visuelles.\n\nStack : Java 21, NeoForge pour MC 1.21+, configuration via fichier TOML pour ajuster cooldown, force du dash et coût en glace sans recompiler. Implémentation d'un capability handler pour persister la quantité de glace stockée par Ghast.\n\nProjet personnel pour explorer le modding Minecraft moderne (NeoForge a remplacé Forge sur les versions récentes), comprendre les events de tick côté serveur, et la synchronisation client/serveur des animations. Documentation détaillée prévue sur la page wiki dédiée du portfolio (en construction)."
         }
     },
     "profile": {

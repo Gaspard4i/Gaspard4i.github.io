@@ -21,6 +21,7 @@ export interface Project {
   image_url: string | null
   featured: boolean
   year: number | null
+  month: number | null
   created_at: string
   project_skills: ProjectSkill[]
 }

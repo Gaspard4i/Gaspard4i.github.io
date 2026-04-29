@@ -34,6 +34,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     : isNextooProject
       ? '/project-images/nextoo.png'
       : null
+  // Logos centrés (pas un screenshot pleine largeur) : object-contain + max-width
+  const LOGO_PROJECTS = ['weerdlebot']
+  const isLogoStyle = LOGO_PROJECTS.some((key) => project.title_key?.includes(key))
 
   const allSkills = project.project_skills?.map((ps) => ps.skills) ?? []
   const techSkills = allSkills.filter((s) => s.category !== 'soft-skill')
@@ -43,11 +46,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     <div className="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300 h-full">
       <Link to={`/projects/${project.id}`} className="block" onClick={() => trackClick(project.id, project.title)}>
         {imageUrl && (
-          <figure className="h-48 overflow-hidden">
+          <figure className={`h-48 overflow-hidden ${isLogoStyle ? 'flex items-center justify-center bg-base-300' : ''}`}>
             <img
               src={imageUrl}
               alt={project.title}
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              className={
+                isLogoStyle
+                  ? 'max-h-32 max-w-[60%] object-contain hover:scale-105 transition-transform duration-300'
+                  : 'w-full h-full object-cover hover:scale-105 transition-transform duration-300'
+              }
               loading="lazy"
             />
           </figure>
@@ -60,7 +67,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             )}
           </div>
           {project.year && (
-            <span className="text-base-content/50 text-sm">{project.year}</span>
+            <span className="text-base-content/50 text-sm">
+              {project.month
+                ? new Date(project.year, project.month - 1).toLocaleDateString(undefined, { month: 'short', year: 'numeric' })
+                : project.year}
+            </span>
           )}
           <p className="text-base-content/70 text-sm flex-1">{description}</p>
         </div>
