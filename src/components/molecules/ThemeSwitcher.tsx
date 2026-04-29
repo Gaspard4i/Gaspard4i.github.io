@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, type ReactNode } from 'react'
-import { Sun, Monitor, Music, ChevronDown, Check } from 'lucide-react'
+import { Sun, Monitor, Music, Citrus, Briefcase, ChevronDown, Check } from 'lucide-react'
 import { useTheme } from '@/hooks/useTheme'
 import type { ThemeName } from '@/types/theme'
 
@@ -8,6 +8,8 @@ const THEME_ICONS: Record<ThemeName, ReactNode> = {
   'original-dark': <Sun size={15} />,
   vscode: <Monitor size={15} />,
   spotify: <Music size={15} />,
+  mandarine: <Citrus size={15} />,
+  nextoo: <Briefcase size={15} />,
 }
 
 export default function ThemeSwitcher() {
