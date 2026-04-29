@@ -37,15 +37,15 @@ export default function SoftSkillCard({ softSkill }: SoftSkillCardProps) {
           <div className="mt-3 space-y-3 animate-fade-in">
             {situation && (
               <div className="bg-base-200 rounded-lg p-3">
-                <p className="text-xs font-semibold text-primary mb-1">{t('about.situation')}</p>
+                <p className="text-xs font-semibold text-secondary mb-1">{t('about.situation')}</p>
                 {situation.split('\n').map((line, i) => (
                   <p key={i} className="text-sm text-base-content/80 leading-relaxed">{line}</p>
                 ))}
               </div>
             )}
             {analysis && (
-              <div className="border-l-2 border-primary pl-3">
-                <p className="text-xs font-semibold text-primary mb-1">{t('about.analysis')}</p>
+              <div className="border-l-2 border-secondary pl-3">
+                <p className="text-xs font-semibold text-secondary mb-1">{t('about.analysis')}</p>
                 {analysis.split('\n').map((line, i) => (
                   <p key={i} className="text-sm text-base-content/70 leading-relaxed italic">{line}</p>
                 ))}

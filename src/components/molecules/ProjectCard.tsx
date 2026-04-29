@@ -104,7 +104,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 key={skill.id}
                 to={`/skills/${skill.id}`}
                 onClick={(e) => e.stopPropagation()}
-                className="flex items-center gap-1 badge badge-secondary badge-outline badge-sm hover:badge-secondary transition-colors"
+                className="flex items-center gap-1 badge badge-secondary badge-sm hover:badge-secondary transition-colors"
               >
                 {skill.icon && <img src={skill.icon} alt={skill.name} width={12} height={12} />}
                 <span>{skill.name}</span>

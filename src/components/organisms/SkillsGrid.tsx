@@ -5,6 +5,7 @@ import { supabase } from '@/lib/supabase'
 import SkillTag from '@/components/molecules/SkillTag'
 import SkeletonBox from '@/components/atoms/SkeletonBox'
 import type { Skill, SkillCategory } from '@/types/skill'
+import { variantForSkill } from '@/lib/variants'
 
 const CATEGORIES: { key: SkillCategory | 'all'; label: string }[] = [
   { key: 'all', label: 'Tout' },
@@ -16,6 +17,17 @@ const CATEGORIES: { key: SkillCategory | 'all'; label: string }[] = [
   { key: 'tools', label: 'Outils' },
   { key: 'soft-skill', label: 'Soft Skills' },
 ]
+
+const ACTIVE_BTN: Record<string, string> = {
+  primary: 'btn-primary',
+  secondary: 'btn-secondary',
+  accent: 'btn-accent',
+  info: 'btn-info',
+  success: 'btn-success',
+  warning: 'btn-warning',
+  error: 'btn-error',
+  neutral: 'btn-neutral',
+}
 
 interface SkillsGridProps {
   featuredOnly?: boolean
@@ -52,17 +64,20 @@ export default function SkillsGrid({ featuredOnly = false }: SkillsGridProps) {
     <div className="space-y-4">
       {!featuredOnly && (
         <div className="flex flex-wrap gap-2">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat.key}
-              onClick={() => setActiveCategory(cat.key)}
-              className={`btn btn-sm ${
-                activeCategory === cat.key ? 'btn-primary' : 'btn-ghost'
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
+          {CATEGORIES.map((cat) => {
+            const activeCls = cat.key === 'all'
+              ? 'btn-primary'
+              : ACTIVE_BTN[variantForSkill(cat.key as SkillCategory)] ?? 'btn-primary'
+            return (
+              <button
+                key={cat.key}
+                onClick={() => setActiveCategory(cat.key)}
+                className={`btn btn-sm ${activeCategory === cat.key ? activeCls : 'btn-ghost'}`}
+              >
+                {cat.label}
+              </button>
+            )
+          })}
         </div>
       )}
 

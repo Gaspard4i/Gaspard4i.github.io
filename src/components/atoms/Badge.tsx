@@ -1,14 +1,20 @@
+type BadgeVariant = 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error' | 'ghost' | 'neutral'
+
 interface BadgeProps {
   label: string
-  variant?: 'primary' | 'secondary' | 'accent' | 'ghost' | 'neutral'
+  variant?: BadgeVariant
   size?: 'sm' | 'md' | 'lg'
   className?: string
 }
 
-const variantClasses = {
+const variantClasses: Record<BadgeVariant, string> = {
   primary: 'badge-primary',
   secondary: 'badge-secondary',
   accent: 'badge-accent',
+  info: 'badge-info',
+  success: 'badge-success',
+  warning: 'badge-warning',
+  error: 'badge-error',
   ghost: 'badge-ghost',
   neutral: 'badge-neutral',
 }
