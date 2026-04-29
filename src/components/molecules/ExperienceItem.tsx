@@ -1,5 +1,27 @@
 import { useTranslation } from 'react-i18next'
 import type { Experience } from '@/types/experience'
+import { variantForExperienceType } from '@/lib/variants'
+
+const DOT_BG: Record<string, string> = {
+  primary: 'bg-primary',
+  secondary: 'bg-secondary',
+  accent: 'bg-accent',
+  info: 'bg-info',
+  success: 'bg-success',
+  warning: 'bg-warning',
+  error: 'bg-error',
+  neutral: 'bg-neutral',
+}
+const TEXT_VARIANT: Record<string, string> = {
+  primary: 'text-primary',
+  secondary: 'text-secondary',
+  accent: 'text-accent',
+  info: 'text-info',
+  success: 'text-success',
+  warning: 'text-warning',
+  error: 'text-error',
+  neutral: 'text-base-content/70',
+}
 
 interface ExperienceItemProps {
   experience: Experience
@@ -26,14 +48,16 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
       ? formatDate(experience.end_date, locale)
       : ''
 
+  const variant = variantForExperienceType(experience.type)
+
   return (
     <li className="mb-6 ml-4">
-      <div className="absolute w-3 h-3 bg-primary mt-1.5 -left-1.5 border border-base-100" />
+      <div className={`absolute w-3 h-3 mt-1.5 -left-1.5 border border-base-100 ${DOT_BG[variant] ?? DOT_BG.neutral}`} />
       <time className="text-xs font-normal text-base-content/50">
         {startDate} – {endDate}
       </time>
       <h3 className="text-sm font-semibold text-base-content mt-0.5">{role}</h3>
-      <p className="text-xs text-primary font-medium">{company}</p>
+      <p className={`text-xs font-medium ${TEXT_VARIANT[variant] ?? TEXT_VARIANT.neutral}`}>{company}</p>
       {description && (
         <p className="text-xs text-base-content/70 mt-1">{description}</p>
       )}
