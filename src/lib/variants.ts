@@ -32,3 +32,10 @@ export function variantForExperienceType(type: string | null | undefined): Daisy
   if (!type) return 'neutral'
   return EXPERIENCE_TYPE_VARIANT[type] ?? 'neutral'
 }
+
+export function companyTextClass(company: string | null | undefined, fallback: string = 'text-primary'): string {
+  if (!company) return fallback
+  if (/mandarine/i.test(company)) return 'text-mandarine'
+  if (/nextoo/i.test(company)) return 'text-nextoo'
+  return fallback
+}

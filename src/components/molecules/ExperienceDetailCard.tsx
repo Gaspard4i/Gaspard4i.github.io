@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { ChevronDown, ChevronUp, Building2, Target, UserCheck, Users } from 'lucide-react'
 import Badge from '@/components/atoms/Badge'
 import type { Experience } from '@/types/experience'
-import { variantForExperienceType } from '@/lib/variants'
+import { variantForExperienceType, companyTextClass } from '@/lib/variants'
 
 interface ExperienceDetailCardProps {
   experience: Experience
@@ -60,6 +60,8 @@ export default function ExperienceDetailCard({ experience }: ExperienceDetailCar
   const interactions = fr ? experience.interactions_fr : experience.interactions_en
 
   const hasDetails = context || missions || autonomy || interactions
+  const variant = variantForExperienceType(experience.type)
+  const companyClass = companyTextClass(company)
 
   return (
     <div className="card bg-base-100 border border-base-300 hover:border-primary/30 transition-colors">
@@ -68,9 +70,9 @@ export default function ExperienceDetailCard({ experience }: ExperienceDetailCar
           <div className="flex-1">
             <div className="flex items-center gap-2 flex-wrap">
               <h3 className="text-lg font-bold text-base-content">{role}</h3>
-              <Badge variant={variantForExperienceType(experience.type)} size="sm" label={t(`experienceTypes.${experience.type}`)} />
+              <Badge variant={variant} size="sm" label={t(`experienceTypes.${experience.type}`)} />
             </div>
-            <p className="text-sm text-primary font-medium">{company}</p>
+            <p className={`text-sm font-medium ${companyClass}`}>{company}</p>
             <p className="text-xs text-base-content/50 mt-0.5">{startDate} – {endDate}</p>
           </div>
         </div>

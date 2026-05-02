@@ -9,13 +9,20 @@ interface ProseBlockProps {
   icon?: React.ReactNode
 }
 
+function colorFor(inner: string): string {
+  if (/mandarine/i.test(inner)) return 'text-mandarine'
+  if (/nextoo/i.test(inner)) return 'text-nextoo'
+  return 'text-primary'
+}
+
 function renderHighlighted(text: string) {
   const parts = text.split(/(\*\*[^*]+\*\*)/g)
   return parts.map((part, i) => {
     if (part.startsWith('**') && part.endsWith('**')) {
+      const inner = part.slice(2, -2)
       return (
-        <span key={i} className="font-semibold text-primary">
-          {part.slice(2, -2)}
+        <span key={i} className={`font-semibold ${colorFor(inner)}`}>
+          {inner}
         </span>
       )
     }
