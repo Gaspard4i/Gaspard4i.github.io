@@ -15,7 +15,6 @@ const CATEGORIES: { key: SkillCategory | 'all'; label: string }[] = [
   { key: 'devops', label: 'DevOps' },
   { key: 'data-science', label: 'Data Science' },
   { key: 'tools', label: 'Outils' },
-  { key: 'soft-skill', label: 'Soft Skills' },
 ]
 
 const ACTIVE_BTN: Record<string, string> = {

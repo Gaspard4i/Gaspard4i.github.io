@@ -5,6 +5,10 @@ export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
+      colors: {
+        mandarine: 'oklch(70% 0.19 55)',
+        nextoo: 'oklch(58% 0.22 25)',
+      },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],

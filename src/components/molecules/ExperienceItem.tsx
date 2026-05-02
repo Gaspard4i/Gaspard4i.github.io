@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import type { Experience } from '@/types/experience'
-import { variantForExperienceType } from '@/lib/variants'
+import { variantForExperienceType, companyTextClass } from '@/lib/variants'
 
 const DOT_BG: Record<string, string> = {
   primary: 'bg-primary',
@@ -49,6 +49,7 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
       : ''
 
   const variant = variantForExperienceType(experience.type)
+  const companyClass = companyTextClass(company, TEXT_VARIANT[variant] ?? TEXT_VARIANT.neutral)
 
   return (
     <li className="mb-6 ml-4">
@@ -57,7 +58,7 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
         {startDate} – {endDate}
       </time>
       <h3 className="text-sm font-semibold text-base-content mt-0.5">{role}</h3>
-      <p className={`text-xs font-medium ${TEXT_VARIANT[variant] ?? TEXT_VARIANT.neutral}`}>{company}</p>
+      <p className={`text-xs font-medium ${companyClass}`}>{company}</p>
       {description && (
         <p className="text-xs text-base-content/70 mt-1">{description}</p>
       )}
