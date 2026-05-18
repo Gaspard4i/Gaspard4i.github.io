@@ -57,19 +57,11 @@ jobs:
     needs: build-and-push
     runs-on: ubuntu-latest
     steps:
-      - uses: appleboy/ssh-action@v1.2.0
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            set -e
-            export XDG_RUNTIME_DIR=/run/user/1100
-            export DOCKER_HOST=unix:///run/user/1100/docker.sock
-            sudo -iu deploy bash -lc '
-              cd /srv/dev/apps/portfolio
-              docker compose pull web
-              docker compose up -d web
-              docker image prune -f
-            '
-            echo "Deployed: $(sudo -iu deploy bash -lc "docker inspect portfolio-web --format \"{{.Config.Image}}\"")"
+            sudo -u deploy -i /srv/dev/apps/portfolio/deploy.sh
