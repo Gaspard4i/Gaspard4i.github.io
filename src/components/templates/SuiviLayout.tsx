@@ -1,6 +1,7 @@
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { useAuth } from '@/hooks/useAuth'
 import { LayoutDashboard, Briefcase, Users, Mail, Upload, LogOut, Eye, Info } from 'lucide-react'
+import ThemeSwitcher from '@/components/molecules/ThemeSwitcher'
 
 const NAV = [
   { to: '/suivi-alternance', label: 'Tableau de bord', icon: <LayoutDashboard size={16} />, end: true },
@@ -24,11 +25,14 @@ export default function SuiviLayout() {
     <div className="min-h-screen bg-base-200 flex flex-col md:flex-row">
       {/* Sidebar */}
       <aside className="w-full md:w-60 bg-base-100 border-b md:border-b-0 md:border-r border-base-300 flex flex-col">
-        <div className="p-4 border-b border-base-300">
-          <a href="/" className="font-mono font-bold text-primary text-sm">
-            ← gaspard4i
-          </a>
-          <p className="text-xs text-base-content/50 mt-0.5">Suivi alternance</p>
+        <div className="p-4 border-b border-base-300 flex items-start justify-between gap-2">
+          <div>
+            <a href="/" className="font-mono font-bold text-primary text-sm">
+              ← gaspard4i
+            </a>
+            <p className="text-xs text-base-content/50 mt-0.5">Suivi alternance</p>
+          </div>
+          <ThemeSwitcher />
         </div>
         <nav className="flex-1 p-2 flex flex-row md:flex-col gap-1 overflow-x-auto">
           {NAV.map((item) => (
