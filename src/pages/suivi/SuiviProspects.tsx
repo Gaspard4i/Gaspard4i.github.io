@@ -24,7 +24,7 @@ export default function SuiviProspects() {
       if (prioOnly && !p.prio) return false
       if (fStatut && p.statut !== fStatut) return false
       if (q) {
-        const hay = `${p.entreprise ?? ''} ${p.nom ?? ''} ${p.prenom ?? ''} ${p.secteur ?? ''} ${p.ville ?? ''}`.toLowerCase()
+        const hay = `${p.entreprise ?? ''} ${p.nom ?? ''} ${p.prenom ?? ''} ${p.secteur ?? ''} ${p.ville ?? ''} ${p.email ?? ''}`.toLowerCase()
         if (!hay.includes(q.toLowerCase())) return false
       }
       return true
@@ -117,6 +117,7 @@ export default function SuiviProspects() {
                 <th></th>
                 <th>Contact</th>
                 <th>Entreprise</th>
+                <th>Email</th>
                 <th>Ville</th>
                 <th>Date envoi</th>
                 <th>Relances</th>
@@ -133,6 +134,13 @@ export default function SuiviProspects() {
                     <div className="text-xs text-base-content/50">{p.poste}</div>
                   </td>
                   <td className="text-sm text-base-content/80">{p.entreprise}<div className="text-xs text-base-content/40">{p.secteur}</div></td>
+                  <td className="text-xs">
+                    {p.email ? (
+                      <a href={`mailto:${p.email}`} className="link link-primary break-all">{p.email}</a>
+                    ) : (
+                      <span className="text-base-content/30">—</span>
+                    )}
+                  </td>
                   <td className="text-xs text-base-content/60">{p.ville}</td>
                   <td>
                     <input
