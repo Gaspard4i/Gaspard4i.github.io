@@ -1,8 +1,20 @@
 import { useMemo } from 'react'
-import { CheckCircle2, Circle } from 'lucide-react'
+import { CheckCircle2, Circle, XCircle, MinusCircle, Ban } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { useSupabase } from '@/hooks/useSupabase'
 import type { ProgressRow } from '@/types/alternance'
+
+const ETAT_META: Record<string, { label: string; cls: string; icon: typeof Circle }> = {
+  Fait: { label: 'Fait', cls: 'text-success', icon: CheckCircle2 },
+  Refusé: { label: 'Refusé', cls: 'text-error', icon: XCircle },
+  Abandonné: { label: 'Abandonné', cls: 'text-warning', icon: MinusCircle },
+  'Plus disponible': { label: 'Plus disponible', cls: 'text-base-content/40', icon: Ban },
+  'Pas encore': { label: 'Pas encore', cls: 'text-base-content/40', icon: Circle },
+}
+
+function etatMeta(etat: string) {
+  return ETAT_META[etat] ?? ETAT_META['Pas encore']
+}
 
 export default function SuiviProgress() {
   const { data, loading } = useSupabase<ProgressRow[]>(() =>
@@ -10,7 +22,9 @@ export default function SuiviProgress() {
   )
 
   const rows = useMemo(() => data ?? [], [data])
-  const fait = rows.filter((r) => r.fait).length
+  const fait = rows.filter((r) => r.etat === 'Fait').length
+  const refuse = rows.filter((r) => r.etat === 'Refusé').length
+  const abandonne = rows.filter((r) => r.etat === 'Abandonné').length
   const pct = rows.length ? Math.round((fait / rows.length) * 100) : 0
 
   return (
@@ -34,6 +48,11 @@ export default function SuiviProgress() {
                   <span className="font-bold text-base-content">{fait} / {rows.length}</span>
                 </div>
                 <progress className="progress progress-primary w-full" value={pct} max={100} />
+                <div className="flex flex-wrap gap-3 mt-3 text-xs">
+                  <span className="inline-flex items-center gap-1 text-success"><CheckCircle2 size={13} /> {fait} faites</span>
+                  <span className="inline-flex items-center gap-1 text-error"><XCircle size={13} /> {refuse} refusées</span>
+                  <span className="inline-flex items-center gap-1 text-warning"><MinusCircle size={13} /> {abandonne} abandonnées</span>
+                </div>
               </div>
             </div>
 
@@ -43,20 +62,20 @@ export default function SuiviProgress() {
                   <tr><th>Entreprise</th><th>Poste</th><th>Domaine</th><th className="text-center">État</th></tr>
                 </thead>
                 <tbody>
-                  {rows.map((r, i) => (
-                    <tr key={i} className="hover">
-                      <td className="font-medium text-base-content">{r.entreprise}</td>
-                      <td className="text-sm text-base-content/70 max-w-xs"><span className="line-clamp-2">{r.poste}</span></td>
-                      <td className="text-xs text-base-content/50">{r.domaine}</td>
-                      <td className="text-center">
-                        {r.fait ? (
-                          <span className="inline-flex items-center gap-1 text-success text-sm"><CheckCircle2 size={15} /> Fait</span>
-                        ) : (
-                          <span className="inline-flex items-center gap-1 text-base-content/40 text-sm"><Circle size={15} /> Pas encore</span>
-                        )}
-                      </td>
-                    </tr>
-                  ))}
+                  {rows.map((r, i) => {
+                    const m = etatMeta(r.etat)
+                    const Icon = m.icon
+                    return (
+                      <tr key={i} className="hover">
+                        <td className="font-medium text-base-content">{r.entreprise}</td>
+                        <td className="text-sm text-base-content/70 max-w-xs"><span className="line-clamp-2">{r.poste}</span></td>
+                        <td className="text-xs text-base-content/50">{r.domaine}</td>
+                        <td className="text-center">
+                          <span className={`inline-flex items-center gap-1 text-sm ${m.cls}`}><Icon size={15} /> {m.label}</span>
+                        </td>
+                      </tr>
+                    )
+                  })}
                 </tbody>
               </table>
             </div>

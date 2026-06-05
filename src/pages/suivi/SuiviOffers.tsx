@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react'
 import { Plus, Trash2, Pencil, ExternalLink, Search, X } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { useSupabase } from '@/hooks/useSupabase'
+import { useSortable } from '@/hooks/useSortable'
+import SortableTh from '@/components/atoms/SortableTh'
 import { DOMAINES, OFFER_STATUTS, PRIORITES, ZONES } from '@/types/alternance'
 import type { Offer } from '@/types/alternance'
 
@@ -22,6 +24,7 @@ const STATUT_BADGE: Record<string, string> = {
   'Refusé': 'badge-error',
   'Accepté': 'badge-success',
   'Abandonné': 'badge-ghost',
+  'Plus disponible': 'badge-neutral',
 }
 
 const EMPTY: Partial<Offer> = { domaine: 'Autre / à trier', entreprise: '', poste: '', statut: 'À postuler' }
@@ -34,6 +37,7 @@ export default function SuiviOffers() {
   const [fDom, setFDom] = useState('')
   const [fZone, setFZone] = useState('')
   const [fStatut, setFStatut] = useState('')
+  const [fPrio, setFPrio] = useState('')
   const [editing, setEditing] = useState<Partial<Offer> | null>(null)
   const [saving, setSaving] = useState(false)
 
@@ -42,13 +46,16 @@ export default function SuiviOffers() {
       if (fDom && o.domaine !== fDom) return false
       if (fZone && o.zone_carte !== fZone) return false
       if (fStatut && o.statut !== fStatut) return false
+      if (fPrio && (o.priorite ?? '') !== fPrio) return false
       if (q) {
         const hay = `${o.entreprise} ${o.poste} ${o.localisation ?? ''} ${o.ref ?? ''}`.toLowerCase()
         if (!hay.includes(q.toLowerCase())) return false
       }
       return true
     })
-  }, [offers, q, fDom, fZone, fStatut])
+  }, [offers, q, fDom, fZone, fStatut, fPrio])
+
+  const { sorted, sortKey, sortDir, toggleSort } = useSortable<Offer>(filtered)
 
   async function updateStatut(o: Offer, statut: string) {
     await supabase.from('alternance_offers').update({ statut }).eq('id', o.id)
@@ -80,8 +87,8 @@ export default function SuiviOffers() {
     refetch()
   }
 
-  const resetFilters = () => { setQ(''); setFDom(''); setFZone(''); setFStatut('') }
-  const hasFilters = q || fDom || fZone || fStatut
+  const resetFilters = () => { setQ(''); setFDom(''); setFZone(''); setFStatut(''); setFPrio('') }
+  const hasFilters = q || fDom || fZone || fStatut || fPrio
 
   return (
     <div className="p-4 sm:p-8">
@@ -113,6 +120,10 @@ export default function SuiviOffers() {
           <option value="">Tous statuts</option>
           {OFFER_STATUTS.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
+        <select className="select select-bordered select-sm" value={fPrio} onChange={(e) => setFPrio(e.target.value)}>
+          <option value="">Toutes priorités</option>
+          {PRIORITES.map((p) => <option key={p} value={p}>Prio : {p}</option>)}
+        </select>
         {hasFilters && (
           <button className="btn btn-ghost btn-sm" onClick={resetFilters}><X size={14} /> Réinitialiser</button>
         )}
@@ -130,17 +141,17 @@ export default function SuiviOffers() {
           <table className="table table-sm">
             <thead>
               <tr>
-                <th>Domaine</th>
-                <th>Entreprise</th>
-                <th>Poste</th>
-                <th>Lieu</th>
-                <th>Zone</th>
-                <th>Statut</th>
+                <SortableTh label="Domaine" column="domaine" activeColumn={sortKey as string | null} direction={sortDir} onSort={(c) => toggleSort(c as keyof Offer)} />
+                <SortableTh label="Entreprise" column="entreprise" activeColumn={sortKey as string | null} direction={sortDir} onSort={(c) => toggleSort(c as keyof Offer)} />
+                <SortableTh label="Poste" column="poste" activeColumn={sortKey as string | null} direction={sortDir} onSort={(c) => toggleSort(c as keyof Offer)} />
+                <SortableTh label="Lieu" column="localisation" activeColumn={sortKey as string | null} direction={sortDir} onSort={(c) => toggleSort(c as keyof Offer)} />
+                <SortableTh label="Zone" column="zone_carte" activeColumn={sortKey as string | null} direction={sortDir} onSort={(c) => toggleSort(c as keyof Offer)} />
+                <SortableTh label="Statut" column="statut" activeColumn={sortKey as string | null} direction={sortDir} onSort={(c) => toggleSort(c as keyof Offer)} />
                 <th></th>
               </tr>
             </thead>
             <tbody>
-              {filtered.map((o) => (
+              {sorted.map((o) => (
                 <tr key={o.id} className="hover">
                   <td><span className={`badge badge-sm ${DOMAINE_BADGE[o.domaine] ?? 'badge-ghost'}`}>{o.domaine}</span></td>
                   <td className="font-medium text-base-content">
