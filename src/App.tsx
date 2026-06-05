@@ -27,6 +27,15 @@ const AdminSoftSkills = lazy(() => import('@/pages/admin/AdminSoftSkills'))
 const AdminHeroRoles = lazy(() => import('@/pages/admin/AdminHeroRoles'))
 const AdminTranslations = lazy(() => import('@/pages/admin/AdminTranslations'))
 
+const SuiviLayout = lazy(() => import('@/components/templates/SuiviLayout'))
+const SuiviLogin = lazy(() => import('@/pages/suivi/SuiviLogin'))
+const SuiviDashboard = lazy(() => import('@/pages/suivi/SuiviDashboard'))
+const SuiviOffers = lazy(() => import('@/pages/suivi/SuiviOffers'))
+const SuiviProspects = lazy(() => import('@/pages/suivi/SuiviProspects'))
+const SuiviEmails = lazy(() => import('@/pages/suivi/SuiviEmails'))
+const SuiviImport = lazy(() => import('@/pages/suivi/SuiviImport'))
+const SuiviProgress = lazy(() => import('@/pages/suivi/SuiviProgress'))
+
 function AppContent() {
   useTheme()
   return (
@@ -68,6 +77,24 @@ function AppContent() {
           <Route path="hero-roles" element={<AdminHeroRoles />} />
           <Route path="messages" element={<AdminMessages />} />
           <Route path="translations" element={<AdminTranslations />} />
+        </Route>
+
+        {/* Suivi alternance (espace privé dédié) */}
+        <Route path="/suivi-alternance/login" element={<SuiviLogin />} />
+        <Route path="/suivi-alternance/avancement" element={<SuiviProgress />} />
+        <Route
+          path="/suivi-alternance"
+          element={
+            <ProtectedRoute redirectTo="/suivi-alternance/login">
+              <SuiviLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<SuiviDashboard />} />
+          <Route path="offres" element={<SuiviOffers />} />
+          <Route path="prospection" element={<SuiviProspects />} />
+          <Route path="emails" element={<SuiviEmails />} />
+          <Route path="import" element={<SuiviImport />} />
         </Route>
       </Routes>
     </BrowserRouter>
