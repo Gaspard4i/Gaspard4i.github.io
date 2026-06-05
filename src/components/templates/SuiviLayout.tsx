@@ -1,12 +1,13 @@
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { useAuth } from '@/hooks/useAuth'
-import { LayoutDashboard, Briefcase, Users, Mail, Upload, LogOut, Eye } from 'lucide-react'
+import { LayoutDashboard, Briefcase, Users, Mail, Upload, LogOut, Eye, Info } from 'lucide-react'
 
 const NAV = [
   { to: '/suivi-alternance', label: 'Tableau de bord', icon: <LayoutDashboard size={16} />, end: true },
   { to: '/suivi-alternance/offres', label: 'Offres', icon: <Briefcase size={16} /> },
   { to: '/suivi-alternance/prospection', label: 'Prospection DRH', icon: <Users size={16} /> },
   { to: '/suivi-alternance/emails', label: 'Emails', icon: <Mail size={16} /> },
+  { to: '/suivi-alternance/infos', label: 'Sources & infos', icon: <Info size={16} /> },
   { to: '/suivi-alternance/import', label: 'Import / Export', icon: <Upload size={16} /> },
 ]
 
