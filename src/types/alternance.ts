@@ -18,6 +18,7 @@ export const OFFER_STATUTS = [
   'Refusé',
   'Accepté',
   'Abandonné',
+  'Plus disponible',
 ] as const
 export type OfferStatut = (typeof OFFER_STATUTS)[number]
 
@@ -38,6 +39,11 @@ export const PROSPECT_STATUTS = [
   'Clôturé',
 ] as const
 export type ProspectStatut = (typeof PROSPECT_STATUTS)[number]
+
+// Provenance d'un contact : Nicolas (Excel de Nicolas), IMT (partage IMT),
+// Claude (recommandations Claude), Autre (origine inconnue / à trier).
+export const SOURCE_CATS = ['Nicolas', 'IMT', 'Claude', 'Autre'] as const
+export type SourceCat = (typeof SOURCE_CATS)[number]
 
 export interface Offer {
   id: string
@@ -74,18 +80,20 @@ export interface Prospect {
   linkedin: string | null
   date_envoi: string | null
   statut: string
+  source_cat: string
   notes: string | null
   created_at: string
   updated_at: string
 }
 
 // Vue publique "avancement" (lecture seule, partage)
+// etat : 'Fait' | 'Refusé' | 'Abandonné' | 'Plus disponible' | 'Pas encore'
 export interface ProgressRow {
   domaine: string
   entreprise: string
   poste: string
   localisation: string | null
-  fait: boolean
+  etat: string
 }
 
 // Note / source utile (issues du partage IMT filière ITR : consignes, contacts, liens)

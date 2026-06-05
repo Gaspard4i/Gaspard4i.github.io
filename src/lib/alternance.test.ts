@@ -41,7 +41,7 @@ describe('emails', () => {
       id: '1', civilite: 'Monsieur', nom: 'Lepage', prio: false, statut: 'À envoyer',
       prenom: null, poste: null, entreprise: null, ville: null, secteur: null,
       email: null, tel: null, linkedin: null, date_envoi: null, notes: null,
-      created_at: '', updated_at: '',
+      source_cat: 'Autre', created_at: '', updated_at: '',
     })
     expect(body.startsWith('Monsieur Lepage,')).toBe(true)
   })

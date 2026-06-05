@@ -3,11 +3,20 @@ import { Link } from 'react-router-dom'
 import { Plus, Trash2, Pencil, Search, X, Mail, Linkedin, Star, Bell } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { useSupabase } from '@/hooks/useSupabase'
-import { PROSPECT_STATUTS } from '@/types/alternance'
+import { useSortable } from '@/hooks/useSortable'
+import SortableTh from '@/components/atoms/SortableTh'
+import { PROSPECT_STATUTS, SOURCE_CATS } from '@/types/alternance'
 import type { Prospect } from '@/types/alternance'
 import { relanceDates, isDue, formatDateFr } from '@/lib/alternance'
 
-const EMPTY: Partial<Prospect> = { prio: false, statut: 'À envoyer' }
+const EMPTY: Partial<Prospect> = { prio: false, statut: 'À envoyer', source_cat: 'Autre' }
+
+const SOURCE_BADGE: Record<string, string> = {
+  Nicolas: 'badge-info',
+  IMT: 'badge-secondary',
+  Claude: 'badge-accent',
+  Autre: 'badge-ghost',
+}
 
 export default function SuiviProspects() {
   const { data: prospects, loading, refetch } = useSupabase<Prospect[]>(() =>
@@ -16,6 +25,7 @@ export default function SuiviProspects() {
   const [q, setQ] = useState('')
   const [prioOnly, setPrioOnly] = useState(false)
   const [fStatut, setFStatut] = useState('')
+  const [fSource, setFSource] = useState('')
   const [editing, setEditing] = useState<Partial<Prospect> | null>(null)
   const [saving, setSaving] = useState(false)
 
@@ -23,13 +33,16 @@ export default function SuiviProspects() {
     return (prospects ?? []).filter((p) => {
       if (prioOnly && !p.prio) return false
       if (fStatut && p.statut !== fStatut) return false
+      if (fSource && p.source_cat !== fSource) return false
       if (q) {
         const hay = `${p.entreprise ?? ''} ${p.nom ?? ''} ${p.prenom ?? ''} ${p.secteur ?? ''} ${p.ville ?? ''} ${p.email ?? ''}`.toLowerCase()
         if (!hay.includes(q.toLowerCase())) return false
       }
       return true
     })
-  }, [prospects, q, prioOnly, fStatut])
+  }, [prospects, q, prioOnly, fStatut, fSource])
+
+  const { sorted, sortKey, sortDir, toggleSort } = useSortable<Prospect>(filtered)
 
   async function updateField(p: Prospect, patch: Partial<Prospect>) {
     await supabase.from('alternance_prospects').update(patch).eq('id', p.id)
@@ -54,8 +67,8 @@ export default function SuiviProspects() {
     refetch()
   }
 
-  const resetFilters = () => { setQ(''); setPrioOnly(false); setFStatut('') }
-  const hasFilters = q || prioOnly || fStatut
+  const resetFilters = () => { setQ(''); setPrioOnly(false); setFStatut(''); setFSource('') }
+  const hasFilters = q || prioOnly || fStatut || fSource
 
   function relanceCell(p: Prospect) {
     const { r1, r2 } = relanceDates(p.date_envoi)
@@ -95,6 +108,10 @@ export default function SuiviProspects() {
           <option value="">Tous statuts</option>
           {PROSPECT_STATUTS.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
+        <select className="select select-bordered select-sm" value={fSource} onChange={(e) => setFSource(e.target.value)}>
+          <option value="">Toutes sources</option>
+          {SOURCE_CATS.map((s) => <option key={s} value={s}>{s}</option>)}
+        </select>
         <label className="label cursor-pointer gap-2">
           <input type="checkbox" className="checkbox checkbox-sm checkbox-warning" checked={prioOnly} onChange={(e) => setPrioOnly(e.target.checked)} />
           <span className="label-text text-sm flex items-center gap-1"><Star size={13} /> Prioritaires</span>
@@ -114,19 +131,20 @@ export default function SuiviProspects() {
           <table className="table table-sm">
             <thead>
               <tr>
-                <th></th>
-                <th>Contact</th>
-                <th>Entreprise</th>
-                <th>Email</th>
-                <th>Ville</th>
-                <th>Date envoi</th>
+                <SortableTh label="" column="prio" activeColumn={sortKey as string | null} direction={sortDir} onSort={(c) => toggleSort(c as keyof Prospect)} />
+                <SortableTh label="Contact" column="nom" activeColumn={sortKey as string | null} direction={sortDir} onSort={(c) => toggleSort(c as keyof Prospect)} />
+                <SortableTh label="Entreprise" column="entreprise" activeColumn={sortKey as string | null} direction={sortDir} onSort={(c) => toggleSort(c as keyof Prospect)} />
+                <SortableTh label="Email" column="email" activeColumn={sortKey as string | null} direction={sortDir} onSort={(c) => toggleSort(c as keyof Prospect)} />
+                <SortableTh label="Ville" column="ville" activeColumn={sortKey as string | null} direction={sortDir} onSort={(c) => toggleSort(c as keyof Prospect)} />
+                <SortableTh label="Date envoi" column="date_envoi" activeColumn={sortKey as string | null} direction={sortDir} onSort={(c) => toggleSort(c as keyof Prospect)} />
                 <th>Relances</th>
-                <th>Statut</th>
+                <SortableTh label="Statut" column="statut" activeColumn={sortKey as string | null} direction={sortDir} onSort={(c) => toggleSort(c as keyof Prospect)} />
+                <SortableTh label="Source" column="source_cat" activeColumn={sortKey as string | null} direction={sortDir} onSort={(c) => toggleSort(c as keyof Prospect)} />
                 <th></th>
               </tr>
             </thead>
             <tbody>
-              {filtered.map((p) => (
+              {sorted.map((p) => (
                 <tr key={p.id} className={p.prio ? 'bg-success/10 hover:bg-success/20' : 'hover'}>
                   <td>{p.prio && <Star size={14} className="text-warning fill-warning" />}</td>
                   <td>
@@ -154,6 +172,16 @@ export default function SuiviProspects() {
                   <td>
                     <select className="select select-xs" value={p.statut} onChange={(e) => updateField(p, { statut: e.target.value })}>
                       {PROSPECT_STATUTS.map((s) => <option key={s} value={s}>{s}</option>)}
+                    </select>
+                  </td>
+                  <td>
+                    <span className={`badge badge-sm ${SOURCE_BADGE[p.source_cat] ?? 'badge-ghost'} mb-1`}>{p.source_cat}</span>
+                    <select
+                      className="select select-xs w-full"
+                      value={p.source_cat}
+                      onChange={(e) => updateField(p, { source_cat: e.target.value })}
+                    >
+                      {SOURCE_CATS.map((s) => <option key={s} value={s}>{s}</option>)}
                     </select>
                   </td>
                   <td>
@@ -192,6 +220,7 @@ export default function SuiviProspects() {
               <F label="LinkedIn (URL)" full><input className="input input-bordered input-sm w-full" value={editing.linkedin ?? ''} onChange={(e) => setEditing({ ...editing, linkedin: e.target.value })} /></F>
               <F label="Date d'envoi"><input type="date" className="input input-bordered input-sm w-full" value={editing.date_envoi ?? ''} onChange={(e) => setEditing({ ...editing, date_envoi: e.target.value || null })} /></F>
               <F label="Statut"><select className="select select-bordered select-sm w-full" value={editing.statut} onChange={(e) => setEditing({ ...editing, statut: e.target.value })}>{PROSPECT_STATUTS.map((s) => <option key={s} value={s}>{s}</option>)}</select></F>
+              <F label="Source"><select className="select select-bordered select-sm w-full" value={editing.source_cat ?? 'Autre'} onChange={(e) => setEditing({ ...editing, source_cat: e.target.value })}>{SOURCE_CATS.map((s) => <option key={s} value={s}>{s}</option>)}</select></F>
               <F label="Notes" full><textarea className="textarea textarea-bordered textarea-sm w-full" rows={2} value={editing.notes ?? ''} onChange={(e) => setEditing({ ...editing, notes: e.target.value })} /></F>
             </div>
             <div className="modal-action">
