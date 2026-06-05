@@ -2,10 +2,9 @@
 import type { Prospect } from '@/types/alternance'
 
 // --- Coordonnées candidat (centralisées : à corriger ici une seule fois) ---
-// NB : vérifier le téléphone (le CV indique 07 68 37 07 76).
 export const CANDIDAT = {
   nom: 'Gaspard Catry',
-  tel: '07 68 37 07 67',
+  tel: '07 68 37 07 76',
   email: 'catry.gaspard@gmail.com',
   portfolio: 'portfolio.gazai.fr',
   linkedin: 'Gaspard Catry',

@@ -87,3 +87,14 @@ export interface ProgressRow {
   localisation: string | null
   fait: boolean
 }
+
+// Note / source utile (issues du partage IMT filière ITR : consignes, contacts, liens)
+export interface Note {
+  id: string
+  titre: string
+  contenu: string | null
+  lien: string | null
+  ordre: number
+  created_at: string
+  updated_at: string
+}

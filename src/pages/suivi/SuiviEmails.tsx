@@ -120,7 +120,7 @@ export default function SuiviEmails() {
       </div>
 
       <p className="text-xs text-base-content/40 mt-4">
-        Signature actuelle : {CANDIDAT.tel} · {CANDIDAT.email} · {CANDIDAT.portfolio} — à corriger dans <code>src/lib/alternance.ts</code> si besoin (le CV indique 07&nbsp;68&nbsp;37&nbsp;07&nbsp;76).
+        Signature actuelle : {CANDIDAT.tel} · {CANDIDAT.email} · {CANDIDAT.portfolio} — à modifier dans <code>src/lib/alternance.ts</code> si besoin.
       </p>
     </div>
   )

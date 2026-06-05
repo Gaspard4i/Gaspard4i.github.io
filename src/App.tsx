@@ -34,6 +34,7 @@ const SuiviOffers = lazy(() => import('@/pages/suivi/SuiviOffers'))
 const SuiviProspects = lazy(() => import('@/pages/suivi/SuiviProspects'))
 const SuiviEmails = lazy(() => import('@/pages/suivi/SuiviEmails'))
 const SuiviImport = lazy(() => import('@/pages/suivi/SuiviImport'))
+const SuiviInfos = lazy(() => import('@/pages/suivi/SuiviInfos'))
 const SuiviProgress = lazy(() => import('@/pages/suivi/SuiviProgress'))
 
 function AppContent() {
@@ -94,6 +95,7 @@ function AppContent() {
           <Route path="offres" element={<SuiviOffers />} />
           <Route path="prospection" element={<SuiviProspects />} />
           <Route path="emails" element={<SuiviEmails />} />
+          <Route path="infos" element={<SuiviInfos />} />
           <Route path="import" element={<SuiviImport />} />
         </Route>
       </Routes>
