@@ -88,10 +88,12 @@ export interface Prospect {
 
 // Vue publique "avancement" (lecture seule, partage)
 // etat : 'Fait' | 'Refusé' | 'Abandonné' | 'Plus disponible' | 'Pas encore'
+// type : 'Offre' | 'Contact direct'
 export interface ProgressRow {
+  type: string
   domaine: string
   entreprise: string
-  poste: string
+  poste: string | null
   localisation: string | null
   etat: string
 }
