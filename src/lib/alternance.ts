@@ -1,5 +1,4 @@
 // Helpers du suivi d'alternance : signature, modèles d'emails, Gmail, CSV, relances.
-import type { Prospect } from '@/types/alternance'
 
 // --- Coordonnées candidat (centralisées : à corriger ici une seule fois) ---
 export const CANDIDAT = {
@@ -111,20 +110,26 @@ ${SIGNATURE}`,
   },
 }
 
-/** Salutation personnalisée selon la civilité + nom du contact. */
-export function salutation(p?: Pick<Prospect, 'civilite' | 'nom'> | null): string {
-  if (p?.civilite && p?.nom) return `${p.civilite} ${p.nom},`
+/** Cible d'un email : nom du contact + date d'action (modèle unifié). */
+export interface MailTarget {
+  contact?: string | null
+  date_action?: string | null
+}
+
+/** Salutation personnalisée selon le nom du contact (ex: "Madame Protano"). */
+export function salutation(p?: MailTarget | null): string {
+  if (p?.contact && p.contact.trim()) return `${p.contact.trim()},`
   return 'Madame, Monsieur,'
 }
 
-/** Remplit un modèle pour un prospect donné (salutation + date d'envoi). */
-export function fillTemplate(kind: TemplateKind, p?: Prospect | null): { subject: string; body: string } {
+/** Remplit un modèle (salutation + date d'envoi). */
+export function fillTemplate(kind: TemplateKind, p?: MailTarget | null): { subject: string; body: string } {
   const t = EMAIL_TEMPLATES[kind]
   let body = t.body
   body = body.replace('Madame, Monsieur,', salutation(p))
-  if (p?.date_envoi) {
-    body = body.split("[date d'envoi]").join(formatDateFr(p.date_envoi))
-    body = body.split("[date d'envoi initial]").join(formatDateFr(p.date_envoi))
+  if (p?.date_action) {
+    body = body.split("[date d'envoi]").join(formatDateFr(p.date_action))
+    body = body.split("[date d'envoi initial]").join(formatDateFr(p.date_action))
   }
   return { subject: t.subject, body }
 }

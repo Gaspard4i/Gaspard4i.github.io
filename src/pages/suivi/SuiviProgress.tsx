@@ -16,7 +16,7 @@ function etatMeta(etat: string) {
   return ETAT_META[etat] ?? ETAT_META['Pas encore']
 }
 
-type TypeFilter = 'all' | 'Offre' | 'Contact direct'
+type TypeFilter = 'all' | 'Offre' | 'Candidature libre'
 
 export default function SuiviProgress() {
   const { data, loading } = useSupabase<ProgressRow[]>(() =>
@@ -33,12 +33,12 @@ export default function SuiviProgress() {
   const pct = rows.length ? Math.round((fait / rows.length) * 100) : 0
 
   const nbOffres = all.filter((r) => r.type === 'Offre').length
-  const nbContacts = all.filter((r) => r.type === 'Contact direct').length
+  const nbContacts = all.filter((r) => r.type === 'Candidature libre').length
 
   const TABS: { key: TypeFilter; label: string; count: number }[] = [
     { key: 'all', label: 'Tout', count: all.length },
     { key: 'Offre', label: 'Offres', count: nbOffres },
-    { key: 'Contact direct', label: 'Contacts directs', count: nbContacts },
+    { key: 'Candidature libre', label: 'Candidatures libres', count: nbContacts },
   ]
 
   return (
@@ -92,7 +92,7 @@ export default function SuiviProgress() {
                   {rows.map((r, i) => {
                     const m = etatMeta(r.etat)
                     const Icon = m.icon
-                    const isContact = r.type === 'Contact direct'
+                    const isContact = r.type === 'Candidature libre'
                     return (
                       <tr key={i} className="hover">
                         <td>

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Upload, Download, FileWarning, CheckCircle2 } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { parseCsv, toCsv, downloadFile } from '@/lib/alternance'
-import type { Offer, Prospect } from '@/types/alternance'
+import type { AlternanceItem } from '@/types/alternance'
 
 type Target = 'offers' | 'prospects'
 
@@ -90,11 +90,13 @@ export default function SuiviImport() {
         lien: lien && lien.toLowerCase() !== 'ouvrir' ? lien : null,
         priorite: get(r, c.priorite) || null,
         statut: get(r, c.statut) || 'À postuler',
-        date_candidature: toIsoDate(get(r, c.date_candidature)),
+        date_action: toIsoDate(get(r, c.date_candidature)),
         date_relance: toIsoDate(get(r, c.date_relance)),
         contact: get(r, c.contact) || null,
         notes: get(r, c.notes) || null,
         zone_carte: get(r, c.zone_carte) || null,
+        type: 'Offre',
+        source_cat: 'IMT',
       }
     })
   }
@@ -116,18 +118,19 @@ export default function SuiviImport() {
     return rows.filter((r) => get(r, c.nom) || get(r, c.entreprise)).map((r) => {
       const secteur = get(r, c.secteur)
       const prio = PRIO_KEYWORDS.some((k) => secteur.toLowerCase().includes(k))
+      const contact = [get(r, c.civilite), get(r, c.prenom), get(r, c.nom)].filter(Boolean).join(' ').trim()
       return {
-        nom: get(r, c.nom) || null,
-        prenom: get(r, c.prenom) || null,
-        civilite: get(r, c.civilite) || null,
+        type: 'Candidature libre',
+        contact: contact || null,
         linkedin: get(r, c.linkedin) || null,
         poste: get(r, c.poste) || null,
         email: get(r, c.email) || null,
         entreprise: get(r, c.entreprise) || null,
         tel: get(r, c.tel) || null,
         secteur: secteur || null,
-        ville: get(r, c.adresse) ? villeFromAddress(get(r, c.adresse)) : null,
-        prio,
+        domaine: secteur || 'Autre / à trier',
+        localisation: get(r, c.adresse) ? villeFromAddress(get(r, c.adresse)) : null,
+        priorite: prio ? 'Haute' : null,
         statut: 'À envoyer',
       }
     })
@@ -136,8 +139,7 @@ export default function SuiviImport() {
   async function doImport() {
     if (!parsed || parsed.length === 0) return
     setImporting(true); setErr(null); setDone(null)
-    const table = target === 'offers' ? 'alternance_offers' : 'alternance_prospects'
-    const { error } = await supabase.from(table).insert(parsed)
+    const { error } = await supabase.from('alternance_items').insert(parsed)
     setImporting(false)
     if (error) setErr('Erreur Supabase : ' + error.message)
     else {
@@ -147,14 +149,15 @@ export default function SuiviImport() {
   }
 
   async function exportData(t: Target) {
+    const type = t === 'offers' ? 'Offre' : 'Candidature libre'
+    const { data } = await supabase.from('alternance_items').select('*').eq('type', type).order('entreprise')
+    const items = (data as AlternanceItem[]) ?? []
     if (t === 'offers') {
-      const { data } = await supabase.from('alternance_offers').select('*').order('domaine')
-      const rows = (data as Offer[] ?? []).map((o) => [o.domaine, o.entreprise, o.poste, o.localisation, o.source, o.ref, o.lien, o.priorite, o.statut, o.date_candidature, o.date_relance, o.contact, o.notes, o.zone_carte])
-      downloadFile('offres.csv', toCsv(['Domaine', 'Entreprise', 'Poste', 'Localisation', 'Source', 'Réf', 'Lien', 'Priorité', 'Statut', 'Date candidature', 'Date relance', 'Contact', 'Notes', 'Zone'], rows))
+      const rows = items.map((o) => [o.domaine, o.entreprise, o.poste, o.localisation, o.source, o.ref, o.lien, o.priorite, o.statut, o.date_action, o.date_relance, o.contact, o.email, o.notes, o.zone_carte])
+      downloadFile('offres.csv', toCsv(['Domaine', 'Entreprise', 'Poste', 'Localisation', 'Source', 'Réf', 'Lien', 'Priorité', 'Statut', 'Date action', 'Date relance', 'Contact', 'Email', 'Notes', 'Zone'], rows))
     } else {
-      const { data } = await supabase.from('alternance_prospects').select('*').order('entreprise')
-      const rows = (data as Prospect[] ?? []).map((p) => [p.prio, p.civilite, p.nom, p.prenom, p.poste, p.entreprise, p.ville, p.secteur, p.email, p.tel, p.linkedin, p.date_envoi, p.statut, p.notes])
-      downloadFile('prospection_drh.csv', toCsv(['Prio', 'Civilité', 'Nom', 'Prénom', 'Poste', 'Entreprise', 'Ville', 'Secteur', 'Email', 'Tél', 'LinkedIn', 'Date envoi', 'Statut', 'Notes'], rows))
+      const rows = items.map((p) => [p.priorite, p.contact, p.poste, p.entreprise, p.localisation, p.secteur, p.email, p.tel, p.linkedin, p.date_action, p.statut, p.source_cat, p.notes])
+      downloadFile('candidatures_libres.csv', toCsv(['Priorité', 'Contact', 'Poste', 'Entreprise', 'Localisation', 'Secteur', 'Email', 'Tél', 'LinkedIn', 'Date action', 'Statut', 'Source', 'Notes'], rows))
     }
   }
 
