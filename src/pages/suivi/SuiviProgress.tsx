@@ -27,10 +27,22 @@ export default function SuiviProgress() {
   const all = useMemo(() => data ?? [], [data])
   const rows = useMemo(() => (fType === 'all' ? all : all.filter((r) => r.type === fType)), [all, fType])
 
+  const total = rows.length
   const fait = rows.filter((r) => r.etat === 'Fait').length
   const refuse = rows.filter((r) => r.etat === 'Refusé').length
   const abandonne = rows.filter((r) => r.etat === 'Abandonné').length
-  const pct = rows.length ? Math.round((fait / rows.length) * 100) : 0
+  const plusDispo = rows.filter((r) => r.etat === 'Plus disponible').length
+  const pasEncore = total - fait - refuse - abandonne - plusDispo
+  const pct = total ? Math.round((fait / total) * 100) : 0
+
+  // Segments de la barre d'avancement (ordre = empilement de gauche à droite).
+  const SEGMENTS = [
+    { n: fait, cls: 'bg-success', label: 'faites' },
+    { n: refuse, cls: 'bg-error', label: 'refusées' },
+    { n: abandonne, cls: 'bg-warning', label: 'abandonnées' },
+    { n: plusDispo, cls: 'bg-neutral', label: 'plus dispo' },
+    { n: pasEncore, cls: 'bg-base-300', label: 'pas encore' },
+  ].filter((s) => s.n > 0)
 
   const nbOffres = all.filter((r) => r.type === 'Offre').length
   const nbContacts = all.filter((r) => r.type === 'Candidature libre').length
@@ -59,13 +71,24 @@ export default function SuiviProgress() {
               <div className="card-body p-4">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm text-base-content/70">Candidatures faites</span>
-                  <span className="font-bold text-base-content">{fait} / {rows.length}</span>
+                  <span className="font-bold text-base-content">{fait} / {total} ({pct} %)</span>
                 </div>
-                <progress className="progress progress-primary w-full" value={pct} max={100} />
+                <div className="flex w-full h-3 rounded-full overflow-hidden bg-base-300" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}>
+                  {SEGMENTS.map((s) => (
+                    <div
+                      key={s.label}
+                      className={s.cls}
+                      style={{ width: `${(s.n / total) * 100}%` }}
+                      title={`${s.n} ${s.label}`}
+                    />
+                  ))}
+                </div>
                 <div className="flex flex-wrap gap-3 mt-3 text-xs">
                   <span className="inline-flex items-center gap-1 text-success"><CheckCircle2 size={13} /> {fait} faites</span>
                   <span className="inline-flex items-center gap-1 text-error"><XCircle size={13} /> {refuse} refusées</span>
                   <span className="inline-flex items-center gap-1 text-warning"><MinusCircle size={13} /> {abandonne} abandonnées</span>
+                  {plusDispo > 0 && <span className="inline-flex items-center gap-1 text-base-content/60"><Ban size={13} /> {plusDispo} plus dispo</span>}
+                  <span className="inline-flex items-center gap-1 text-base-content/40"><Circle size={13} /> {pasEncore} pas encore</span>
                 </div>
               </div>
             </div>
