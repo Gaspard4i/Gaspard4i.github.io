@@ -33,7 +33,8 @@ export default function SuiviProgress() {
   const abandonne = rows.filter((r) => r.etat === 'Abandonné').length
   const plusDispo = rows.filter((r) => r.etat === 'Plus disponible').length
   const pasEncore = total - fait - refuse - abandonne - plusDispo
-  const pct = total ? Math.round((fait / total) * 100) : 0
+  const traitees = total - pasEncore // toutes celles où une action a été faite
+  const pct = total ? Math.round((traitees / total) * 100) : 0
 
   // Segments de la barre d'avancement (ordre = empilement de gauche à droite).
   const SEGMENTS = [
@@ -70,8 +71,8 @@ export default function SuiviProgress() {
             <div className="card bg-base-100 border border-base-300 mb-4">
               <div className="card-body p-4">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm text-base-content/70">Candidatures faites</span>
-                  <span className="font-bold text-base-content">{fait} / {total} ({pct} %)</span>
+                  <span className="text-sm text-base-content/70">Candidatures traitées</span>
+                  <span className="font-bold text-base-content">{traitees} / {total} ({pct} %)</span>
                 </div>
                 <div className="flex w-full h-3 rounded-full overflow-hidden bg-base-300" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}>
                   {SEGMENTS.map((s) => (
