@@ -1,5 +1,5 @@
-import { useMemo } from 'react'
-import { CheckCircle2, Circle, XCircle, MinusCircle, Ban } from 'lucide-react'
+import { useMemo, useState } from 'react'
+import { CheckCircle2, Circle, XCircle, MinusCircle, Ban, Briefcase, UserRound } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { useSupabase } from '@/hooks/useSupabase'
 import type { ProgressRow } from '@/types/alternance'
@@ -16,16 +16,30 @@ function etatMeta(etat: string) {
   return ETAT_META[etat] ?? ETAT_META['Pas encore']
 }
 
+type TypeFilter = 'all' | 'Offre' | 'Contact direct'
+
 export default function SuiviProgress() {
   const { data, loading } = useSupabase<ProgressRow[]>(() =>
-    supabase.from('alternance_progress_public').select('*').order('domaine').order('entreprise')
+    supabase.from('alternance_progress_public').select('*').order('entreprise')
   )
+  const [fType, setFType] = useState<TypeFilter>('all')
 
-  const rows = useMemo(() => data ?? [], [data])
+  const all = useMemo(() => data ?? [], [data])
+  const rows = useMemo(() => (fType === 'all' ? all : all.filter((r) => r.type === fType)), [all, fType])
+
   const fait = rows.filter((r) => r.etat === 'Fait').length
   const refuse = rows.filter((r) => r.etat === 'Refusé').length
   const abandonne = rows.filter((r) => r.etat === 'Abandonné').length
   const pct = rows.length ? Math.round((fait / rows.length) * 100) : 0
+
+  const nbOffres = all.filter((r) => r.type === 'Offre').length
+  const nbContacts = all.filter((r) => r.type === 'Contact direct').length
+
+  const TABS: { key: TypeFilter; label: string; count: number }[] = [
+    { key: 'all', label: 'Tout', count: all.length },
+    { key: 'Offre', label: 'Offres', count: nbOffres },
+    { key: 'Contact direct', label: 'Contacts directs', count: nbContacts },
+  ]
 
   return (
     <div className="min-h-screen bg-base-200">
@@ -37,11 +51,11 @@ export default function SuiviProgress() {
 
         {loading ? (
           <div className="flex justify-center py-20"><span className="loading loading-spinner loading-lg" /></div>
-        ) : rows.length === 0 ? (
+        ) : all.length === 0 ? (
           <p className="text-base-content/50 text-sm">Aucune candidature enregistrée pour le moment.</p>
         ) : (
           <>
-            <div className="card bg-base-100 border border-base-300 mb-6">
+            <div className="card bg-base-100 border border-base-300 mb-4">
               <div className="card-body p-4">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm text-base-content/70">Candidatures faites</span>
@@ -56,20 +70,41 @@ export default function SuiviProgress() {
               </div>
             </div>
 
+            <div role="tablist" className="tabs tabs-boxed mb-4 w-fit">
+              {TABS.map((t) => (
+                <button
+                  key={t.key}
+                  role="tab"
+                  className={`tab ${fType === t.key ? 'tab-active' : ''}`}
+                  onClick={() => setFType(t.key)}
+                >
+                  {t.label} <span className="ml-1 text-xs opacity-60">({t.count})</span>
+                </button>
+              ))}
+            </div>
+
             <div className="overflow-x-auto border border-base-300 rounded-box bg-base-100">
               <table className="table table-sm">
                 <thead>
-                  <tr><th>Entreprise</th><th>Poste</th><th>Domaine</th><th className="text-center">État</th></tr>
+                  <tr><th>Type</th><th>Entreprise</th><th>Poste / Secteur</th><th className="text-center">État</th></tr>
                 </thead>
                 <tbody>
                   {rows.map((r, i) => {
                     const m = etatMeta(r.etat)
                     const Icon = m.icon
+                    const isContact = r.type === 'Contact direct'
                     return (
                       <tr key={i} className="hover">
+                        <td>
+                          <span className={`badge badge-sm ${isContact ? 'badge-accent' : 'badge-ghost'} gap-1`}>
+                            {isContact ? <UserRound size={11} /> : <Briefcase size={11} />}
+                            {isContact ? 'Contact' : 'Offre'}
+                          </span>
+                        </td>
                         <td className="font-medium text-base-content">{r.entreprise}</td>
-                        <td className="text-sm text-base-content/70 max-w-xs"><span className="line-clamp-2">{r.poste}</span></td>
-                        <td className="text-xs text-base-content/50">{r.domaine}</td>
+                        <td className="text-sm text-base-content/70 max-w-xs">
+                          <span className="line-clamp-2">{r.poste ?? r.domaine}</span>
+                        </td>
                         <td className="text-center">
                           <span className={`inline-flex items-center gap-1 text-sm ${m.cls}`}><Icon size={15} /> {m.label}</span>
                         </td>
