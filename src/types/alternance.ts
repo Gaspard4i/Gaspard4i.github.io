@@ -86,9 +86,59 @@ export interface Prospect {
   updated_at: string
 }
 
+// Table unifiée : offres + candidatures libres (ex-prospection DRH).
+export const ITEM_TYPES = ['Offre', 'Candidature libre'] as const
+export type ItemType = (typeof ITEM_TYPES)[number]
+
+// Statuts unifiés (offres + candidatures libres).
+export const ITEM_STATUTS = [
+  'À postuler',
+  'À envoyer',
+  'Candidature envoyée',
+  'Envoyé',
+  'Relancé',
+  'Relance 1 faite',
+  'Relance 2 faite',
+  'Entretien',
+  'Réponse +',
+  'Réponse -',
+  'Refusé',
+  'Accepté',
+  'Abandonné',
+  'Clôturé',
+  'Plus disponible',
+] as const
+export type ItemStatut = (typeof ITEM_STATUTS)[number]
+
+export interface AlternanceItem {
+  id: string
+  type: string // 'Offre' | 'Candidature libre'
+  domaine: string
+  entreprise: string
+  poste: string | null
+  localisation: string | null
+  email: string | null
+  contact: string | null
+  tel: string | null
+  linkedin: string | null
+  secteur: string | null
+  source: string | null
+  source_cat: string
+  ref: string | null
+  lien: string | null
+  priorite: string | null
+  statut: string
+  date_action: string | null
+  date_relance: string | null
+  notes: string | null
+  zone_carte: string | null
+  created_at: string
+  updated_at: string
+}
+
 // Vue publique "avancement" (lecture seule, partage)
 // etat : 'Fait' | 'Refusé' | 'Abandonné' | 'Plus disponible' | 'Pas encore'
-// type : 'Offre' | 'Contact direct'
+// type : 'Offre' | 'Candidature libre'
 export interface ProgressRow {
   type: string
   domaine: string

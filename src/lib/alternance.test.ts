@@ -33,16 +33,11 @@ describe('emails', () => {
     expect(url).toContain('su=Sujet')
   })
   it('salutation personnalise selon le contact', () => {
-    expect(salutation({ civilite: 'Madame', nom: 'Protano' })).toBe('Madame Protano,')
+    expect(salutation({ contact: 'Madame Protano' })).toBe('Madame Protano,')
     expect(salutation(null)).toBe('Madame, Monsieur,')
   })
   it('fillTemplate remplace la salutation', () => {
-    const { body } = fillTemplate('candidature', {
-      id: '1', civilite: 'Monsieur', nom: 'Lepage', prio: false, statut: 'À envoyer',
-      prenom: null, poste: null, entreprise: null, ville: null, secteur: null,
-      email: null, tel: null, linkedin: null, date_envoi: null, notes: null,
-      source_cat: 'Autre', created_at: '', updated_at: '',
-    })
+    const { body } = fillTemplate('candidature', { contact: 'Monsieur Lepage', date_action: null })
     expect(body.startsWith('Monsieur Lepage,')).toBe(true)
   })
 })

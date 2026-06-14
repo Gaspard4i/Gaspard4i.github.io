@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useTheme } from '@/hooks/useTheme'
 import PageLayout from '@/components/templates/PageLayout'
 import AdminLayout from '@/components/templates/AdminLayout'
@@ -30,8 +30,7 @@ const AdminTranslations = lazy(() => import('@/pages/admin/AdminTranslations'))
 const SuiviLayout = lazy(() => import('@/components/templates/SuiviLayout'))
 const SuiviLogin = lazy(() => import('@/pages/suivi/SuiviLogin'))
 const SuiviDashboard = lazy(() => import('@/pages/suivi/SuiviDashboard'))
-const SuiviOffers = lazy(() => import('@/pages/suivi/SuiviOffers'))
-const SuiviProspects = lazy(() => import('@/pages/suivi/SuiviProspects'))
+const SuiviItems = lazy(() => import('@/pages/suivi/SuiviItems'))
 const SuiviEmails = lazy(() => import('@/pages/suivi/SuiviEmails'))
 const SuiviImport = lazy(() => import('@/pages/suivi/SuiviImport'))
 const SuiviInfos = lazy(() => import('@/pages/suivi/SuiviInfos'))
@@ -92,8 +91,9 @@ function AppContent() {
           }
         >
           <Route index element={<SuiviDashboard />} />
-          <Route path="offres" element={<SuiviOffers />} />
-          <Route path="prospection" element={<SuiviProspects />} />
+          <Route path="candidatures" element={<SuiviItems />} />
+          <Route path="offres" element={<Navigate to="/suivi-alternance/candidatures" replace />} />
+          <Route path="prospection" element={<Navigate to="/suivi-alternance/candidatures" replace />} />
           <Route path="emails" element={<SuiviEmails />} />
           <Route path="infos" element={<SuiviInfos />} />
           <Route path="import" element={<SuiviImport />} />

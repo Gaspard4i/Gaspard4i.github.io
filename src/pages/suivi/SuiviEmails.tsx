@@ -3,29 +3,29 @@ import { useSearchParams } from 'react-router-dom'
 import { Copy, Check, Send, Paperclip, Mail } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { useSupabase } from '@/hooks/useSupabase'
-import type { Prospect } from '@/types/alternance'
+import type { AlternanceItem } from '@/types/alternance'
 import { EMAIL_TEMPLATES, fillTemplate, gmailComposeUrl, mailtoUrl, CANDIDAT } from '@/lib/alternance'
 import type { TemplateKind } from '@/lib/alternance'
 
 export default function SuiviEmails() {
   const [params] = useSearchParams()
-  const { data: prospects } = useSupabase<Prospect[]>(() =>
-    supabase.from('alternance_prospects').select('*').order('prio', { ascending: false }).order('entreprise')
+  const { data: items } = useSupabase<AlternanceItem[]>(() =>
+    supabase.from('alternance_items').select('*').not('email', 'is', null).order('entreprise')
   )
   const [kind, setKind] = useState<TemplateKind>('candidature')
-  const [prospectId, setProspectId] = useState<string>('')
+  const [itemId, setItemId] = useState<string>('')
   const [to, setTo] = useState('')
   const [subject, setSubject] = useState('')
   const [body, setBody] = useState('')
   const [copied, setCopied] = useState<'body' | 'subject' | null>(null)
 
-  // Préselection via ?prospect=<id>
+  // Préselection via ?item=<id>
   useEffect(() => {
-    const pid = params.get('prospect')
-    if (pid) setProspectId(pid)
+    const id = params.get('item')
+    if (id) setItemId(id)
   }, [params])
 
-  const selected = prospects?.find((p) => p.id === prospectId) ?? null
+  const selected = items?.find((p) => p.id === itemId) ?? null
 
   // (Re)génère le modèle quand le type ou le destinataire change
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function SuiviEmails() {
     setBody(b)
     setTo(selected?.email ?? '')
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [kind, prospectId])
+  }, [kind, itemId])
 
   async function copy(what: 'body' | 'subject') {
     await navigator.clipboard.writeText(what === 'body' ? body : subject)
@@ -61,11 +61,11 @@ export default function SuiviEmails() {
           </select>
         </div>
         <div className="form-control sm:col-span-2">
-          <label className="label py-1"><span className="label-text text-xs">Destinataire (contact DRH)</span></label>
-          <select className="select select-bordered select-sm w-full" value={prospectId} onChange={(e) => setProspectId(e.target.value)}>
+          <label className="label py-1"><span className="label-text text-xs">Destinataire</span></label>
+          <select className="select select-bordered select-sm w-full" value={itemId} onChange={(e) => setItemId(e.target.value)}>
             <option value="">— Aucun (saisie manuelle) —</option>
-            {prospects?.map((p) => (
-              <option key={p.id} value={p.id}>{p.entreprise} — {p.civilite} {p.nom} {p.email ? `(${p.email})` : ''}</option>
+            {items?.map((p) => (
+              <option key={p.id} value={p.id}>{p.entreprise} — {p.contact ?? p.poste ?? ''} {p.email ? `(${p.email})` : ''}</option>
             ))}
           </select>
         </div>
