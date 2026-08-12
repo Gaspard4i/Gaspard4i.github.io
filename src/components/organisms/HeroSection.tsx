@@ -5,6 +5,7 @@ import { Linkedin } from 'lucide-react'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import Avatar from '@/components/atoms/Avatar'
 import SocialLink from '@/components/atoms/SocialLink'
+import SkeletonBox from '@/components/atoms/SkeletonBox'
 import { useSupabase } from '@/hooks/useSupabase'
 import { useI18nField } from '@/hooks/useI18nField'
 import { supabase } from '@/lib/supabase'
@@ -27,14 +28,19 @@ export default function HeroSection() {
   const resolve = useI18nField()
   const [roleIndex, setRoleIndex] = useState(0)
   const [visible, setVisible] = useState(true)
-  const { data: profile } = useSupabase<Profile>(() =>
+  const { data: profile, loading: profileLoading } = useSupabase<Profile>(() =>
     supabase.from('profile').select('*').single()
   )
-  const { data: heroRoles } = useSupabase<HeroRole[]>(() =>
+  const { data: heroRoles, loading: rolesLoading } = useSupabase<HeroRole[]>(() =>
     supabase.from('hero_roles').select('*').order('sort_order')
   )
+  // Tant que le profil charge, on n'affiche PAS de texte de repli (i18n) : il peut provenir
+  // d'un fr.json encore en cache navigateur et flasher une version périmée. Skeleton à la place.
+  // Si la requête a fini sans données (erreur réseau), on retombe sur le fallback i18n.
   const bio = profile
     ? resolve(profile.hero_key, i18n.language.startsWith('fr') ? profile.hero_fr : profile.hero_en)
+    : profileLoading
+    ? null
     : t('hero.bio')
 
   const roles = heroRoles && heroRoles.length > 0
@@ -61,15 +67,26 @@ export default function HeroSection() {
             {t('hero.name')}
           </h1>
           <div className="h-8 mb-6">
-            <p
-              className={`text-xl text-primary font-medium transition-opacity duration-300 ${
-                visible ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              {roles[roleIndex]}
-            </p>
+            {rolesLoading ? (
+              <SkeletonBox className="h-6 w-56" />
+            ) : (
+              <p
+                className={`text-xl text-primary font-medium transition-opacity duration-300 ${
+                  visible ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                {roles[roleIndex]}
+              </p>
+            )}
           </div>
-          <p className="text-base-content/70 max-w-md mb-8">{bio}</p>
+          {bio === null ? (
+            <div className="max-w-md mb-8 space-y-2">
+              <SkeletonBox className="h-4 w-full" />
+              <SkeletonBox className="h-4 w-4/5" />
+            </div>
+          ) : (
+            <p className="text-base-content/70 max-w-md mb-8">{bio}</p>
+          )}
           <div className="flex items-center gap-4 flex-wrap">
             <Link to="/about" className="btn btn-primary">
               {t('hero.cta')}
