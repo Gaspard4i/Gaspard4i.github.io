@@ -9,11 +9,11 @@
     "hero": {
         "greeting": "Hello, my name is",
         "name": "Gaspard",
-        "bio": "Full-stack developer apprentice at Mandarine Academy, 3rd year Computer Science student at IUT de Lille.",
+        "bio": "Full-stack developer, holder of a BUT (Bachelor's) in Computer Science from IUT de Lille and finishing my apprenticeship at Mandarine Academy.",
         "cta": "About me",
         "ctaProjects": "My projects",
         "role": {
-            "student": "Computer Science student",
+            "student": "Computer Science graduate (BUT)",
             "fullstack": "full-stack developer",
             "web": "web developer"
         }
@@ -33,7 +33,7 @@
     "about": {
         "title": "About",
         "subtitle": "Who am I?",
-        "bio": "I am Gaspard Catry, a 20-year-old full-stack developer based in Lille. Currently in my 3rd year of Computer Science (BUT) at IUT de Lille, doing my work-study at Mandarine Academy.",
+        "bio": "I am Gaspard Catry, a 20-year-old full-stack developer based in Lille. I hold a BUT (Bachelor's) in Computer Science from IUT de Lille and I'm finishing my apprenticeship at Mandarine Academy.",
         "skills": "Technical Skills",
         "skillsSubtitle": "The technologies I use daily.",
         "experience": "Full Timeline",
@@ -192,9 +192,9 @@
         }
     },
     "profile": {
-        "hero": "Full-stack developer apprentice at Mandarine Academy, 3rd year Computer Science (BUT) at IUT de Lille. I enjoy team projects as much as solo ones. Have a look around.",
-        "about": "I'm **Gaspard Catry**, 20, full-stack developer based in **Lille**. 3rd year **BUT Computer Science** at **IUT de Lille**, apprenticeship at **Mandarine Academy** on a **PHP / Symfony / Tailwind** stack.\n\nBefore that, internship at **Nextoo** (Roubaix): intensive **Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker** training, 3 internal web apps. Written recommendation from the Deputy MD at the end.\n\nOn the side I run personal projects in production (**MaGare**, web reproduction of the SNCF app) and dabble in open-source on weekends. Goal: software engineer on full-stack web apps.",
-        "positioning": "I'm finishing a **BUT Computer Science** (Application Development track), with experience combining **Java / Spring Boot / Vue.js** (Nextoo internship) and **PHP / Symfony / Tailwind** (Mandarine apprenticeship).\n\nLooking for a **full-stack developer** or **junior software engineer** role in a demanding technical team where I can work on architecture and code quality.",
+        "hero": "Full-stack developer, holder of a BUT (Bachelor's) in Computer Science from IUT de Lille and finishing my apprenticeship at Mandarine Academy. I enjoy team projects as much as solo ones. Have a look around.",
+        "about": "I'm **Gaspard Catry**, 20, full-stack developer based in **Lille**. I hold a **BUT (Bachelor's) in Computer Science** from **IUT de Lille** and I'm finishing my apprenticeship at **Mandarine Academy** on a **PHP / Symfony / Tailwind** stack.\n\nBefore that, internship at **Nextoo** (Roubaix): intensive **Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker** training, 3 internal web apps. Written recommendation from the Deputy MD at the end.\n\nOn the side I run personal projects in production (**MaGare**, web reproduction of the SNCF app) and dabble in open-source on weekends. Goal: software engineer on full-stack web apps.",
+        "positioning": "I hold a **BUT in Computer Science** (Application Development track), with experience combining **Java / Spring Boot / Vue.js** (Nextoo internship) and **PHP / Symfony / Tailwind** (Mandarine apprenticeship).\n\nLooking for a **full-stack developer** or **junior software engineer** role in a demanding technical team where I can work on architecture and code quality.",
         "reflexive": "I learn fast in a demanding technical environment. Ramping up on Spring Boot and Vue in 10 weeks at Nextoo showed me I could absorb a new stack quickly. At Mandarine I confirmed the same thing on a PHP/Symfony stack I didn't know: I adapt fast to a new environment.\n\nI'm more effective when someone explains *why* we're doing something. The *how* I can usually find on my own with the docs. My biggest growth moments come when my mentor takes the time to explain an architectural choice or the reason behind a constraint.\n\nMoving into a company also taught me to manage my time differently: estimate, prioritize, communicate on progress.",
         "strengths": "**Fast learning.** Confirmed by my Nextoo internship and my Mandarine apprenticeship, both on stacks I didn't (really) know.\n\n**Teamwork.** DinnerMatch and several other group projects confirmed it. I integrate easily, even when the average age is higher — I make the effort.\n\n**Stack adaptability.** I'll spend personal time figuring out the tools in place. I also try to keep up with new tech, even if things move fast with AI.\n\n**Considered use of AI.** I've grown with the models since COVID, I'm good at prompting. I know it's a tool — security-risky if you don't understand what it produces, so you have to stay a developer to review, fix, and code without it (with the docs).\n\n**Technical rigor.** Tests, docs, conventions (GitFlow, conventional commits, clean architecture). Positive code reviews.\n\n**Curiosity.** Personal projects (MaGare, this portfolio), open-source, regular tech watch.",
         "improvements": "**Meeting communication.** Reserved lately, especially at the start of a mission: I observe everyone's level first to figure out my place in the group before speaking up. Improving via daily stand-ups at Mandarine.\n\n**Time estimation.** Tendency to underestimate (especially front). Learning to break things down finer and leave realistic buffers.\n\n**Asking for help.** I can dive into a technical problem too long before reaching out. Trying to spot earlier when a colleague would help me move faster.",

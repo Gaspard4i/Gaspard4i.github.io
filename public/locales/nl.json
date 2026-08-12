@@ -9,11 +9,11 @@
     "hero": {
         "greeting": "Hallo, ik heet",
         "name": "Gaspard",
-        "bio": "Full-stack developer in een duaal traject bij Mandarine Academy, 3e jaars Informatica student aan het IUT de Lille.",
+        "bio": "Full-stack developer, afgestudeerd met een BUT in Informatica (IUT de Lille) en aan het einde van mijn duaal traject bij Mandarine Academy.",
         "cta": "Over mij",
         "ctaProjects": "Mijn projecten",
         "role": {
-            "student": "informatica student",
+            "student": "afgestudeerd in informatica (BUT)",
             "fullstack": "full-stack developer",
             "web": "webontwikkelaar"
         }
@@ -33,7 +33,7 @@
     "about": {
         "title": "Over mij",
         "subtitle": "Wie ben ik?",
-        "bio": "Ik ben Gaspard Catry, een 20-jarige full-stack developer uit Lille. Momenteel in mijn 3e jaar Informatica aan het IUT de Lille, loop ik mijn duaal traject bij Mandarine Academy.",
+        "bio": "Ik ben Gaspard Catry, een 20-jarige full-stack developer uit Lille. Afgestudeerd met een BUT in Informatica aan het IUT de Lille, ben ik aan het einde van mijn duaal traject bij Mandarine Academy.",
         "skills": "Technische vaardigheden",
         "skillsSubtitle": "De technologieën die ik dagelijks gebruik.",
         "experience": "Volledig parcours",
@@ -192,9 +192,9 @@
         }
     },
     "profile": {
-        "hero": "Full-stack developer in een duaal traject bij Mandarine Academy, 3e jaars Informatica student aan het IUT de Lille. Gepassioneerd door het ontwerpen van moderne webapplicaties - Java, Spring Boot, Vue.js, PHP/Symfony.",
+        "hero": "Full-stack developer, afgestudeerd met een BUT in Informatica (IUT de Lille) en aan het einde van mijn duaal traject bij Mandarine Academy. Gepassioneerd door het ontwerpen van moderne webapplicaties - Java, Spring Boot, Vue.js, PHP/Symfony.",
         "about": "Ik ben Gaspard Catry, een 20-jarige full-stack developer uit Lille. Momenteel in mijn 3e jaar Informatica aan het IUT de Lille, loop ik mijn duaal traject bij Mandarine Academy met een PHP/Symfony/Tailwind-stack.\n\nMijn stage bij Nextoo (Roubaix) stelde mij in staat om een intensieve opleiding te volgen in Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker en 3 interne webapplicaties te ontwikkelen. De adjunct-directeur van Nextoo heeft mij aanbevolen voor mijn nauwkeurigheid, zelfstandigheid en intellectuele nieuwsgierigheid.\n\nBuiten werk en studie ontwikkel ik persoonlijke projecten in productie: MaGare (webreproductie van de SNCF-app). Ik draag ook bij aan open-source projecten in het weekend. Mijn doel: software-engineer worden, gespecialiseerd in robuuste en performante full-stack webapplicaties.",
-        "positioning": "Full-stack developer aan het einde van mijn Informatica-opleiding, specialiseer ik mij in het ontwerpen van robuuste en performante webapplicaties. Mijn ervaring combineert een intensieve stage bij Nextoo (Java/Spring Boot/Vue.js) en een duaal traject bij Mandarine Academy (PHP/Symfony/Tailwind). Ik zoek een positie als full-stack developer of junior software-engineer, idealiter in een veeleisend technisch team waar ik kan blijven groeien in software-architectuur en -kwaliteit.",
+        "positioning": "Full-stack developer met een BUT in Informatica, specialiseer ik mij in het ontwerpen van robuuste en performante webapplicaties. Mijn ervaring combineert een intensieve stage bij Nextoo (Java/Spring Boot/Vue.js) en een duaal traject bij Mandarine Academy (PHP/Symfony/Tailwind). Ik zoek een positie als full-stack developer of junior software-engineer, idealiter in een veeleisend technisch team waar ik kan blijven groeien in software-architectuur en -kwaliteit.",
         "reflexive": "Ik leer snel in een veeleisende technische omgeving. Bij Nextoo liet het opbouwen van Spring Boot- en Vue-kennis in 10 weken mij zien dat ik snel een nieuwe stack kon verwerken. Bij Mandarine bevestigde ik hetzelfde op een PHP/Symfony-stack die ik niet kende: ik pas mij snel aan een nieuwe omgeving aan.\n\nIk ben effectiever wanneer iemand mij uitlegt *waarom* we iets doen. Het *hoe* kan ik zelf vinden met de documentatie. De beste leermomenten zijn die waarop mijn begeleider de tijd neemt om een architectuurkeuze of de reden van een beperking uit te leggen.\n\nDe overstap naar het bedrijf heeft mij ook geleerd mijn tijd anders te beheren: schatten, prioriteren, communiceren over voortgang.",
         "strengths": "**Snel leren.** Bevestigd door mijn stage bij Nextoo en mijn duaal traject bij Mandarine, telkens op stacks die ik (bijna) niet kende.\n\n**Teamwerk.** DinnerMatch en meerdere andere groepsprojecten hebben het bevestigd. Ik integreer makkelijk, zelfs wanneer de gemiddelde leeftijd hoger is — ik doe de moeite.\n\n**Stack-aanpassing.** Ik besteed persoonlijke tijd om de gebruikte tools te begrijpen. Ik probeer ook bij te blijven met nieuwe technologieën, ook al gaat het snel met AI.\n\n**Doordacht gebruik van AI.** Ik evolueer mee met de modellen sinds COVID, ben goed in prompting. Ik weet dat het een tool is — gevaarlijk qua security als je niet begrijpt wat het produceert, dus je moet developer blijven om te reviewen, te corrigeren en zonder AI te kunnen programmeren (met de documentatie).\n\n**Technische nauwkeurigheid.** Tests, documentatie, naleving van conventies (GitFlow, conventionele commits, schone architectuur). Positieve code reviews.\n\n**Nieuwsgierigheid.** Persoonlijke projecten (MaGare, dit portfolio), open-source, regelmatig tech-watching.",
         "improvements": "**Communicatie in vergaderingen.** De laatste tijd terughoudend, vooral aan het begin van een opdracht: ik observeer eerst het niveau van iedereen om mijn plek in de groep te begrijpen voordat ik het woord neem. Ik verbeter via de daily stand-ups bij Mandarine.\n\n**Tijdsinschatting.** Neiging om te onderschatten (vooral frontend). Ik leer fijner op te splitsen en realistische marges in te bouwen.\n\n**Hulp vragen.** Wanneer ik vastzit in een technisch probleem, kan ik er te lang in blijven voordat ik om hulp vraag. Ik probeer eerder te herkennen wanneer een collega raadplegen efficiënter is.",

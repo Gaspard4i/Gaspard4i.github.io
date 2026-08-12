@@ -12,7 +12,7 @@ import type { Profile } from '@/types/profile'
 import type { HeroRole } from '@/types/project'
 
 const FALLBACK_ROLES = [
-  'étudiant en BUT informatique',
+  'diplômé d\'un BUT Informatique',
   'développeur full-stack',
   'développeur web',
 ]

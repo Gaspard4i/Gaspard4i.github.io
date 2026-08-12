@@ -9,11 +9,11 @@
     "hero": {
         "greeting": "Ciao, mi chiamo",
         "name": "Gaspard",
-        "bio": "Sviluppatore full-stack in alternanza presso Mandarine Academy, studente al 3° anno di Informatica all'IUT di Lille.",
+        "bio": "Sviluppatore full-stack, laureato con un BUT in Informatica (IUT di Lille) e in fase di conclusione della mia alternanza presso Mandarine Academy.",
         "cta": "Chi sono",
         "ctaProjects": "I miei progetti",
         "role": {
-            "student": "studente di informatica",
+            "student": "laureato in informatica (BUT)",
             "fullstack": "sviluppatore full-stack",
             "web": "sviluppatore web"
         }
@@ -33,7 +33,7 @@
     "about": {
         "title": "Chi sono",
         "subtitle": "Chi sono io?",
-        "bio": "Sono Gaspard Catry, sviluppatore full-stack di 20 anni con sede a Lille. Attualmente al 3° anno di Informatica all'IUT di Lille, svolgo la mia alternanza presso Mandarine Academy.",
+        "bio": "Sono Gaspard Catry, sviluppatore full-stack di 20 anni con sede a Lille. Laureato con un BUT in Informatica all'IUT di Lille, sto concludendo la mia alternanza presso Mandarine Academy.",
         "skills": "Competenze tecniche",
         "skillsSubtitle": "Le tecnologie che utilizzo quotidianamente.",
         "experience": "Percorso completo",
@@ -192,9 +192,9 @@
         }
     },
     "profile": {
-        "hero": "Sviluppatore full-stack in alternanza presso Mandarine Academy, studente al 3° anno di Informatica all'IUT di Lille. Appassionato di progettazione di applicazioni web moderne - Java, Spring Boot, Vue.js, PHP/Symfony.",
+        "hero": "Sviluppatore full-stack, laureato con un BUT in Informatica (IUT di Lille) e in fase di conclusione della mia alternanza presso Mandarine Academy. Appassionato di progettazione di applicazioni web moderne - Java, Spring Boot, Vue.js, PHP/Symfony.",
         "about": "Sono Gaspard Catry, sviluppatore full-stack di 20 anni con sede a Lille. Attualmente al 3° anno di Informatica all'IUT di Lille, svolgo la mia alternanza presso Mandarine Academy con uno stack PHP/Symfony/Tailwind.\n\nIl mio stage presso Nextoo (Roubaix) mi ha permesso di seguire una formazione intensiva su Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker e di sviluppare 3 applicazioni web interne. Il Direttore Generale Delegato di Nextoo mi ha raccomandato per il mio rigore, la mia autonomia e la mia curiosità intellettuale.\n\nAl di fuori del lavoro e degli studi, sviluppo progetti personali in produzione: MaGare (riproduzione web dell'app SNCF). Contribuisco anche a progetti open-source nei weekend. Il mio obiettivo: diventare ingegnere software specializzato nella progettazione di applicazioni web full-stack robuste e performanti.",
-        "positioning": "Sviluppatore full-stack in fase di completamento della laurea in Informatica, mi specializzo nella progettazione di applicazioni web robuste e performanti. La mia esperienza combina uno stage intensivo presso Nextoo (Java/Spring Boot/Vue.js) e un'alternanza presso Mandarine Academy (PHP/Symfony/Tailwind). Cerco una posizione come sviluppatore full-stack o ingegnere software junior, idealmente in un team tecnico esigente dove poter continuare a crescere in architettura e qualità del software.",
+        "positioning": "Sviluppatore full-stack laureato con un BUT in Informatica, mi specializzo nella progettazione di applicazioni web robuste e performanti. La mia esperienza combina uno stage intensivo presso Nextoo (Java/Spring Boot/Vue.js) e un'alternanza presso Mandarine Academy (PHP/Symfony/Tailwind). Cerco una posizione come sviluppatore full-stack o ingegnere software junior, idealmente in un team tecnico esigente dove poter continuare a crescere in architettura e qualità del software.",
         "reflexive": "Imparo in fretta quando sono in un ambiente tecnico esigente. Da Nextoo, salire in competenza su Spring Boot e Vue in 10 settimane mi ha mostrato che potevo digerire rapidamente un nuovo stack. Da Mandarine ho confermato la stessa cosa su uno stack PHP/Symfony che non conoscevo: mi adatto rapidamente a un ambiente nuovo.\n\nSono più efficace quando mi spiegano *perché* facciamo qualcosa. Il *come* posso trovarlo da solo con la documentazione. I migliori momenti di apprendimento sono quelli in cui il mio tutor si prende il tempo di spiegare una scelta architetturale o la ragione di un vincolo.\n\nIl passaggio in azienda mi ha anche insegnato a gestire diversamente il mio tempo: stimare, dare priorità, comunicare sui progressi.",
         "strengths": "**Apprendimento rapido.** Confermato dal mio stage a Nextoo e dalla mia alternanza a Mandarine, ogni volta su stack (quasi) sconosciuti.\n\n**Lavoro di squadra.** DinnerMatch e diversi altri progetti di gruppo lo hanno confermato. Mi integro facilmente, anche quando l'età media è più alta — ci metto impegno.\n\n**Adattamento a uno stack.** Dedico tempo personale per capire gli strumenti in uso. Cerco anche di restare aggiornato sulle nuove tecnologie, anche se vanno veloci con l'IA.\n\n**Uso ragionato dell'IA.** Evolvo con i modelli dal COVID, sono bravo nel prompting. So che è uno strumento — pericoloso a livello di sicurezza se non si capisce cosa produce, quindi bisogna restare dev per rivedere, correggere e saper programmare senza (con la documentazione).\n\n**Rigore tecnico.** Test, documentazione, rispetto delle convenzioni (GitFlow, commit convenzionali, architettura pulita). Revisioni del codice positive.\n\n**Curiosità.** Progetti personali (MaGare, questo portfolio), open-source, monitoraggio tecnologico regolare.",
         "improvements": "**Comunicazione nelle riunioni.** Riservato ultimamente, soprattutto a inizio missione: prima osservo il livello di ognuno per capire il mio posto nel gruppo prima di prendere la parola. Progredisco grazie ai daily stand-up da Mandarine.\n\n**Stima dei tempi.** Tendenza a sottostimare (soprattutto sul frontend). Sto imparando a suddividere più fine e a inserire margini realistici.\n\n**Chiedere aiuto.** Quando sono su un problema tecnico, posso restarci troppo a lungo prima di chiedere. Cerco di individuare prima quando consultare un collega è più efficace.",
