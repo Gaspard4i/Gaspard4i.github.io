@@ -9,11 +9,11 @@
     "hero": {
         "greeting": "Hola, me llamo",
         "name": "Gaspard",
-        "bio": "Desarrollador full-stack en alternancia en Mandarine Academy, estudiante de 3er año de Ingeniería Informática en el IUT de Lille.",
+        "bio": "Desarrollador full-stack, titulado de un BUT en Informática (IUT de Lille) y finalizando mi alternancia en Mandarine Academy.",
         "cta": "Sobre mí",
         "ctaProjects": "Mis proyectos",
         "role": {
-            "student": "estudiante de informática",
+            "student": "titulado en informática (BUT)",
             "fullstack": "desarrollador full-stack",
             "web": "desarrollador web"
         }
@@ -33,7 +33,7 @@
     "about": {
         "title": "Sobre mí",
         "subtitle": "¿Quién soy?",
-        "bio": "Soy Gaspard Catry, desarrollador full-stack de 20 años con sede en Lille. Actualmente en 3er año de Ingeniería Informática en el IUT de Lille, realizo mi alternancia en Mandarine Academy.",
+        "bio": "Soy Gaspard Catry, desarrollador full-stack de 20 años con sede en Lille. Titulado de un BUT en Informática en el IUT de Lille, estoy finalizando mi alternancia en Mandarine Academy.",
         "skills": "Competencias técnicas",
         "skillsSubtitle": "Las tecnologías que utilizo a diario.",
         "experience": "Trayectoria completa",
@@ -192,9 +192,9 @@
         }
     },
     "profile": {
-        "hero": "Desarrollador full-stack en alternancia en Mandarine Academy, estudiante de 3er año de Informática en el IUT de Lille. Apasionado por el diseño de aplicaciones web modernas - Java, Spring Boot, Vue.js, PHP/Symfony.",
-        "about": "Soy Gaspard Catry, desarrollador full-stack de 20 años con sede en Lille. Actualmente en 3er año de Informática en el IUT de Lille, realizo mi alternancia en Mandarine Academy con un stack PHP/Symfony/Tailwind.\n\nMi período de prácticas en Nextoo (Roubaix) me permitió seguir una formación intensiva en Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker y desarrollar 3 aplicaciones web internas. El Director General Adjunto de Nextoo me recomendó por mi rigor, autonomía y curiosidad intelectual.\n\nFuera del trabajo y los estudios, desarrollo proyectos personales en producción: MaGare (reproducción web de la app SNCF). También contribuyo a proyectos open-source los fines de semana. Mi objetivo: convertirme en ingeniero de software especializado en aplicaciones web full-stack robustas y eficientes.",
-        "positioning": "Desarrollador full-stack finalizando mi carrera en Informática, me especializo en el diseño de aplicaciones web robustas y eficientes. Mi experiencia combina unas prácticas intensivas en Nextoo (Java/Spring Boot/Vue.js) y una alternancia en Mandarine Academy (PHP/Symfony/Tailwind). Busco un puesto de desarrollador full-stack o ingeniero de software junior, idealmente en un equipo técnico exigente donde pueda seguir progresando en arquitectura y calidad de software.",
+        "hero": "Desarrollador full-stack, titulado de un BUT en Informática (IUT de Lille) y finalizando mi alternancia en Mandarine Academy. Apasionado por el diseño de aplicaciones web modernas - Java, Spring Boot, Vue.js, PHP/Symfony.",
+        "about": "Soy Gaspard Catry, desarrollador full-stack de 20 años con sede en Lille. Titulado de un BUT en Informática en el IUT de Lille, estoy finalizando mi alternancia en Mandarine Academy con un stack PHP/Symfony/Tailwind.\n\nMi período de prácticas en Nextoo (Roubaix) me permitió seguir una formación intensiva en Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker y desarrollar 3 aplicaciones web internas. El Director General Adjunto de Nextoo me recomendó por mi rigor, autonomía y curiosidad intelectual.\n\nFuera del trabajo y los estudios, desarrollo proyectos personales en producción: MaGare (reproducción web de la app SNCF). También contribuyo a proyectos open-source los fines de semana. Mi objetivo: convertirme en ingeniero de software especializado en aplicaciones web full-stack robustas y eficientes.",
+        "positioning": "Desarrollador full-stack titulado de un BUT en Informática, me especializo en el diseño de aplicaciones web robustas y eficientes. Mi experiencia combina unas prácticas intensivas en Nextoo (Java/Spring Boot/Vue.js) y una alternancia en Mandarine Academy (PHP/Symfony/Tailwind). Busco un puesto de desarrollador full-stack o ingeniero de software junior, idealmente en un equipo técnico exigente donde pueda seguir progresando en arquitectura y calidad de software.",
         "reflexive": "Aprendo rápido cuando estoy en un entorno técnico exigente. En Nextoo, ponerme al día con Spring Boot y Vue en 10 semanas me demostró que podía asimilar un stack nuevo rápidamente. En Mandarine confirmé lo mismo con un stack PHP/Symfony que no conocía: me adapto rápido a un entorno nuevo.\n\nSoy más eficaz cuando me explican *por qué* hacemos algo. El *cómo* puedo encontrarlo yo mismo con la documentación. Los mejores momentos de aprendizaje son cuando mi tutor se toma el tiempo de explicar una decisión de arquitectura o el motivo de una restricción.\n\nEl paso a la empresa también me enseñó a gestionar mi tiempo de otra forma: estimar, priorizar, comunicar sobre el avance.",
         "strengths": "**Aprendizaje rápido.** Confirmado por mis prácticas en Nextoo y mi alternancia en Mandarine, en cada caso sobre stacks (casi) desconocidos.\n\n**Trabajo en equipo.** DinnerMatch y varios otros proyectos de grupo lo han confirmado. Me integro fácilmente, incluso cuando la media de edad es más alta — hago el esfuerzo.\n\n**Adaptación a un stack.** Dedico tiempo personal para entender las herramientas en uso. También intento mantenerme al día con las nuevas tecnologías, aunque avancen rápido con la IA.\n\n**Uso reflexivo de la IA.** Evoluciono con los modelos desde el COVID, soy bueno con los prompts. Sé que es una herramienta — peligrosa a nivel de seguridad si no entiendes lo que produce, así que hay que seguir siendo dev para revisar, corregir y saber programar sin ella (con la documentación).\n\n**Rigor técnico.** Pruebas, documentación, respeto de las convenciones (GitFlow, commits convencionales, arquitectura limpia). Revisiones de código positivas.\n\n**Curiosidad.** Proyectos personales (MaGare, este portfolio), open-source, vigilancia tecnológica regular.",
         "improvements": "**Comunicación en reuniones.** Reservado últimamente, sobre todo al inicio de una misión: observo primero el nivel de cada uno para entender mi sitio en el grupo antes de tomar la palabra. Progreso con los daily stand-ups en Mandarine.\n\n**Estimación de tiempos.** Tendencia a subestimar (sobre todo en frontend). Aprendo a descomponer más fino y a añadir márgenes realistas.\n\n**Pedir ayuda.** Cuando estoy con un problema técnico, puedo quedarme demasiado tiempo antes de pedir ayuda. Intento identificar antes cuándo consultar a un compañero es más eficaz.",

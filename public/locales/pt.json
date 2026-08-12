@@ -9,11 +9,11 @@
     "hero": {
         "greeting": "Olá, chamo-me",
         "name": "Gaspard",
-        "bio": "Desenvolvedor full-stack em alternância na Mandarine Academy, estudante do 3.º ano de Informática no IUT de Lille.",
+        "bio": "Desenvolvedor full-stack, licenciado com um BUT em Informática (IUT de Lille) e a concluir a minha alternância na Mandarine Academy.",
         "cta": "Sobre mim",
         "ctaProjects": "Os meus projetos",
         "role": {
-            "student": "estudante de informática",
+            "student": "licenciado em informática (BUT)",
             "fullstack": "desenvolvedor full-stack",
             "web": "desenvolvedor web"
         }
@@ -33,7 +33,7 @@
     "about": {
         "title": "Sobre mim",
         "subtitle": "Quem sou eu?",
-        "bio": "Sou Gaspard Catry, desenvolvedor full-stack de 20 anos com sede em Lille. Atualmente no 3.º ano de Informática no IUT de Lille, realizo a minha alternância na Mandarine Academy.",
+        "bio": "Sou Gaspard Catry, desenvolvedor full-stack de 20 anos com sede em Lille. Licenciado com um BUT em Informática no IUT de Lille, estou a concluir a minha alternância na Mandarine Academy.",
         "skills": "Competências técnicas",
         "skillsSubtitle": "As tecnologias que utilizo diariamente.",
         "experience": "Percurso completo",
@@ -192,9 +192,9 @@
         }
     },
     "profile": {
-        "hero": "Desenvolvedor full-stack em alternância na Mandarine Academy, estudante do 3.º ano de Informática no IUT de Lille. Apaixonado pela conceção de aplicações web modernas - Java, Spring Boot, Vue.js, PHP/Symfony.",
+        "hero": "Desenvolvedor full-stack, licenciado com um BUT em Informática (IUT de Lille) e a concluir a minha alternância na Mandarine Academy. Apaixonado pela conceção de aplicações web modernas - Java, Spring Boot, Vue.js, PHP/Symfony.",
         "about": "Sou Gaspard Catry, desenvolvedor full-stack de 20 anos com sede em Lille. Atualmente no 3.º ano de Informática no IUT de Lille, realizo a minha alternância na Mandarine Academy com um stack PHP/Symfony/Tailwind.\n\nO meu estágio na Nextoo (Roubaix) permitiu-me seguir uma formação intensiva em Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker e desenvolver 3 aplicações web internas. O Diretor-Geral Adjunto da Nextoo recomendou-me pelo meu rigor, autonomia e curiosidade intelectual.\n\nFora do trabalho e dos estudos, desenvolvo projetos pessoais em produção: MaGare (reprodução web da app SNCF). Também contribuo para projetos open-source aos fins de semana. O meu objetivo: tornar-me engenheiro de software especializado na conceção de aplicações web full-stack robustas e eficientes.",
-        "positioning": "Desenvolvedor full-stack em fase final da licenciatura em Informática, especializo-me na conceção de aplicações web robustas e eficientes. A minha experiência combina um estágio intensivo na Nextoo (Java/Spring Boot/Vue.js) e uma alternância na Mandarine Academy (PHP/Symfony/Tailwind). Procuro uma posição de desenvolvedor full-stack ou engenheiro de software júnior, idealmente numa equipa técnica exigente onde possa continuar a evoluir em arquitetura e qualidade de software.",
+        "positioning": "Desenvolvedor full-stack licenciado com um BUT em Informática, especializo-me na conceção de aplicações web robustas e eficientes. A minha experiência combina um estágio intensivo na Nextoo (Java/Spring Boot/Vue.js) e uma alternância na Mandarine Academy (PHP/Symfony/Tailwind). Procuro uma posição de desenvolvedor full-stack ou engenheiro de software júnior, idealmente numa equipa técnica exigente onde possa continuar a evoluir em arquitetura e qualidade de software.",
         "reflexive": "Aprendo rápido num ambiente técnico exigente. Na Nextoo, subir em competências em Spring Boot e Vue em 10 semanas mostrou-me que conseguia digerir um novo stack rapidamente. Na Mandarine confirmei o mesmo num stack PHP/Symfony que não conhecia: adapto-me rapidamente a um ambiente novo.\n\nSou mais eficaz quando me explicam *porquê* fazemos algo. O *como* posso encontrá-lo sozinho com a documentação. Os melhores momentos de aprendizagem são quando o meu tutor dedica tempo a explicar uma escolha de arquitetura ou a razão de uma restrição.\n\nA passagem para a empresa também me ensinou a gerir o meu tempo de forma diferente: estimar, priorizar, comunicar sobre o progresso.",
         "strengths": "**Aprendizagem rápida.** Confirmada pelo meu estágio na Nextoo e pela minha alternância na Mandarine, sempre em stacks (quase) desconhecidos.\n\n**Trabalho em equipa.** O DinnerMatch e vários outros projetos de grupo confirmaram-no. Integro-me facilmente, mesmo quando a média de idades é mais elevada — faço o esforço.\n\n**Adaptação a um stack.** Dedico tempo pessoal para perceber as ferramentas em uso. Tento também manter-me atualizado sobre as novas tecnologias, mesmo que avancem rápido com a IA.\n\n**Uso ponderado da IA.** Evoluo com os modelos desde a COVID, sou bom em prompting. Sei que é uma ferramenta — perigosa a nível de segurança se não percebermos o que produz, por isso é preciso continuar a ser dev para rever, corrigir e saber programar sem ela (com a documentação).\n\n**Rigor técnico.** Testes, documentação, respeito pelas convenções (GitFlow, commits convencionais, arquitetura limpa). Revisões de código positivas.\n\n**Curiosidade.** Projetos pessoais (MaGare, este portfolio), open-source, monitorização tecnológica regular.",
         "improvements": "**Comunicação em reuniões.** Reservado ultimamente, sobretudo no início de uma missão: observo primeiro o nível de cada um para perceber o meu lugar no grupo antes de tomar a palavra. Progrido com os daily stand-ups na Mandarine.\n\n**Estimativa de tempos.** Tendência a subestimar (sobretudo no frontend). Estou a aprender a decompor mais fino e a adicionar margens realistas.\n\n**Pedir ajuda.** Quando estou num problema técnico, posso ficar demasiado tempo antes de pedir ajuda. Tento identificar mais cedo quando consultar um colega é mais eficaz.",

@@ -9,11 +9,11 @@
     "hero": {
         "greeting": "Hallo, ich heiße",
         "name": "Gaspard",
-        "bio": "Full-Stack-Entwickler im dualen Studium bei Mandarine Academy, Student im 3. Jahr Informatik am IUT de Lille.",
+        "bio": "Full-Stack-Entwickler, Absolvent eines BUT in Informatik (IUT de Lille) und am Ende meines dualen Studiums bei Mandarine Academy.",
         "cta": "Über mich",
         "ctaProjects": "Meine Projekte",
         "role": {
-            "student": "Informatikstudent",
+            "student": "Informatik-Absolvent (BUT)",
             "fullstack": "Full-Stack-Entwickler",
             "web": "Webentwickler"
         }
@@ -33,7 +33,7 @@
     "about": {
         "title": "Über mich",
         "subtitle": "Wer bin ich?",
-        "bio": "Ich bin Gaspard Catry, 20-jähriger Full-Stack-Entwickler aus Lille. Derzeit im 3. Jahr Informatik am IUT de Lille, absolviere ich mein duales Studium bei Mandarine Academy.",
+        "bio": "Ich bin Gaspard Catry, 20-jähriger Full-Stack-Entwickler aus Lille. Absolvent eines BUT in Informatik am IUT de Lille, befinde ich mich am Ende meines dualen Studiums bei Mandarine Academy.",
         "skills": "Technische Kompetenzen",
         "skillsSubtitle": "Die Technologien, die ich täglich verwende.",
         "experience": "Vollständiger Werdegang",
@@ -192,9 +192,9 @@
         }
     },
     "profile": {
-        "hero": "Full-Stack-Entwickler im dualen Studium bei Mandarine Academy, Student im 3. Jahr Informatik am IUT de Lille. Leidenschaftlich für die Entwicklung moderner Webanwendungen - Java, Spring Boot, Vue.js, PHP/Symfony.",
+        "hero": "Full-Stack-Entwickler, Absolvent eines BUT in Informatik (IUT de Lille) und am Ende meines dualen Studiums bei Mandarine Academy. Leidenschaftlich für die Entwicklung moderner Webanwendungen - Java, Spring Boot, Vue.js, PHP/Symfony.",
         "about": "Ich bin Gaspard Catry, 20-jähriger Full-Stack-Entwickler aus Lille. Derzeit im 3. Jahr Informatik am IUT de Lille absolviere ich mein duales Studium bei Mandarine Academy mit einem PHP/Symfony/Tailwind-Stack.\n\nMein Praktikum bei Nextoo (Roubaix) ermöglichte mir eine intensive Ausbildung in Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker und die Entwicklung von 3 internen Webanwendungen. Der stellvertretende Geschäftsführer von Nextoo empfahl mich für meine Sorgfalt, Selbstständigkeit und intellektuelle Neugier.\n\nAußerhalb von Arbeit und Studium entwickle ich persönliche Projekte in Produktion: MaGare (Web-Nachbildung der SNCF-App). Ich trage auch am Wochenende zu Open-Source-Projekten bei. Mein Ziel: Software-Ingenieur werden, spezialisiert auf robuste und performante Full-Stack-Webanwendungen.",
-        "positioning": "Full-Stack-Entwickler am Ende meines Informatikstudiums, spezialisiere ich mich auf die Entwicklung robuster und performanter Webanwendungen. Meine Erfahrung kombiniert ein intensives Praktikum bei Nextoo (Java/Spring Boot/Vue.js) und ein duales Studium bei Mandarine Academy (PHP/Symfony/Tailwind). Ich suche eine Stelle als Full-Stack-Entwickler oder Junior-Software-Ingenieur, idealerweise in einem anspruchsvollen technischen Team, in dem ich mich in Softwarearchitektur und -qualität weiterentwickeln kann.",
+        "positioning": "Full-Stack-Entwickler mit einem BUT in Informatik, spezialisiere ich mich auf die Entwicklung robuster und performanter Webanwendungen. Meine Erfahrung kombiniert ein intensives Praktikum bei Nextoo (Java/Spring Boot/Vue.js) und ein duales Studium bei Mandarine Academy (PHP/Symfony/Tailwind). Ich suche eine Stelle als Full-Stack-Entwickler oder Junior-Software-Ingenieur, idealerweise in einem anspruchsvollen technischen Team, in dem ich mich in Softwarearchitektur und -qualität weiterentwickeln kann.",
         "reflexive": "Ich lerne schnell, wenn ich in einem anspruchsvollen technischen Umfeld arbeite. Bei Nextoo hat mir der Aufbau von Spring-Boot- und Vue-Kenntnissen in 10 Wochen gezeigt, dass ich mich schnell in einen neuen Stack einarbeiten kann. Bei Mandarine habe ich dasselbe auf einem mir unbekannten PHP/Symfony-Stack bestätigt: Ich passe mich schnell an eine neue Umgebung an.\n\nIch bin am effektivsten, wenn man mir erklärt, *warum* wir etwas tun. Das *wie* finde ich selbst mit der Doku heraus. Die besten Lernmomente sind die, in denen mein Betreuer sich die Zeit nimmt, eine Architekturentscheidung oder den Grund einer Einschränkung zu erklären.\n\nDer Eintritt ins Unternehmen hat mich auch gelehrt, meine Zeit anders zu verwalten: schätzen, priorisieren, über den Fortschritt kommunizieren.",
         "strengths": "**Schnelles Lernen.** Bestätigt durch mein Praktikum bei Nextoo und mein duales Studium bei Mandarine, jedes Mal mit Stacks, die ich (fast) nicht kannte.\n\n**Teamarbeit.** DinnerMatch und mehrere weitere Gruppenprojekte haben es bestätigt. Ich integriere mich leicht, auch wenn der Altersdurchschnitt höher ist — ich gebe mir Mühe.\n\n**Anpassung an einen Stack.** Ich nehme mir auch private Zeit, um die eingesetzten Werkzeuge zu verstehen. Ich versuche außerdem, auf neue Technologien up-to-date zu bleiben, auch wenn es mit der KI sehr schnell geht.\n\n**Reflektierter Umgang mit KI.** Ich entwickle mich seit COVID mit den Modellen weiter und bin gut im Prompting. Ich weiß, dass es ein Werkzeug ist — sicherheitsmäßig riskant, wenn man nicht versteht, was es produziert, also muss man Entwickler bleiben, um zu reviewen, zu korrigieren und auch ohne KI programmieren zu können (mit der Doku).\n\n**Technische Sorgfalt.** Tests, Doku, Einhaltung von Konventionen (GitFlow, konventionelle Commits, saubere Architektur). Positive Code-Reviews.\n\n**Neugier.** Persönliche Projekte (MaGare, dieses Portfolio), Open-Source, regelmäßiges Tech-Watching.",
         "improvements": "**Kommunikation in Meetings.** In letzter Zeit zurückhaltend, besonders zu Beginn einer Mission: Ich beobachte zuerst das Niveau aller, um meinen Platz in der Gruppe zu verstehen, bevor ich das Wort ergreife. Ich verbessere mich über die Daily Stand-ups bei Mandarine.\n\n**Zeitschätzung.** Tendenz zur Unterschätzung (besonders Frontend). Ich lerne, feiner aufzuteilen und realistische Puffer einzuplanen.\n\n**Um Hilfe bitten.** Wenn ich an einem technischen Problem festsitze, kann ich zu lange darin verharren, bevor ich frage. Ich versuche, früher zu erkennen, wann ein Kollege effizienter wäre.",
