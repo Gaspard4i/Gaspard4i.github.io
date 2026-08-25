@@ -78,13 +78,6 @@
     "maniere_communiquer": "Way of Communicating",
     "maniere_travailler": "Way of Working with Others"
   },
-  "experienceTypes": {
-    "stage": "Internship",
-    "alternance": "Work-Study",
-    "education": "Education",
-    "job": "Employment",
-    "other": "Other"
-  },
   "project": {
     "ffdc": {
       "title": "FinnFoundDaChest",
