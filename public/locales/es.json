@@ -1,486 +1,189 @@
 {
-    "nav": {
-        "home": "Inicio",
-        "projects": "Proyectos",
-        "about": "Sobre mí",
-        "contact": "Contacto",
-        "wiki": ""
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, me llamo",
+    "name": "Gaspard",
+    "bio": "Desarrollador full-stack, titulado de un BUT en Informática (IUT de Lille) y finalizando mi alternancia en Mandarine Academy.",
+    "cta": "Sobre mí",
+    "ctaProjects": "Mis proyectos"
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "subtitle": "Una selección de mis logros personales y académicos.",
+    "featuredTitle": "Proyectos destacados",
+    "featuredSubtitle": "Algunos proyectos de los que estoy especialmente orgulloso.",
+    "seeAll": "Ver todos los proyectos",
+    "viewGithub": "GitHub",
+    "viewLive": "Ver el proyecto",
+    "featured": "Destacado",
+    "softSkills": "",
+    "technologies": ""
+  },
+  "about": {
+    "skills": "Competencias técnicas",
+    "skillsSubtitle": "Las tecnologías que utilizo a diario.",
+    "experience": "Trayectoria completa",
+    "experienceSubtitle": "Mi recorrido académico y profesional.",
+    "positioning": "Posicionamiento profesional",
+    "positioningSubtitle": "Mi proyecto y mi visión.",
+    "proExperience": "Experiencias profesionales",
+    "proExperienceSubtitle": "Detalle de mis prácticas y alternancias.",
+    "reflexive": "Análisis reflexivo",
+    "reflexiveSubtitle": "Lo que mis experiencias profesionales me han enseñado sobre mí mismo.",
+    "strengths": "Puntos fuertes",
+    "improvements": "Áreas de mejora",
+    "context": "Contexto",
+    "missions": "Misiones",
+    "autonomy": "Autonomía",
+    "interactions": "Interacciones",
+    "situation": "Situación concreta",
+    "analysis": "Mi análisis",
+    "seeMore": "Ver detalle",
+    "seeLess": "Reducir",
+    "vision": "",
+    "whoAmI": ""
+  },
+  "contact": {
+    "title": "Contáctame",
+    "subtitle": "¿Una pregunta o una oportunidad? ¡No dudes en contactarme!",
+    "name": "Tu Nombre",
+    "email": "Tu Email",
+    "message": "Tu Mensaje",
+    "messagePlaceholder": "Hola Gaspard, quería...",
+    "send": "Enviar el mensaje",
+    "success": "¡Mensaje enviado con éxito! Te responderé lo antes posible.",
+    "error": "Ha ocurrido un error. Por favor, inténtalo de nuevo.",
+    "findMe": "Encuéntrame en",
+    "gdpr": "Tus datos (nombre, email, mensaje) se utilizan únicamente para responderte. Nunca se revenden ni se usan con fines comerciales."
+  },
+  "footer": {
+    "madeWith": "Hecho con React, Tailwind & DaisyUI"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "subtitle": "La página que buscas no existe.",
+    "cta": "Volver al inicio"
+  },
+  "common": {
+    "error": "Ha ocurrido un error al cargar los datos.",
+    "present": "Presente"
+  },
+  "softSkillCategories": {
+    "maniere_etre": "Manera de ser",
+    "maniere_communiquer": "Manera de comunicar",
+    "maniere_travailler": "Manera de trabajar con los demás"
+  },
+  "experienceTypes": {
+    "stage": "Prácticas",
+    "alternance": "Alternancia",
+    "education": "Formación",
+    "job": "Empleo",
+    "other": "Otro"
+  },
+  "project": {
+    "ffdc": {
+      "title": "FinnFoundDaChest",
+      "description": "Juego Java Swing, proyecto individual",
+      "long_description": ""
     },
-    "hero": {
-        "greeting": "Hola, me llamo",
-        "name": "Gaspard",
-        "bio": "Desarrollador full-stack, titulado de un BUT en Informática (IUT de Lille) y finalizando mi alternancia en Mandarine Academy.",
-        "cta": "Sobre mí",
-        "ctaProjects": "Mis proyectos",
-        "role": {
-            "student": "titulado en informática (BUT)",
-            "fullstack": "desarrollador full-stack",
-            "web": "desarrollador web"
-        }
+    "agile": {
+      "title": "Proyecto Agile de Rentrée",
+      "description": "Rogue-Like Java, trabajo en equipo",
+      "long_description": ""
     },
-    "projects": {
-        "title": "Mis Proyectos",
-        "subtitle": "Una selección de mis logros personales y académicos.",
-        "featuredTitle": "Proyectos destacados",
-        "featuredSubtitle": "Algunos proyectos de los que estoy especialmente orgulloso.",
-        "seeAll": "Ver todos los proyectos",
-        "viewGithub": "GitHub",
-        "viewLive": "Ver el proyecto",
-        "featured": "Destacado",
-        "softSkills": "",
-        "technologies": ""
+    "sae33": {
+      "title": "Proyecto SAE 3.3",
+      "description": "Aplicación JavaFX MVC, trabajo en equipo",
+      "long_description": ""
     },
-    "about": {
-        "title": "Sobre mí",
-        "subtitle": "¿Quién soy?",
-        "bio": "Soy Gaspard Catry, desarrollador full-stack de 20 años con sede en Lille. Titulado de un BUT en Informática en el IUT de Lille, estoy finalizando mi alternancia en Mandarine Academy.",
-        "skills": "Competencias técnicas",
-        "skillsSubtitle": "Las tecnologías que utilizo a diario.",
-        "experience": "Trayectoria completa",
-        "experienceSubtitle": "Mi recorrido académico y profesional.",
-        "positioning": "Posicionamiento profesional",
-        "positioningSubtitle": "Mi proyecto y mi visión.",
-        "proExperience": "Experiencias profesionales",
-        "proExperienceSubtitle": "Detalle de mis prácticas y alternancias.",
-        "softSkills": "Competencias interpersonales",
-        "softSkillsSubtitle": "Las habilidades blandas que definen mi postura profesional.",
-        "reflexive": "Análisis reflexivo",
-        "reflexiveSubtitle": "Lo que mis experiencias profesionales me han enseñado sobre mí mismo.",
-        "strengths": "Puntos fuertes",
-        "improvements": "Áreas de mejora",
-        "context": "Contexto",
-        "missions": "Misiones",
-        "autonomy": "Autonomía",
-        "interactions": "Interacciones",
-        "situation": "Situación concreta",
-        "analysis": "Mi análisis",
-        "seeMore": "Ver detalle",
-        "seeLess": "Reducir",
-        "vision": "",
-        "visionSubtitle": "",
-        "whoAmI": "",
-        "whoAmISubtitle": ""
+    "mte": {
+      "title": "MineToEarn",
+      "description": "Plugin Minecraft + interfaz web, trabajo en equipo",
+      "long_description": ""
     },
-    "contact": {
-        "title": "Contáctame",
-        "subtitle": "¿Una pregunta o una oportunidad? ¡No dudes en contactarme!",
-        "name": "Tu Nombre",
-        "email": "Tu Email",
-        "message": "Tu Mensaje",
-        "messagePlaceholder": "Hola Gaspard, quería...",
-        "send": "Enviar el mensaje",
-        "success": "¡Mensaje enviado con éxito! Te responderé lo antes posible.",
-        "error": "Ha ocurrido un error. Por favor, inténtalo de nuevo.",
-        "findMe": "Encuéntrame en",
-        "gdpr": "Tus datos (nombre, email, mensaje) se utilizan únicamente para responderte. Nunca se revenden ni se usan con fines comerciales."
+    "corpsamer": {
+      "title": "Nuit de l'Info: CorpsAMer",
+      "description": "Webapp HTML/CSS/JS, hackathon Nuit de l'Info, trabajo en equipo",
+      "long_description": ""
     },
-    "footer": {
-        "madeWith": "Hecho con React, Tailwind & DaisyUI"
+    "talkul": {
+      "title": "Talkul",
+      "description": "Webapp Java EE, mensajería en tiempo real",
+      "long_description": ""
     },
-    "notFound": {
-        "title": "Página no encontrada",
-        "subtitle": "La página que buscas no existe.",
-        "cta": "Volver al inicio"
+    "woze": {
+      "title": "Woze",
+      "description": "Clasificador KNN con interfaz JavaFX, trabajo en equipo",
+      "long_description": ""
     },
-    "common": {
-        "loading": "Cargando...",
-        "error": "Ha ocurrido un error al cargar los datos.",
-        "present": "Presente"
+    "maio": {
+      "title": "Ma.io",
+      "description": "Juego multijugador peculiar (mayonesa y alienígenas), Node.js + JS",
+      "long_description": ""
     },
-    "softSkillCategories": {
-        "maniere_etre": "Manera de ser",
-        "maniere_communiquer": "Manera de comunicar",
-        "maniere_travailler": "Manera de trabajar con los demás"
+    "magare": {
+      "title": "MaGare",
+      "description": "Reproducción web de la app SNCF con API en tiempo real",
+      "long_description": ""
     },
-    "experienceTypes": {
-        "stage": "Prácticas",
-        "alternance": "Alternancia",
-        "education": "Formación",
-        "job": "Empleo",
-        "other": "Otro"
+    "weathersport": {
+      "title": "WeatherSport",
+      "description": "Clima + recomendaciones deportivas, proyecto de prácticas Nextoo",
+      "long_description": ""
     },
-    "project": {
-        "ffdc": {
-            "title": "FinnFoundDaChest",
-            "description": "Juego Java Swing, proyecto individual",
-            "long_description": ""
-        },
-        "agile": {
-            "title": "Proyecto Agile de Rentrée",
-            "description": "Rogue-Like Java, trabajo en equipo",
-            "long_description": ""
-        },
-        "sae33": {
-            "title": "Proyecto SAE 3.3",
-            "description": "Aplicación JavaFX MVC, trabajo en equipo",
-            "long_description": ""
-        },
-        "mte": {
-            "title": "MineToEarn",
-            "description": "Plugin Minecraft + interfaz web, trabajo en equipo",
-            "long_description": ""
-        },
-        "corpsamer": {
-            "title": "Nuit de l'Info: CorpsAMer",
-            "description": "Webapp HTML/CSS/JS, hackathon Nuit de l'Info, trabajo en equipo",
-            "long_description": ""
-        },
-        "talkul": {
-            "title": "Talkul",
-            "description": "Webapp Java EE, mensajería en tiempo real",
-            "long_description": ""
-        },
-        "woze": {
-            "title": "Woze",
-            "description": "Clasificador KNN con interfaz JavaFX, trabajo en equipo",
-            "long_description": ""
-        },
-        "maio": {
-            "title": "Ma.io",
-            "description": "Juego multijugador peculiar (mayonesa y alienígenas), Node.js + JS",
-            "long_description": ""
-        },
-        "magare": {
-            "title": "MaGare",
-            "description": "Reproducción web de la app SNCF con API en tiempo real",
-            "long_description": ""
-        },
-        "weathersport": {
-            "title": "WeatherSport",
-            "description": "Clima + recomendaciones deportivas, proyecto de prácticas Nextoo",
-            "long_description": ""
-        },
-        "nextmovie": {
-            "title": "NextMovie",
-            "description": "Motor de recomendación de películas, proyecto de prácticas Nextoo",
-            "long_description": ""
-        },
-        "gds": {
-            "title": "GDS",
-            "description": "Gestión de stock con API REST e interfaz dinámica, prácticas Nextoo",
-            "long_description": ""
-        },
-        "dinnermatch": {
-            "title": "DinnerMatch",
-            "description": "Plataforma para compartir cenas temáticas entre clientes de hoteles. Spring Boot + React.",
-            "long_description": "Conecta a clientes de hoteles que quieren compartir cenas temáticas según sus intereses. Proyecto de grupo durante la semana ágil en el IUT (BUT3): un promotor de proyecto eligió a nuestro equipo de 6/7 para trabajar en la idea. Desplegado en dinnermatch.fr.\n\nFront: React 19, TypeScript, Tailwind 4, DaisyUI 5, editor de temas para hoteleros, calendario responsive, dashboards por rol (Cliente / Hotelero / Admin). Back: Spring Boot 4, Java 21, Spring Security + JWT, JPA/Hibernate, Postgres 17, emails vía Scaleway TEM. CI/CD GitLab, Docker, Nginx reverse proxy.\n\nMi parte: backend (API, JWT, matching, paneles admin CRUD).\n\nNota: si el sitio está caído, es culpa del promotor del proyecto — no le hace caso y ya no tengo acceso SSH para reiniciarlo."
-        },
-        "refugegourmand": {
-            "title": "Le Refuge Gourmand",
-            "description": "Sitio web de reserva de sala de un restaurante ficticio - Next.js, Prisma, NextAuth, Stripe.",
-            "long_description": ""
-        },
-        "weerdlebot": {
-            "title": "WeerdleBot",
-            "description": "Bot Node.js que juega automáticamente a Weerdle (Wordle Pokémon) con panel de control web.",
-            "long_description": ""
-        },
-        "snackandcatch": {
-            "title": "",
-            "description": "",
-            "long_description": ""
-        },
-        "numismatic": {
-            "title": "",
-            "description": "",
-            "long_description": ""
-        },
-        "ghastrider": {
-            "title": "",
-            "description": "",
-            "long_description": ""
-        }
+    "nextmovie": {
+      "title": "NextMovie",
+      "description": "Motor de recomendación de películas, proyecto de prácticas Nextoo",
+      "long_description": ""
     },
-    "profile": {
-        "hero": "Desarrollador full-stack, titulado de un BUT en Informática (IUT de Lille) y finalizando mi alternancia en Mandarine Academy. Apasionado por el diseño de aplicaciones web modernas - Java, Spring Boot, Vue.js, PHP/Symfony.",
-        "about": "Soy Gaspard Catry, desarrollador full-stack de 20 años con sede en Lille. Titulado de un BUT en Informática en el IUT de Lille, estoy finalizando mi alternancia en Mandarine Academy con un stack PHP/Symfony/Tailwind.\n\nMi período de prácticas en Nextoo (Roubaix) me permitió seguir una formación intensiva en Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker y desarrollar 3 aplicaciones web internas. El Director General Adjunto de Nextoo me recomendó por mi rigor, autonomía y curiosidad intelectual.\n\nFuera del trabajo y los estudios, desarrollo proyectos personales en producción: MaGare (reproducción web de la app SNCF). También contribuyo a proyectos open-source los fines de semana. Mi objetivo: convertirme en ingeniero de software especializado en aplicaciones web full-stack robustas y eficientes.",
-        "positioning": "Desarrollador full-stack titulado de un BUT en Informática, me especializo en el diseño de aplicaciones web robustas y eficientes. Mi experiencia combina unas prácticas intensivas en Nextoo (Java/Spring Boot/Vue.js) y una alternancia en Mandarine Academy (PHP/Symfony/Tailwind). Busco un puesto de desarrollador full-stack o ingeniero de software junior, idealmente en un equipo técnico exigente donde pueda seguir progresando en arquitectura y calidad de software.",
-        "reflexive": "Aprendo rápido cuando estoy en un entorno técnico exigente. En Nextoo, ponerme al día con Spring Boot y Vue en 10 semanas me demostró que podía asimilar un stack nuevo rápidamente. En Mandarine confirmé lo mismo con un stack PHP/Symfony que no conocía: me adapto rápido a un entorno nuevo.\n\nSoy más eficaz cuando me explican *por qué* hacemos algo. El *cómo* puedo encontrarlo yo mismo con la documentación. Los mejores momentos de aprendizaje son cuando mi tutor se toma el tiempo de explicar una decisión de arquitectura o el motivo de una restricción.\n\nEl paso a la empresa también me enseñó a gestionar mi tiempo de otra forma: estimar, priorizar, comunicar sobre el avance.",
-        "strengths": "**Aprendizaje rápido.** Confirmado por mis prácticas en Nextoo y mi alternancia en Mandarine, en cada caso sobre stacks (casi) desconocidos.\n\n**Trabajo en equipo.** DinnerMatch y varios otros proyectos de grupo lo han confirmado. Me integro fácilmente, incluso cuando la media de edad es más alta — hago el esfuerzo.\n\n**Adaptación a un stack.** Dedico tiempo personal para entender las herramientas en uso. También intento mantenerme al día con las nuevas tecnologías, aunque avancen rápido con la IA.\n\n**Uso reflexivo de la IA.** Evoluciono con los modelos desde el COVID, soy bueno con los prompts. Sé que es una herramienta — peligrosa a nivel de seguridad si no entiendes lo que produce, así que hay que seguir siendo dev para revisar, corregir y saber programar sin ella (con la documentación).\n\n**Rigor técnico.** Pruebas, documentación, respeto de las convenciones (GitFlow, commits convencionales, arquitectura limpia). Revisiones de código positivas.\n\n**Curiosidad.** Proyectos personales (MaGare, este portfolio), open-source, vigilancia tecnológica regular.",
-        "improvements": "**Comunicación en reuniones.** Reservado últimamente, sobre todo al inicio de una misión: observo primero el nivel de cada uno para entender mi sitio en el grupo antes de tomar la palabra. Progreso con los daily stand-ups en Mandarine.\n\n**Estimación de tiempos.** Tendencia a subestimar (sobre todo en frontend). Aprendo a descomponer más fino y a añadir márgenes realistas.\n\n**Pedir ayuda.** Cuando estoy con un problema técnico, puedo quedarme demasiado tiempo antes de pedir ayuda. Intento identificar antes cuándo consultar a un compañero es más eficaz.",
-        "aboutVision": ""
+    "gds": {
+      "title": "GDS",
+      "description": "Gestión de stock con API REST e interfaz dinámica, prácticas Nextoo",
+      "long_description": ""
     },
-    "wiki": {
-        "title": "",
-        "subtitle": "",
-        "viewDocs": "",
-        "download": "",
-        "backToCategory": "",
-        "modCount_one": "",
-        "modCount_other": "",
-        "minecraft": {
-            "title": "",
-            "subtitle": ""
-        },
-        "mods": {
-            "ghastrider": {
-                "name": "",
-                "tagline": "",
-                "sections": {
-                    "overview": {
-                        "title": "",
-                        "content": ""
-                    },
-                    "dash": {
-                        "title": "",
-                        "content": ""
-                    },
-                    "ice": {
-                        "title": "",
-                        "content": ""
-                    },
-                    "installation": {
-                        "title": "",
-                        "content": ""
-                    },
-                    "commands": {
-                        "title": "",
-                        "content": ""
-                    },
-                    "changelog": {
-                        "title": "",
-                        "content": ""
-                    }
-                }
-            },
-            "numismatic": {
-                "name": "",
-                "tagline": "",
-                "sections": {
-                    "overview": {
-                        "title": "",
-                        "content": ""
-                    },
-                    "currency": {
-                        "title": "",
-                        "content": ""
-                    },
-                    "roadmap": {
-                        "title": "",
-                        "content": ""
-                    }
-                }
-            }
-        },
-        "gr": {
-            "sections": {
-                "overview": "",
-                "dash": "",
-                "ice": "",
-                "installation": "",
-                "commands": "",
-                "changelog": "",
-                "config": ""
-            },
-            "overview": {
-                "intro": "",
-                "screenshotRiding": "",
-                "featuresTitle": "",
-                "chargeBar": "",
-                "minThreshold": "",
-                "overchargeDecay": "",
-                "proportionalCd": "",
-                "autoRecharge": "",
-                "iceFeeding": "",
-                "customSounds": "",
-                "particles": "",
-                "tip": "",
-                "dashTitle": "",
-                "dashDesc": "",
-                "iceTitle": "",
-                "iceDesc": "",
-                "quickStartTitle": "",
-                "qs1": "",
-                "qs2": "",
-                "qs3prefix": "",
-                "qs3suffix": "",
-                "qs4": "",
-                "compatNote": ""
-            },
-            "dash": {
-                "intro": "",
-                "howTo": "",
-                "key": "",
-                "step1": "",
-                "step2prefix": "",
-                "step2suffix": "",
-                "step3prefix": "",
-                "step3suffix": "",
-                "step4": "",
-                "step5prefix": "",
-                "step5suffix": "",
-                "screenshotCharging": "",
-                "screenshotCooldown": "",
-                "params": "",
-                "paramCol": "",
-                "valueCol": "",
-                "minCharge": "",
-                "maxChargeTime": "",
-                "maxCooldown": "",
-                "verticalBoost": "",
-                "keyLabel": "",
-                "configurable": "",
-                "overchargeTip": "",
-                "tipsTitle": "",
-                "tipRelease": "",
-                "tipAutoRecharge": "",
-                "tipOvercharge": ""
-            },
-            "ice": {
-                "intro": "",
-                "itemCol": "",
-                "effectCol": "",
-                "durationCol": "",
-                "notesCol": "",
-                "ice": "",
-                "packedIce": "",
-                "blueIce": "",
-                "powderSnow": "",
-                "stacks": "",
-                "empties": "",
-                "resetWarning": "",
-                "screenshotFeeding": "",
-                "effectsTitle": "",
-                "crunchSound": "",
-                "purrSound": "",
-                "itemParticles": "",
-                "howTo": "",
-                "howToDesc": ""
-            },
-            "install": {
-                "requirements": "",
-                "req": {
-                    "mc": "",
-                    "loader": "",
-                    "fabricApi": ""
-                },
-                "stepsTitle": "",
-                "step1": "",
-                "step2": "",
-                "step3": "",
-                "step4prefix": "",
-                "step4suffix": "",
-                "step5": "",
-                "downloadTitle": "",
-                "platforms": ""
-            },
-            "commands": {
-                "debugTitle": "",
-                "debugDesc": "",
-                "actionCol": "",
-                "detailCol": "",
-                "actions": {
-                    "peaceful": {
-                        "action": "",
-                        "detail": ""
-                    },
-                    "gamerules": {
-                        "action": "",
-                        "detail": ""
-                    },
-                    "weather": {
-                        "action": "",
-                        "detail": ""
-                    },
-                    "clearInv": {
-                        "action": "",
-                        "detail": ""
-                    },
-                    "killGhasts": {
-                        "action": "",
-                        "detail": ""
-                    },
-                    "spawnGhasts": {
-                        "action": "",
-                        "detail": ""
-                    },
-                    "giveItems": {
-                        "action": "",
-                        "detail": ""
-                    }
-                },
-                "screenshotDebug": "",
-                "requiresCreative": ""
-            },
-            "changelog": {
-                "firstRelease": "",
-                "items": {
-                    "dashMechanic": "",
-                    "overchargeDecay": "",
-                    "proportionalCd": "",
-                    "autoRecharge": "",
-                    "verticalBoost": "",
-                    "iceFeeding": "",
-                    "customSounds": "",
-                    "itemParticles": "",
-                    "debugFunction": "",
-                    "loaderSupport": ""
-                }
-            },
-            "config": {
-                "intro": "",
-                "keybindTitle": "",
-                "keybindDesc": "",
-                "keybindStep1prefix": "",
-                "keybindStep1suffix": "",
-                "keybindStep2": "",
-                "keybindStep3": "",
-                "keybindStep4": "",
-                "screenshotKeybind": "",
-                "settingsTitle": "",
-                "settingCol": "",
-                "defaultCol": "",
-                "descCol": "",
-                "settDashKey": "",
-                "settDashKeyDesc": "",
-                "moreSettingsNote": ""
-            }
-        },
-        "nr": {
-            "sections": {
-                "overview": "",
-                "currency": "",
-                "roadmap": ""
-            },
-            "overview": {
-                "intro": "",
-                "desc": "",
-                "wipNotice": ""
-            },
-            "currency": {
-                "intro": "",
-                "coinCol": "",
-                "valueCol": "",
-                "exchangeCol": "",
-                "bronze": "",
-                "silver": "",
-                "gold": "",
-                "netherite": "",
-                "starCoin": "",
-                "baseUnit": "",
-                "eq100bronze": "",
-                "eq100silver": "",
-                "eq100gold": "",
-                "achievement": "",
-                "starCoinDesc": ""
-            },
-            "roadmap": {
-                "intro": "",
-                "phases": {
-                    "coinItems": "",
-                    "purse": "",
-                    "piggyBank": "",
-                    "shopBlock": "",
-                    "config": "",
-                    "lootTables": "",
-                    "villagerTrades": "",
-                    "marketplace": "",
-                    "achievements": "",
-                    "security": "",
-                    "addonApi": "",
-                    "neoforgePort": ""
-                }
-            }
-        }
+    "dinnermatch": {
+      "title": "DinnerMatch",
+      "description": "Plataforma para compartir cenas temáticas entre clientes de hoteles. Spring Boot + React.",
+      "long_description": "Conecta a clientes de hoteles que quieren compartir cenas temáticas según sus intereses. Proyecto de grupo durante la semana ágil en el IUT (BUT3): un promotor de proyecto eligió a nuestro equipo de 6/7 para trabajar en la idea. Desplegado en dinnermatch.fr.\n\nFront: React 19, TypeScript, Tailwind 4, DaisyUI 5, editor de temas para hoteleros, calendario responsive, dashboards por rol (Cliente / Hotelero / Admin). Back: Spring Boot 4, Java 21, Spring Security + JWT, JPA/Hibernate, Postgres 17, emails vía Scaleway TEM. CI/CD GitLab, Docker, Nginx reverse proxy.\n\nMi parte: backend (API, JWT, matching, paneles admin CRUD).\n\nNota: si el sitio está caído, es culpa del promotor del proyecto — no le hace caso y ya no tengo acceso SSH para reiniciarlo."
+    },
+    "refugegourmand": {
+      "title": "Le Refuge Gourmand",
+      "description": "Sitio web de reserva de sala de un restaurante ficticio - Next.js, Prisma, NextAuth, Stripe.",
+      "long_description": ""
+    },
+    "weerdlebot": {
+      "title": "WeerdleBot",
+      "description": "Bot Node.js que juega automáticamente a Weerdle (Wordle Pokémon) con panel de control web.",
+      "long_description": ""
+    },
+    "snackandcatch": {
+      "title": "",
+      "description": "",
+      "long_description": ""
+    },
+    "numismatic": {
+      "title": "",
+      "description": "",
+      "long_description": ""
+    },
+    "ghastrider": {
+      "title": "",
+      "description": "",
+      "long_description": ""
     }
+  },
+  "profile": {
+    "hero": "Desarrollador full-stack, titulado de un BUT en Informática (IUT de Lille) y finalizando mi alternancia en Mandarine Academy. Apasionado por el diseño de aplicaciones web modernas - Java, Spring Boot, Vue.js, PHP/Symfony.",
+    "about": "Soy Gaspard Catry, desarrollador full-stack de 20 años con sede en Lille. Titulado de un BUT en Informática en el IUT de Lille, estoy finalizando mi alternancia en Mandarine Academy con un stack PHP/Symfony/Tailwind.\n\nMi período de prácticas en Nextoo (Roubaix) me permitió seguir una formación intensiva en Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker y desarrollar 3 aplicaciones web internas. El Director General Adjunto de Nextoo me recomendó por mi rigor, autonomía y curiosidad intelectual.\n\nFuera del trabajo y los estudios, desarrollo proyectos personales en producción: MaGare (reproducción web de la app SNCF). También contribuyo a proyectos open-source los fines de semana. Mi objetivo: convertirme en ingeniero de software especializado en aplicaciones web full-stack robustas y eficientes.",
+    "positioning": "Desarrollador full-stack titulado de un BUT en Informática, me especializo en el diseño de aplicaciones web robustas y eficientes. Mi experiencia combina unas prácticas intensivas en Nextoo (Java/Spring Boot/Vue.js) y una alternancia en Mandarine Academy (PHP/Symfony/Tailwind). Busco un puesto de desarrollador full-stack o ingeniero de software junior, idealmente en un equipo técnico exigente donde pueda seguir progresando en arquitectura y calidad de software.",
+    "reflexive": "Aprendo rápido cuando estoy en un entorno técnico exigente. En Nextoo, ponerme al día con Spring Boot y Vue en 10 semanas me demostró que podía asimilar un stack nuevo rápidamente. En Mandarine confirmé lo mismo con un stack PHP/Symfony que no conocía: me adapto rápido a un entorno nuevo.\n\nSoy más eficaz cuando me explican *por qué* hacemos algo. El *cómo* puedo encontrarlo yo mismo con la documentación. Los mejores momentos de aprendizaje son cuando mi tutor se toma el tiempo de explicar una decisión de arquitectura o el motivo de una restricción.\n\nEl paso a la empresa también me enseñó a gestionar mi tiempo de otra forma: estimar, priorizar, comunicar sobre el avance.",
+    "strengths": "**Aprendizaje rápido.** Confirmado por mis prácticas en Nextoo y mi alternancia en Mandarine, en cada caso sobre stacks (casi) desconocidos.\n\n**Trabajo en equipo.** DinnerMatch y varios otros proyectos de grupo lo han confirmado. Me integro fácilmente, incluso cuando la media de edad es más alta — hago el esfuerzo.\n\n**Adaptación a un stack.** Dedico tiempo personal para entender las herramientas en uso. También intento mantenerme al día con las nuevas tecnologías, aunque avancen rápido con la IA.\n\n**Uso reflexivo de la IA.** Evoluciono con los modelos desde el COVID, soy bueno con los prompts. Sé que es una herramienta — peligrosa a nivel de seguridad si no entiendes lo que produce, así que hay que seguir siendo dev para revisar, corregir y saber programar sin ella (con la documentación).\n\n**Rigor técnico.** Pruebas, documentación, respeto de las convenciones (GitFlow, commits convencionales, arquitectura limpia). Revisiones de código positivas.\n\n**Curiosidad.** Proyectos personales (MaGare, este portfolio), open-source, vigilancia tecnológica regular.",
+    "improvements": "**Comunicación en reuniones.** Reservado últimamente, sobre todo al inicio de una misión: observo primero el nivel de cada uno para entender mi sitio en el grupo antes de tomar la palabra. Progreso con los daily stand-ups en Mandarine.\n\n**Estimación de tiempos.** Tendencia a subestimar (sobre todo en frontend). Aprendo a descomponer más fino y a añadir márgenes realistas.\n\n**Pedir ayuda.** Cuando estoy con un problema técnico, puedo quedarme demasiado tiempo antes de pedir ayuda. Intento identificar antes cuándo consultar a un compañero es más eficaz.",
+    "aboutVision": ""
+  }
 }

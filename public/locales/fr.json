@@ -1,486 +1,189 @@
 {
-    "nav": {
-        "home": "Accueil",
-        "projects": "Projets",
-        "about": "À propos",
-        "contact": "Contact",
-        "wiki": "Wiki"
+  "nav": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je m'appelle",
+    "name": "Gaspard",
+    "bio": "Développeur full-stack, diplômé d'un BUT Informatique à l'IUT de Lille et en fin d'alternance chez Mandarine Academy.",
+    "cta": "À propos de moi",
+    "ctaProjects": "Mes projets"
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "subtitle": "Une sélection de mes réalisations personnelles et académiques.",
+    "featuredTitle": "Projets en vedette",
+    "featuredSubtitle": "Quelques projets dont je suis particulièrement fier.",
+    "seeAll": "Voir tous les projets",
+    "viewGithub": "GitHub",
+    "viewLive": "Voir le projet",
+    "featured": "En vedette",
+    "softSkills": "Soft skills",
+    "technologies": "Technologies"
+  },
+  "about": {
+    "skills": "Compétences techniques",
+    "skillsSubtitle": "Les technologies que j'utilise au quotidien.",
+    "experience": "Parcours complet",
+    "experienceSubtitle": "Mon parcours académique et professionnel.",
+    "positioning": "Positionnement professionnel",
+    "positioningSubtitle": "Mon projet et ma vision.",
+    "proExperience": "Expériences professionnelles",
+    "proExperienceSubtitle": "Détail de mes stages et alternances.",
+    "reflexive": "Analyse réflexive",
+    "reflexiveSubtitle": "Ce que mes expériences professionnelles m'ont appris sur moi-même.",
+    "strengths": "Points forts",
+    "improvements": "Axes d'amélioration",
+    "context": "Contexte",
+    "missions": "Missions",
+    "autonomy": "Autonomie",
+    "interactions": "Interactions",
+    "situation": "Situation concrète",
+    "analysis": "Mon analyse",
+    "seeMore": "Voir le détail",
+    "seeLess": "Réduire",
+    "vision": "Ma vision",
+    "whoAmI": "Qui suis-je ?"
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Une question ou une opportunité ? N'hésitez pas à me contacter !",
+    "name": "Votre Nom",
+    "email": "Votre Email",
+    "message": "Votre Message",
+    "messagePlaceholder": "Bonjour Gaspard, je souhaitais...",
+    "send": "Envoyer le message",
+    "success": "Message envoyé avec succès ! Je vous répondrai dès que possible.",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "findMe": "Retrouvez-moi sur",
+    "gdpr": "Vos données (nom, email, message) sont utilisées uniquement pour vous répondre. Elles ne sont jamais revendues ni utilisées à des fins commerciales."
+  },
+  "footer": {
+    "madeWith": "Fait avec React, Tailwind & DaisyUI"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "subtitle": "La page que vous recherchez n'existe pas.",
+    "cta": "Retour à l'accueil"
+  },
+  "common": {
+    "error": "Une erreur est survenue lors du chargement des données.",
+    "present": "Présent"
+  },
+  "softSkillCategories": {
+    "maniere_etre": "Manière d'être",
+    "maniere_communiquer": "Manière de communiquer",
+    "maniere_travailler": "Manière de travailler avec les autres"
+  },
+  "experienceTypes": {
+    "stage": "Stage",
+    "alternance": "Alternance",
+    "education": "Formation",
+    "job": "Emploi",
+    "other": "Autre"
+  },
+  "project": {
+    "ffdc": {
+      "title": "FinnFoundDaChest",
+      "description": "Jeu d'aventure 2D solo en Java pur (univers Adventure Time).",
+      "long_description": "Premier projet Java en autonomie. Jeu 2D solo orienté speedrun : Finn explore une carte fixe, trouve des clés, ouvre des portes, atteint le coffre final.\n\nJava pur (sans moteur). Sprites de Finn faits à la main. Déplacement ZQSD, collisions, gestion des objets, mode debug (FPS, latence, coordonnées), musique togglable, README HTML généré via Pandoc."
     },
-    "hero": {
-        "greeting": "Bonjour, je m'appelle",
-        "name": "Gaspard",
-        "bio": "Développeur full-stack, diplômé d'un BUT Informatique à l'IUT de Lille et en fin d'alternance chez Mandarine Academy.",
-        "cta": "À propos de moi",
-        "ctaProjects": "Mes projets",
-        "role": {
-            "student": "diplômé d'un BUT Informatique",
-            "fullstack": "développeur full-stack",
-            "web": "développeur web"
-        }
+    "agile": {
+      "title": "Projet Agile de Rentrée",
+      "description": "Rogue-Like Java jouable au terminal. 10 sprints Scrum, équipe de 4.",
+      "long_description": "Projet Agile de Rentrée (BUT2). Rogue-Like en Java jouable au terminal, fait à 4 en 10 sprints hebdo en Scrum sur GitLab.\n\nPlusieurs classes (guerrier, mage…), étages procéduraux, coffres, équipement, boss final, mode admin avec cheat codes. Cahier des charges, issues, rétros et incrément jouable à chaque sprint."
     },
-    "projects": {
-        "title": "Mes Projets",
-        "subtitle": "Une sélection de mes réalisations personnelles et académiques.",
-        "featuredTitle": "Projets en vedette",
-        "featuredSubtitle": "Quelques projets dont je suis particulièrement fier.",
-        "seeAll": "Voir tous les projets",
-        "viewGithub": "GitHub",
-        "viewLive": "Voir le projet",
-        "featured": "En vedette",
-        "softSkills": "Soft skills",
-        "technologies": "Technologies"
+    "sae33": {
+      "title": "Projet SAE 3.3",
+      "description": "App JavaFX de classification k-NN sur des données. MVC, équipe de 4.",
+      "long_description": "SAE 3.3 (BUT2), équipe de 4 (\"Mathieu Fanclub\"). App JavaFX de visualisation et classification k-NN.\n\nCharge un dataset (Iris), affiche un nuage de points 2D avec choix des axes, ajoute un point inconnu et le classifie via k-NN. Drag-and-drop multi-fenêtres, lecteur CSV générique.\n\nMa partie : maquettage, prototypes du jalon 1, colorisation et classification. MVC strict (FXML, SceneBuilder), tests JUnit, UML complet."
     },
-    "about": {
-        "title": "À propos",
-        "subtitle": "Qui suis-je ?",
-        "bio": "Je suis Gaspard Catry, développeur full-stack de 20 ans basé à Lille. Diplômé d'un BUT Informatique à l'IUT de Lille, je suis en fin d'alternance chez Mandarine Academy.",
-        "skills": "Compétences techniques",
-        "skillsSubtitle": "Les technologies que j'utilise au quotidien.",
-        "experience": "Parcours complet",
-        "experienceSubtitle": "Mon parcours académique et professionnel.",
-        "positioning": "Positionnement professionnel",
-        "positioningSubtitle": "Mon projet et ma vision.",
-        "proExperience": "Expériences professionnelles",
-        "proExperienceSubtitle": "Détail de mes stages et alternances.",
-        "softSkills": "Compétences comportementales",
-        "softSkillsSubtitle": "Les savoir-être qui définissent ma posture professionnelle.",
-        "reflexive": "Analyse réflexive",
-        "reflexiveSubtitle": "Ce que mes expériences professionnelles m'ont appris sur moi-même.",
-        "strengths": "Points forts",
-        "improvements": "Axes d'amélioration",
-        "context": "Contexte",
-        "missions": "Missions",
-        "autonomy": "Autonomie",
-        "interactions": "Interactions",
-        "situation": "Situation concrète",
-        "analysis": "Mon analyse",
-        "seeMore": "Voir le détail",
-        "seeLess": "Réduire",
-        "vision": "Ma vision",
-        "visionSubtitle": "L'IA comme outil, l'humain comme pilote.",
-        "whoAmI": "Qui suis-je ?",
-        "whoAmISubtitle": "Mon parcours en quelques mots."
+    "mte": {
+      "title": "MineToEarn",
+      "description": "Plugin Minecraft de mining récompensé + interface web. Travail d'équipe.",
+      "long_description": "Plugin Minecraft (Spigot) qui transforme l'activité de mining en monnaie utilisable. Interface web pour suivre la progression et faire des transactions. Travail d'équipe."
     },
-    "contact": {
-        "title": "Contactez-moi",
-        "subtitle": "Une question ou une opportunité ? N'hésitez pas à me contacter !",
-        "name": "Votre Nom",
-        "email": "Votre Email",
-        "message": "Votre Message",
-        "messagePlaceholder": "Bonjour Gaspard, je souhaitais...",
-        "send": "Envoyer le message",
-        "success": "Message envoyé avec succès ! Je vous répondrai dès que possible.",
-        "error": "Une erreur est survenue. Veuillez réessayer.",
-        "findMe": "Retrouvez-moi sur",
-        "gdpr": "Vos données (nom, email, message) sont utilisées uniquement pour vous répondre. Elles ne sont jamais revendues ni utilisées à des fins commerciales."
+    "corpsamer": {
+      "title": "Projet Nuit de l'Info : CorpsAMer",
+      "description": "Webapp HTML/CSS/JS pour la Nuit de l'Info. Travail d'équipe.",
+      "long_description": "Webapp réalisée pendant la Nuit de l'Info (concours d'une nuit). HTML / CSS / JS vanilla, équipe de plusieurs étudiants, sujet imposé par les organisateurs."
     },
-    "footer": {
-        "madeWith": "Fait avec React, Tailwind & DaisyUI"
+    "talkul": {
+      "title": "Talkul",
+      "description": "Webapp Java EE de messagerie en temps réel. Tomcat + Postgres.",
+      "long_description": "App de messagerie web en Java EE (Servlets, JSP, Tomcat) avec Postgres, dans le cadre du module dev web côté serveur.\n\nAuth, conversations, envoi et rafraîchissement de messages. Config externalisée dans `config.prop` pour ne jamais hardcoder les credentials. Jackson pour le JSON/XML, Jakarta Migration pour les versions récentes."
     },
-    "notFound": {
-        "title": "Page introuvable",
-        "subtitle": "La page que vous recherchez n'existe pas.",
-        "cta": "Retour à l'accueil"
+    "woze": {
+      "title": "Woze",
+      "description": "Calculateur d'itinéraire multi-modal (train/bus/avion) en JavaFX. Équipe de 3.",
+      "long_description": "SAE 2.01-2.02 (BUT1), équipe de 3. App Java/JavaFX qui calcule des itinéraires multi-modaux entre villes en optimisant prix, durée ou émissions CO2e.\n\n3 versions successives : (1) plus court chemin mono-modal sur graphe à partir de CSV, (2) multi-modalité avec coûts de correspondance, (3) pondération relative des critères + historique de voyages. MVC, contrôleurs FXML, tests PMD.\n\nMa partie : POO (Voyage/Lieu/Plateforme, import CSV, exceptions, filtrage) et graphe (pondération des arêtes, correspondances)."
     },
-    "common": {
-        "loading": "Chargement...",
-        "error": "Une erreur est survenue lors du chargement des données.",
-        "present": "Présent"
+    "maio": {
+      "title": "Ma.io",
+      "description": "Jeu .io multijoueur (mayonnaise contre aliens) en Node.js + JS. Travail d'équipe.",
+      "long_description": "SAE JavaScript : jeu multijoueur web (.io like) sur le thème mayonnaise contre aliens.\n\nClient/serveur séparés. Serveur Node.js (ES modules) qui gère l'état partagé (positions joueurs, taches de mayo, leaderboard). Client JS bundlé Webpack. WebSockets pour le temps réel.\n\nPoints clés : refacto pour séparer client et serveur après un démarrage monolithique, TDD sur la classe Player, calibrage des collisions par itérations, écriture de bots qui ne se contentent pas d'errer aléatoirement."
     },
-    "softSkillCategories": {
-        "maniere_etre": "Manière d'être",
-        "maniere_communiquer": "Manière de communiquer",
-        "maniere_travailler": "Manière de travailler avec les autres"
+    "magare": {
+      "title": "MaGare",
+      "description": "Reproduction web de l'app SNCF Ma Gare avec API temps réel.",
+      "long_description": "Reproduction de l'app mobile Ma Gare en web, déployée sur GitHub Pages. Projet perso, fait seul de A à Z.\n\nReact 19, TypeScript, Vite, Tailwind, DaisyUI, React Router. API SNCF Navitia pour les départs/arrivées temps réel et le détail des trajets. Tableau d'affichage côte à côte (desktop) ou en bascule (mobile), feuille glissante pour le détail d'un train, filtrage avec favoris, gare par défaut en localStorage, thèmes clair/sombre aux couleurs SNCF."
     },
-    "experienceTypes": {
-        "stage": "Stage",
-        "alternance": "Alternance",
-        "education": "Formation",
-        "job": "Emploi",
-        "other": "Autre"
+    "weathersport": {
+      "title": "WeatherSport",
+      "description": "Météo + recommandations sportives selon le temps. Spring Boot + Vue.js. Stage Nextoo.",
+      "long_description": "Premier projet du stage Nextoo (Nextoo Academy). Croise les données météo d'une ville avec un catalogue de sports pour recommander des activités adaptées (pluie → indoor, beau temps → outdoor).\n\nBackend Spring Boot architecture n-tiers (DTO/BO/DAO), API REST, JPA/Hibernate, Postgres en Docker, tests JUnit/Mockito. Front Vue.js 3 + Vuetify. Docker Compose, CI/CD GitLab + SonarQube/JACOCO."
     },
-    "project": {
-        "ffdc": {
-            "title": "FinnFoundDaChest",
-            "description": "Jeu d'aventure 2D solo en Java pur (univers Adventure Time).",
-            "long_description": "Premier projet Java en autonomie. Jeu 2D solo orienté speedrun : Finn explore une carte fixe, trouve des clés, ouvre des portes, atteint le coffre final.\n\nJava pur (sans moteur). Sprites de Finn faits à la main. Déplacement ZQSD, collisions, gestion des objets, mode debug (FPS, latence, coordonnées), musique togglable, README HTML généré via Pandoc."
-        },
-        "agile": {
-            "title": "Projet Agile de Rentrée",
-            "description": "Rogue-Like Java jouable au terminal. 10 sprints Scrum, équipe de 4.",
-            "long_description": "Projet Agile de Rentrée (BUT2). Rogue-Like en Java jouable au terminal, fait à 4 en 10 sprints hebdo en Scrum sur GitLab.\n\nPlusieurs classes (guerrier, mage…), étages procéduraux, coffres, équipement, boss final, mode admin avec cheat codes. Cahier des charges, issues, rétros et incrément jouable à chaque sprint."
-        },
-        "sae33": {
-            "title": "Projet SAE 3.3",
-            "description": "App JavaFX de classification k-NN sur des données. MVC, équipe de 4.",
-            "long_description": "SAE 3.3 (BUT2), équipe de 4 (\"Mathieu Fanclub\"). App JavaFX de visualisation et classification k-NN.\n\nCharge un dataset (Iris), affiche un nuage de points 2D avec choix des axes, ajoute un point inconnu et le classifie via k-NN. Drag-and-drop multi-fenêtres, lecteur CSV générique.\n\nMa partie : maquettage, prototypes du jalon 1, colorisation et classification. MVC strict (FXML, SceneBuilder), tests JUnit, UML complet."
-        },
-        "mte": {
-            "title": "MineToEarn",
-            "description": "Plugin Minecraft de mining récompensé + interface web. Travail d'équipe.",
-            "long_description": "Plugin Minecraft (Spigot) qui transforme l'activité de mining en monnaie utilisable. Interface web pour suivre la progression et faire des transactions. Travail d'équipe."
-        },
-        "corpsamer": {
-            "title": "Projet Nuit de l'Info : CorpsAMer",
-            "description": "Webapp HTML/CSS/JS pour la Nuit de l'Info. Travail d'équipe.",
-            "long_description": "Webapp réalisée pendant la Nuit de l'Info (concours d'une nuit). HTML / CSS / JS vanilla, équipe de plusieurs étudiants, sujet imposé par les organisateurs."
-        },
-        "talkul": {
-            "title": "Talkul",
-            "description": "Webapp Java EE de messagerie en temps réel. Tomcat + Postgres.",
-            "long_description": "App de messagerie web en Java EE (Servlets, JSP, Tomcat) avec Postgres, dans le cadre du module dev web côté serveur.\n\nAuth, conversations, envoi et rafraîchissement de messages. Config externalisée dans `config.prop` pour ne jamais hardcoder les credentials. Jackson pour le JSON/XML, Jakarta Migration pour les versions récentes."
-        },
-        "woze": {
-            "title": "Woze",
-            "description": "Calculateur d'itinéraire multi-modal (train/bus/avion) en JavaFX. Équipe de 3.",
-            "long_description": "SAE 2.01-2.02 (BUT1), équipe de 3. App Java/JavaFX qui calcule des itinéraires multi-modaux entre villes en optimisant prix, durée ou émissions CO2e.\n\n3 versions successives : (1) plus court chemin mono-modal sur graphe à partir de CSV, (2) multi-modalité avec coûts de correspondance, (3) pondération relative des critères + historique de voyages. MVC, contrôleurs FXML, tests PMD.\n\nMa partie : POO (Voyage/Lieu/Plateforme, import CSV, exceptions, filtrage) et graphe (pondération des arêtes, correspondances)."
-        },
-        "maio": {
-            "title": "Ma.io",
-            "description": "Jeu .io multijoueur (mayonnaise contre aliens) en Node.js + JS. Travail d'équipe.",
-            "long_description": "SAE JavaScript : jeu multijoueur web (.io like) sur le thème mayonnaise contre aliens.\n\nClient/serveur séparés. Serveur Node.js (ES modules) qui gère l'état partagé (positions joueurs, taches de mayo, leaderboard). Client JS bundlé Webpack. WebSockets pour le temps réel.\n\nPoints clés : refacto pour séparer client et serveur après un démarrage monolithique, TDD sur la classe Player, calibrage des collisions par itérations, écriture de bots qui ne se contentent pas d'errer aléatoirement."
-        },
-        "magare": {
-            "title": "MaGare",
-            "description": "Reproduction web de l'app SNCF Ma Gare avec API temps réel.",
-            "long_description": "Reproduction de l'app mobile Ma Gare en web, déployée sur GitHub Pages. Projet perso, fait seul de A à Z.\n\nReact 19, TypeScript, Vite, Tailwind, DaisyUI, React Router. API SNCF Navitia pour les départs/arrivées temps réel et le détail des trajets. Tableau d'affichage côte à côte (desktop) ou en bascule (mobile), feuille glissante pour le détail d'un train, filtrage avec favoris, gare par défaut en localStorage, thèmes clair/sombre aux couleurs SNCF."
-        },
-        "weathersport": {
-            "title": "WeatherSport",
-            "description": "Météo + recommandations sportives selon le temps. Spring Boot + Vue.js. Stage Nextoo.",
-            "long_description": "Premier projet du stage Nextoo (Nextoo Academy). Croise les données météo d'une ville avec un catalogue de sports pour recommander des activités adaptées (pluie → indoor, beau temps → outdoor).\n\nBackend Spring Boot architecture n-tiers (DTO/BO/DAO), API REST, JPA/Hibernate, Postgres en Docker, tests JUnit/Mockito. Front Vue.js 3 + Vuetify. Docker Compose, CI/CD GitLab + SonarQube/JACOCO."
-        },
-        "nextmovie": {
-            "title": "NextMovie",
-            "description": "Moteur de recommandation de films. Spring Boot + Vue.js. Stage Nextoo.",
-            "long_description": "Deuxième projet du stage Nextoo, fait en autonomie en 2 semaines (validation des acquis). Recommande des films selon les films vus et les notes données par l'utilisateur.\n\nSpring Boot avec API TheMovieDB, ExceptionHandler global, architecture n-tiers. Front Vue.js 3 / Vuetify, 5 vues (accueil, détail film, profil, recommandations, top rated)."
-        },
-        "gds": {
-            "title": "GDS",
-            "description": "Outil interne de gestion de stock. Spring Boot + Vue.js. Stage Nextoo.",
-            "long_description": "Troisième projet du stage Nextoo : gestion des stocks internes (matériel info, téléphones, véhicules). Intégration directe dans une équipe existante.\n\nSpring Boot + Vue.js + Postgres + Docker. CRUD complet, filtrage / tri / pagination côté serveur, formulaires de saisie. Daily, revues de code sur merge requests, prise en charge d'une User Story dès le 1er jour."
-        },
-        "dinnermatch": {
-            "title": "DinnerMatch",
-            "description": "Plateforme pour partager des dîners à thème entre clients d'hôtels. Spring Boot + React.",
-            "long_description": "Met en relation les clients d'hôtels pour partager des dîners selon leurs centres d'intérêt. Projet de groupe pendant la semaine agile à l'IUT (BUT3) : un porteur de projet a choisi notre équipe de 6/7 pour bosser sur l'idée. Déployé sur dinnermatch.fr.\n\nFront : React 19, TypeScript, Tailwind 4, DaisyUI 5, éditeur de thèmes pour hôteliers, calendrier responsive, dashboards par rôle (Client / Hôtelier / Admin). Back : Spring Boot 4, Java 21, Spring Security + JWT, JPA/Hibernate, Postgres 17, emails via Scaleway TEM. CI/CD GitLab, Docker, Nginx reverse proxy.\n\nMa partie : back (API, JWT, matching, panels admin CRUD).\n\nNote : si le site est down, c'est de la faute du porteur de projet — il n'y fait pas gaffe et je n'ai plus les accès SSH pour le relancer."
-        },
-        "refugegourmand": {
-            "title": "Le Refuge Gourmand",
-            "description": "Site de réservation de salle pour un restaurant fictif. Next.js, Prisma, NextAuth, Stripe.",
-            "long_description": "Projet académique d'entrepreneuriat : site de réservation de salles pour un restaurant fictif. Next.js export statique sur GitHub Pages.\n\nNextAuth + bcrypt, paiement Stripe, Prisma (Postgres), validation React Hook Form + Zod, Tailwind. Atomic Design."
-        },
-        "weerdlebot": {
-            "title": "WeerdleBot",
-            "description": "Bot Node.js qui joue automatiquement à Weerdle (Wordle Pokémon) avec dashboard de contrôle.",
-            "long_description": "Bot perso pour Weerdle (variante Pokémon de Wordle sur pokengine.com). Envoie des requêtes HTTP authentifiées, analyse les réponses et adapte sa stratégie.\n\nDashboard web (Node.js + HTML/CSS/JS) pour start/stop, logs en direct et rotation VPN NordVPN pour éviter les bans IP. Tourne en Docker."
-        },
-        "snackandcatch": {
-            "title": "Snack & Catch",
-            "description": "App web pour Cobblemon (Pokémon dans Minecraft). Recettes, spots de spawn, addons. Next.js + Drizzle.",
-            "long_description": "App compagnon pour le mod Cobblemon. Centralise recettes, spots de spawn et addons trouvés sur les wikis communautaires.\n\nNext.js 15, TypeScript, Tailwind, Drizzle sur Postgres (Neon), déployée sur Vercel. Pipeline d'ingestion qui scrape les wikis et structure les données."
-        },
-        "numismatic": {
-            "title": "Numismatic Reimagined (WIP)",
-            "description": "Mod Minecraft de monnaie multi-loader (Fabric + Forge), MC 1.20.1. WIP.",
-            "long_description": "Système de monnaie pour Minecraft inspiré de Numismatic Overhaul, mais réécrit pour tourner sur Fabric et Forge en parallèle.\n\nJava 17, Architectury API, Gradle multi-module (common / fabric / forge). Pas encore publié."
-        },
-        "ghastrider": {
-            "title": "GhastRider (WIP)",
-            "description": "Mod Minecraft NeoForge : dash propulsé pour le Happy Ghast (MC 1.21+). WIP.",
-            "long_description": "Ajoute une mécanique de dash au Happy Ghast (MC 1.21). Le joueur consomme des blocs de glace pour se propulser.\n\nJava 21, NeoForge, config TOML pour ajuster cooldown / force / coût sans recompiler. Pas encore publié."
-        }
+    "nextmovie": {
+      "title": "NextMovie",
+      "description": "Moteur de recommandation de films. Spring Boot + Vue.js. Stage Nextoo.",
+      "long_description": "Deuxième projet du stage Nextoo, fait en autonomie en 2 semaines (validation des acquis). Recommande des films selon les films vus et les notes données par l'utilisateur.\n\nSpring Boot avec API TheMovieDB, ExceptionHandler global, architecture n-tiers. Front Vue.js 3 / Vuetify, 5 vues (accueil, détail film, profil, recommandations, top rated)."
     },
-    "profile": {
-        "hero": "Développeur full-stack, diplômé d'un BUT Informatique (IUT de Lille) et en fin d'alternance chez Mandarine Academy. J'aime autant les projets en équipe que les projets perso. Bonne visite.",
-        "about": "Je suis **Gaspard Catry**, 20 ans, développeur full-stack basé à **Lille**. Diplômé d'un **BUT Informatique** à l'**IUT de Lille**, je suis en fin d'alternance chez **Mandarine Academy** sur un stack **PHP / Symfony / Tailwind**.\n\nAvant ça, stage chez **Nextoo** (Roubaix) : formation intensive **Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker**, 3 applis web internes. Recommandation écrite du DGD à la fin du stage.\n\nÀ côté, je fais des projets perso déployés en prod (**MaGare**, reproduction web de l'app SNCF) et je touche à l'open-source le week-end. Objectif : devenir ingénieur logiciel sur des applis web full-stack.",
-        "positioning": "Diplômé d'un BUT Informatique (parcours Réalisation d'applications) avec une expérience qui combine du **Java / Spring Boot / Vue.js** (stage Nextoo) et du **PHP / Symfony / Tailwind** (alternance Mandarine).\n\nJe cherche un poste de **développeur full-stack** ou **ingénieur logiciel junior** dans une équipe technique exigeante, où je pourrai bosser sur l'archi et la qualité.",
-        "reflexive": "J'apprends vite quand je suis dans un cadre technique exigeant. Chez Nextoo, monter en compétence sur Spring Boot et Vue en 10 semaines m'a montré que je pouvais digérer un nouveau stack rapidement. Chez Mandarine, j'ai confirmé la même chose sur un stack PHP/Symfony qui m'était inconnu : je m'adapte vite à un environnement nouveau.\n\nJe suis plus efficace quand on m'explique *pourquoi* on fait quelque chose. Le *comment*, je peux le trouver moi-même avec la doc. Les meilleurs moments d'apprentissage, c'est quand mon tuteur prend le temps d'expliquer un choix d'archi ou la raison d'une contrainte.\n\nLe passage en entreprise m'a aussi appris à gérer mon temps autrement : estimer, prioriser, communiquer sur l'avancement.",
-        "strengths": "**Apprentissage rapide.** Confirmé par mon stage chez Nextoo et mon alternance chez Mandarine, sur des stacks inconnus ou presque à chaque fois.\n\n**Travail en équipe.** DinnerMatch et plusieurs autres projets de groupe l'ont confirmé. Je m'intègre facilement, même quand la moyenne d'âge est plus élevée — je fais l'effort.\n\n**Adaptation à un stack.** Je prends sur mon temps perso pour comprendre les outils en place. J'essaie aussi de me tenir à jour sur les nouvelles technos, même si ça avance vite avec l'IA.\n\n**Usage raisonné de l'IA.** J'évolue avec les modèles depuis le COVID, je suis bon en prompt. Je sais que c'est un outil — dangereux côté sécurité si on ne comprend pas ce qu'il produit, donc il faut rester dev pour relire, corriger et savoir coder sans (avec la doc).\n\n**Rigueur technique.** Tests, doc, respect des conventions (GitFlow, commits conventionnels, archi propre). Revues de code positives.\n\n**Curiosité.** Projets perso (MaGare, ce portfolio), open-source, veille techno régulière.",
-        "improvements": "**Communication en réunion.** Réservé depuis peu, surtout en début de mission : j'observe d'abord le niveau de chacun pour comprendre ma place dans le groupe avant de prendre la parole. Je progresse via les dailys chez Mandarine.\n\n**Estimation des temps.** Tendance à sous-estimer (surtout sur le front). J'apprends à découper plus fin et à mettre des marges réalistes.\n\n**Demande d'aide.** Quand je suis dans un problème technique, je peux y rester trop longtemps avant de demander. J'essaie d'identifier plus tôt quand solliciter un collègue est plus efficace.",
-        "aboutVision": "Ce qui reste irremplaçable chez un dev : comprendre un besoin métier et le traduire en solution, architecturer un système, assumer la responsabilité technique, gérer le relationnel équipe et client. L'IA est un outil que j'utilise au quotidien — un amplificateur, pas un remplaçant.\n\nObjectif : devenir ingénieur logiciel sur des applis web full-stack."
+    "gds": {
+      "title": "GDS",
+      "description": "Outil interne de gestion de stock. Spring Boot + Vue.js. Stage Nextoo.",
+      "long_description": "Troisième projet du stage Nextoo : gestion des stocks internes (matériel info, téléphones, véhicules). Intégration directe dans une équipe existante.\n\nSpring Boot + Vue.js + Postgres + Docker. CRUD complet, filtrage / tri / pagination côté serveur, formulaires de saisie. Daily, revues de code sur merge requests, prise en charge d'une User Story dès le 1er jour."
     },
-    "wiki": {
-        "title": "Wiki",
-        "subtitle": "Documentation de mes projets open-source.",
-        "viewDocs": "Documentation",
-        "download": "Télécharger",
-        "backToCategory": "Retour",
-        "modCount_one": "{{count}} mod",
-        "modCount_other": "{{count}} mods",
-        "minecraft": {
-            "title": "Mods Minecraft",
-            "subtitle": "Mods pour Minecraft Java Edition."
-        },
-        "mods": {
-            "ghastrider": {
-                "name": "GhastRider",
-                "tagline": "Mécanique de dash pour le Happy Ghast",
-                "sections": {
-                    "overview": {
-                        "title": "Présentation",
-                        "content": "<p>GhastRider ajoute une <strong>mécanique de dash par charge</strong> au Happy Ghast, inspirée de la barre de saut du cheval.</p><p>Maintenez la touche dash pour charger, relâchez pour propulser avec un son de vent. Nourrissez votre ghast avec de la glace pour des bonus de vitesse !</p><h3 class=\"text-lg font-semibold mt-6 mb-2\">Caractéristiques</h3><ul class=\"list-disc list-inside space-y-1\"><li><strong>Barre de charge</strong> — remplace la barre d'XP en montant un Happy Ghast</li><li><strong>Seuil minimum</strong> — les appuis trop courts sont ignorés (2/18 barres)</li><li><strong>Décroissance de surcharge</strong> — maintenir trop longtemps réduit la charge</li><li><strong>Cooldown proportionnel</strong> — charge courte = cooldown court</li><li><strong>Auto-recharge</strong> — gardez G enfoncé pendant le cooldown</li><li><strong>Boost vertical</strong> — maintient l'altitude pendant le dash</li><li><strong>Alimentation en glace</strong> — donnez de la glace pour des effets de vitesse</li><li><strong>Sons custom</strong> — souffle de vent, craquement de glace, ronronnement</li></ul>"
-                    },
-                    "dash": {
-                        "title": "Mécanique de Dash",
-                        "content": "<h3 class=\"text-lg font-semibold mb-2\">Comment dasher</h3><ol class=\"list-decimal list-inside space-y-1\"><li>Montez un Happy Ghast (équipez-le d'un harnais)</li><li>Maintenez <kbd class=\"kbd kbd-sm\">G</kbd> pour charger — la barre se remplit</li><li>Relâchez <kbd class=\"kbd kbd-sm\">G</kbd> au bon moment pour un boost maximum</li><li>La barre affiche le cooldown qui diminue</li><li>Une fois la barre vide, vous pouvez redash — ou gardez G enfoncé pour auto-recharger</li></ol><h3 class=\"text-lg font-semibold mt-6 mb-2\">Paramètres</h3><table class=\"table table-zebra w-full\"><thead><tr><th>Paramètre</th><th>Valeur</th></tr></thead><tbody><tr><td>Charge minimum</td><td>2/18 barres (~11%)</td></tr><tr><td>Temps de charge max</td><td>2 secondes</td></tr><tr><td>Cooldown max</td><td>3 secondes</td></tr><tr><td>Boost vertical</td><td>30%</td></tr><tr><td>Touche</td><td><kbd class=\"kbd kbd-sm\">G</kbd> (configurable)</td></tr></tbody></table>"
-                    },
-                    "ice": {
-                        "title": "Alimentation en Glace",
-                        "content": "<p>Nourrissez votre Happy Ghast avec de la glace (clic droit) pour des <strong>bonus de vitesse temporaires</strong>.</p><table class=\"table table-zebra w-full mt-4\"><thead><tr><th>Item</th><th>Effet</th><th>Durée</th><th>Notes</th></tr></thead><tbody><tr><td>Glace</td><td>Vitesse I</td><td>10s</td><td>Durée cumulable</td></tr><tr><td>Glace compactée</td><td>Vitesse II</td><td>10s</td><td>Durée cumulable</td></tr><tr><td>Glace bleue</td><td>Vitesse III</td><td>10s</td><td>Durée cumulable</td></tr><tr><td>Seau de neige poudreuse</td><td>Vitesse I</td><td>10s</td><td>Se vide en seau</td></tr></tbody></table><p class=\"mt-4 text-base-content/60\">Donner un type de glace différent remet la durée à 10s avec le nouveau niveau de vitesse.</p><h3 class=\"text-lg font-semibold mt-6 mb-2\">Effets</h3><ul class=\"list-disc list-inside space-y-1\"><li>Son de craquement de glace</li><li>Son de ronronnement du ghast</li><li>Particules de l'item donné</li></ul>"
-                    },
-                    "installation": {
-                        "title": "Installation",
-                        "content": "<h3 class=\"text-lg font-semibold mb-2\">Prérequis</h3><ul class=\"list-disc list-inside space-y-1\"><li><strong>Minecraft 26.1.2</strong></li><li><a href=\"https://fabricmc.net/\" class=\"link link-primary\" target=\"_blank\">Fabric Loader</a> ou <a href=\"https://neoforged.net/\" class=\"link link-primary\" target=\"_blank\">NeoForge</a></li><li><a href=\"https://modrinth.com/mod/fabric-api\" class=\"link link-primary\" target=\"_blank\">Fabric API</a> (Fabric uniquement)</li></ul><h3 class=\"text-lg font-semibold mt-6 mb-2\">Étapes</h3><ol class=\"list-decimal list-inside space-y-1\"><li>Installez Fabric Loader ou NeoForge pour MC 26.1.2</li><li>Pour Fabric : installez aussi Fabric API</li><li>Téléchargez le JAR depuis <a href=\"https://github.com/Gaspard4i/ghastrider/releases/latest\" class=\"link link-primary\" target=\"_blank\">GitHub Releases</a></li><li>Placez le JAR dans votre dossier <code>mods/</code></li><li>Lancez le jeu</li></ol>"
-                    },
-                    "commands": {
-                        "title": "Commandes",
-                        "content": "<h3 class=\"text-lg font-semibold mb-2\">Fonction debug</h3><div class=\"mockup-code mb-4\"><pre data-prefix=\"$\"><code>/function ghastrider:debug</code></pre></div><p>Prépare un environnement de test :</p><ul class=\"list-disc list-inside space-y-1 mt-2\"><li>Difficulté pacifique</li><li>Désactive le cycle jour/nuit, spawn de mobs, météo</li><li>Jour + beau temps</li><li>Vide votre inventaire</li><li>Tue les Happy Ghasts existants</li><li>Invoque 3 Happy Ghasts invulnérables</li><li>Donne : harnais, tous types de glace, boules de neige</li></ul><p class=\"mt-4 text-base-content/60\">Nécessite un monde <strong>Créatif avec les commandes activées</strong> (Superflat recommandé).</p>"
-                    },
-                    "changelog": {
-                        "title": "Changelog",
-                        "content": "<h3 class=\"text-lg font-semibold mb-2\">v26.1.2.1-alpha.1</h3><p class=\"text-sm text-base-content/50 mb-3\">16 avril 2026</p><p class=\"mb-2\">Première version publique :</p><ul class=\"list-disc list-inside space-y-1\"><li>Mécanique de dash avec barre de charge</li><li>Décroissance de surcharge avec seuil minimum</li><li>Cooldown proportionnel</li><li>Auto-recharge en maintenant G</li><li>Boost vertical pendant le dash</li><li>Alimentation en glace avec effets de Vitesse</li><li>Sons custom (vent, craquement, ronronnement)</li><li>Particules d'items</li><li>Fonction debug</li><li>Support Fabric et NeoForge pour MC 26.1.2</li></ul>"
-                    }
-                }
-            },
-            "numismatic": {
-                "name": "Numismatic Reimagined",
-                "tagline": "Système de monnaie custom pour Minecraft",
-                "sections": {
-                    "overview": {
-                        "title": "Présentation",
-                        "content": "<p><strong>Numismatic Reimagined</strong> est un mod de monnaie Minecraft inspiré de <a href=\"https://github.com/wisp-forest/numismatic-overhaul\" class=\"link link-primary\" target=\"_blank\">Numismatic Overhaul</a>, reconstruit de zéro.</p><p class=\"mt-2\">Il ajoute un système d'économie complet avec plusieurs dénominations de pièces, des boutiques, des tirelires et une intégration avec les échanges de villageois.</p><div class=\"mt-4 p-4 bg-base-300 rounded-lg\"><p class=\"text-sm\">Ce mod est actuellement en <strong>développement</strong>. La Phase 1 (items de monnaie) est terminée.</p></div>"
-                    },
-                    "currency": {
-                        "title": "Système de Monnaie",
-                        "content": "<p>Cinq dénominations avec un taux de change base 100 :</p><table class=\"table table-zebra w-full mt-4\"><thead><tr><th>Pièce</th><th>Valeur</th><th>Équivalence</th></tr></thead><tbody><tr><td>Bronze</td><td>1</td><td>Unité de base</td></tr><tr><td>Argent</td><td>100</td><td>= 100 Bronze</td></tr><tr><td>Or</td><td>10 000</td><td>= 100 Argent</td></tr><tr><td>Netherite</td><td>1 000 000</td><td>= 100 Or</td></tr><tr><td>Star Coin</td><td>Unique</td><td>Récompense de succès</td></tr></tbody></table><p class=\"mt-4\">Le <strong>Star Coin</strong> est un trophée obtenu en accumulant 1 000 Netherite Coins de transactions. Unique par joueur mais pas lié à l'âme.</p>"
-                    },
-                    "roadmap": {
-                        "title": "Feuille de Route",
-                        "content": "<p>Le mod est développé en 12 phases :</p><ol class=\"list-decimal list-inside space-y-2 mt-4\"><li><strong class=\"text-success\">Items de Monnaie</strong> — Terminé</li><li>Système de Bourse (Purse)</li><li>Bloc Tirelire (Piggy Bank)</li><li>Bloc Boutique</li><li>Système de Configuration</li><li>Loot Tables + Drops de Mobs</li><li>Échanges de Villageois</li><li>Marketplace + Commandes</li><li>Succès + Star Coin</li><li>Sécurité</li><li>API Addon</li><li>Port NeoForge + MC 1.21.1</li></ol>"
-                    }
-                }
-            }
-        },
-        "gr": {
-            "sections": {
-                "overview": "Présentation",
-                "dash": "Le Dash",
-                "ice": "Alimentation en Glace",
-                "installation": "Installation",
-                "commands": "Commandes",
-                "changelog": "Changelog",
-                "config": "Configuration"
-            },
-            "overview": {
-                "intro": "GhastRider transforme le Happy Ghast en véritable monture de combat aérien. Chargez votre dash et propulsez-vous à travers le ciel, nourrissez votre ghast avec de la glace pour aller encore plus vite.",
-                "screenshotRiding": "Screenshot : voler sur un Happy Ghast",
-                "featuresTitle": "Caractéristiques",
-                "chargeBar": "Barre de charge — remplace la barre d'XP en montant un Happy Ghast",
-                "minThreshold": "Seuil minimum — les appuis trop courts sont ignorés (2/18 barres)",
-                "overchargeDecay": "Décroissance de surcharge — maintenir trop longtemps réduit la charge",
-                "proportionalCd": "Cooldown proportionnel — charge courte = cooldown court",
-                "autoRecharge": "Auto-recharge — gardez G enfoncé pendant le cooldown pour relancer la charge",
-                "iceFeeding": "Alimentation en glace — donnez de la glace pour des effets de vitesse",
-                "customSounds": "Sons custom — souffle de vent au dash, craquement de glace",
-                "particles": "Particules — particules de l'item donné lors de l'alimentation",
-                "tip": "Relâchez à 80%+ de charge pour le meilleur boost. Mais ne maintenez pas trop longtemps — la charge décroît après le max !",
-                "dashTitle": "Dash aérien",
-                "dashDesc": "Maintenez G pour charger, relâchez pour vous propulser dans les airs. Plus vous chargez, plus le boost est puissant.",
-                "iceTitle": "Boost de vitesse",
-                "iceDesc": "Donnez de la glace à votre ghast pour obtenir des effets de Vitesse temporaires. Glace bleue = Speed III !",
-                "quickStartTitle": "Prise en main rapide",
-                "qs1": "Équipez un Happy Ghast avec un harnais et montez dessus",
-                "qs2": "Vous voyez la barre de charge à la place de la barre d'XP",
-                "qs3prefix": "Maintenez",
-                "qs3suffix": "pour charger, relâchez pour dasher",
-                "qs4": "Donnez de la glace (clic droit) pour aller plus vite",
-                "compatNote": "Compatible Fabric et NeoForge pour Minecraft 26.1.2"
-            },
-            "dash": {
-                "intro": "Quand vous montez un Happy Ghast, la barre d'XP est remplacée par une barre de charge. C'est votre dash.",
-                "howTo": "Comment ça marche",
-                "key": "G",
-                "step1": "Montez un Happy Ghast équipé d'un harnais",
-                "step2prefix": "Maintenez",
-                "step2suffix": "— la barre se remplit",
-                "step3prefix": "Relâchez",
-                "step3suffix": "— vous êtes propulsé vers l'avant",
-                "step4": "Attendez la fin du cooldown (la barre se vide) puis recommencez",
-                "step5prefix": "Gardez",
-                "step5suffix": "enfoncé pour auto-recharger dès la fin du cooldown",
-                "screenshotCharging": "Screenshot : barre de charge en train de se remplir",
-                "screenshotCooldown": "Screenshot : cooldown après un dash",
-                "params": "Paramètres",
-                "paramCol": "Paramètre",
-                "valueCol": "Valeur",
-                "minCharge": "Charge minimum",
-                "maxChargeTime": "Temps de charge max",
-                "maxCooldown": "Cooldown max",
-                "verticalBoost": "Boost vertical",
-                "keyLabel": "Touche",
-                "configurable": "configurable",
-                "overchargeTip": "La surcharge commence quand la barre est pleine. La charge descend lentement jusqu'au seuil minimum (2/18). Relâchez avant pour garder plus de puissance !",
-                "tipsTitle": "Astuces",
-                "tipRelease": "Relâchez quand la barre est presque pleine pour le meilleur boost. Pas besoin d'attendre qu'elle soit à 100%.",
-                "tipAutoRecharge": "Gardez G enfoncé même pendant le cooldown — le dash se rechargera automatiquement dès que possible.",
-                "tipOvercharge": "Attention : si vous maintenez trop longtemps après que la barre est pleine, la charge redescend. Relâchez au bon moment !"
-            },
-            "ice": {
-                "intro": "Donnez de la glace à votre Happy Ghast (clic droit en le montant) pour obtenir des bonus de vitesse temporaires.",
-                "itemCol": "Item",
-                "effectCol": "Effet",
-                "durationCol": "Durée",
-                "notesCol": "Notes",
-                "ice": "Glace",
-                "packedIce": "Glace compactée",
-                "blueIce": "Glace bleue",
-                "powderSnow": "Seau de neige poudreuse",
-                "stacks": "Durée cumulable",
-                "empties": "Se vide en seau",
-                "resetWarning": "Donner un type de glace différent remet la durée à 10s avec le nouveau niveau de vitesse. Par exemple, si vous donnez de la Glace bleue (Speed III) puis de la Glace normale (Speed I), vous perdez le Speed III.",
-                "screenshotFeeding": "Screenshot : donner de la glace à un Happy Ghast",
-                "effectsTitle": "Effets",
-                "crunchSound": "Son de craquement de glace à l'alimentation",
-                "purrSound": "Ronronnement du ghast content",
-                "itemParticles": "Particules de l'item de glace donné",
-                "howTo": "Comment nourrir",
-                "howToDesc": "Tenez un bloc de glace et faites clic droit sur votre Happy Ghast pendant que vous le montez. L'effet de vitesse dure 10 secondes et peut être cumulé en donnant plusieurs fois le même type de glace."
-            },
-            "install": {
-                "requirements": "Prérequis",
-                "req": {
-                    "mc": "Minecraft 26.1.2",
-                    "loader": "Fabric Loader ou NeoForge",
-                    "fabricApi": "Fabric API (Fabric uniquement)"
-                },
-                "stepsTitle": "Étapes d'installation",
-                "step1": "Installez Fabric Loader ou NeoForge pour MC 26.1.2",
-                "step2": "Pour Fabric : installez aussi Fabric API",
-                "step3": "Téléchargez le JAR depuis GitHub Releases",
-                "step4prefix": "Placez le JAR dans votre dossier",
-                "step4suffix": "",
-                "step5": "Lancez le jeu",
-                "downloadTitle": "Téléchargement",
-                "platforms": "Modrinth et CurseForge bientôt disponibles."
-            },
-            "commands": {
-                "debugTitle": "Fonction debug",
-                "debugDesc": "Lance une commande qui prépare un monde de test pour essayer le mod rapidement :",
-                "actionCol": "Action",
-                "detailCol": "Détail",
-                "actions": {
-                    "peaceful": {
-                        "action": "Difficulté",
-                        "detail": "Pacifique"
-                    },
-                    "gamerules": {
-                        "action": "Gamerules",
-                        "detail": "Désactive temps, mobs, météo"
-                    },
-                    "weather": {
-                        "action": "Météo",
-                        "detail": "Jour + beau temps"
-                    },
-                    "clearInv": {
-                        "action": "Inventaire",
-                        "detail": "Vidé"
-                    },
-                    "killGhasts": {
-                        "action": "Ghasts existants",
-                        "detail": "Supprimés"
-                    },
-                    "spawnGhasts": {
-                        "action": "Invocation",
-                        "detail": "3 Happy Ghasts invulnérables"
-                    },
-                    "giveItems": {
-                        "action": "Items donnés",
-                        "detail": "Harnais, tous types de glace, boules de neige"
-                    }
-                },
-                "screenshotDebug": "Screenshot : environnement après /function ghastrider:debug",
-                "requiresCreative": "Nécessite un monde Créatif avec les commandes activées (Superflat recommandé)."
-            },
-            "changelog": {
-                "firstRelease": "Première version publique.",
-                "items": {
-                    "dashMechanic": "Mécanique de dash avec barre de charge",
-                    "overchargeDecay": "Décroissance de surcharge avec seuil minimum",
-                    "proportionalCd": "Cooldown proportionnel",
-                    "autoRecharge": "Auto-recharge en maintenant G",
-                    "verticalBoost": "Boost vertical pendant le dash",
-                    "iceFeeding": "Alimentation en glace avec effets de Vitesse",
-                    "customSounds": "Sons custom (vent, craquement, ronronnement)",
-                    "itemParticles": "Particules d'items",
-                    "debugFunction": "Fonction debug",
-                    "loaderSupport": "Support Fabric et NeoForge pour MC 26.1.2"
-                }
-            },
-            "config": {
-                "intro": "GhastRider est configurable via les options de Minecraft. Voici ce que vous pouvez changer.",
-                "keybindTitle": "Changer la touche de dash",
-                "keybindDesc": "Par défaut, le dash est sur G. Vous pouvez le changer dans les options du jeu :",
-                "keybindStep1prefix": "Appuyez sur",
-                "keybindStep1suffix": "pour ouvrir le menu",
-                "keybindStep2": "Allez dans Options > Contrôles > Assignation des touches",
-                "keybindStep3": "Cherchez \"GhastRider Dash\" dans la catégorie GhastRider",
-                "keybindStep4": "Cliquez dessus et appuyez sur la nouvelle touche souhaitée",
-                "screenshotKeybind": "Screenshot : menu des contrôles avec la touche GhastRider Dash",
-                "settingsTitle": "Paramètres",
-                "settingCol": "Paramètre",
-                "defaultCol": "Par défaut",
-                "descCol": "Description",
-                "settDashKey": "Touche de dash",
-                "settDashKeyDesc": "La touche pour charger et activer le dash",
-                "moreSettingsNote": "D'autres options de configuration (temps de charge, cooldown, etc.) seront ajoutées dans une prochaine mise à jour."
-            }
-        },
-        "nr": {
-            "sections": {
-                "overview": "Présentation",
-                "currency": "Système de Monnaie",
-                "roadmap": "Feuille de Route"
-            },
-            "overview": {
-                "intro": "Numismatic Reimagined est un mod de monnaie Minecraft inspiré de Numismatic Overhaul, reconstruit de zéro.",
-                "desc": "Il ajoute un système d'économie complet avec plusieurs dénominations de pièces, des boutiques, des tirelires et une intégration avec les échanges de villageois.",
-                "wipNotice": "Ce mod est actuellement en développement. La Phase 1 (items de monnaie) est terminée."
-            },
-            "currency": {
-                "intro": "Cinq dénominations de pièces avec un taux de change base 100 :",
-                "coinCol": "Pièce",
-                "valueCol": "Valeur",
-                "exchangeCol": "Équivalence",
-                "bronze": "Bronze",
-                "silver": "Argent",
-                "gold": "Or",
-                "netherite": "Netherite",
-                "starCoin": "Star Coin",
-                "baseUnit": "Unité de base",
-                "eq100bronze": "= 100 Bronze",
-                "eq100silver": "= 100 Argent",
-                "eq100gold": "= 100 Or",
-                "achievement": "Récompense de succès",
-                "starCoinDesc": "Le Star Coin est un trophée obtenu en accumulant 1 000 Netherite Coins de transactions. Unique par joueur mais pas lié à l'âme."
-            },
-            "roadmap": {
-                "intro": "Le mod est développé en 12 phases :",
-                "phases": {
-                    "coinItems": "Items de Monnaie",
-                    "purse": "Système de Bourse (Purse)",
-                    "piggyBank": "Bloc Tirelire (Piggy Bank)",
-                    "shopBlock": "Bloc Boutique",
-                    "config": "Système de Configuration",
-                    "lootTables": "Loot Tables + Drops de Mobs",
-                    "villagerTrades": "Échanges de Villageois",
-                    "marketplace": "Marketplace + Commandes",
-                    "achievements": "Succès + Star Coin",
-                    "security": "Sécurité",
-                    "addonApi": "API Addon",
-                    "neoforgePort": "Port NeoForge + MC 1.21.1"
-                }
-            }
-        }
+    "dinnermatch": {
+      "title": "DinnerMatch",
+      "description": "Plateforme pour partager des dîners à thème entre clients d'hôtels. Spring Boot + React.",
+      "long_description": "Met en relation les clients d'hôtels pour partager des dîners selon leurs centres d'intérêt. Projet de groupe pendant la semaine agile à l'IUT (BUT3) : un porteur de projet a choisi notre équipe de 6/7 pour bosser sur l'idée. Déployé sur dinnermatch.fr.\n\nFront : React 19, TypeScript, Tailwind 4, DaisyUI 5, éditeur de thèmes pour hôteliers, calendrier responsive, dashboards par rôle (Client / Hôtelier / Admin). Back : Spring Boot 4, Java 21, Spring Security + JWT, JPA/Hibernate, Postgres 17, emails via Scaleway TEM. CI/CD GitLab, Docker, Nginx reverse proxy.\n\nMa partie : back (API, JWT, matching, panels admin CRUD).\n\nNote : si le site est down, c'est de la faute du porteur de projet — il n'y fait pas gaffe et je n'ai plus les accès SSH pour le relancer."
+    },
+    "refugegourmand": {
+      "title": "Le Refuge Gourmand",
+      "description": "Site de réservation de salle pour un restaurant fictif. Next.js, Prisma, NextAuth, Stripe.",
+      "long_description": "Projet académique d'entrepreneuriat : site de réservation de salles pour un restaurant fictif. Next.js export statique sur GitHub Pages.\n\nNextAuth + bcrypt, paiement Stripe, Prisma (Postgres), validation React Hook Form + Zod, Tailwind. Atomic Design."
+    },
+    "weerdlebot": {
+      "title": "WeerdleBot",
+      "description": "Bot Node.js qui joue automatiquement à Weerdle (Wordle Pokémon) avec dashboard de contrôle.",
+      "long_description": "Bot perso pour Weerdle (variante Pokémon de Wordle sur pokengine.com). Envoie des requêtes HTTP authentifiées, analyse les réponses et adapte sa stratégie.\n\nDashboard web (Node.js + HTML/CSS/JS) pour start/stop, logs en direct et rotation VPN NordVPN pour éviter les bans IP. Tourne en Docker."
+    },
+    "snackandcatch": {
+      "title": "Snack & Catch",
+      "description": "App web pour Cobblemon (Pokémon dans Minecraft). Recettes, spots de spawn, addons. Next.js + Drizzle.",
+      "long_description": "App compagnon pour le mod Cobblemon. Centralise recettes, spots de spawn et addons trouvés sur les wikis communautaires.\n\nNext.js 15, TypeScript, Tailwind, Drizzle sur Postgres (Neon), déployée sur Vercel. Pipeline d'ingestion qui scrape les wikis et structure les données."
+    },
+    "numismatic": {
+      "title": "Numismatic Reimagined (WIP)",
+      "description": "Mod Minecraft de monnaie multi-loader (Fabric + Forge), MC 1.20.1. WIP.",
+      "long_description": "Système de monnaie pour Minecraft inspiré de Numismatic Overhaul, mais réécrit pour tourner sur Fabric et Forge en parallèle.\n\nJava 17, Architectury API, Gradle multi-module (common / fabric / forge). Pas encore publié."
+    },
+    "ghastrider": {
+      "title": "GhastRider (WIP)",
+      "description": "Mod Minecraft NeoForge : dash propulsé pour le Happy Ghast (MC 1.21+). WIP.",
+      "long_description": "Ajoute une mécanique de dash au Happy Ghast (MC 1.21). Le joueur consomme des blocs de glace pour se propulser.\n\nJava 21, NeoForge, config TOML pour ajuster cooldown / force / coût sans recompiler. Pas encore publié."
     }
+  },
+  "profile": {
+    "hero": "Développeur full-stack, diplômé d'un BUT Informatique (IUT de Lille) et en fin d'alternance chez Mandarine Academy. J'aime autant les projets en équipe que les projets perso. Bonne visite.",
+    "about": "Je suis **Gaspard Catry**, 20 ans, développeur full-stack basé à **Lille**. Diplômé d'un **BUT Informatique** à l'**IUT de Lille**, je suis en fin d'alternance chez **Mandarine Academy** sur un stack **PHP / Symfony / Tailwind**.\n\nAvant ça, stage chez **Nextoo** (Roubaix) : formation intensive **Java 21 / Spring Boot 3.4 / Vue.js 3 / Docker**, 3 applis web internes. Recommandation écrite du DGD à la fin du stage.\n\nÀ côté, je fais des projets perso déployés en prod (**MaGare**, reproduction web de l'app SNCF) et je touche à l'open-source le week-end. Objectif : devenir ingénieur logiciel sur des applis web full-stack.",
+    "positioning": "Diplômé d'un BUT Informatique (parcours Réalisation d'applications) avec une expérience qui combine du **Java / Spring Boot / Vue.js** (stage Nextoo) et du **PHP / Symfony / Tailwind** (alternance Mandarine).\n\nJe cherche un poste de **développeur full-stack** ou **ingénieur logiciel junior** dans une équipe technique exigeante, où je pourrai bosser sur l'archi et la qualité.",
+    "reflexive": "J'apprends vite quand je suis dans un cadre technique exigeant. Chez Nextoo, monter en compétence sur Spring Boot et Vue en 10 semaines m'a montré que je pouvais digérer un nouveau stack rapidement. Chez Mandarine, j'ai confirmé la même chose sur un stack PHP/Symfony qui m'était inconnu : je m'adapte vite à un environnement nouveau.\n\nJe suis plus efficace quand on m'explique *pourquoi* on fait quelque chose. Le *comment*, je peux le trouver moi-même avec la doc. Les meilleurs moments d'apprentissage, c'est quand mon tuteur prend le temps d'expliquer un choix d'archi ou la raison d'une contrainte.\n\nLe passage en entreprise m'a aussi appris à gérer mon temps autrement : estimer, prioriser, communiquer sur l'avancement.",
+    "strengths": "**Apprentissage rapide.** Confirmé par mon stage chez Nextoo et mon alternance chez Mandarine, sur des stacks inconnus ou presque à chaque fois.\n\n**Travail en équipe.** DinnerMatch et plusieurs autres projets de groupe l'ont confirmé. Je m'intègre facilement, même quand la moyenne d'âge est plus élevée — je fais l'effort.\n\n**Adaptation à un stack.** Je prends sur mon temps perso pour comprendre les outils en place. J'essaie aussi de me tenir à jour sur les nouvelles technos, même si ça avance vite avec l'IA.\n\n**Usage raisonné de l'IA.** J'évolue avec les modèles depuis le COVID, je suis bon en prompt. Je sais que c'est un outil — dangereux côté sécurité si on ne comprend pas ce qu'il produit, donc il faut rester dev pour relire, corriger et savoir coder sans (avec la doc).\n\n**Rigueur technique.** Tests, doc, respect des conventions (GitFlow, commits conventionnels, archi propre). Revues de code positives.\n\n**Curiosité.** Projets perso (MaGare, ce portfolio), open-source, veille techno régulière.",
+    "improvements": "**Communication en réunion.** Réservé depuis peu, surtout en début de mission : j'observe d'abord le niveau de chacun pour comprendre ma place dans le groupe avant de prendre la parole. Je progresse via les dailys chez Mandarine.\n\n**Estimation des temps.** Tendance à sous-estimer (surtout sur le front). J'apprends à découper plus fin et à mettre des marges réalistes.\n\n**Demande d'aide.** Quand je suis dans un problème technique, je peux y rester trop longtemps avant de demander. J'essaie d'identifier plus tôt quand solliciter un collègue est plus efficace.",
+    "aboutVision": "Ce qui reste irremplaçable chez un dev : comprendre un besoin métier et le traduire en solution, architecturer un système, assumer la responsabilité technique, gérer le relationnel équipe et client. L'IA est un outil que j'utilise au quotidien — un amplificateur, pas un remplaçant.\n\nObjectif : devenir ingénieur logiciel sur des applis web full-stack."
+  }
 }
