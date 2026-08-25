@@ -10,7 +10,7 @@ export default {
         nextoo: 'oklch(58% 0.22 25)',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Luciole', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       animation: {
