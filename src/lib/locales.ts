@@ -13,22 +13,6 @@ export const ALL_LOCALES = [
   {
     "code": "es",
     "label": "Español"
-  },
-  {
-    "code": "it",
-    "label": "Italiano"
-  },
-  {
-    "code": "de",
-    "label": "Deutsch"
-  },
-  {
-    "code": "nl",
-    "label": "Nederlands"
-  },
-  {
-    "code": "pt",
-    "label": "Português"
   }
 ] as const
 

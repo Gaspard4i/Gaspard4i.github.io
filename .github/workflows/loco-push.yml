@@ -18,7 +18,7 @@ jobs:
 
       - name: Push all locale files to Loco
         run: |
-          LOCALE_MAP="fr:fr-FR en:en-GB es:es-ES it:it-IT de:de-DE nl:nl-NL pt:pt-PT"
+          LOCALE_MAP="fr:fr-FR en:en-GB es:es-ES"
           for PAIR in $LOCALE_MAP; do
             SHORT="${PAIR%%:*}"
             FULL="${PAIR##*:}"

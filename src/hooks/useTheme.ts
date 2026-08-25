@@ -1,39 +1,38 @@
 import { useState, useEffect, useCallback } from 'react'
-import type { ThemeName, ThemeDefinition } from '@/types/theme'
+import type { ThemeMode } from '@/types/theme'
 
 const STORAGE_KEY = 'portfolio-theme'
 
-function getSystemDefault(): ThemeName {
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'original-dark'
-  return 'original'
+function getSystemPreference(): 'light' | 'dark' {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 }
 
-const THEMES: ThemeDefinition[] = [
-  { id: 'original', name: 'Original', prefersDark: false, primaryColor: '#5c8a4a' },
-  { id: 'original-dark', name: 'Original Dark', prefersDark: true, primaryColor: '#6aad56' },
-  { id: 'vscode', name: 'VS Code', prefersDark: true, primaryColor: '#4fc3f7' },
-  { id: 'spotify', name: 'Spotify', prefersDark: true, primaryColor: '#1db954' },
-  { id: 'mandarine', name: 'Mandarine', prefersDark: false, primaryColor: '#e8762e' },
-  { id: 'nextoo', name: 'Nextoo', prefersDark: false, primaryColor: '#1e5fb4' },
-]
-
 export function useTheme() {
-  const [theme, setThemeState] = useState<ThemeName>(() => {
-    const stored = localStorage.getItem(STORAGE_KEY) as ThemeName | null
-    const isValid = stored && THEMES.some((t) => t.id === stored)
-    return isValid ? stored : getSystemDefault()
+  const [mode, setModeState] = useState<ThemeMode>(() => {
+    const stored = localStorage.getItem(STORAGE_KEY) as ThemeMode | null
+    return stored === 'light' || stored === 'dark' || stored === 'system' ? stored : 'system'
   })
 
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem(STORAGE_KEY, theme)
-  }, [theme])
+  const resolvedTheme = mode === 'system' ? getSystemPreference() : mode
 
-  const setTheme = useCallback((name: ThemeName) => {
-    setThemeState(name)
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', resolvedTheme)
+    localStorage.setItem(STORAGE_KEY, mode)
+  }, [mode, resolvedTheme])
+
+  useEffect(() => {
+    if (mode !== 'system') return
+    const mql = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleChange = () => {
+      document.documentElement.setAttribute('data-theme', getSystemPreference())
+    }
+    mql.addEventListener('change', handleChange)
+    return () => mql.removeEventListener('change', handleChange)
+  }, [mode])
+
+  const setMode = useCallback((next: ThemeMode) => {
+    setModeState(next)
   }, [])
 
-  const currentTheme = THEMES.find((t) => t.id === theme) ?? THEMES[0]
-
-  return { theme, setTheme, themes: THEMES, currentTheme }
+  return { mode, setMode, resolvedTheme }
 }
