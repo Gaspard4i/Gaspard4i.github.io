@@ -10,3 +10,12 @@ if (!supabaseUrl || !supabaseAnonKey) {
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+
+// Bug connu de supabase-js : la Navigator LockManager API peut rejeter la promesse
+// d'acquisition du verrou de refresh token sans que ce soit une vraie erreur
+// (concurrence entre onglets/tabs), cf. https://github.com/supabase/auth-js/issues/966
+window.addEventListener('unhandledrejection', (event) => {
+  if (event.reason?.message?.includes('Acquiring an exclusive Navigator LockManager lock')) {
+    event.preventDefault()
+  }
+})
